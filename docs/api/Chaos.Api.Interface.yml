@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Interface
+  commentId: N:Chaos.Api.Interface
+  id: Chaos.Api.Interface
+  children:
+  - Chaos.Api.Interface.IAnimalService
+  - Chaos.Api.Interface.ICasinoGamesService
+  - Chaos.Api.Interface.IDeckService
+  - Chaos.Api.Interface.ITokenBlackListService
+  - Chaos.Api.Interface.IUserService
+  langs:
+  - csharp
+  - vb
+  name: Chaos.Api.Interface
+  nameWithType: Chaos.Api.Interface
+  fullName: Chaos.Api.Interface
+  type: Namespace
+  assemblies:
+  - Chaos.Api
+references:
+- uid: Chaos.Api.Interface.IAnimalService
+  commentId: T:Chaos.Api.Interface.IAnimalService
+  parent: Chaos.Api.Interface
+  href: Chaos.Api.Interface.IAnimalService.html
+  name: IAnimalService
+  nameWithType: IAnimalService
+  fullName: Chaos.Api.Interface.IAnimalService
+- uid: Chaos.Api.Interface.ICasinoGamesService
+  commentId: T:Chaos.Api.Interface.ICasinoGamesService
+  parent: Chaos.Api.Interface
+  href: Chaos.Api.Interface.ICasinoGamesService.html
+  name: ICasinoGamesService
+  nameWithType: ICasinoGamesService
+  fullName: Chaos.Api.Interface.ICasinoGamesService
+- uid: Chaos.Api.Interface.IDeckService
+  commentId: T:Chaos.Api.Interface.IDeckService
+  parent: Chaos.Api.Interface
+  href: Chaos.Api.Interface.IDeckService.html
+  name: IDeckService
+  nameWithType: IDeckService
+  fullName: Chaos.Api.Interface.IDeckService
+- uid: Chaos.Api.Interface.ITokenBlackListService
+  commentId: T:Chaos.Api.Interface.ITokenBlackListService
+  parent: Chaos.Api.Interface
+  href: Chaos.Api.Interface.ITokenBlackListService.html
+  name: ITokenBlackListService
+  nameWithType: ITokenBlackListService
+  fullName: Chaos.Api.Interface.ITokenBlackListService
+- uid: Chaos.Api.Interface.IUserService
+  commentId: T:Chaos.Api.Interface.IUserService
+  parent: Chaos.Api.Interface
+  href: Chaos.Api.Interface.IUserService.html
+  name: IUserService
+  nameWithType: IUserService
+  fullName: Chaos.Api.Interface.IUserService
+- uid: Chaos.Api.Interface
+  commentId: N:Chaos.Api.Interface
+  href: Chaos.html
+  name: Chaos.Api.Interface
+  nameWithType: Chaos.Api.Interface
+  fullName: Chaos.Api.Interface
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Interface
+    name: Interface
+    href: Chaos.Api.Interface.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Interface
+    name: Interface
+    href: Chaos.Api.Interface.html

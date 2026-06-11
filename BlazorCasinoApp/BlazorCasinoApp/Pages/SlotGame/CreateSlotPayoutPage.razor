@@ -1,0 +1,153 @@
+﻿@page "/slot-payout/create"
+
+@using Chaos.BlazorCasinoApp.IApiService.Slots
+@using Chaos.Shared.RequestEntity.SlotGame
+@using Chaos.Shared.ResponseEntity.SlotGame
+
+@inject ISlotPayoutRuleService SlotPayoutRuleService
+@inject ISlotGameService SlotGameConfigService
+@inject ISlotSymbolService SlotSymbolService
+@inject NavigationManager Nav
+
+<PageTitle>Nueva Payout Rule — Slot Game</PageTitle>
+
+<div class="casino-page">
+
+    <div class="casino-form-header">
+        <button class="btn-casino-secondary" @onclick="GoBack">← Volver</button>
+        <h4>💰 Nueva Payout Rule</h4>
+    </div>
+
+    @if (isLoading)
+    {
+        <div class="casino-loading">
+            <div class="casino-spinner" role="status">🛞</div>
+            <p class="text-gold">Cargando datos...</p>
+        </div>
+    }
+    else
+    {
+        @if (errorMessage is not null)
+        {
+            <div class="alert alert-danger">⚠️ @errorMessage</div>
+        }
+
+        <div class="card">
+            <div class="card-body">
+                <EditForm Model="request" OnValidSubmit="HandleSubmit">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary class="alert alert-danger" />
+
+                    <div class="form-group">
+                        <label class="form-label">Combinación</label>
+                        <InputText class="form-control" @bind-Value="request.Combination" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Multiplicador Payout</label>
+                        <InputNumber class="form-control" @bind-Value="request.PayoutMultiplier" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Slot Config</label>
+                        <InputSelect class="form-select casino-select" @bind-Value="request.SlotGameConfigId">
+                            <option value="">-- Selecciona una configuración --</option>
+                            @foreach (var config in configs)
+                            {
+                                <option value="@config.Id">@config.MachineName</option>
+                            }
+                        </InputSelect>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Símbolo</label>
+                        <InputSelect class="form-select casino-select" @bind-Value="request.SlotSymbolId">
+                            <option value="">-- Selecciona un símbolo --</option>
+                            @foreach (var symbol in symbols)
+                            {
+                                <option value="@symbol.Id">@symbol.SymbolName</option>
+                            }
+                        </InputSelect>
+                    </div>
+
+              <div class="casino-toggle-row">
+                        <button type="button"
+                                class="casino-toggle-btn @(request.IsActive ? "badge-casino-active" : "badge-casino-inactive")"
+                                @onclick="() => request.IsActive = !request.IsActive">
+                            @if (request.IsActive)
+                            {
+                                <span>● Activo</span>
+                            }
+                            else
+                            {
+                                <span>● Inactivo</span>
+                            }
+                        </button>
+                    </div
+
+                    <div class="casino-form-actions">
+                        <button type="button" class="btn-casino-secondary" @onclick="GoBack">
+                            ✖ Cancelar
+                        </button>
+                        <button type="submit" class="btn-casino-primary" disabled="@isSaving">
+                            @if (isSaving)
+                            {
+                                <span class="casino-spinner-sm">🛞</span>
+                            }
+                            💾 Crear Regla
+                        </button>
+                    </div>
+
+                </EditForm>
+            </div>
+        </div>
+    }
+
+</div>
+
+@code {
+    private CreateSlotPayoutRuleRequest request = new();
+    private List<SlotGameConfigResponse> configs = new();
+    private List<SlotSymbolResponse> symbols = new();
+    private bool isLoading = true;
+    private bool isSaving = false;
+    private string? errorMessage;
+    private bool isActive = true;
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            configs = await SlotGameConfigService.GetAllAsync();
+            symbols = await SlotSymbolService.GetAllAsync();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al cargar datos: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task HandleSubmit()
+    {
+        isSaving = true;
+        errorMessage = null;
+        try
+        {
+            await SlotPayoutRuleService.CreateAsync(request);
+            GoBack();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al crear regla: {ex.Message}";
+        }
+        finally
+        {
+            isSaving = false;
+        }
+    }
+
+    private void GoBack() => Nav.NavigateTo("/SlotGamePage");
+}

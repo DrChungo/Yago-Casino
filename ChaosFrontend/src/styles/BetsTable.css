@@ -1,0 +1,42 @@
+.bets-table-container {
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid gold;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+    color: white;
+    overflow-y: auto;
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    top: -80%;
+    left: 7%;
+    min-width: 250px; 
+    
+}
+
+.bets-table-container h3 {
+    text-align: center;
+    color: gold;
+    margin: 0;
+}
+
+
+
+.bets-table th {
+    background: rgba(255, 215, 0, 0.2);
+    color: gold;
+    padding: 0.5rem 0.4rem;
+    text-align: center;
+    font-size: 1.4rem;
+    border-bottom: 1px solid gold;
+    
+    
+}
+
+.bets-table td {
+    padding: 0.5rem 0.4rem;
+    font-size: 1.3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+

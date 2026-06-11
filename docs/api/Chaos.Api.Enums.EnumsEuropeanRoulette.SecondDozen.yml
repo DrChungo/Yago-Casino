@@ -1,0 +1,348 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  id: SecondDozen
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  children:
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.EIGHTEEN
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.FIFTEEN
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.FOURTEEN
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.NINETEEN
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.SEVENTEEN
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.SIXTEEN
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.THIRTEEN
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY_FOUR
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY_ONE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY_THREE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY_TWO
+  langs:
+  - csharp
+  - vb
+  name: SecondDozen
+  nameWithType: SecondDozen
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  type: Enum
+  source:
+    id: SecondDozen
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondDozen.cs
+    startLine: 5
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  summary: As the name says is the second one Dozen in the European Roulette
+  example: []
+  syntax:
+    content: public enum SecondDozen
+    content.vb: Public Enum SecondDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.THIRTEEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.THIRTEEN
+  id: THIRTEEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  langs:
+  - csharp
+  - vb
+  name: THIRTEEN
+  nameWithType: SecondDozen.THIRTEEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.THIRTEEN
+  type: Field
+  source:
+    id: THIRTEEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondDozen.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: THIRTEEN = 13
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.FOURTEEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.FOURTEEN
+  id: FOURTEEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  langs:
+  - csharp
+  - vb
+  name: FOURTEEN
+  nameWithType: SecondDozen.FOURTEEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.FOURTEEN
+  type: Field
+  source:
+    id: FOURTEEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondDozen.cs
+    startLine: 8
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: FOURTEEN = 14
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.FIFTEEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.FIFTEEN
+  id: FIFTEEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  langs:
+  - csharp
+  - vb
+  name: FIFTEEN
+  nameWithType: SecondDozen.FIFTEEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.FIFTEEN
+  type: Field
+  source:
+    id: FIFTEEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondDozen.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: FIFTEEN = 15
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.SIXTEEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.SIXTEEN
+  id: SIXTEEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  langs:
+  - csharp
+  - vb
+  name: SIXTEEN
+  nameWithType: SecondDozen.SIXTEEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.SIXTEEN
+  type: Field
+  source:
+    id: SIXTEEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondDozen.cs
+    startLine: 10
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: SIXTEEN = 16
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.SEVENTEEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.SEVENTEEN
+  id: SEVENTEEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  langs:
+  - csharp
+  - vb
+  name: SEVENTEEN
+  nameWithType: SecondDozen.SEVENTEEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.SEVENTEEN
+  type: Field
+  source:
+    id: SEVENTEEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondDozen.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: SEVENTEEN = 17
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.EIGHTEEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.EIGHTEEN
+  id: EIGHTEEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  langs:
+  - csharp
+  - vb
+  name: EIGHTEEN
+  nameWithType: SecondDozen.EIGHTEEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.EIGHTEEN
+  type: Field
+  source:
+    id: EIGHTEEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondDozen.cs
+    startLine: 12
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: EIGHTEEN = 18
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.NINETEEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.NINETEEN
+  id: NINETEEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  langs:
+  - csharp
+  - vb
+  name: NINETEEN
+  nameWithType: SecondDozen.NINETEEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.NINETEEN
+  type: Field
+  source:
+    id: NINETEEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondDozen.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: NINETEEN = 19
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY
+  id: TWENTY
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  langs:
+  - csharp
+  - vb
+  name: TWENTY
+  nameWithType: SecondDozen.TWENTY
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY
+  type: Field
+  source:
+    id: TWENTY
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondDozen.cs
+    startLine: 14
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY = 20
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY_ONE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY_ONE
+  id: TWENTY_ONE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_ONE
+  nameWithType: SecondDozen.TWENTY_ONE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY_ONE
+  type: Field
+  source:
+    id: TWENTY_ONE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondDozen.cs
+    startLine: 15
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_ONE = 21
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY_TWO
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY_TWO
+  id: TWENTY_TWO
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_TWO
+  nameWithType: SecondDozen.TWENTY_TWO
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY_TWO
+  type: Field
+  source:
+    id: TWENTY_TWO
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondDozen.cs
+    startLine: 16
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_TWO = 22
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY_THREE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY_THREE
+  id: TWENTY_THREE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_THREE
+  nameWithType: SecondDozen.TWENTY_THREE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY_THREE
+  type: Field
+  source:
+    id: TWENTY_THREE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondDozen.cs
+    startLine: 17
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_THREE = 23
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY_FOUR
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY_FOUR
+  id: TWENTY_FOUR
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_FOUR
+  nameWithType: SecondDozen.TWENTY_FOUR
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.TWENTY_FOUR
+  type: Field
+  source:
+    id: TWENTY_FOUR
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondDozen.cs
+    startLine: 18
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_FOUR = 24
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+references:
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+  commentId: N:Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.html
+  name: Chaos.Api.Enums.EnumsEuropeanRoulette
+  nameWithType: Chaos.Api.Enums.EnumsEuropeanRoulette
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  - name: .
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+    name: EnumsEuropeanRoulette
+    href: Chaos.Api.Enums.EnumsEuropeanRoulette.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  - name: .
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+    name: EnumsEuropeanRoulette
+    href: Chaos.Api.Enums.EnumsEuropeanRoulette.html
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.html
+  name: SecondDozen
+  nameWithType: SecondDozen
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen

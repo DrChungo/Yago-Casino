@@ -1,0 +1,44 @@
+{
+  "hash": "89977cc8",
+  "configHash": "57d43aac",
+  "lockfileHash": "6fee58a5",
+  "browserHash": "eaaa86cf",
+  "optimized": {
+    "react-dom": {
+      "src": "../../node_modules/react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "ed90ce36",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "ca043a20",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "a1307c3d",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "7392ff20",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "60f6759f",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "react-BejDdLFV": {
+      "file": "react-BejDdLFV.js",
+      "isDynamicEntry": false
+    }
+  }
+}

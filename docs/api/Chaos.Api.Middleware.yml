@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Middleware
+  commentId: N:Chaos.Api.Middleware
+  id: Chaos.Api.Middleware
+  children:
+  - Chaos.Api.Middleware.TokenBlackListMiddleware
+  langs:
+  - csharp
+  - vb
+  name: Chaos.Api.Middleware
+  nameWithType: Chaos.Api.Middleware
+  fullName: Chaos.Api.Middleware
+  type: Namespace
+  assemblies:
+  - Chaos.Api
+references:
+- uid: Chaos.Api.Middleware.TokenBlackListMiddleware
+  commentId: T:Chaos.Api.Middleware.TokenBlackListMiddleware
+  href: Chaos.Api.Middleware.TokenBlackListMiddleware.html
+  name: TokenBlackListMiddleware
+  nameWithType: TokenBlackListMiddleware
+  fullName: Chaos.Api.Middleware.TokenBlackListMiddleware

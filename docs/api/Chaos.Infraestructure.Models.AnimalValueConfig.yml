@@ -1,0 +1,896 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig
+  commentId: T:Chaos.Infraestructure.Models.AnimalValueConfig
+  id: AnimalValueConfig
+  parent: Chaos.Infraestructure.Models
+  children:
+  - Chaos.Infraestructure.Models.AnimalValueConfig.AgeMultiplier
+  - Chaos.Infraestructure.Models.AnimalValueConfig.AnimalType
+  - Chaos.Infraestructure.Models.AnimalValueConfig.Animals
+  - Chaos.Infraestructure.Models.AnimalValueConfig.HealthMultiplier
+  - Chaos.Infraestructure.Models.AnimalValueConfig.HeightMultiplier
+  - Chaos.Infraestructure.Models.AnimalValueConfig.Id
+  - Chaos.Infraestructure.Models.AnimalValueConfig.IsActive
+  - Chaos.Infraestructure.Models.AnimalValueConfig.RarityMultiplier
+  - Chaos.Infraestructure.Models.AnimalValueConfig.UpdatedBy
+  - Chaos.Infraestructure.Models.AnimalValueConfig.UpdatedByNavigation
+  - Chaos.Infraestructure.Models.AnimalValueConfig.WeightMultiplier
+  langs:
+  - csharp
+  - vb
+  name: AnimalValueConfig
+  nameWithType: AnimalValueConfig
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig
+  type: Class
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalValueConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: AnimalValueConfig
+    path: ../Chaos.Infraestructure/Models/AnimalValueConfig.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public class AnimalValueConfig
+    content.vb: Public Class AnimalValueConfig
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.Id
+  commentId: P:Chaos.Infraestructure.Models.AnimalValueConfig.Id
+  id: Id
+  parent: Chaos.Infraestructure.Models.AnimalValueConfig
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: AnimalValueConfig.Id
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.Id
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalValueConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: Id
+    path: ../Chaos.Infraestructure/Models/AnimalValueConfig.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid Id { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Id As Guid
+  overload: Chaos.Infraestructure.Models.AnimalValueConfig.Id*
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.AnimalType
+  commentId: P:Chaos.Infraestructure.Models.AnimalValueConfig.AnimalType
+  id: AnimalType
+  parent: Chaos.Infraestructure.Models.AnimalValueConfig
+  langs:
+  - csharp
+  - vb
+  name: AnimalType
+  nameWithType: AnimalValueConfig.AnimalType
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.AnimalType
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalValueConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: AnimalType
+    path: ../Chaos.Infraestructure/Models/AnimalValueConfig.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string AnimalType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AnimalType As String
+  overload: Chaos.Infraestructure.Models.AnimalValueConfig.AnimalType*
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.AgeMultiplier
+  commentId: P:Chaos.Infraestructure.Models.AnimalValueConfig.AgeMultiplier
+  id: AgeMultiplier
+  parent: Chaos.Infraestructure.Models.AnimalValueConfig
+  langs:
+  - csharp
+  - vb
+  name: AgeMultiplier
+  nameWithType: AnimalValueConfig.AgeMultiplier
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.AgeMultiplier
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalValueConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: AgeMultiplier
+    path: ../Chaos.Infraestructure/Models/AnimalValueConfig.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public decimal AgeMultiplier { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property AgeMultiplier As Decimal
+  overload: Chaos.Infraestructure.Models.AnimalValueConfig.AgeMultiplier*
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.WeightMultiplier
+  commentId: P:Chaos.Infraestructure.Models.AnimalValueConfig.WeightMultiplier
+  id: WeightMultiplier
+  parent: Chaos.Infraestructure.Models.AnimalValueConfig
+  langs:
+  - csharp
+  - vb
+  name: WeightMultiplier
+  nameWithType: AnimalValueConfig.WeightMultiplier
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.WeightMultiplier
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalValueConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: WeightMultiplier
+    path: ../Chaos.Infraestructure/Models/AnimalValueConfig.cs
+    startLine: 15
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public decimal WeightMultiplier { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property WeightMultiplier As Decimal
+  overload: Chaos.Infraestructure.Models.AnimalValueConfig.WeightMultiplier*
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.HeightMultiplier
+  commentId: P:Chaos.Infraestructure.Models.AnimalValueConfig.HeightMultiplier
+  id: HeightMultiplier
+  parent: Chaos.Infraestructure.Models.AnimalValueConfig
+  langs:
+  - csharp
+  - vb
+  name: HeightMultiplier
+  nameWithType: AnimalValueConfig.HeightMultiplier
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.HeightMultiplier
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalValueConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: HeightMultiplier
+    path: ../Chaos.Infraestructure/Models/AnimalValueConfig.cs
+    startLine: 17
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public decimal HeightMultiplier { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property HeightMultiplier As Decimal
+  overload: Chaos.Infraestructure.Models.AnimalValueConfig.HeightMultiplier*
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.HealthMultiplier
+  commentId: P:Chaos.Infraestructure.Models.AnimalValueConfig.HealthMultiplier
+  id: HealthMultiplier
+  parent: Chaos.Infraestructure.Models.AnimalValueConfig
+  langs:
+  - csharp
+  - vb
+  name: HealthMultiplier
+  nameWithType: AnimalValueConfig.HealthMultiplier
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.HealthMultiplier
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalValueConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: HealthMultiplier
+    path: ../Chaos.Infraestructure/Models/AnimalValueConfig.cs
+    startLine: 19
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public decimal HealthMultiplier { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property HealthMultiplier As Decimal
+  overload: Chaos.Infraestructure.Models.AnimalValueConfig.HealthMultiplier*
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.RarityMultiplier
+  commentId: P:Chaos.Infraestructure.Models.AnimalValueConfig.RarityMultiplier
+  id: RarityMultiplier
+  parent: Chaos.Infraestructure.Models.AnimalValueConfig
+  langs:
+  - csharp
+  - vb
+  name: RarityMultiplier
+  nameWithType: AnimalValueConfig.RarityMultiplier
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.RarityMultiplier
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalValueConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: RarityMultiplier
+    path: ../Chaos.Infraestructure/Models/AnimalValueConfig.cs
+    startLine: 21
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public decimal RarityMultiplier { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property RarityMultiplier As Decimal
+  overload: Chaos.Infraestructure.Models.AnimalValueConfig.RarityMultiplier*
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.IsActive
+  commentId: P:Chaos.Infraestructure.Models.AnimalValueConfig.IsActive
+  id: IsActive
+  parent: Chaos.Infraestructure.Models.AnimalValueConfig
+  langs:
+  - csharp
+  - vb
+  name: IsActive
+  nameWithType: AnimalValueConfig.IsActive
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.IsActive
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalValueConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: IsActive
+    path: ../Chaos.Infraestructure/Models/AnimalValueConfig.cs
+    startLine: 23
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public bool IsActive { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsActive As Boolean
+  overload: Chaos.Infraestructure.Models.AnimalValueConfig.IsActive*
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.UpdatedBy
+  commentId: P:Chaos.Infraestructure.Models.AnimalValueConfig.UpdatedBy
+  id: UpdatedBy
+  parent: Chaos.Infraestructure.Models.AnimalValueConfig
+  langs:
+  - csharp
+  - vb
+  name: UpdatedBy
+  nameWithType: AnimalValueConfig.UpdatedBy
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.UpdatedBy
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalValueConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: UpdatedBy
+    path: ../Chaos.Infraestructure/Models/AnimalValueConfig.cs
+    startLine: 25
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid? UpdatedBy { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Guid}
+    content.vb: Public Property UpdatedBy As Guid?
+  overload: Chaos.Infraestructure.Models.AnimalValueConfig.UpdatedBy*
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.Animals
+  commentId: P:Chaos.Infraestructure.Models.AnimalValueConfig.Animals
+  id: Animals
+  parent: Chaos.Infraestructure.Models.AnimalValueConfig
+  langs:
+  - csharp
+  - vb
+  name: Animals
+  nameWithType: AnimalValueConfig.Animals
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.Animals
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalValueConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: Animals
+    path: ../Chaos.Infraestructure/Models/AnimalValueConfig.cs
+    startLine: 27
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual ICollection<Animal> Animals { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.Animal}
+    content.vb: Public Overridable Property Animals As ICollection(Of Animal)
+  overload: Chaos.Infraestructure.Models.AnimalValueConfig.Animals*
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.UpdatedByNavigation
+  commentId: P:Chaos.Infraestructure.Models.AnimalValueConfig.UpdatedByNavigation
+  id: UpdatedByNavigation
+  parent: Chaos.Infraestructure.Models.AnimalValueConfig
+  langs:
+  - csharp
+  - vb
+  name: UpdatedByNavigation
+  nameWithType: AnimalValueConfig.UpdatedByNavigation
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.UpdatedByNavigation
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalValueConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: UpdatedByNavigation
+    path: ../Chaos.Infraestructure/Models/AnimalValueConfig.cs
+    startLine: 29
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual User UpdatedByNavigation { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Infraestructure.Models.User
+    content.vb: Public Overridable Property UpdatedByNavigation As User
+  overload: Chaos.Infraestructure.Models.AnimalValueConfig.UpdatedByNavigation*
+references:
+- uid: Chaos.Infraestructure.Models
+  commentId: N:Chaos.Infraestructure.Models
+  href: Chaos.html
+  name: Chaos.Infraestructure.Models
+  nameWithType: Chaos.Infraestructure.Models
+  fullName: Chaos.Infraestructure.Models
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Infraestructure
+    name: Infraestructure
+    href: Chaos.Infraestructure.html
+  - name: .
+  - uid: Chaos.Infraestructure.Models
+    name: Models
+    href: Chaos.Infraestructure.Models.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Infraestructure
+    name: Infraestructure
+    href: Chaos.Infraestructure.html
+  - name: .
+  - uid: Chaos.Infraestructure.Models
+    name: Models
+    href: Chaos.Infraestructure.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.Id*
+  commentId: Overload:Chaos.Infraestructure.Models.AnimalValueConfig.Id
+  href: Chaos.Infraestructure.Models.AnimalValueConfig.html#Chaos_Infraestructure_Models_AnimalValueConfig_Id
+  name: Id
+  nameWithType: AnimalValueConfig.Id
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.Id
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.AnimalType*
+  commentId: Overload:Chaos.Infraestructure.Models.AnimalValueConfig.AnimalType
+  href: Chaos.Infraestructure.Models.AnimalValueConfig.html#Chaos_Infraestructure_Models_AnimalValueConfig_AnimalType
+  name: AnimalType
+  nameWithType: AnimalValueConfig.AnimalType
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.AnimalType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.AgeMultiplier*
+  commentId: Overload:Chaos.Infraestructure.Models.AnimalValueConfig.AgeMultiplier
+  href: Chaos.Infraestructure.Models.AnimalValueConfig.html#Chaos_Infraestructure_Models_AnimalValueConfig_AgeMultiplier
+  name: AgeMultiplier
+  nameWithType: AnimalValueConfig.AgeMultiplier
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.AgeMultiplier
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.WeightMultiplier*
+  commentId: Overload:Chaos.Infraestructure.Models.AnimalValueConfig.WeightMultiplier
+  href: Chaos.Infraestructure.Models.AnimalValueConfig.html#Chaos_Infraestructure_Models_AnimalValueConfig_WeightMultiplier
+  name: WeightMultiplier
+  nameWithType: AnimalValueConfig.WeightMultiplier
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.WeightMultiplier
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.HeightMultiplier*
+  commentId: Overload:Chaos.Infraestructure.Models.AnimalValueConfig.HeightMultiplier
+  href: Chaos.Infraestructure.Models.AnimalValueConfig.html#Chaos_Infraestructure_Models_AnimalValueConfig_HeightMultiplier
+  name: HeightMultiplier
+  nameWithType: AnimalValueConfig.HeightMultiplier
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.HeightMultiplier
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.HealthMultiplier*
+  commentId: Overload:Chaos.Infraestructure.Models.AnimalValueConfig.HealthMultiplier
+  href: Chaos.Infraestructure.Models.AnimalValueConfig.html#Chaos_Infraestructure_Models_AnimalValueConfig_HealthMultiplier
+  name: HealthMultiplier
+  nameWithType: AnimalValueConfig.HealthMultiplier
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.HealthMultiplier
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.RarityMultiplier*
+  commentId: Overload:Chaos.Infraestructure.Models.AnimalValueConfig.RarityMultiplier
+  href: Chaos.Infraestructure.Models.AnimalValueConfig.html#Chaos_Infraestructure_Models_AnimalValueConfig_RarityMultiplier
+  name: RarityMultiplier
+  nameWithType: AnimalValueConfig.RarityMultiplier
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.RarityMultiplier
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.IsActive*
+  commentId: Overload:Chaos.Infraestructure.Models.AnimalValueConfig.IsActive
+  href: Chaos.Infraestructure.Models.AnimalValueConfig.html#Chaos_Infraestructure_Models_AnimalValueConfig_IsActive
+  name: IsActive
+  nameWithType: AnimalValueConfig.IsActive
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.IsActive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.UpdatedBy*
+  commentId: Overload:Chaos.Infraestructure.Models.AnimalValueConfig.UpdatedBy
+  href: Chaos.Infraestructure.Models.AnimalValueConfig.html#Chaos_Infraestructure_Models_AnimalValueConfig_UpdatedBy
+  name: UpdatedBy
+  nameWithType: AnimalValueConfig.UpdatedBy
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.UpdatedBy
+- uid: System.Nullable{System.Guid}
+  commentId: T:System.Nullable{System.Guid}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid?
+  nameWithType: Guid?
+  fullName: System.Guid?
+  spec.csharp:
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '?'
+  spec.vb:
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.Animals*
+  commentId: Overload:Chaos.Infraestructure.Models.AnimalValueConfig.Animals
+  href: Chaos.Infraestructure.Models.AnimalValueConfig.html#Chaos_Infraestructure_Models_AnimalValueConfig_Animals
+  name: Animals
+  nameWithType: AnimalValueConfig.Animals
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.Animals
+- uid: System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.Animal}
+  commentId: T:System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.Animal}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<Animal>
+  nameWithType: ICollection<Animal>
+  fullName: System.Collections.Generic.ICollection<Chaos.Infraestructure.Models.Animal>
+  nameWithType.vb: ICollection(Of Animal)
+  fullName.vb: System.Collections.Generic.ICollection(Of Chaos.Infraestructure.Models.Animal)
+  name.vb: ICollection(Of Animal)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: Chaos.Infraestructure.Models.Animal
+    name: Animal
+    href: Chaos.Infraestructure.Models.Animal.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Chaos.Infraestructure.Models.Animal
+    name: Animal
+    href: Chaos.Infraestructure.Models.Animal.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Chaos.Infraestructure.Models.AnimalValueConfig.UpdatedByNavigation*
+  commentId: Overload:Chaos.Infraestructure.Models.AnimalValueConfig.UpdatedByNavigation
+  href: Chaos.Infraestructure.Models.AnimalValueConfig.html#Chaos_Infraestructure_Models_AnimalValueConfig_UpdatedByNavigation
+  name: UpdatedByNavigation
+  nameWithType: AnimalValueConfig.UpdatedByNavigation
+  fullName: Chaos.Infraestructure.Models.AnimalValueConfig.UpdatedByNavigation
+- uid: Chaos.Infraestructure.Models.User
+  commentId: T:Chaos.Infraestructure.Models.User
+  parent: Chaos.Infraestructure.Models
+  href: Chaos.Infraestructure.Models.User.html
+  name: User
+  nameWithType: User
+  fullName: Chaos.Infraestructure.Models.User

@@ -1,0 +1,249 @@
+﻿@page "/users/{UserId:guid}/info"
+@using Chaos.BlazorCasinoApp.Service
+@using Chaos.Shared.Dto
+@using Chaos.Shared.ResponseEntity
+@using Microsoft.AspNetCore.Authorization
+@inject UserManagementService UserService
+@inject NavigationManager Navigation
+@attribute [Authorize]
+
+<PageTitle>Info del Usuario</PageTitle>
+
+<div class="casino-page">
+
+    <!-- ══ HEADER ══ -->
+    <div class="casino-session-header">
+        <button class="btn-casino-back" @onclick="GoBack">← Volver</button>
+        <h1>👤 Info del Usuario</h1>
+    </div>
+
+    @if (isLoading)
+    {
+        <div class="casino-loading">
+            <span class="casino-spinner">🛞</span>
+            <p class="text-gold">Cargando usuario...</p>
+        </div>
+    }
+    else if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="alert alert-danger">⚠️ @errorMessage</div>
+    }
+    else if (user is not null)
+    {
+        <!-- ══ TARJETA PERFIL ══ -->
+        <!-- ══ TARJETA PERFIL ══ -->
+        <div class="user-info-card mb-4">
+
+            <!-- Columna izquierda: Avatar -->
+            <div class="user-info-avatar-col">
+                <div class="user-info-avatar-circle">👤</div>
+            </div>
+
+            <!-- Columna derecha: Datos -->
+            <div class="user-info-data-col">
+
+                <!-- Nombre + email -->
+                <div class="user-info-name">@user.UserName</div>
+                <div class="user-info-email">📧 @user.Email</div>
+
+                <!-- Badges -->
+                <div class="user-info-badges">
+                    @if (user.IsAdmin)
+                    {
+                        <span class="badge-casino badge-gold">🔑 Admin</span>
+                    }
+                    else
+                    {
+                        <span class="badge-casino badge-muted">👤 Usuario</span>
+                    }
+                    @if (user.IsActive)
+                    {
+                        <span class="badge-casino badge-success">✅ Activo</span>
+                    }
+                    else
+                    {
+                        <span class="badge-casino badge-danger">❌ Inactivo</span>
+                    }
+                </div>
+
+                <!-- Balance -->
+                <div class="user-info-balance-row">
+                    <div class="user-info-balance-box">
+                        <span class="user-info-balance-label">💰 Balance actual</span>
+                        <span class="user-info-balance-value">@user.Balance.ToString("F2") €</span>
+                    </div>
+                    <button class="btn-casino-primary" @onclick="GoToManage">
+                        ⚙️ Gestionar Usuario
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ══ SECCIÓN PARTIDAS ══ -->
+        <div class="casino-panel mt-4">
+            <h3 class="casino-panel-title">🎮 Partidas del Usuario</h3>
+
+            @if (sessionsLoading)
+            {
+                <div class="casino-loading">
+                    <span class="casino-spinner">🛞</span>
+                    <p class="text-gold">Cargando partidas...</p>
+                </div>
+            }
+            else if (!sessions.Any())
+            {
+                <div class="casino-empty-state">
+                    <div class="casino-empty-icon">😕</div>
+                    <h5>Sin partidas</h5>
+                    <p>Este usuario no tiene partidas registradas.</p>
+                </div>
+            }
+            else
+            {
+                <!-- ── Stats ── -->
+                <div class="casino-stats-grid mb-4">
+                    <div class="casino-stat-card stat-neutral">
+                        <div class="stat-value">@sessions.Count</div>
+                        <div class="stat-label">Total Partidas</div>
+                    </div>
+                    <div class="casino-stat-card stat-win">
+                        <div class="stat-value">@sessions.Count(s => s.IsWin)</div>
+                        <div class="stat-label">Victorias 🏆</div>
+                    </div>
+                    <div class="casino-stat-card stat-loss">
+                        <div class="stat-value">@sessions.Count(s => !s.IsWin)</div>
+                        <div class="stat-label">Derrotas 💀</div>
+                    </div>
+                    <div class="casino-stat-card @(TotalBalance >= 0 ? "stat-win" : "stat-loss")">
+                        <div class="stat-value @(TotalBalance >= 0 ? "money-positive" : "money-negative")">
+                            @(TotalBalance >= 0 ? "+" : "")@TotalBalance.ToString("F2")€
+                        </div>
+                        <div class="stat-label">Balance Total 💰</div>
+                    </div>
+                </div>
+
+                <!-- ── Filtros ── -->
+                <div class="casino-filters mb-3">
+                    <input class="casino-input"
+                           placeholder="🔍 Buscar por juego..."
+                           @bind="searchGame"
+                           @bind:event="oninput" />
+                    <select class="casino-select" @bind="filterResult">
+                        <option value="">Todos los resultados</option>
+                        <option value="win">🏆 Victorias</option>
+                        <option value="loss">💀 Derrotas</option>
+                    </select>
+                </div>
+
+                <!-- ── Tabla ── -->
+                <div class="casino-table-wrapper">
+                    <table class="casino-table">
+                        <thead>
+                            <tr>
+                                <th>🎲 Juego</th>
+                                <th>🕐 Inicio</th>
+                                <th>🕑 Fin</th>
+                                <th class="text-end">💰 Dinero</th>
+                                <th class="text-center">Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (!FilteredSessions.Any())
+                            {
+                                <tr>
+                                    <td colspan="5" class="text-center text-muted-casino" style="padding: 2rem;">
+                                        😕 No hay partidas con esos filtros.
+                                    </td>
+                                </tr>
+                            }
+                            else
+                            {
+                                @foreach (var session in FilteredSessions)
+                                {
+                                    <tr>
+                                        <td class="cell-gold-bold">@session.GameName</td>
+                                        <td class="text-muted-casino">@FormatDate(session.StartDate)</td>
+                                        <td class="text-muted-casino">@FormatDate(session.EndDate)</td>
+                                        <td class="text-end @(session.IsWin ? "money-positive" : "money-negative")">
+                                            @(session.MoneyDelta >= 0 ? "+" : "")@session.MoneyDelta.ToString("F2")€
+                                        </td>
+                                        <td class="text-center">
+                                            @if (session.IsWin)
+                                            {
+                                                <span class="badge-casino badge-success">🏆 Win</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge-casino badge-danger">💀 Loss</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    }
+</div>
+@code {
+    [Parameter] public Guid UserId { get; set; }
+
+    private UserConfigDto? user;
+    private List<GameSessionDto> sessions = new();
+    private bool isLoading = true;
+    private bool sessionsLoading = true;
+    private string errorMessage = string.Empty;
+    private string searchGame = string.Empty;
+    private string filterResult = string.Empty;
+
+    private decimal TotalBalance => sessions.Sum(s => s.MoneyDelta);
+
+    private IEnumerable<GameSessionDto> FilteredSessions => sessions
+        .Where(s =>
+            (string.IsNullOrEmpty(searchGame) ||
+             s.GameName.Contains(searchGame, StringComparison.OrdinalIgnoreCase))
+            &&
+            (filterResult == "" ||
+             (filterResult == "win" && s.IsWin) ||
+             (filterResult == "loss" && !s.IsWin))
+        );
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadUser();
+        await LoadSessions();
+    }
+
+    private async Task LoadUser()
+    {
+        isLoading = true;
+        try
+        {
+            var allUsers = await UserService.GetAllUsersAsync();
+            user = allUsers.FirstOrDefault(u => u.Id == UserId);
+            if (user is null) errorMessage = "No se encontró el usuario.";
+        }
+        catch (Exception ex) { errorMessage = $"Error: {ex.Message}"; }
+        finally { isLoading = false; }
+    }
+
+    private async Task LoadSessions()
+    {
+        sessionsLoading = true;
+        try { sessions = await UserService.GetUserSessionsAsync(UserId); }
+        catch { sessions = new(); }
+        finally { sessionsLoading = false; }
+    }
+
+    private void GoBack() => Navigation.NavigateTo("/users");
+    private void GoToManage() => Navigation.NavigateTo($"/users/{UserId}/userEditInfo");
+
+    private string FormatDate(string? raw)
+    {
+        if (string.IsNullOrEmpty(raw)) return "—";
+        return DateTime.TryParse(raw, out var dt) ? dt.ToString("dd/MM/yyyy HH:mm") : raw;
+    }
+}

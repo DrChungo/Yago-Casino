@@ -1,0 +1,93 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.ResponseEntity
+  commentId: N:Chaos.Api.ResponseEntity
+  id: Chaos.Api.ResponseEntity
+  children:
+  - Chaos.Api.ResponseEntity.BlackJackResponse
+  - Chaos.Api.ResponseEntity.CashBack
+  - Chaos.Api.ResponseEntity.CoinGameResponse
+  - Chaos.Api.ResponseEntity.HigherLowerResponse
+  - Chaos.Api.ResponseEntity.UserResponse
+  - Chaos.Api.ResponseEntity.WalletResponse
+  langs:
+  - csharp
+  - vb
+  name: Chaos.Api.ResponseEntity
+  nameWithType: Chaos.Api.ResponseEntity
+  fullName: Chaos.Api.ResponseEntity
+  type: Namespace
+  assemblies:
+  - Chaos.Api
+references:
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse
+  commentId: T:Chaos.Api.ResponseEntity.BlackJackResponse
+  parent: Chaos.Api.ResponseEntity
+  href: Chaos.Api.ResponseEntity.BlackJackResponse.html
+  name: BlackJackResponse
+  nameWithType: BlackJackResponse
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse
+- uid: Chaos.Api.ResponseEntity.CashBack
+  commentId: T:Chaos.Api.ResponseEntity.CashBack
+  parent: Chaos.Api.ResponseEntity
+  href: Chaos.Api.ResponseEntity.CashBack.html
+  name: CashBack
+  nameWithType: CashBack
+  fullName: Chaos.Api.ResponseEntity.CashBack
+- uid: Chaos.Api.ResponseEntity.CoinGameResponse
+  commentId: T:Chaos.Api.ResponseEntity.CoinGameResponse
+  href: Chaos.Api.ResponseEntity.CoinGameResponse.html
+  name: CoinGameResponse
+  nameWithType: CoinGameResponse
+  fullName: Chaos.Api.ResponseEntity.CoinGameResponse
+- uid: Chaos.Api.ResponseEntity.HigherLowerResponse
+  commentId: T:Chaos.Api.ResponseEntity.HigherLowerResponse
+  parent: Chaos.Api.ResponseEntity
+  href: Chaos.Api.ResponseEntity.HigherLowerResponse.html
+  name: HigherLowerResponse
+  nameWithType: HigherLowerResponse
+  fullName: Chaos.Api.ResponseEntity.HigherLowerResponse
+- uid: Chaos.Api.ResponseEntity.UserResponse
+  commentId: T:Chaos.Api.ResponseEntity.UserResponse
+  parent: Chaos.Api.ResponseEntity
+  href: Chaos.Api.ResponseEntity.UserResponse.html
+  name: UserResponse
+  nameWithType: UserResponse
+  fullName: Chaos.Api.ResponseEntity.UserResponse
+- uid: Chaos.Api.ResponseEntity.WalletResponse
+  commentId: T:Chaos.Api.ResponseEntity.WalletResponse
+  parent: Chaos.Api.ResponseEntity
+  href: Chaos.Api.ResponseEntity.WalletResponse.html
+  name: WalletResponse
+  nameWithType: WalletResponse
+  fullName: Chaos.Api.ResponseEntity.WalletResponse
+- uid: Chaos.Api.ResponseEntity
+  commentId: N:Chaos.Api.ResponseEntity
+  href: Chaos.html
+  name: Chaos.Api.ResponseEntity
+  nameWithType: Chaos.Api.ResponseEntity
+  fullName: Chaos.Api.ResponseEntity
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.ResponseEntity
+    name: ResponseEntity
+    href: Chaos.Api.ResponseEntity.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.ResponseEntity
+    name: ResponseEntity
+    href: Chaos.Api.ResponseEntity.html

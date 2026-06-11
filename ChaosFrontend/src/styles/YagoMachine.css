@@ -1,0 +1,163 @@
+:root{
+--background--Selected: rgba(8, 8, 8, 0.582);
+--text_color: white;
+}
+.stats_machine{
+    color: var(--text_color);
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    text-align: left; 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color:var(--background--Selected);
+    border-radius:15px;
+    padding: 0.5rem;
+}
+.yago-machine-wrapper {
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url('../assets/gamesImages/yago-machine.png');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+
+.yago-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #D4AF37;
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.8),
+                 0 0 30px rgba(212, 175, 55, 0.4);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+
+.yago-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+}
+
+
+.reel-window {
+    width: auto;                
+    height: 100%;              
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.reel-scene {
+    display: flex;
+    flex-direction: row;       
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    perspective: 600px;
+    perspective-origin: center;
+}
+
+.reel-column {
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    padding: 0;
+}
+
+.Reel {
+    width: var(--reel-size, 50px);
+    height: var(--reel-size, 50px);  
+    position: relative;
+    transform-style: preserve-3d;
+    transition: none;
+}
+
+.reel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;              
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#bet {
+    
+    position: absolute;
+    bottom: 12rem;
+    left: 35.5rem;
+    padding: 1rem 1.2rem;
+    background-color: #D4AF37;
+    border: 1px solid #8B6914;
+    border-radius: 2px;
+    display: inline-block;
+    transform: skew(-20deg);
+    box-shadow:
+        4px 4px 0px #8B6914,   
+        5px 5px 0px #7A5C10,  
+        6px 6px 0px #6B4F0D;  
+
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+
+#bet:active {
+    transform: skew(-10deg) translate(4px, 4px);
+    box-shadow:
+        1px 1px 0px #8B6914,
+        2px 2px 0px #7A5C10;
+}
+
+#spin{
+    font-size: large;
+    position: absolute;
+     bottom: 11.5rem; 
+     left: 55.5rem; 
+     width:  5rem ;
+    height: 4rem;
+    background-color: #D4AF37;
+    border: 1px solid #8B6914;
+    border-radius: 2px;
+    display: inline-block;
+    box-shadow:
+        4px 4px 40px #8B6914,   
+        5px 5px 40px #7A5C10,  
+        6px 6px 40px #6B4F0D;  
+    perspective: 400px;
+    transform: rotateX(60deg);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#spin:active {
+    transform: translateY(-50px), rotateX(60deg);
+    box-shadow:
+        1px 1px 40px #8B6914,
+        2px 2px 40px #7A5C10;
+}
+
+#spin:hover {
+   box-shadow: #D4AF37 0px 0px 50px, #D4AF37 0px 0px 100px;
+}
+
+

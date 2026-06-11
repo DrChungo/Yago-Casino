@@ -1,0 +1,104 @@
+﻿@page "/CoinGamePage/create"
+@using Chaos.BlazorCasinoApp.IApiService
+@using Chaos.Shared.ResponseEntity
+@using Chaos.Shared.RequestEntity
+@inject ICoinGameService CoinGameService
+@inject NavigationManager Navigation
+
+<PageTitle>Nueva Configuración — CoinGame</PageTitle>
+
+<div class="casino-page">
+
+    <div class="casino-form-header">
+        <button class="btn-casino-secondary" @onclick="GoBack">← Volver</button>
+        <h4>➕ Nueva Configuración CoinGame</h4>
+    </div>
+
+    @if (errorMessage is not null)
+    {
+        <div class="alert alert-danger">⚠️ @errorMessage</div>
+    }
+
+    <div class="card">
+        <div class="card-body">
+
+            <div class="form-group">
+                <label class="form-label">Nombre Config</label>
+                <input class="form-control"
+                       @bind="configName"
+                       placeholder="Ej: Coin Flip Pro" />
+            </div>
+
+            <div class="casino-toggle-row">
+                <button type="button"
+                        class="casino-toggle-btn @(isActive ? "badge-casino-active" : "badge-casino-inactive")"
+                        @onclick="() => isActive = !isActive">
+                    <span class="casino-toggle-dot"></span>
+                    @if (isActive)
+                    {
+                        <span>● Activo</span>
+                    }
+                    else
+                    {
+                        <span>● Inactivo</span>
+                    }
+                </button>
+            </div>
+            <div class="casino-form-actions">
+                <button class="btn-casino-secondary" @onclick="GoBack">
+                    ✖ Cancelar
+                </button>
+                <button class="btn-casino-primary" @onclick="HandleCreate" disabled="@isSaving">
+                    @if (isSaving)
+                    {
+                        <span class="casino-spinner-sm">🛞</span>
+                    }
+                    💾 Guardar
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+@code {
+    private string configName = "";
+    private bool isActive = true;
+    private bool isSaving = false;
+    private string? errorMessage;
+
+    private async Task HandleCreate()
+    {
+        if (string.IsNullOrWhiteSpace(configName))
+        {
+            errorMessage = "El nombre de la configuración es obligatorio.";
+            return;
+        }
+
+        try
+        {
+            isSaving = true;
+            errorMessage = null;
+
+            var request = new CoinGameRequest
+            {
+                ConfigName = configName,
+                IsActive = isActive
+            };
+
+            await CoinGameService.CreateAsync(request);
+            Navigation.NavigateTo("/CoinGamePage");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al crear: {ex.Message}";
+        }
+        finally
+        {
+            isSaving = false;
+        }
+    }
+
+    private void GoBack() => Navigation.NavigateTo("/CoinGamePage");
+}

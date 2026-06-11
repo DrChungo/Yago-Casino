@@ -1,0 +1,343 @@
+﻿@page "/users/{UserId:guid}/userEditInfo"
+@using Chaos.BlazorCasinoApp.Service
+@using Chaos.Shared.Dto
+@using Microsoft.AspNetCore.Authorization
+@inject AnimalApiService AnimalService
+@inject UserManagementService UserService
+@inject NavigationManager Navigation
+@attribute [Authorize]
+
+<PageTitle>Gestionar Usuario</PageTitle>
+
+<div class="casino-page">
+
+    <!-- ══ HEADER ══ -->
+    <div class="casino-session-header">
+        <button class="btn-casino-back" @onclick="GoBack">← Volver</button>
+        <h1>⚙️ Gestionar Usuario</h1>
+    </div>
+
+    @if (isLoading)
+    {
+        <div class="casino-loading">
+            <span class="casino-spinner">🛞</span>
+            <p class="text-gold">Cargando...</p>
+        </div>
+    }
+    else if (user is not null)
+    {
+        <!-- ══ PERFIL + ACCIONES — fila superior ══ -->
+        <div class="manage-top-row">
+
+            <!-- Tarjeta perfil -->
+            <div class="manage-profile-card">
+                <div class="manage-profile-avatar">👤</div>
+                <div class="manage-profile-data">
+                    <p class="manage-profile-name">@user.UserName</p>
+                    <div class="manage-profile-balance">
+                        <span class="manage-balance-label">💰 Balance</span>
+                        <span class="manage-balance-value">@user.Balance.ToString("F2") €</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: Añadir Dinero -->
+            <div class="manage-action-card">
+                <div class="manage-action-header">
+                    <span class="manage-action-icon">💰</span>
+                    <span class="manage-action-title">Añadir Dinero</span>
+                </div>
+                <div class="manage-action-body">
+                    <label class="form-label">Cantidad (€)</label>
+                    <input class="casino-input"
+                           type="number"
+                           min="1"
+                           step="1"
+                           placeholder="Ej: 50"
+                           @bind="balanceAmount" />
+                    <button class="btn-casino-primary manage-action-btn"
+                            @onclick="HandleAddBalance"
+                            disabled="@isActionLoading">
+                        @if (isActionLoading && activeAction == "balance")
+                        {
+                            <span class="casino-spinner-sm">⏳</span>
+                            <span>Procesando...</span>
+                        }
+                        else
+                        {
+                            <span>➕ Añadir Balance</span>
+                        }
+                    </button>
+                </div>
+            </div>
+
+            <!-- Panel: Crear Animal -->
+            <div class="manage-action-card">
+                <div class="manage-action-header">
+                    <span class="manage-action-icon">🐾</span>
+                    <span class="manage-action-title">Crear Animal</span>
+                </div>
+                <div class="manage-action-body">
+                    <p class="text-muted-casino manage-action-desc">
+                        Se generará un animal aleatorio y se asignará directamente a este usuario.
+                    </p>
+                    <button class="btn-casino-primary manage-action-btn"
+                            @onclick="HandleCreateAnimal"
+                            disabled="@isActionLoading">
+                        @if (isActionLoading && activeAction == "createAnimal")
+                        {
+                            <span class="casino-spinner-sm">⏳</span>
+                            <span>Creando...</span>
+                        }
+                        else
+                        {
+                            <span>🎲 Crear y Asignar Animal</span>
+                        }
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ══ PANEL ANIMALES ══ -->
+        <div class="casino-panel mt-4">
+            <div class="manage-animals-header">
+                <h3 class="casino-panel-title" style="margin-bottom:0;">
+                    🐾 Animales del Usuario
+                </h3>
+                <span class="badge-casino badge-gold">@animals.Count</span>
+            </div>
+
+            @if (animalsLoading)
+            {
+                <div class="casino-loading">
+                    <span class="casino-spinner">🛞</span>
+                    <p class="text-gold">Cargando animales...</p>
+                </div>
+            }
+            else if (!animals.Any())
+            {
+                <div class="casino-empty-state">
+                    <div class="casino-empty-icon">🐾</div>
+                    <h5>Sin animales</h5>
+                    <p>Este usuario no tiene animales asignados.</p>
+                </div>
+            }
+            else
+            {
+                <div class="casino-table-wrapper">
+                    <table class="casino-table">
+                        <thead>
+                            <tr>
+                                <th>🐾 Nombre</th>
+                                <th>🦎 Tipo</th>
+                                <th>❤️ Salud</th>
+                                <th>⚖️ Peso</th>
+                                <th>📏 Altura</th>
+                                <th>🎂 Edad</th>
+                                <th>💰 Valor</th>
+                                <th>✨ Rareza</th>
+                                <th class="acciones-cell">⚙️ Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var animal in PagedAnimals)  @* 👈 Cambiado a PagedAnimals *@
+                            {
+                                <tr>
+                                    <td class="cell-gold-bold">@animal.Name</td>
+                                    <td class="cell-secondary">@animal.TypeAnimal</td>
+                                    <td class="cell-secondary">@animal.Health</td>
+                                    <td class="cell-muted">@animal.Weight kg</td>
+                                    <td class="cell-muted">@animal.Height m</td>
+                                    <td class="cell-muted">@animal.Age años</td>
+                                    <td class="cell-gold-bold">@animal.Value €</td>
+                                    <td>
+                                        @if (animal.Rarity == true)
+                                        {
+                                            <span class="badge-casino badge-gold">✨ Raro</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge-casino badge-muted">Normal</span>
+                                        }
+                                    </td>
+                                    <td class="acciones-cell">
+                                        <button class="btn-casino-delete"
+                                                @onclick="() => HandleRemoveAnimal(animal)"
+                                                disabled="@isActionLoading">
+                                            🗑️ Eliminar
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ══ PAGINADOR ══ -->
+                @if (TotalPages > 1)
+                {
+                    <div class="casino-pagination">
+                        <button class="btn-casino-page"
+                                @onclick="() => GoToPage(currentPage - 1)"
+                                disabled="@(currentPage == 1)">
+                            ← Anterior
+                        </button>
+
+                        @for (int i = 1; i <= TotalPages; i++)
+                        {
+                            var pageNum = i;  
+                            <button class="btn-casino-page @(pageNum == currentPage ? "active" : "")"
+                                    @onclick="() => GoToPage(pageNum)">
+                                @pageNum  
+                            </button>
+                        }
+
+                        <button class="btn-casino-page"
+                                @onclick="() => GoToPage(currentPage + 1)"
+                                disabled="@(currentPage == TotalPages)">
+                            Siguiente →
+                        </button>
+                    </div>
+                }
+            }
+        </div>
+    }
+
+    <!-- ══ TOAST ══ -->
+    @if (!string.IsNullOrEmpty(toastMessage))
+    {
+        <div class="casino-toast @toastCssClass">
+            <span>@toastMessage</span>
+            <button @onclick="() => toastMessage = string.Empty">✕</button>
+        </div>
+    }
+
+</div>
+
+@code {
+    [Parameter] public Guid UserId { get; set; }
+
+    private UserConfigDto? user;
+    private List<AnimalDto> animals = new();
+    private bool isLoading = true;
+    private bool animalsLoading = true;
+    private bool isActionLoading = false;
+    private string activeAction = string.Empty;
+    private decimal balanceAmount = 0;
+    private string toastMessage = string.Empty;
+    private string toastCssClass = "toast-success";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadUser();
+        await LoadAnimals();
+    }
+
+    private async Task LoadUser()
+    {
+        isLoading = true;
+        try
+        {
+            var allUsers = await UserService.GetAllUsersAsync();
+            user = allUsers.FirstOrDefault(u => u.Id == UserId);
+        }
+        catch (Exception ex) { Console.WriteLine($"[ERROR] {ex.Message}"); }
+        finally { isLoading = false; }
+    }
+
+    private async Task LoadAnimals()
+    {
+        animalsLoading = true;
+        try
+        {
+            animals = await AnimalService.GetAnimalsByUserAsync(UserId);
+            currentPage = 1; // 👈 Reset al recargar
+        }
+        catch { animals = new(); }
+        finally { animalsLoading = false; }
+    }
+
+    private async Task HandleAddBalance()
+    {
+        if (balanceAmount <= 0)
+        {
+            ShowToast("⚠️ Introduce una cantidad válida.", "toast-warning");
+            return;
+        }
+        isActionLoading = true;
+        activeAction = "balance";
+        try
+        {
+            await UserService.AddBalanceAsync(UserId, balanceAmount);
+            user!.Balance += balanceAmount;
+            balanceAmount = 0;
+            ShowToast("✅ Balance añadido correctamente.", "toast-success");
+        }
+        catch { ShowToast("❌ Error al añadir balance.", "toast-danger"); }
+        finally { isActionLoading = false; activeAction = string.Empty; }
+    }
+
+
+    // ══ PAGINACIÓN ══
+    private int currentPage = 1;
+    private int pageSize = 10; // Animales por página
+    private int TotalPages => (int)Math.Ceiling((double)animals.Count / pageSize);
+    private List<AnimalDto> PagedAnimals => animals
+        .Skip((currentPage - 1) * pageSize)
+        .Take(pageSize)
+        .ToList();
+
+    private void GoToPage(int page)
+    {
+        if (page < 1 || page > TotalPages) return;
+        currentPage = page;
+    }
+
+    private async Task HandleCreateAnimal()
+    {
+        isActionLoading = true;
+        activeAction = "createAnimal";
+        try
+        {
+            var success = await AnimalService.CreateAndAssignAnimalAsync(UserId);
+            if (!success)
+            {
+                ShowToast("❌ El servidor rechazó la petición.", "toast-danger");
+                return;
+            }
+            await LoadAnimals();
+            ShowToast("✅ Animal creado y asignado correctamente.", "toast-success");
+        }
+        catch (Exception ex) { ShowToast($"❌ Error: {ex.Message}", "toast-danger"); }
+        finally { isActionLoading = false; activeAction = string.Empty; }
+    }
+
+    private async Task HandleRemoveAnimal(AnimalDto animal)
+    {
+        isActionLoading = true;
+        activeAction = "removeAnimal";
+        try
+        {
+            await AnimalService.RemoveAnimalAsync(animal.Id);
+            animals.Remove(animal);
+            ShowToast($"🗑️ Animal '{animal.Name}' eliminado.", "toast-warning");
+        }
+        catch { ShowToast("❌ Error al eliminar el animal.", "toast-danger"); }
+        finally { isActionLoading = false; activeAction = string.Empty; }
+    }
+
+    private void GoBack() => Navigation.NavigateTo($"/users/{UserId}/info");
+
+    private void ShowToast(string message, string css)
+    {
+        toastMessage = message;
+        toastCssClass = css;
+        StateHasChanged();
+        _ = Task.Delay(3500).ContinueWith(_ =>
+        {
+            toastMessage = string.Empty;
+            InvokeAsync(StateHasChanged);
+        });
+    }
+}

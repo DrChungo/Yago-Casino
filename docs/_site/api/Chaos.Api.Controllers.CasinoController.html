@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class CasinoController | CasinoRoyalYago </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class CasinoController | CasinoRoyalYago ">
+      
+      
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="CasinoRoyalYago">
+            CasinoRoyalYago
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Chaos.Api.Controllers.CasinoController">
+
+
+
+  <h1 id="Chaos_Api_Controllers_CasinoController" data-uid="Chaos.Api.Controllers.CasinoController" class="text-break">
+Class CasinoController  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Chaos.html">Chaos</a>.<a class="xref" href="Chaos.Api.html">Api</a>.<a class="xref" href="Chaos.Api.Controllers.html">Controllers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Chaos.Api.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Authorize]
+[ApiController]
+[Route(&quot;[controller]&quot;)]
+public class CasinoController : ControllerBase</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase">ControllerBase</a></div>
+      <div><span class="xref">CasinoController</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.statuscode#microsoft-aspnetcore-mvc-controllerbase-statuscode(system-int32)">ControllerBase.StatusCode(int)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.statuscode#microsoft-aspnetcore-mvc-controllerbase-statuscode(system-int32-system-object)">ControllerBase.StatusCode(int, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#microsoft-aspnetcore-mvc-controllerbase-content(system-string)">ControllerBase.Content(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#microsoft-aspnetcore-mvc-controllerbase-content(system-string-system-string)">ControllerBase.Content(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#microsoft-aspnetcore-mvc-controllerbase-content(system-string-system-string-system-text-encoding)">ControllerBase.Content(string, string, Encoding)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#microsoft-aspnetcore-mvc-controllerbase-content(system-string-microsoft-net-http-headers-mediatypeheadervalue)">ControllerBase.Content(string, MediaTypeHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.nocontent">ControllerBase.NoContent()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.ok#microsoft-aspnetcore-mvc-controllerbase-ok">ControllerBase.Ok()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.ok#microsoft-aspnetcore-mvc-controllerbase-ok(system-object)">ControllerBase.Ok(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirect">ControllerBase.Redirect(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirectpermanent">ControllerBase.RedirectPermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirectpreservemethod">ControllerBase.RedirectPreserveMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirectpermanentpreservemethod">ControllerBase.RedirectPermanentPreserveMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirect">ControllerBase.LocalRedirect(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirectpermanent">ControllerBase.LocalRedirectPermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirectpreservemethod">ControllerBase.LocalRedirectPreserveMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirectpermanentpreservemethod">ControllerBase.LocalRedirectPermanentPreserveMethod(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction">ControllerBase.RedirectToAction()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string)">ControllerBase.RedirectToAction(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-object)">ControllerBase.RedirectToAction(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-string)">ControllerBase.RedirectToAction(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-string-system-object)">ControllerBase.RedirectToAction(string, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-string-system-string)">ControllerBase.RedirectToAction(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#microsoft-aspnetcore-mvc-controllerbase-redirecttoaction(system-string-system-string-system-object-system-string)">ControllerBase.RedirectToAction(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpreservemethod">ControllerBase.RedirectToActionPreserveMethod(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string)">ControllerBase.RedirectToActionPermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-object)">ControllerBase.RedirectToActionPermanent(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-string)">ControllerBase.RedirectToActionPermanent(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-string-system-string)">ControllerBase.RedirectToActionPermanent(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-string-system-object)">ControllerBase.RedirectToActionPermanent(string, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoactionpermanent(system-string-system-string-system-object-system-string)">ControllerBase.RedirectToActionPermanent(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanentpreservemethod">ControllerBase.RedirectToActionPermanentPreserveMethod(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-string)">ControllerBase.RedirectToRoute(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-object)">ControllerBase.RedirectToRoute(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-string-system-object)">ControllerBase.RedirectToRoute(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-string-system-string)">ControllerBase.RedirectToRoute(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#microsoft-aspnetcore-mvc-controllerbase-redirecttoroute(system-string-system-object-system-string)">ControllerBase.RedirectToRoute(string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepreservemethod">ControllerBase.RedirectToRoutePreserveMethod(string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-string)">ControllerBase.RedirectToRoutePermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-object)">ControllerBase.RedirectToRoutePermanent(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-string-system-object)">ControllerBase.RedirectToRoutePermanent(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-string-system-string)">ControllerBase.RedirectToRoutePermanent(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttoroutepermanent(system-string-system-object-system-string)">ControllerBase.RedirectToRoutePermanent(string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanentpreservemethod">ControllerBase.RedirectToRoutePermanentPreserveMethod(string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string)">ControllerBase.RedirectToPage(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-object)">ControllerBase.RedirectToPage(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-string)">ControllerBase.RedirectToPage(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-string-system-object)">ControllerBase.RedirectToPage(string, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-string-system-string)">ControllerBase.RedirectToPage(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#microsoft-aspnetcore-mvc-controllerbase-redirecttopage(system-string-system-string-system-object-system-string)">ControllerBase.RedirectToPage(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string)">ControllerBase.RedirectToPagePermanent(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string-system-object)">ControllerBase.RedirectToPagePermanent(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string-system-string)">ControllerBase.RedirectToPagePermanent(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string-system-string-system-string)">ControllerBase.RedirectToPagePermanent(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#microsoft-aspnetcore-mvc-controllerbase-redirecttopagepermanent(system-string-system-string-system-object-system-string)">ControllerBase.RedirectToPagePermanent(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepreservemethod">ControllerBase.RedirectToPagePreserveMethod(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanentpreservemethod">ControllerBase.RedirectToPagePermanentPreserveMethod(string, string, object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string)">ControllerBase.File(byte[], string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-boolean)">ControllerBase.File(byte[], string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-string)">ControllerBase.File(byte[], string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-string-system-boolean)">ControllerBase.File(byte[], string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(byte[], string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(byte[], string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(byte[], string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-byte()-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(byte[], string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string)">ControllerBase.File(Stream, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-boolean)">ControllerBase.File(Stream, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-string)">ControllerBase.File(Stream, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-string-system-boolean)">ControllerBase.File(Stream, string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(Stream, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(Stream, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(Stream, string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-io-stream-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(Stream, string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string)">ControllerBase.File(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-boolean)">ControllerBase.File(string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-string)">ControllerBase.File(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-string-system-boolean)">ControllerBase.File(string, string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.File(string, string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#microsoft-aspnetcore-mvc-controllerbase-file(system-string-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.File(string, string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string)">ControllerBase.PhysicalFile(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-boolean)">ControllerBase.PhysicalFile(string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-string)">ControllerBase.PhysicalFile(string, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-string-system-boolean)">ControllerBase.PhysicalFile(string, string, string, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.PhysicalFile(string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.PhysicalFile(string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue)">ControllerBase.PhysicalFile(string, string, string, DateTimeOffset?, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#microsoft-aspnetcore-mvc-controllerbase-physicalfile(system-string-system-string-system-string-system-nullable((system-datetimeoffset))-microsoft-net-http-headers-entitytagheadervalue-system-boolean)">ControllerBase.PhysicalFile(string, string, string, DateTimeOffset?, EntityTagHeaderValue, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unauthorized#microsoft-aspnetcore-mvc-controllerbase-unauthorized">ControllerBase.Unauthorized()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unauthorized#microsoft-aspnetcore-mvc-controllerbase-unauthorized(system-object)">ControllerBase.Unauthorized(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.notfound#microsoft-aspnetcore-mvc-controllerbase-notfound">ControllerBase.NotFound()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.notfound#microsoft-aspnetcore-mvc-controllerbase-notfound(system-object)">ControllerBase.NotFound(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.badrequest#microsoft-aspnetcore-mvc-controllerbase-badrequest">ControllerBase.BadRequest()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.badrequest#microsoft-aspnetcore-mvc-controllerbase-badrequest(system-object)">ControllerBase.BadRequest(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.badrequest#microsoft-aspnetcore-mvc-controllerbase-badrequest(microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.BadRequest(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unprocessableentity#microsoft-aspnetcore-mvc-controllerbase-unprocessableentity">ControllerBase.UnprocessableEntity()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unprocessableentity#microsoft-aspnetcore-mvc-controllerbase-unprocessableentity(system-object)">ControllerBase.UnprocessableEntity(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unprocessableentity#microsoft-aspnetcore-mvc-controllerbase-unprocessableentity(microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.UnprocessableEntity(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.conflict#microsoft-aspnetcore-mvc-controllerbase-conflict">ControllerBase.Conflict()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.conflict#microsoft-aspnetcore-mvc-controllerbase-conflict(system-object)">ControllerBase.Conflict(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.conflict#microsoft-aspnetcore-mvc-controllerbase-conflict(microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.Conflict(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.problem#microsoft-aspnetcore-mvc-controllerbase-problem(system-string-system-string-system-nullable((system-int32))-system-string-system-string)">ControllerBase.Problem(string, string, int?, string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.problem#microsoft-aspnetcore-mvc-controllerbase-problem(system-string-system-string-system-nullable((system-int32))-system-string-system-string-system-collections-generic-idictionary((system-string-system-object)))">ControllerBase.Problem(string, string, int?, string, string, IDictionary&lt;string, object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem(microsoft-aspnetcore-mvc-validationproblemdetails)">ControllerBase.ValidationProblem(ValidationProblemDetails)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem(microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.ValidationProblem(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem">ControllerBase.ValidationProblem()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem(system-string-system-string-system-nullable((system-int32))-system-string-system-string-microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary)">ControllerBase.ValidationProblem(string, string, int?, string, string, ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#microsoft-aspnetcore-mvc-controllerbase-validationproblem(system-string-system-string-system-nullable((system-int32))-system-string-system-string-microsoft-aspnetcore-mvc-modelbinding-modelstatedictionary-system-collections-generic-idictionary((system-string-system-object)))">ControllerBase.ValidationProblem(string, string, int?, string, string, ModelStateDictionary, IDictionary&lt;string, object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.created#microsoft-aspnetcore-mvc-controllerbase-created">ControllerBase.Created()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.created#microsoft-aspnetcore-mvc-controllerbase-created(system-string-system-object)">ControllerBase.Created(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.created#microsoft-aspnetcore-mvc-controllerbase-created(system-uri-system-object)">ControllerBase.Created(Uri, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdataction#microsoft-aspnetcore-mvc-controllerbase-createdataction(system-string-system-object)">ControllerBase.CreatedAtAction(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdataction#microsoft-aspnetcore-mvc-controllerbase-createdataction(system-string-system-object-system-object)">ControllerBase.CreatedAtAction(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdataction#microsoft-aspnetcore-mvc-controllerbase-createdataction(system-string-system-string-system-object-system-object)">ControllerBase.CreatedAtAction(string, string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdatroute#microsoft-aspnetcore-mvc-controllerbase-createdatroute(system-string-system-object)">ControllerBase.CreatedAtRoute(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdatroute#microsoft-aspnetcore-mvc-controllerbase-createdatroute(system-object-system-object)">ControllerBase.CreatedAtRoute(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdatroute#microsoft-aspnetcore-mvc-controllerbase-createdatroute(system-string-system-object-system-object)">ControllerBase.CreatedAtRoute(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted">ControllerBase.Accepted()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-object)">ControllerBase.Accepted(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-uri)">ControllerBase.Accepted(Uri)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-string)">ControllerBase.Accepted(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-string-system-object)">ControllerBase.Accepted(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#microsoft-aspnetcore-mvc-controllerbase-accepted(system-uri-system-object)">ControllerBase.Accepted(Uri, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string)">ControllerBase.AcceptedAtAction(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-string)">ControllerBase.AcceptedAtAction(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-object)">ControllerBase.AcceptedAtAction(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-string-system-object)">ControllerBase.AcceptedAtAction(string, string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-object-system-object)">ControllerBase.AcceptedAtAction(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#microsoft-aspnetcore-mvc-controllerbase-acceptedataction(system-string-system-string-system-object-system-object)">ControllerBase.AcceptedAtAction(string, string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-object)">ControllerBase.AcceptedAtRoute(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-string)">ControllerBase.AcceptedAtRoute(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-string-system-object)">ControllerBase.AcceptedAtRoute(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-object-system-object)">ControllerBase.AcceptedAtRoute(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#microsoft-aspnetcore-mvc-controllerbase-acceptedatroute(system-string-system-object-system-object)">ControllerBase.AcceptedAtRoute(string, object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#microsoft-aspnetcore-mvc-controllerbase-challenge">ControllerBase.Challenge()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#microsoft-aspnetcore-mvc-controllerbase-challenge(system-string())">ControllerBase.Challenge(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#microsoft-aspnetcore-mvc-controllerbase-challenge(microsoft-aspnetcore-authentication-authenticationproperties)">ControllerBase.Challenge(AuthenticationProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#microsoft-aspnetcore-mvc-controllerbase-challenge(microsoft-aspnetcore-authentication-authenticationproperties-system-string())">ControllerBase.Challenge(AuthenticationProperties, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#microsoft-aspnetcore-mvc-controllerbase-forbid">ControllerBase.Forbid()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#microsoft-aspnetcore-mvc-controllerbase-forbid(system-string())">ControllerBase.Forbid(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#microsoft-aspnetcore-mvc-controllerbase-forbid(microsoft-aspnetcore-authentication-authenticationproperties)">ControllerBase.Forbid(AuthenticationProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#microsoft-aspnetcore-mvc-controllerbase-forbid(microsoft-aspnetcore-authentication-authenticationproperties-system-string())">ControllerBase.Forbid(AuthenticationProperties, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#microsoft-aspnetcore-mvc-controllerbase-signin(system-security-claims-claimsprincipal)">ControllerBase.SignIn(ClaimsPrincipal)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#microsoft-aspnetcore-mvc-controllerbase-signin(system-security-claims-claimsprincipal-system-string)">ControllerBase.SignIn(ClaimsPrincipal, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#microsoft-aspnetcore-mvc-controllerbase-signin(system-security-claims-claimsprincipal-microsoft-aspnetcore-authentication-authenticationproperties)">ControllerBase.SignIn(ClaimsPrincipal, AuthenticationProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#microsoft-aspnetcore-mvc-controllerbase-signin(system-security-claims-claimsprincipal-microsoft-aspnetcore-authentication-authenticationproperties-system-string)">ControllerBase.SignIn(ClaimsPrincipal, AuthenticationProperties, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#microsoft-aspnetcore-mvc-controllerbase-signout">ControllerBase.SignOut()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#microsoft-aspnetcore-mvc-controllerbase-signout(microsoft-aspnetcore-authentication-authenticationproperties)">ControllerBase.SignOut(AuthenticationProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#microsoft-aspnetcore-mvc-controllerbase-signout(system-string())">ControllerBase.SignOut(params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#microsoft-aspnetcore-mvc-controllerbase-signout(microsoft-aspnetcore-authentication-authenticationproperties-system-string())">ControllerBase.SignOut(AuthenticationProperties, params string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0)">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string)">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-microsoft-aspnetcore-mvc-modelbinding-ivalueprovider)">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, IValueProvider)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-system-linq-expressions-expression((system-func((-0-system-object))))())">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, params Expression&lt;Func&lt;TModel, object&gt;&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-system-func((microsoft-aspnetcore-mvc-modelbinding-modelmetadata-system-boolean)))">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, Func&lt;ModelMetadata, bool&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-microsoft-aspnetcore-mvc-modelbinding-ivalueprovider-system-linq-expressions-expression((system-func((-0-system-object))))())">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, IValueProvider, params Expression&lt;Func&lt;TModel, object&gt;&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync-1(-0-system-string-microsoft-aspnetcore-mvc-modelbinding-ivalueprovider-system-func((microsoft-aspnetcore-mvc-modelbinding-modelmetadata-system-boolean)))">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, string, IValueProvider, Func&lt;ModelMetadata, bool&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync(system-object-system-type-system-string)">ControllerBase.TryUpdateModelAsync(object, Type, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#microsoft-aspnetcore-mvc-controllerbase-tryupdatemodelasync(system-object-system-type-system-string-microsoft-aspnetcore-mvc-modelbinding-ivalueprovider-system-func((microsoft-aspnetcore-mvc-modelbinding-modelmetadata-system-boolean)))">ControllerBase.TryUpdateModelAsync(object, Type, string, IValueProvider, Func&lt;ModelMetadata, bool&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryvalidatemodel#microsoft-aspnetcore-mvc-controllerbase-tryvalidatemodel(system-object)">ControllerBase.TryValidateModel(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryvalidatemodel#microsoft-aspnetcore-mvc-controllerbase-tryvalidatemodel(system-object-system-string)">ControllerBase.TryValidateModel(object, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.httpcontext">ControllerBase.HttpContext</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.request">ControllerBase.Request</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.response">ControllerBase.Response</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.routedata">ControllerBase.RouteData</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.modelstate">ControllerBase.ModelState</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.controllercontext">ControllerBase.ControllerContext</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.metadataprovider">ControllerBase.MetadataProvider</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.modelbinderfactory">ControllerBase.ModelBinderFactory</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.url">ControllerBase.Url</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.objectvalidator">ControllerBase.ObjectValidator</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.problemdetailsfactory">ControllerBase.ProblemDetailsFactory</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.user">ControllerBase.User</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.empty">ControllerBase.Empty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Chaos_Api_Controllers_CasinoController__ctor_" data-uid="Chaos.Api.Controllers.CasinoController.#ctor*"></a>
+
+  <h3 id="Chaos_Api_Controllers_CasinoController__ctor_Chaos_Api_Interface_ICasinoGamesService_Chaos_Api_Interface_IUserService_Chaos_Api_Interface_ITokenBlackListService_Microsoft_AspNetCore_Http_IHttpContextAccessor_" data-uid="Chaos.Api.Controllers.CasinoController.#ctor(Chaos.Api.Interface.ICasinoGamesService,Chaos.Api.Interface.IUserService,Chaos.Api.Interface.ITokenBlackListService,Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+  CasinoController(ICasinoGamesService, IUserService, ITokenBlackListService, IHttpContextAccessor)
+  
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CasinoController(ICasinoGamesService casino, IUserService userService, ITokenBlackListService tokenBlackListService, IHttpContextAccessor httpContextAccessor)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>casino</code> <a class="xref" href="Chaos.Api.Interface.ICasinoGamesService.html">ICasinoGamesService</a></dt>
+    <dd></dd>
+    <dt><code>userService</code> <a class="xref" href="Chaos.Api.Interface.IUserService.html">IUserService</a></dt>
+    <dd></dd>
+    <dt><code>tokenBlackListService</code> <a class="xref" href="Chaos.Api.Interface.ITokenBlackListService.html">ITokenBlackListService</a></dt>
+    <dd></dd>
+    <dt><code>httpContextAccessor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor">IHttpContextAccessor</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Chaos_Api_Controllers_CasinoController_BlackJackHit_" data-uid="Chaos.Api.Controllers.CasinoController.BlackJackHit*"></a>
+
+  <h3 id="Chaos_Api_Controllers_CasinoController_BlackJackHit_System_Guid_" data-uid="Chaos.Api.Controllers.CasinoController.BlackJackHit(System.Guid)">
+  BlackJackHit(Guid)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>El jugador pide una carta (Hit) en una partida de Blackjack existente.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;blackjack/{gameId}/hit&quot;)]
+public ActionResult&lt;BlackJackResponse&gt; BlackJackHit(Guid gameId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>El ID de la partida de Blackjack.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="Chaos.Api.ResponseEntity.BlackJackResponse.html">BlackJackResponse</a>&gt;</dt>
+    <dd><p>El estado actualizado de la partida de Blackjack.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Chaos_Api_Controllers_CasinoController_BlackJackStand_" data-uid="Chaos.Api.Controllers.CasinoController.BlackJackStand*"></a>
+
+  <h3 id="Chaos_Api_Controllers_CasinoController_BlackJackStand_System_Guid_" data-uid="Chaos.Api.Controllers.CasinoController.BlackJackStand(System.Guid)">
+  BlackJackStand(Guid)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>El jugador se planta (Stand) en una partida de Blackjack existente.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;blackjack/{gameId}/stand&quot;)]
+public ActionResult&lt;BlackJackResponse&gt; BlackJackStand(Guid gameId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>El ID de la partida de Blackjack.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="Chaos.Api.ResponseEntity.BlackJackResponse.html">BlackJackResponse</a>&gt;</dt>
+    <dd><p>El estado final de la partida de Blackjack después del turno del dealer.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Chaos_Api_Controllers_CasinoController_CashOutHigherLower_" data-uid="Chaos.Api.Controllers.CasinoController.CashOutHigherLower*"></a>
+
+  <h3 id="Chaos_Api_Controllers_CasinoController_CashOutHigherLower_System_Guid_" data-uid="Chaos.Api.Controllers.CasinoController.CashOutHigherLower(System.Guid)">
+  CashOutHigherLower(Guid)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>El jugador retira su recompensa acumulada en una partida de Higher or Lower.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;higherlower/{gameId}/cashout&quot;)]
+public ActionResult&lt;HigherLowerResponse&gt; CashOutHigherLower(Guid gameId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>El ID de la partida de Higher or Lower.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="Chaos.Api.ResponseEntity.HigherLowerResponse.html">HigherLowerResponse</a>&gt;</dt>
+    <dd><p>El estado final de la partida.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Chaos_Api_Controllers_CasinoController_CoinGame_" data-uid="Chaos.Api.Controllers.CasinoController.CoinGame*"></a>
+
+  <h3 id="Chaos_Api_Controllers_CasinoController_CoinGame_Chaos_Api_RequestEntity_CoinGameRequest_" data-uid="Chaos.Api.Controllers.CasinoController.CoinGame(Chaos.Api.RequestEntity.CoinGameRequest)">
+  CoinGame(CoinGameRequest)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plays a coin game using the specified request and returns the game result.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;CoinGame&quot;)]
+public IActionResult CoinGame(CoinGameRequest request)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="Chaos.Api.RequestEntity.CoinGameRequest.html">CoinGameRequest</a></dt>
+    <dd><p>The request containing the parameters for the coin game.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.iactionresult">IActionResult</a></dt>
+    <dd><p>A response containing the result of the coin game.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Chaos_Api_Controllers_CasinoController_EuropeanRoullete_" data-uid="Chaos.Api.Controllers.CasinoController.EuropeanRoullete*"></a>
+
+  <h3 id="Chaos_Api_Controllers_CasinoController_EuropeanRoullete_Chaos_Api_RequestEntity_SelectionUserEuropeanRoulette_" data-uid="Chaos.Api.Controllers.CasinoController.EuropeanRoullete(Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette)">
+  EuropeanRoullete(SelectionUserEuropeanRoulette)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>You can Play European Roulette Beting in color number, specific numbers, the first half, Dozen ,row... etc</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;EuropeanRoullete&quot;)]
+public ActionResult EuropeanRoullete(SelectionUserEuropeanRoulette Bet)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Bet</code> <a class="xref" href="Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette.html">SelectionUserEuropeanRoulette</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></dt>
+    <dd><p>CashBack, the number of the roulette ball position and the bet</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Chaos_Api_Controllers_CasinoController_GetBlackJackGame_" data-uid="Chaos.Api.Controllers.CasinoController.GetBlackJackGame*"></a>
+
+  <h3 id="Chaos_Api_Controllers_CasinoController_GetBlackJackGame_System_Guid_" data-uid="Chaos.Api.Controllers.CasinoController.GetBlackJackGame(System.Guid)">
+  GetBlackJackGame(Guid)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Obtiene el estado actual de una partida de Blackjack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;blackjack/{gameId}&quot;)]
+public ActionResult&lt;BlackJackResponse&gt; GetBlackJackGame(Guid gameId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>El ID de la partida de Blackjack.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="Chaos.Api.ResponseEntity.BlackJackResponse.html">BlackJackResponse</a>&gt;</dt>
+    <dd><p>El estado actual de la partida de Blackjack.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Chaos_Api_Controllers_CasinoController_GetHigherLowerGame_" data-uid="Chaos.Api.Controllers.CasinoController.GetHigherLowerGame*"></a>
+
+  <h3 id="Chaos_Api_Controllers_CasinoController_GetHigherLowerGame_System_Guid_" data-uid="Chaos.Api.Controllers.CasinoController.GetHigherLowerGame(System.Guid)">
+  GetHigherLowerGame(Guid)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Obtiene el estado actual de una partida de Higher or Lower.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;higherlower/{gameId}&quot;)]
+public ActionResult&lt;HigherLowerResponse&gt; GetHigherLowerGame(Guid gameId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>gameId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd><p>El ID de la partida de Higher or Lower.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="Chaos.Api.ResponseEntity.HigherLowerResponse.html">HigherLowerResponse</a>&gt;</dt>
+    <dd><p>El estado actual de la partida.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Chaos_Api_Controllers_CasinoController_PlayHigherLower_" data-uid="Chaos.Api.Controllers.CasinoController.PlayHigherLower*"></a>
+
+  <h3 id="Chaos_Api_Controllers_CasinoController_PlayHigherLower_Chaos_Api_RequestEntity_HigherLowerPlayRequest_" data-uid="Chaos.Api.Controllers.CasinoController.PlayHigherLower(Chaos.Api.RequestEntity.HigherLowerPlayRequest)">
+  PlayHigherLower(HigherLowerPlayRequest)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>El jugador hace su elección (HIGHER o LOWER) en una partida activa.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;higherlower/play&quot;)]
+public ActionResult&lt;HigherLowerResponse&gt; PlayHigherLower(HigherLowerPlayRequest request)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="Chaos.Api.RequestEntity.HigherLowerPlayRequest.html">HigherLowerPlayRequest</a></dt>
+    <dd><p>Contiene el GameId y la elección del jugador (HIGHER o LOWER).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="Chaos.Api.ResponseEntity.HigherLowerResponse.html">HigherLowerResponse</a>&gt;</dt>
+    <dd><p>El estado actualizado de la partida de Higher or Lower.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Chaos_Api_Controllers_CasinoController_RussianRoullete_" data-uid="Chaos.Api.Controllers.CasinoController.RussianRoullete*"></a>
+
+  <h3 id="Chaos_Api_Controllers_CasinoController_RussianRoullete_System_Collections_Generic_List_System_Guid__" data-uid="Chaos.Api.Controllers.CasinoController.RussianRoullete(System.Collections.Generic.List{System.Guid})">
+  RussianRoullete(List&lt;Guid&gt;)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The players plays a game where only can be stand up one of them</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;RussianRoullete&quot;)]
+public ActionResult RussianRoullete(List&lt;Guid&gt; IdPlayers)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>IdPlayers</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></dt>
+    <dd><p>Returns a list of the players and the round where each of them was eliminated and the winner of the game</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Chaos_Api_Controllers_CasinoController_StartBlackJack_" data-uid="Chaos.Api.Controllers.CasinoController.StartBlackJack*"></a>
+
+  <h3 id="Chaos_Api_Controllers_CasinoController_StartBlackJack_Chaos_Api_RequestEntity_BlackJackRequest_" data-uid="Chaos.Api.Controllers.CasinoController.StartBlackJack(Chaos.Api.RequestEntity.BlackJackRequest)">
+  StartBlackJack(BlackJackRequest)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inicia una nueva partida de Blackjack con el animal especificado.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;blackjack/start&quot;)]
+public ActionResult&lt;BlackJackResponse&gt; StartBlackJack(BlackJackRequest request)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="Chaos.Api.RequestEntity.BlackJackRequest.html">BlackJackRequest</a></dt>
+    <dd><p>Contiene el ID del animal con el que se jugará.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="Chaos.Api.ResponseEntity.BlackJackResponse.html">BlackJackResponse</a>&gt;</dt>
+    <dd><p>El estado inicial de la partida de Blackjack.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Chaos_Api_Controllers_CasinoController_StartHigherLower_" data-uid="Chaos.Api.Controllers.CasinoController.StartHigherLower*"></a>
+
+  <h3 id="Chaos_Api_Controllers_CasinoController_StartHigherLower_Chaos_Api_RequestEntity_HigherLowerRequest_" data-uid="Chaos.Api.Controllers.CasinoController.StartHigherLower(Chaos.Api.RequestEntity.HigherLowerRequest)">
+  StartHigherLower(HigherLowerRequest)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inicia una nueva partida de Higher or Lower.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;higherlower/start&quot;)]
+public ActionResult&lt;HigherLowerResponse&gt; StartHigherLower(HigherLowerRequest request)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="Chaos.Api.RequestEntity.HigherLowerRequest.html">HigherLowerRequest</a></dt>
+    <dd><p>Contiene el ID del animal con el que se jugará.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="Chaos.Api.ResponseEntity.HigherLowerResponse.html">HigherLowerResponse</a>&gt;</dt>
+    <dd><p>El estado inicial de la partida de Higher or Lower.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Chaos_Api_Controllers_CasinoController_Tragaperrillas_" data-uid="Chaos.Api.Controllers.CasinoController.Tragaperrillas*"></a>
+
+  <h3 id="Chaos_Api_Controllers_CasinoController_Tragaperrillas_Chaos_Api_RequestEntity_CoinGameRequest_" data-uid="Chaos.Api.Controllers.CasinoController.Tragaperrillas(Chaos.Api.RequestEntity.CoinGameRequest)">
+  Tragaperrillas(CoinGameRequest)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plays a slot machine game for the specified animal and removes the animal from the system if found.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;TragaPerrillas&quot;)]
+public ActionResult Tragaperrillas(CoinGameRequest Coin)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Coin</code> <a class="xref" href="Chaos.Api.RequestEntity.CoinGameRequest.html">CoinGameRequest</a></dt>
+    <dd><p>The request containing the animal identifier and coin information.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></dt>
+    <dd><p>An array of slot machine game results if the animal is found; otherwise, a NotFound result.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums.ShopTransactionTypeEnum
+  commentId: T:Chaos.Api.Enums.ShopTransactionTypeEnum
+  id: ShopTransactionTypeEnum
+  parent: Chaos.Api.Enums
+  children:
+  - Chaos.Api.Enums.ShopTransactionTypeEnum.BUY
+  - Chaos.Api.Enums.ShopTransactionTypeEnum.SELL
+  langs:
+  - csharp
+  - vb
+  name: ShopTransactionTypeEnum
+  nameWithType: ShopTransactionTypeEnum
+  fullName: Chaos.Api.Enums.ShopTransactionTypeEnum
+  type: Enum
+  source:
+    id: ShopTransactionTypeEnum
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\ShopTransactionTypeEnum.cs
+    startLine: 2
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: public enum ShopTransactionTypeEnum
+    content.vb: Public Enum ShopTransactionTypeEnum
+- uid: Chaos.Api.Enums.ShopTransactionTypeEnum.BUY
+  commentId: F:Chaos.Api.Enums.ShopTransactionTypeEnum.BUY
+  id: BUY
+  parent: Chaos.Api.Enums.ShopTransactionTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: BUY
+  nameWithType: ShopTransactionTypeEnum.BUY
+  fullName: Chaos.Api.Enums.ShopTransactionTypeEnum.BUY
+  type: Field
+  source:
+    id: BUY
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\ShopTransactionTypeEnum.cs
+    startLine: 4
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: BUY = 0
+    return:
+      type: Chaos.Api.Enums.ShopTransactionTypeEnum
+- uid: Chaos.Api.Enums.ShopTransactionTypeEnum.SELL
+  commentId: F:Chaos.Api.Enums.ShopTransactionTypeEnum.SELL
+  id: SELL
+  parent: Chaos.Api.Enums.ShopTransactionTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: SELL
+  nameWithType: ShopTransactionTypeEnum.SELL
+  fullName: Chaos.Api.Enums.ShopTransactionTypeEnum.SELL
+  type: Field
+  source:
+    id: SELL
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\ShopTransactionTypeEnum.cs
+    startLine: 5
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: SELL = 1
+    return:
+      type: Chaos.Api.Enums.ShopTransactionTypeEnum
+references:
+- uid: Chaos.Api.Enums
+  commentId: N:Chaos.Api.Enums
+  href: Chaos.html
+  name: Chaos.Api.Enums
+  nameWithType: Chaos.Api.Enums
+  fullName: Chaos.Api.Enums
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+- uid: Chaos.Api.Enums.ShopTransactionTypeEnum
+  commentId: T:Chaos.Api.Enums.ShopTransactionTypeEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.ShopTransactionTypeEnum.html
+  name: ShopTransactionTypeEnum
+  nameWithType: ShopTransactionTypeEnum
+  fullName: Chaos.Api.Enums.ShopTransactionTypeEnum

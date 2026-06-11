@@ -1,0 +1,121 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthStateProvider
+@inject Chaos.BlazorCasinoApp.Service.AuthBackOfficeService AuthService
+@inject NavigationManager Navigation
+
+<!-- ══════ TOP NAVBAR ══════ -->
+<div class="casino-navbar">
+    <div class="casino-navbar-inner">
+
+        <a class="casino-brand" href="">
+            <span class="brand-icon">🎲</span>
+            <span class="nav-title">Configuration Casino</span>
+        </a>
+
+        <button class="casino-nav-toggler @(collapseNavMenu ? "" : "is-open")"
+                title="Navigation menu"
+                @onclick="ToggleNavMenu">
+            <span class="toggler-bar"></span>
+            <span class="toggler-bar"></span>
+            <span class="toggler-bar"></span>
+        </button>
+
+    </div>
+</div>
+
+<!-- ══════ SIDE NAV ══════ -->
+<div class="casino-nav-wrapper @(collapseNavMenu ? "collapsed" : "")"
+     @onclick="ToggleNavMenu">
+
+    <nav class="casino-nav-menu" @onclick:stopPropagation="true">
+
+        <AuthorizeView>
+
+            <!-- ── Autorizado ── -->
+            <Authorized>
+
+                <div class="casino-nav-section">
+                    <p class="casino-nav-section-title">General</p>
+
+                    <NavLink class="casino-nav-link" href="" Match="NavLinkMatch.All">
+                        <span class="nav-icon">🏠</span> Home
+                    </NavLink>
+
+                    <NavLink class="casino-nav-link" href="users">
+                        <span class="nav-icon">👥</span> Gestión de Usuarios
+                    </NavLink>
+                </div>
+
+                <div class="casino-nav-section">
+                    <p class="casino-nav-section-title">Configuración</p>
+
+                    <NavLink class="casino-nav-link" href="AnimalValueConfigPage">
+                        <span class="nav-icon">🐾</span> Animal Value Config
+                    </NavLink>
+                </div>
+
+                <div class="casino-nav-section">
+                    <p class="casino-nav-section-title">Juegos</p>
+
+                    <NavLink class="casino-nav-link" href="CoinGamePage">
+                        <span class="nav-icon">🪙</span> Coin Game
+                    </NavLink>
+
+                    <NavLink class="casino-nav-link" href="SlotGamePage">
+                        <span class="nav-icon">🎰</span> Slot Game
+                    </NavLink>
+
+                    <NavLink class="casino-nav-link" href="BlackjackPage">
+                        <span class="nav-icon">🃏</span> Blackjack
+                    </NavLink>
+
+                    <NavLink class="casino-nav-link" href="HigherLowerGamePage">
+                        <span class="nav-icon">📈</span> Higher Lower Game
+                    </NavLink>
+
+                    <NavLink class="casino-nav-link" href="RussianRoulettePage">
+                        <span class="nav-icon">🔫</span> Russian Roulette
+                    </NavLink>
+
+                    <NavLink class="casino-nav-link" href="RouletteGamePage">
+                        <span class="nav-icon">🛞</span> Roulette
+                    </NavLink>
+                </div>
+
+          
+
+            </Authorized>
+
+            <!-- ── No autorizado ── -->
+            <NotAuthorized>
+
+                <div class="casino-nav-section">
+                    <p class="casino-nav-section-title">Acceso</p>
+
+                    <NavLink class="casino-nav-link" href="login">
+                        <span class="nav-icon">🔑</span> Iniciar Sesión
+                    </NavLink>
+
+                    <NavLink class="casino-nav-link" href="register">
+                        <span class="nav-icon">📋</span> Registrarse
+                    </NavLink>
+                </div>
+
+            </NotAuthorized>
+
+        </AuthorizeView>
+
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private void ToggleNavMenu() => collapseNavMenu = !collapseNavMenu;
+
+    private async Task HandleLogout()
+    {
+        await AuthService.LogoutAsync();
+        Navigation.NavigateTo("/login", forceLoad: true);
+    }
+}

@@ -1,0 +1,165 @@
+﻿@page "/CoinGamePage"
+@using Chaos.BlazorCasinoApp.IApiService
+@using Chaos.Shared.ResponseEntity
+@inject ICoinGameService CoinGameService
+@inject NavigationManager Navigation
+
+<PageTitle>Backoffice — CoinGame</PageTitle>
+
+<div class="casino-page">
+
+    <h3>🎰 Configuraciones CoinGame</h3>
+
+    @if (isLoading)
+    {
+        <div class="casino-loading">
+            <div class="casino-spinner" role="status">🛞</div>
+            <p class="text-gold">Cargando configuraciones...</p>
+        </div>
+    }
+    else if (errorMessage is not null)
+    {
+        <div class="alert alert-danger">⚠️ @errorMessage</div>
+    }
+    else
+    {
+        @if (deleteError is not null)
+        {
+            <div class="alert alert-danger casino-alert-dismissible">
+                <span>⚠️ @deleteError</span>
+                <button class="btn-casino-dismiss" @onclick="() => deleteError = null">✖ Cerrar</button>
+            </div>
+        }
+
+        <div class="casino-toolbar">
+            <h5>Configuraciones</h5>
+            <button class="btn-casino-primary" @onclick="GoToCreate">
+                <span class="btn-casino-icon">➕</span>
+                Nueva Configuración
+            </button>
+        </div>
+
+        @if (configs is null || configs.Count == 0)
+        {
+            <div class="casino-empty-state">
+                <div class="casino-empty-icon">🛞</div>
+                <h5>NO HAY CONFIGURACIONES</h5>
+                <p>La mesa está vacía. ¡Crea tu primera configuración!</p>
+                <button class="btn-casino-primary" @onclick="GoToCreate">
+                    <span class="btn-casino-icon">➕</span>
+                    Nueva Configuración
+                </button>
+            </div>
+        }
+        else
+        {
+            <div class="casino-table-wrapper">
+                <table class="casino-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre Config</th>
+                            <th>Juego</th>
+                            <th>Estado</th>
+                            <th>Creado</th>
+                            <th style="text-align:center;">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var config in configs)
+                        {
+                            <tr>
+                                <td class="cell-gold-bold">@config.ConfigName</td>
+                                <td class="cell-secondary">@config.GameName</td>
+                                <td>
+                                    @if (config.IsActive)
+                                    {
+                                        <span class="badge-casino-active">● Activo</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge-casino-inactive">● Inactivo</span>
+                                    }
+                                </td>
+                                <td class="cell-muted">@config.CreatedAt</td>
+                                <td class="acciones-cell">
+                                    <button class="btn-casino-edit"
+                                            @onclick="() => GoToEdit(config.Id)">
+                                        ✏️ Editar
+                                    </button>
+                                    <button class="btn-casino-toggle"
+                                            @onclick="() => ToggleActive(config.Id)">
+                                        🔄 Toggle
+                                    </button>
+                                    <button class="btn-casino-delete"
+                                            @onclick="() => Delete(config.Id)">
+                                        🗑️ Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    }
+
+</div>
+
+@code {
+    private List<CoinGameResponse>? configs;
+    private bool isLoading = true;
+    private string? errorMessage;
+    private string? deleteError;
+
+    protected override async Task OnInitializedAsync() => await LoadConfigs();
+
+    private async Task LoadConfigs()
+    {
+        try
+        {
+            isLoading = true;
+            errorMessage = null;
+            var result = await CoinGameService.GetAllAsync();
+            configs = result.OrderBy(c => c.CreatedAt).ToList();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al cargar configuraciones: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private void GoToCreate() => Navigation.NavigateTo("/CoinGamePage/create");
+    private void GoToEdit(Guid id) => Navigation.NavigateTo($"/CoinGamePage/edit/{id}");
+
+    private async Task ToggleActive(Guid id)
+    {
+        try
+        {
+            await CoinGameService.ToggleActiveAsync(id);
+            await LoadConfigs();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al cambiar estado: {ex.Message}";
+        }
+    }
+
+    private async Task Delete(Guid id)
+    {
+        deleteError = null;
+        try
+        {
+            await CoinGameService.DeleteAsync(id);
+            await LoadConfigs();
+        }
+        catch (Exception ex)
+        {
+            deleteError = ex.Message;
+            StateHasChanged();
+        }
+    }
+}

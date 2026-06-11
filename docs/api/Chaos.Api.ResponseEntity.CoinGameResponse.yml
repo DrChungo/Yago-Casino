@@ -1,0 +1,495 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.ResponseEntity.CoinGameResponse
+  commentId: T:Chaos.Api.ResponseEntity.CoinGameResponse
+  id: CoinGameResponse
+  parent: Chaos.Api.ResponseEntity
+  children:
+  - Chaos.Api.ResponseEntity.CoinGameResponse.AnimalName
+  - Chaos.Api.ResponseEntity.CoinGameResponse.Message
+  - Chaos.Api.ResponseEntity.CoinGameResponse.Possibility
+  - Chaos.Api.ResponseEntity.CoinGameResponse.Reward
+  - Chaos.Api.ResponseEntity.CoinGameResponse.Won
+  langs:
+  - csharp
+  - vb
+  name: CoinGameResponse
+  nameWithType: CoinGameResponse
+  fullName: Chaos.Api.ResponseEntity.CoinGameResponse
+  type: Class
+  source:
+    id: CoinGameResponse
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\ResponseEntity\CoinGameResponse.cs
+    startLine: 2
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.ResponseEntity
+  syntax:
+    content: public class CoinGameResponse
+    content.vb: Public Class CoinGameResponse
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Chaos.Api.ResponseEntity.CoinGameResponse.AnimalName
+  commentId: P:Chaos.Api.ResponseEntity.CoinGameResponse.AnimalName
+  id: AnimalName
+  parent: Chaos.Api.ResponseEntity.CoinGameResponse
+  langs:
+  - csharp
+  - vb
+  name: AnimalName
+  nameWithType: CoinGameResponse.AnimalName
+  fullName: Chaos.Api.ResponseEntity.CoinGameResponse.AnimalName
+  type: Property
+  source:
+    id: AnimalName
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\ResponseEntity\CoinGameResponse.cs
+    startLine: 4
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.ResponseEntity
+  syntax:
+    content: public string AnimalName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AnimalName As String
+  overload: Chaos.Api.ResponseEntity.CoinGameResponse.AnimalName*
+- uid: Chaos.Api.ResponseEntity.CoinGameResponse.Possibility
+  commentId: P:Chaos.Api.ResponseEntity.CoinGameResponse.Possibility
+  id: Possibility
+  parent: Chaos.Api.ResponseEntity.CoinGameResponse
+  langs:
+  - csharp
+  - vb
+  name: Possibility
+  nameWithType: CoinGameResponse.Possibility
+  fullName: Chaos.Api.ResponseEntity.CoinGameResponse.Possibility
+  type: Property
+  source:
+    id: Possibility
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\ResponseEntity\CoinGameResponse.cs
+    startLine: 5
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.ResponseEntity
+  syntax:
+    content: public int Possibility { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Possibility As Integer
+  overload: Chaos.Api.ResponseEntity.CoinGameResponse.Possibility*
+- uid: Chaos.Api.ResponseEntity.CoinGameResponse.Reward
+  commentId: P:Chaos.Api.ResponseEntity.CoinGameResponse.Reward
+  id: Reward
+  parent: Chaos.Api.ResponseEntity.CoinGameResponse
+  langs:
+  - csharp
+  - vb
+  name: Reward
+  nameWithType: CoinGameResponse.Reward
+  fullName: Chaos.Api.ResponseEntity.CoinGameResponse.Reward
+  type: Property
+  source:
+    id: Reward
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\ResponseEntity\CoinGameResponse.cs
+    startLine: 6
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.ResponseEntity
+  syntax:
+    content: public int Reward { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Reward As Integer
+  overload: Chaos.Api.ResponseEntity.CoinGameResponse.Reward*
+- uid: Chaos.Api.ResponseEntity.CoinGameResponse.Won
+  commentId: P:Chaos.Api.ResponseEntity.CoinGameResponse.Won
+  id: Won
+  parent: Chaos.Api.ResponseEntity.CoinGameResponse
+  langs:
+  - csharp
+  - vb
+  name: Won
+  nameWithType: CoinGameResponse.Won
+  fullName: Chaos.Api.ResponseEntity.CoinGameResponse.Won
+  type: Property
+  source:
+    id: Won
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\ResponseEntity\CoinGameResponse.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.ResponseEntity
+  syntax:
+    content: public bool Won { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Won As Boolean
+  overload: Chaos.Api.ResponseEntity.CoinGameResponse.Won*
+- uid: Chaos.Api.ResponseEntity.CoinGameResponse.Message
+  commentId: P:Chaos.Api.ResponseEntity.CoinGameResponse.Message
+  id: Message
+  parent: Chaos.Api.ResponseEntity.CoinGameResponse
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: CoinGameResponse.Message
+  fullName: Chaos.Api.ResponseEntity.CoinGameResponse.Message
+  type: Property
+  source:
+    id: Message
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\ResponseEntity\CoinGameResponse.cs
+    startLine: 8
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.ResponseEntity
+  syntax:
+    content: public string Message { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Message As String
+  overload: Chaos.Api.ResponseEntity.CoinGameResponse.Message*
+references:
+- uid: Chaos.Api.ResponseEntity
+  commentId: N:Chaos.Api.ResponseEntity
+  href: Chaos.html
+  name: Chaos.Api.ResponseEntity
+  nameWithType: Chaos.Api.ResponseEntity
+  fullName: Chaos.Api.ResponseEntity
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.ResponseEntity
+    name: ResponseEntity
+    href: Chaos.Api.ResponseEntity.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.ResponseEntity
+    name: ResponseEntity
+    href: Chaos.Api.ResponseEntity.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chaos.Api.ResponseEntity.CoinGameResponse.AnimalName*
+  commentId: Overload:Chaos.Api.ResponseEntity.CoinGameResponse.AnimalName
+  href: Chaos.Api.ResponseEntity.CoinGameResponse.html#Chaos_Api_ResponseEntity_CoinGameResponse_AnimalName
+  name: AnimalName
+  nameWithType: CoinGameResponse.AnimalName
+  fullName: Chaos.Api.ResponseEntity.CoinGameResponse.AnimalName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Chaos.Api.ResponseEntity.CoinGameResponse.Possibility*
+  commentId: Overload:Chaos.Api.ResponseEntity.CoinGameResponse.Possibility
+  href: Chaos.Api.ResponseEntity.CoinGameResponse.html#Chaos_Api_ResponseEntity_CoinGameResponse_Possibility
+  name: Possibility
+  nameWithType: CoinGameResponse.Possibility
+  fullName: Chaos.Api.ResponseEntity.CoinGameResponse.Possibility
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Chaos.Api.ResponseEntity.CoinGameResponse.Reward*
+  commentId: Overload:Chaos.Api.ResponseEntity.CoinGameResponse.Reward
+  href: Chaos.Api.ResponseEntity.CoinGameResponse.html#Chaos_Api_ResponseEntity_CoinGameResponse_Reward
+  name: Reward
+  nameWithType: CoinGameResponse.Reward
+  fullName: Chaos.Api.ResponseEntity.CoinGameResponse.Reward
+- uid: Chaos.Api.ResponseEntity.CoinGameResponse.Won*
+  commentId: Overload:Chaos.Api.ResponseEntity.CoinGameResponse.Won
+  href: Chaos.Api.ResponseEntity.CoinGameResponse.html#Chaos_Api_ResponseEntity_CoinGameResponse_Won
+  name: Won
+  nameWithType: CoinGameResponse.Won
+  fullName: Chaos.Api.ResponseEntity.CoinGameResponse.Won
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Chaos.Api.ResponseEntity.CoinGameResponse.Message*
+  commentId: Overload:Chaos.Api.ResponseEntity.CoinGameResponse.Message
+  href: Chaos.Api.ResponseEntity.CoinGameResponse.html#Chaos_Api_ResponseEntity_CoinGameResponse_Message
+  name: Message
+  nameWithType: CoinGameResponse.Message
+  fullName: Chaos.Api.ResponseEntity.CoinGameResponse.Message

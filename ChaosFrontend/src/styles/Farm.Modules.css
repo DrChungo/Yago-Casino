@@ -1,0 +1,76 @@
+﻿/* Resetea cualquier margen por defecto que pueda tener el navegador */
+:global(body), body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+/* Contenedor principal a pantalla completa */
+.pagina-juego {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+}
+
+/* Lienzo del corral — sin overlay oscuro */
+.lienzo-corral {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+/* La imagen cubre todo el lienzo sin deformarse */
+.imagen-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: pixelated;
+    z-index: 1;
+    user-select: none;
+}
+
+/* La capa invisible donde se moverán los sprites */
+.capa-entidades {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.fullscreen-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    z-index: 9999;
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}

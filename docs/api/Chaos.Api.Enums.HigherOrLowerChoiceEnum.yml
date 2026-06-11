@@ -1,0 +1,108 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums.HigherOrLowerChoiceEnum
+  commentId: T:Chaos.Api.Enums.HigherOrLowerChoiceEnum
+  id: HigherOrLowerChoiceEnum
+  parent: Chaos.Api.Enums
+  children:
+  - Chaos.Api.Enums.HigherOrLowerChoiceEnum.HIGHER
+  - Chaos.Api.Enums.HigherOrLowerChoiceEnum.LOWER
+  langs:
+  - csharp
+  - vb
+  name: HigherOrLowerChoiceEnum
+  nameWithType: HigherOrLowerChoiceEnum
+  fullName: Chaos.Api.Enums.HigherOrLowerChoiceEnum
+  type: Enum
+  source:
+    id: HigherOrLowerChoiceEnum
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\HigherOrLowerChoiceEnum.cs
+    startLine: 2
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: public enum HigherOrLowerChoiceEnum
+    content.vb: Public Enum HigherOrLowerChoiceEnum
+- uid: Chaos.Api.Enums.HigherOrLowerChoiceEnum.HIGHER
+  commentId: F:Chaos.Api.Enums.HigherOrLowerChoiceEnum.HIGHER
+  id: HIGHER
+  parent: Chaos.Api.Enums.HigherOrLowerChoiceEnum
+  langs:
+  - csharp
+  - vb
+  name: HIGHER
+  nameWithType: HigherOrLowerChoiceEnum.HIGHER
+  fullName: Chaos.Api.Enums.HigherOrLowerChoiceEnum.HIGHER
+  type: Field
+  source:
+    id: HIGHER
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\HigherOrLowerChoiceEnum.cs
+    startLine: 4
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: HIGHER = 0
+    return:
+      type: Chaos.Api.Enums.HigherOrLowerChoiceEnum
+- uid: Chaos.Api.Enums.HigherOrLowerChoiceEnum.LOWER
+  commentId: F:Chaos.Api.Enums.HigherOrLowerChoiceEnum.LOWER
+  id: LOWER
+  parent: Chaos.Api.Enums.HigherOrLowerChoiceEnum
+  langs:
+  - csharp
+  - vb
+  name: LOWER
+  nameWithType: HigherOrLowerChoiceEnum.LOWER
+  fullName: Chaos.Api.Enums.HigherOrLowerChoiceEnum.LOWER
+  type: Field
+  source:
+    id: LOWER
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\HigherOrLowerChoiceEnum.cs
+    startLine: 5
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: LOWER = 1
+    return:
+      type: Chaos.Api.Enums.HigherOrLowerChoiceEnum
+references:
+- uid: Chaos.Api.Enums
+  commentId: N:Chaos.Api.Enums
+  href: Chaos.html
+  name: Chaos.Api.Enums
+  nameWithType: Chaos.Api.Enums
+  fullName: Chaos.Api.Enums
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+- uid: Chaos.Api.Enums.HigherOrLowerChoiceEnum
+  commentId: T:Chaos.Api.Enums.HigherOrLowerChoiceEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.HigherOrLowerChoiceEnum.html
+  name: HigherOrLowerChoiceEnum
+  nameWithType: HigherOrLowerChoiceEnum
+  fullName: Chaos.Api.Enums.HigherOrLowerChoiceEnum

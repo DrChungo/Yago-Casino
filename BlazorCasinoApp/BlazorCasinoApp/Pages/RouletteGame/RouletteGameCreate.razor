@@ -1,0 +1,129 @@
+﻿@page "/RouletteGamePage/create"
+@using Chaos.BlazorCasinoApp.IApiService
+@using Chaos.Shared.RequestEntity
+@inject IRouletteGameConfigService RouletteService
+@inject NavigationManager Navigation
+
+<PageTitle>Nueva Configuración — Roulette Game</PageTitle>
+
+<div class="casino-page">
+
+    <div class="casino-form-header">
+        <button class="btn-casino-secondary" @onclick="GoBack">← Volver</button>
+        <h4>➕ Nueva Configuración Roulette Game</h4>
+    </div>
+
+    @if (errorMessage is not null)
+    {
+        <div class="alert alert-danger">⚠️ @errorMessage</div>
+    }
+
+    <div class="card">
+        <div class="card-body">
+
+            <div class="form-group">
+                <label class="form-label">Nombre de Mesa</label>
+                <input class="form-control" @bind="tableName" placeholder="Ej: Mesa Europea VIP" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Tipo de Ruleta</label>
+                <input class="form-control" @bind="rouletteType" placeholder="Ej: European, American" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Total de Números</label>
+                <input class="form-control" type="number" @bind="totalNumbers" placeholder="Ej: 37" />
+            </div>
+
+            <div class="casino-toggle-row">
+                <label class="form-label">Tiene Zero (0)</label>
+                <button type="button"
+                        class="casino-toggle-btn @(hasZero ? "badge-casino-active" : "badge-casino-inactive")"
+                        @onclick="() => hasZero = !hasZero">
+                    @(hasZero ? "✅ Sí" : "❌ No")
+                </button>
+            </div>
+
+            <div class="casino-toggle-row">
+                <label class="form-label">Tiene Doble Zero (00)</label>
+                <button type="button"
+                        class="casino-toggle-btn @(hasDoubleZero ? "badge-casino-active" : "badge-casino-inactive")"
+                        @onclick="() => hasDoubleZero = !hasDoubleZero">
+                    @(hasDoubleZero ? "✅ Sí" : "❌ No")
+                </button>
+            </div>
+
+            <div class="casino-toggle-row">
+                <label class="form-label">Estado</label>
+                <button type="button"
+                        class="casino-toggle-btn @(isActive ? "badge-casino-active" : "badge-casino-inactive")"
+                        @onclick="() => isActive = !isActive">
+                    @(isActive ? "● Activo" : "● Inactivo")
+                </button>
+            </div>
+
+            <div class="casino-form-actions">
+                <button class="btn-casino-secondary" @onclick="GoBack">✖ Cancelar</button>
+                <button class="btn-casino-primary" @onclick="HandleCreate" disabled="@isSaving">
+                    @if (isSaving)
+                    {
+                        <span class="casino-spinner-sm">🎰</span>
+                    }
+                    💾 Guardar
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+@code {
+    private string tableName = "";
+    private string rouletteType = "";
+    private int totalNumbers = 37;
+    private bool hasZero = true;
+    private bool hasDoubleZero = false;
+    private bool isActive = true;
+    private bool isSaving = false;
+    private string? errorMessage;
+
+    private async Task HandleCreate()
+    {
+        if (string.IsNullOrWhiteSpace(tableName))
+        {
+            errorMessage = "El nombre de la mesa es obligatorio.";
+            return;
+        }
+
+        try
+        {
+            isSaving = true;
+            errorMessage = null;
+
+            var request = new RouletteGameConfigRequest
+            {
+                TableName = tableName,
+                RouletteType = rouletteType,
+                HasZero = hasZero,
+                HasDoubleZero = hasDoubleZero,
+                TotalNumbers = totalNumbers,
+                IsActive = isActive
+            };
+
+            await RouletteService.CreateAsync(request);
+            Navigation.NavigateTo("/RouletteGamePage");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al crear: {ex.Message}";
+        }
+        finally
+        {
+            isSaving = false;
+        }
+    }
+
+    private void GoBack() => Navigation.NavigateTo("/RouletteGamePage");
+}

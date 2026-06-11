@@ -1,0 +1,600 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaos API - Animal Price Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 500px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+            .header h1 {
+                color: #333;
+                font-size: 28px;
+                margin-bottom: 8px;
+                font-weight: 600;
+            }
+
+            .header p {
+                color: #999;
+                font-size: 14px;
+            }
+
+        .api-status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 8px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .api-status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ccc;
+            transition: background 0.3s;
+        }
+
+            .api-status-dot.online {
+                background: #6c6;
+            }
+
+            .api-status-dot.offline {
+                background: #f66;
+            }
+
+            .api-status-dot.checking {
+                background: #fa0;
+                animation: pulse 1s infinite;
+            }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        /* ✅ NUEVO: Banner de advertencia de puerto */
+        .port-warning {
+            display: none;
+            background: #fff8e1;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #795548;
+        }
+
+            .port-warning.active {
+                display: block;
+            }
+
+            .port-warning strong {
+                display: block;
+                margin-bottom: 4px;
+                color: #e65100;
+            }
+
+        .animal-selector {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .animal-btn {
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+
+            .animal-btn:hover {
+                border-color: #667eea;
+                color: #667eea;
+            }
+
+            .animal-btn.active {
+                background: #667eea;
+                border-color: #667eea;
+                color: white;
+            }
+
+        .form-group {
+            margin-bottom: 20px;
+            display: none;
+        }
+
+            .form-group.active {
+                display: block;
+            }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+            input[type="text"]:focus,
+            input[type="number"]:focus,
+            select:focus {
+                outline: none;
+                border-color: #667eea;
+                box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+            }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+            .btn-submit:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(102,126,234,0.3);
+            }
+
+            .btn-submit:active {
+                transform: translateY(0);
+            }
+
+            .btn-submit:disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+                transform: none;
+            }
+
+        .response {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: none;
+            border-left: 4px solid #667eea;
+        }
+
+            .response.active {
+                display: block;
+                animation: slideIn 0.3s ease;
+            }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .response h3 {
+            color: #333;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .response-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+        }
+
+            .response-item:last-child {
+                border-bottom: none;
+            }
+
+            .response-item strong {
+                color: #666;
+            }
+
+            .response-item span {
+                color: #333;
+                font-weight: 500;
+            }
+
+        .error {
+            background: #fee;
+            border-left-color: #f66;
+            color: #c33;
+        }
+
+        .success {
+            background: #efe;
+            border-left-color: #6c6;
+            color: #363;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            color: #667eea;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+            .loading.active {
+                display: block;
+            }
+
+        .spinner {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 2px solid #667eea;
+            border-top: 2px solid transparent;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐾 Chaos API</h1>
+            <p>Animal Price Calculator</p>
+            <div class="api-status">
+                <div class="api-status-dot checking" id="api-dot"></div>
+                <span id="api-status-text">Checking API...</span>
+            </div>
+        </div>
+
+        <!-- ✅ NUEVO: Aviso si el puerto no responde -->
+        <div class="port-warning" id="port-warning">
+            <strong>⚠️ No se pudo conectar con la API</strong>
+            Verifica que tu proyecto .NET esté corriendo y que el puerto en el HTML coincida con
+            el de <code>launchSettings.json</code>. Puerto actual: <span id="current-port"></span>
+        </div>
+
+        <div class="animal-selector">
+            <button class="animal-btn active" data-animal="dog">🐕 Dog</button>
+            <button class="animal-btn" data-animal="cat">🐱 Cat</button>
+            <button class="animal-btn" data-animal="monkey">🐵 Monkey</button>
+            <button class="animal-btn" data-animal="rabbit">🐰 Rabbit</button>
+            <button class="animal-btn" data-animal="parrot">🦜 Parrot</button>
+        </div>
+
+        <!-- Dog Form -->
+        <form id="dog-form" class="form-group active">
+            <label for="dog-name">Dog Name</label>
+            <input type="text" id="dog-name" placeholder="Enter dog name" required>
+            <label for="dog-breed" style="margin-top:15px;">Breed</label>
+            <select id="dog-breed" required>
+                <option value="">Select a breed</option>
+                <option value="Labrador">Labrador</option>
+                <option value="GoldenRetriever">Golden Retriever</option>
+                <option value="GermanShepherd">German Shepherd</option>
+                <option value="Bulldog">Bulldog</option>
+            </select>
+            <label for="dog-age" style="margin-top:15px;">Age (years)</label>
+            <input type="number" id="dog-age" placeholder="0" min="0" required>
+            <button type="submit" class="btn-submit" style="margin-top:20px;">Calculate Price</button>
+        </form>
+
+        <!-- Cat Form -->
+        <form id="cat-form" class="form-group">
+            <label for="cat-name">Cat Name</label>
+            <input type="text" id="cat-name" placeholder="Enter cat name" required>
+            <label for="cat-breed" style="margin-top:15px;">Breed</label>
+            <select id="cat-breed" required>
+                <option value="">Select a breed</option>
+                <option value="Persian">Persian</option>
+                <option value="Siamese">Siamese</option>
+                <option value="MaineCoon">Maine Coon</option>
+                <option value="Ragdoll">Ragdoll</option>
+            </select>
+            <label for="cat-age" style="margin-top:15px;">Age (years)</label>
+            <input type="number" id="cat-age" placeholder="0" min="0" required>
+            <button type="submit" class="btn-submit" style="margin-top:20px;">Calculate Price</button>
+        </form>
+
+        <!-- Monkey Form -->
+        <form id="monkey-form" class="form-group">
+            <label for="monkey-name">Monkey Name</label>
+            <input type="text" id="monkey-name" placeholder="Enter monkey name" required>
+            <label for="monkey-breed" style="margin-top:15px;">Species</label>
+            <select id="monkey-breed" required>
+                <option value="">Select a species</option>
+                <option value="Macaque">Macaque</option>
+                <option value="Chimpanzee">Chimpanzee</option>
+                <option value="Baboon">Baboon</option>
+                <option value="Gibbon">Gibbon</option>
+            </select>
+            <label for="monkey-age" style="margin-top:15px;">Age (years)</label>
+            <input type="number" id="monkey-age" placeholder="0" min="0" required>
+            <button type="submit" class="btn-submit" style="margin-top:20px;">Calculate Price</button>
+        </form>
+
+        <!-- Rabbit Form -->
+        <form id="rabbit-form" class="form-group">
+            <label for="rabbit-name">Rabbit Name</label>
+            <input type="text" id="rabbit-name" placeholder="Enter rabbit name" required>
+            <label for="rabbit-breed" style="margin-top:15px;">Breed</label>
+            <select id="rabbit-breed" required>
+                <option value="">Select a breed</option>
+                <option value="HollandLop">Holland Lop</option>
+                <option value="Angora">Angora</option>
+                <option value="Rex">Rex</option>
+                <option value="Lionhead">Lionhead</option>
+            </select>
+            <label for="rabbit-age" style="margin-top:15px;">Age (years)</label>
+            <input type="number" id="rabbit-age" placeholder="0" min="0" required>
+            <button type="submit" class="btn-submit" style="margin-top:20px;">Calculate Price</button>
+        </form>
+
+        <!-- Parrot Form -->
+        <form id="parrot-form" class="form-group">
+            <label for="parrot-name">Parrot Name</label>
+            <input type="text" id="parrot-name" placeholder="Enter parrot name" required>
+            <label for="parrot-breed" style="margin-top:15px;">Species</label>
+            <select id="parrot-breed" required>
+                <option value="">Select a species</option>
+                <option value="AfricanGrey">African Grey</option>
+                <option value="Macaw">Macaw</option>
+                <option value="Cockatoo">Cockatoo</option>
+                <option value="Parakeet">Parakeet</option>
+            </select>
+            <label for="parrot-age" style="margin-top:15px;">Age (years)</label>
+            <input type="number" id="parrot-age" placeholder="0" min="0" required>
+            <button type="submit" class="btn-submit" style="margin-top:20px;">Calculate Price</button>
+        </form>
+
+        <div class="loading" id="loading">
+            <span class="spinner"></span>Calculating price...
+        </div>
+
+        <div class="response" id="response">
+            <h3 id="response-title">Results</h3>
+            <div id="response-content"></div>
+        </div>
+    </div>
+
+    <script>
+
+        const PORT = 5254;
+        const API_BASE_URL = `http://localhost:${PORT}/api/animals`;
+
+        const FALLBACK_PORTS = [5000, 5001, 7000, 7101, 8080];
+
+        let currentAnimal = 'dog';
+        let activeBaseUrl = API_BASE_URL;
+
+        document.querySelectorAll('.animal-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.animal-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.form-group').forEach(f => f.classList.remove('active'));
+                btn.classList.add('active');
+                currentAnimal = btn.dataset.animal;
+                document.getElementById(`${currentAnimal}-form`).classList.add('active');
+                document.getElementById('response').classList.remove('active');
+            });
+        });
+
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                await submitForm(form);
+            });
+        });
+
+        async function submitForm(form) {
+            const animal = form.id.split('-')[0];
+            const name = document.getElementById(`${animal}-name`).value.trim();
+            const breed = document.getElementById(`${animal}-breed`).value;
+            const age = parseInt(document.getElementById(`${animal}-age`).value, 10);
+
+            if (!name || !breed || isNaN(age)) {
+                displayResponse({ error: 'Please fill in all fields correctly.' }, false);
+                return;
+            }
+
+            const payload = { name, breed, age };
+
+            try {
+                showLoading(true);
+                disableForms(true);
+
+                const response = await fetch(`${activeBaseUrl}/${animal}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    let errorMsg = `Server error: ${response.status} ${response.statusText}`;
+                    try {
+                        const errData = await response.json();
+                        errorMsg = errData.title || errData.message || errData.error || errorMsg;
+                    } catch (_) { }
+                    throw new Error(errorMsg);
+                }
+
+                const data = await response.json();
+                displayResponse(data, true);
+
+            } catch (error) {
+                const msg = error.message.includes('Failed to fetch')
+                    ? `Could not connect to the API on port ${PORT}. Make sure your .NET project is running.`
+                    : error.message;
+                displayResponse({ error: msg }, false);
+            } finally {
+                showLoading(false);
+                disableForms(false);
+            }
+        }
+
+        function showLoading(show) {
+            document.getElementById('loading').classList.toggle('active', show);
+        }
+
+        function disableForms(disabled) {
+            document.querySelectorAll('.btn-submit').forEach(btn => btn.disabled = disabled);
+        }
+
+        function displayResponse(data, success) {
+            const responseDiv = document.getElementById('response');
+            const responseTitle = document.getElementById('response-title');
+            const responseContent = document.getElementById('response-content');
+
+            responseDiv.classList.remove('success', 'error');
+            responseDiv.classList.add(success ? 'success' : 'error');
+
+            if (success && data) {
+                responseTitle.textContent = '✓ Price Calculated';
+                let html = '';
+                if (data.name) html += buildItem('Name', data.name);
+                if (data.breed) html += buildItem('Breed', data.breed);
+                if (data.age !== undefined) html += buildItem('Age', `${data.age} years`);
+                if (data.price !== undefined)
+                    html += buildItem('Price', `$${parseFloat(data.price).toFixed(2)}`);
+                if (data.animalType) html += buildItem('Type', data.animalType);
+                responseContent.innerHTML = html || '<p>No data returned by the API.</p>';
+            } else {
+                responseTitle.textContent = '✗ Error';
+                responseContent.innerHTML = buildItem('Error', data.error || 'Unknown error');
+            }
+
+            responseDiv.classList.add('active');
+        }
+
+        function buildItem(label, value) {
+            return `<div class="response-item">
+                        <strong>${label}:</strong>
+                        <span>${value}</span>
+                    </div>`;
+        }
+
+        // ─── Health check con auto-detección de puerto ────────────────────────────
+        async function checkPort(port) {
+            const urlsToTry = [
+                `http://localhost:${port}/health`,
+                `http://localhost:${port}/api/animals`
+            ];
+
+            for (const url of urlsToTry) {
+                try {
+                    const res = await fetch(url, {
+                        signal: AbortSignal.timeout(2000),
+                        method: 'GET'
+                    });
+                    // Cualquier respuesta del servidor (incluso 404/405) significa que la API está viva
+                    if (res.status < 500) return true;
+                } catch (_) { }
+            }
+            return false;
+        }
+
+        window.addEventListener('load', async () => {
+            const dot = document.getElementById('api-dot');
+            const statusText = document.getElementById('api-status-text');
+            const warning = document.getElementById('port-warning');
+
+            document.getElementById('current-port').textContent = PORT;
+
+            // 1️⃣ Prueba el puerto configurado primero
+            const mainOnline = await checkPort(PORT);
+
+            if (mainOnline) {
+                dot.classList.remove('checking');
+                dot.classList.add('online');
+                statusText.textContent = `API Online ✓ (port ${PORT})`;
+                return;
+            }
+
+            // 2️⃣ Si falla, prueba puertos alternativos automáticamente
+            statusText.textContent = 'Scanning ports...';
+            for (const port of FALLBACK_PORTS) {
+                if (port === PORT) continue;
+                const found = await checkPort(port);
+                if (found) {
+                    activeBaseUrl = `http://localhost:${port}/api/animals`;
+                    dot.classList.remove('checking');
+                    dot.classList.add('online');
+                    statusText.textContent = `API Online ✓ (port ${port} — update PORT to ${port})`;
+                    return;
+                }
+            }
+
+            // 3️⃣ Ningún puerto respondió
+            dot.classList.remove('checking');
+            dot.classList.add('offline');
+            statusText.textContent = 'API Offline — start your .NET project';
+            warning.classList.add('active');
+        });
+    </script>
+</body>
+</html>

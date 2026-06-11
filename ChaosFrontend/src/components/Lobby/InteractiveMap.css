@@ -1,0 +1,256 @@
+﻿/* ─────────────────────────────────────────
+   INTERACTIVE MAP — Game Selector Showcase
+───────────────────────────────────────── */
+
+/* ── Wrapper externo ── */
+.interactive-map-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.interactive-svg-showcase {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 16px 100px 16px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+/* ── Flexible Grid Layout ── */
+.games-flexible-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+    justify-items: center;
+    margin-bottom: 70px;
+}
+
+/* ── Individual Game Card ── */
+.game-card-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    user-select: none;
+}
+
+    .game-card-showcase:hover {
+        transform: translateY(-6px) scale(1.05);
+        filter: drop-shadow(0 8px 20px rgba(191, 149, 63, 0.6));
+    }
+
+    .game-card-showcase:active {
+        transform: translateY(-2px) scale(0.98);
+    }
+
+/* ── Image Box ── */
+.game-interactive-box {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(191, 149, 63, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+    transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+}
+
+.game-card-showcase:hover .game-interactive-box {
+    background: rgba(191, 149, 63, 0.12);
+    border-color: rgba(252, 246, 186, 0.6);
+    box-shadow: 0 8px 30px rgba(191, 149, 63, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* ── Dark overlay that appears at the bottom of the card image ── */
+.no-buffs-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 8px 6px;
+    background: linear-gradient( to top, rgba(20, 0, 0, 0.92) 0%, rgba(20, 0, 0, 0.75) 60%, transparent 100% );
+    border-radius: 0 0 20px 20px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* ── Emoji icon ── */
+.no-buffs-icon {
+    font-size: 1.1rem;
+    line-height: 1;
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.8));
+}
+
+/* ── Label text ── */
+.no-buffs-text {
+    font-size: 0.52rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #ff6b6b;
+    text-shadow: 0 0 8px rgba(255, 80, 80, 0.8);
+    white-space: nowrap;
+}
+
+/* ── Game Icon Image ── */
+.svg-game-asset {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+}
+
+.game-card-showcase:hover .svg-game-asset {
+    transform: scale(1.08);
+}
+
+/* ── Game Name Label ── */
+.game-label-card {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+    background: linear-gradient( 90deg, #bf953f 0%, #fcf6ba 20%, #fff5a0 35%, #fcf6ba 50%, #bf953f 65%, #fcf6ba 80%, #bf953f 100% );
+    background-size: 300% 100%;
+    background-position: 0% 50%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: metallicText 4s linear infinite;
+}
+
+@keyframes metallicText {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 300% 50%;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   SCROLL INDICATOR — Rediseñado
+═══════════════════════════════════════════ */
+
+.scroll-down-indicator {
+    position: absolute;
+    bottom: 200px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    pointer-events: none;
+    user-select: none;
+    z-index: 10;
+
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.scroll-indicator--visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-indicator--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ── Contenedor interno centrado ── */
+.scroll-indicator-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: indicatorFloat 2s ease-in-out infinite;
+}
+
+/* ── Chevrons apilados ── */
+.scroll-chevrons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    
+}
+
+.chevron {
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 5rem;
+    line-height: 0.90;
+    background: linear-gradient( 90deg, #bf953f 0%, #fcf6ba 20%, #fff5a0 35%, #fcf6ba 50%, #bf953f 65%, #fcf6ba 80%, #bf953f 100% );
+    background-size: 300% 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: metallicText 4s linear infinite, chevronFade 1.6s ease-in-out infinite;
+}
+
+@keyframes chevronFade {
+    0%, 100% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ── Flotación suave del conjunto ── */
+@keyframes indicatorFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+/* ── Responsive: Laptop ── */
+@media (max-width: 1024px) {
+    .games-flexible-layout {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 100px;
+    }
+}
+
+/* ── Responsive: Tablet ── */
+@media (max-width: 768px) {
+    .games-flexible-layout {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    } 
+}
+
+/* ── Responsive: Mobile ── */
+@media (max-width: 480px) {
+    .game-label-card {
+        font-size: 0.68rem;
+        letter-spacing: 1.5px;
+    }
+
+    .scroll-down-indicator {
+        bottom: 250px;
+    }
+
+}

@@ -1,0 +1,200 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums.SlotSymbolEnum
+  commentId: T:Chaos.Api.Enums.SlotSymbolEnum
+  id: SlotSymbolEnum
+  parent: Chaos.Api.Enums
+  children:
+  - Chaos.Api.Enums.SlotSymbolEnum.BAR
+  - Chaos.Api.Enums.SlotSymbolEnum.BELL
+  - Chaos.Api.Enums.SlotSymbolEnum.CHERRY
+  - Chaos.Api.Enums.SlotSymbolEnum.LEMON
+  - Chaos.Api.Enums.SlotSymbolEnum.ORANGE
+  - Chaos.Api.Enums.SlotSymbolEnum.SEVEN
+  langs:
+  - csharp
+  - vb
+  name: SlotSymbolEnum
+  nameWithType: SlotSymbolEnum
+  fullName: Chaos.Api.Enums.SlotSymbolEnum
+  type: Enum
+  source:
+    id: SlotSymbolEnum
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\SlotSymbolEnum.cs
+    startLine: 2
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: public enum SlotSymbolEnum
+    content.vb: Public Enum SlotSymbolEnum
+- uid: Chaos.Api.Enums.SlotSymbolEnum.CHERRY
+  commentId: F:Chaos.Api.Enums.SlotSymbolEnum.CHERRY
+  id: CHERRY
+  parent: Chaos.Api.Enums.SlotSymbolEnum
+  langs:
+  - csharp
+  - vb
+  name: CHERRY
+  nameWithType: SlotSymbolEnum.CHERRY
+  fullName: Chaos.Api.Enums.SlotSymbolEnum.CHERRY
+  type: Field
+  source:
+    id: CHERRY
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\SlotSymbolEnum.cs
+    startLine: 5
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: CHERRY = 0
+    return:
+      type: Chaos.Api.Enums.SlotSymbolEnum
+- uid: Chaos.Api.Enums.SlotSymbolEnum.LEMON
+  commentId: F:Chaos.Api.Enums.SlotSymbolEnum.LEMON
+  id: LEMON
+  parent: Chaos.Api.Enums.SlotSymbolEnum
+  langs:
+  - csharp
+  - vb
+  name: LEMON
+  nameWithType: SlotSymbolEnum.LEMON
+  fullName: Chaos.Api.Enums.SlotSymbolEnum.LEMON
+  type: Field
+  source:
+    id: LEMON
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\SlotSymbolEnum.cs
+    startLine: 6
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: LEMON = 1
+    return:
+      type: Chaos.Api.Enums.SlotSymbolEnum
+- uid: Chaos.Api.Enums.SlotSymbolEnum.ORANGE
+  commentId: F:Chaos.Api.Enums.SlotSymbolEnum.ORANGE
+  id: ORANGE
+  parent: Chaos.Api.Enums.SlotSymbolEnum
+  langs:
+  - csharp
+  - vb
+  name: ORANGE
+  nameWithType: SlotSymbolEnum.ORANGE
+  fullName: Chaos.Api.Enums.SlotSymbolEnum.ORANGE
+  type: Field
+  source:
+    id: ORANGE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\SlotSymbolEnum.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: ORANGE = 2
+    return:
+      type: Chaos.Api.Enums.SlotSymbolEnum
+- uid: Chaos.Api.Enums.SlotSymbolEnum.BELL
+  commentId: F:Chaos.Api.Enums.SlotSymbolEnum.BELL
+  id: BELL
+  parent: Chaos.Api.Enums.SlotSymbolEnum
+  langs:
+  - csharp
+  - vb
+  name: BELL
+  nameWithType: SlotSymbolEnum.BELL
+  fullName: Chaos.Api.Enums.SlotSymbolEnum.BELL
+  type: Field
+  source:
+    id: BELL
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\SlotSymbolEnum.cs
+    startLine: 8
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: BELL = 3
+    return:
+      type: Chaos.Api.Enums.SlotSymbolEnum
+- uid: Chaos.Api.Enums.SlotSymbolEnum.BAR
+  commentId: F:Chaos.Api.Enums.SlotSymbolEnum.BAR
+  id: BAR
+  parent: Chaos.Api.Enums.SlotSymbolEnum
+  langs:
+  - csharp
+  - vb
+  name: BAR
+  nameWithType: SlotSymbolEnum.BAR
+  fullName: Chaos.Api.Enums.SlotSymbolEnum.BAR
+  type: Field
+  source:
+    id: BAR
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\SlotSymbolEnum.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: BAR = 4
+    return:
+      type: Chaos.Api.Enums.SlotSymbolEnum
+- uid: Chaos.Api.Enums.SlotSymbolEnum.SEVEN
+  commentId: F:Chaos.Api.Enums.SlotSymbolEnum.SEVEN
+  id: SEVEN
+  parent: Chaos.Api.Enums.SlotSymbolEnum
+  langs:
+  - csharp
+  - vb
+  name: SEVEN
+  nameWithType: SlotSymbolEnum.SEVEN
+  fullName: Chaos.Api.Enums.SlotSymbolEnum.SEVEN
+  type: Field
+  source:
+    id: SEVEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\SlotSymbolEnum.cs
+    startLine: 10
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: SEVEN = 5
+    return:
+      type: Chaos.Api.Enums.SlotSymbolEnum
+references:
+- uid: Chaos.Api.Enums
+  commentId: N:Chaos.Api.Enums
+  href: Chaos.html
+  name: Chaos.Api.Enums
+  nameWithType: Chaos.Api.Enums
+  fullName: Chaos.Api.Enums
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+- uid: Chaos.Api.Enums.SlotSymbolEnum
+  commentId: T:Chaos.Api.Enums.SlotSymbolEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.SlotSymbolEnum.html
+  name: SlotSymbolEnum
+  nameWithType: SlotSymbolEnum
+  fullName: Chaos.Api.Enums.SlotSymbolEnum

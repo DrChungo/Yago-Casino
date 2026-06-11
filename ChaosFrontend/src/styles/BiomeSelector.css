@@ -1,0 +1,413 @@
+﻿/* ══════════════════════════════════════════════════════════════
+   BIOME SELECTOR — Contenedor
+══════════════════════════════════════════════════════════════ */
+.biome-selector {
+    position: absolute;
+    top: clamp(6px, 1vh, 20px);
+    right: clamp(8px, 2vw, 20px);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   BOTÓN TRIGGER — Default (dorado clásico)
+══════════════════════════════════════════════════════════════ */
+.biome-selector__trigger {
+    color: #D4AF37;
+    font-size: clamp(11px, 1vw, 14px);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: clamp(3px, 0.5vh, 10px) clamp(10px, 1.2vw, 16px);
+    border: 1px solid #D4AF37;
+    border-radius: 2px;
+    clip-path: polygon(0% 0%, calc(100% - 12px) 0%, 100% 100%, 0% 100%);
+    background: rgba(8, 8, 8, 0.6);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.3), inset 0 0 8px rgba(212, 175, 55, 0.05);
+    transition: all 0.25s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+    .biome-selector__trigger:hover {
+        box-shadow: 0 0 16px rgba(212, 175, 55, 0.6), inset 0 0 12px rgba(212, 175, 55, 0.1);
+    }
+
+@media (max-width: 500px) {
+    .biome-selector__trigger {
+        clip-path: none;
+        border-radius: 8px;
+    }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   DROPDOWN — Lista de biomas
+══════════════════════════════════════════════════════════════ */
+.biome-selector__dropdown {
+    list-style: none;
+    margin: 6px 0 0 0;
+    padding: 6px 0;
+    background: rgba(8, 8, 8, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    min-width: 160px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    animation: dropdown-open 0.18s ease;
+}
+
+@keyframes dropdown-open {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   OPCIÓN — Default
+══════════════════════════════════════════════════════════════ */
+.biome-selector__option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    font-size: clamp(11px, 1vw, 13px);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #D4AF37;
+    transition: all 0.2s ease;
+}
+
+    .biome-selector__option:hover {
+        background: rgba(255, 255, 255, 0.06);
+        padding-left: 22px;
+    }
+
+.biome-selector__emoji {
+    font-size: 1.1em;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   TRIGGER — por bioma actual
+══════════════════════════════════════════════════════════════ */
+
+/* 🌊 OCEAN */
+.biome-selector__trigger[data-biome="Ocean"] {
+    color: #7dd8f0;
+    border-color: #7dd8f0;
+    background: rgba(0, 20, 45, 0.75);
+    box-shadow: 0 0 10px rgba(125, 216, 240, 0.4), inset 0 0 10px rgba(125, 216, 240, 0.08), 0 0 25px rgba(0, 80, 120, 0.3);
+    text-shadow: 0 0 8px rgba(125, 216, 240, 0.8);
+}
+
+    .biome-selector__trigger[data-biome="Ocean"]:hover {
+        color: #a8eaf8;
+        border-color: #a8eaf8;
+        box-shadow: 0 0 18px rgba(125, 216, 240, 0.7), inset 0 0 14px rgba(125, 216, 240, 0.15);
+    }
+
+/* 🌾 FARM */
+.biome-selector__trigger[data-biome="Farm"] {
+    color: #a8d85a;
+    border-color: #a8d85a;
+    background: rgba(10, 30, 5, 0.75);
+    box-shadow: 0 0 10px rgba(168, 216, 90, 0.4), inset 0 0 10px rgba(168, 216, 90, 0.08), 0 0 25px rgba(80, 140, 20, 0.2);
+    text-shadow: 0 0 8px rgba(168, 216, 90, 0.7);
+}
+
+    .biome-selector__trigger[data-biome="Farm"]:hover {
+        color: #c8f07a;
+        border-color: #c8f07a;
+        box-shadow: 0 0 18px rgba(168, 216, 90, 0.7), inset 0 0 14px rgba(168, 216, 90, 0.15);
+    }
+
+/* ✨ LEGEND */
+.biome-selector__trigger[data-biome="Legend"] {
+    color: #ffe066;
+    border-color: #D4AF37;
+    background: rgba(15, 5, 30, 0.88);
+    box-shadow: 0 0 14px rgba(212, 175, 55, 0.6), inset 0 0 14px rgba(212, 175, 55, 0.12), 0 0 35px rgba(150, 60, 240, 0.4);
+    text-shadow: 0 0 10px rgba(255, 220, 80, 1), 0 0 20px rgba(212, 175, 55, 0.6);
+    animation: legend-pulse 2.5s ease-in-out infinite;
+    border-width: 1.5px;
+}
+
+    .biome-selector__trigger[data-biome="Legend"]:hover {
+        color: #fff5aa;
+        border-color: #ffe066;
+        box-shadow: 0 0 24px rgba(212, 175, 55, 0.9), inset 0 0 18px rgba(212, 175, 55, 0.2), 0 0 50px rgba(180, 90, 255, 0.55);
+    }
+
+/* 🏜️ DESERT */
+.biome-selector__trigger[data-biome="Desert"] {
+    color: #f5c842;
+    border-color: #d4831a;
+    background: rgba(35, 15, 0, 0.85);
+    box-shadow: 0 0 12px rgba(245, 166, 35, 0.5), inset 0 0 12px rgba(245, 166, 35, 0.1), 0 0 30px rgba(210, 80, 10, 0.35);
+    text-shadow: 0 0 8px rgba(255, 200, 60, 0.9);
+    animation: desert-heat 3s ease-in-out infinite;
+}
+
+    .biome-selector__trigger[data-biome="Desert"]:hover {
+        color: #ffe07a;
+        border-color: #f5a623;
+        box-shadow: 0 0 22px rgba(245, 166, 35, 0.8), inset 0 0 16px rgba(245, 166, 35, 0.18), 0 0 40px rgba(220, 90, 10, 0.5);
+    }
+
+/* 🌿 SWAMP */
+.biome-selector__trigger[data-biome="Swamp"] {
+    color: #88cc77;
+    border-color: #4a7a3a;
+    background: rgba(5, 15, 5, 0.88);
+    box-shadow: 0 0 12px rgba(100, 170, 80, 0.4), inset 0 0 12px rgba(80, 140, 60, 0.1), 0 0 28px rgba(30, 70, 20, 0.55);
+    text-shadow: 0 0 8px rgba(120, 200, 90, 0.7);
+    animation: swamp-fog 4s ease-in-out infinite;
+}
+
+    .biome-selector__trigger[data-biome="Swamp"]:hover {
+        color: #aae899;
+        border-color: #7abf6e;
+        box-shadow: 0 0 20px rgba(120, 190, 100, 0.65), inset 0 0 16px rgba(100, 170, 80, 0.15), 0 0 38px rgba(40, 90, 25, 0.6);
+    }
+
+/* 🌴 JUNGLE */
+.biome-selector__trigger[data-biome="Jungle"] {
+    color: #5dfc8a;
+    border-color: #2a9e4f;
+    background: rgba(0, 12, 5, 0.88);
+    box-shadow: 0 0 12px rgba(60, 220, 100, 0.45), inset 0 0 12px rgba(40, 180, 80, 0.1), 0 0 30px rgba(10, 100, 35, 0.5);
+    text-shadow: 0 0 10px rgba(80, 255, 120, 0.85);
+    animation: jungle-flicker 3.5s ease-in-out infinite;
+}
+
+    .biome-selector__trigger[data-biome="Jungle"]:hover {
+        color: #90ffb5;
+        border-color: #4ddf7a;
+        box-shadow: 0 0 22px rgba(60, 230, 110, 0.75), inset 0 0 16px rgba(50, 200, 90, 0.18), 0 0 42px rgba(15, 120, 45, 0.65);
+    }
+
+/* 🦁 SAVANNA */
+.biome-selector__trigger[data-biome="Savanna"] {
+    color: #f0c84a;
+    border-color: #c48a18;
+    background: rgba(30, 14, 0, 0.85);
+    box-shadow: 0 0 12px rgba(232, 184, 75, 0.5), inset 0 0 12px rgba(232, 184, 75, 0.1), 0 0 30px rgba(190, 100, 10, 0.35);
+    text-shadow: 0 0 8px rgba(255, 210, 80, 0.9);
+    animation: savanna-dust 4s ease-in-out infinite;
+}
+
+    .biome-selector__trigger[data-biome="Savanna"]:hover {
+        color: #ffe07a;
+        border-color: #e8b84b;
+        box-shadow: 0 0 22px rgba(232, 184, 75, 0.8), inset 0 0 16px rgba(232, 184, 75, 0.18), 0 0 42px rgba(200, 110, 15, 0.5);
+    }
+
+/* 🦕 JURASSIC */
+.biome-selector__trigger[data-biome="Jurassic"] {
+    color: #d4a84b;
+    border-color: #8a5a1a;
+    background: rgba(8, 16, 4, 0.88);
+    box-shadow: 0 0 12px rgba(200, 168, 75, 0.45), inset 0 0 12px rgba(200, 168, 75, 0.1), 0 0 30px rgba(160, 70, 15, 0.45);
+    text-shadow: 0 0 8px rgba(220, 180, 80, 0.85);
+    animation: jurassic-rumble 5s ease-in-out infinite;
+}
+
+    .biome-selector__trigger[data-biome="Jurassic"]:hover {
+        color: #eec870;
+        border-color: #c8a84b;
+        box-shadow: 0 0 22px rgba(200, 168, 75, 0.75), inset 0 0 16px rgba(200, 168, 75, 0.18), 0 0 42px rgba(180, 80, 20, 0.6);
+    }
+
+/* 🏙️ URBAN */
+.biome-selector__trigger[data-biome="Urban"] {
+    color: #ff9f4a;
+    border-color: #cc5500;
+    background: rgba(8, 6, 14, 0.90);
+    box-shadow: 0 0 12px rgba(255, 140, 60, 0.5), inset 0 0 12px rgba(255, 140, 60, 0.1), 0 0 30px rgba(200, 60, 10, 0.4);
+    text-shadow: 0 0 8px rgba(255, 160, 70, 0.9);
+    animation: urban-neon 3s ease-in-out infinite;
+}
+
+    .biome-selector__trigger[data-biome="Urban"]:hover {
+        color: #ffc87a;
+        border-color: #ff7722;
+        box-shadow: 0 0 22px rgba(255, 140, 60, 0.85), inset 0 0 16px rgba(255, 140, 60, 0.2), 0 0 42px rgba(220, 70, 15, 0.6);
+    }
+
+/* ══════════════════════════════════════════════════════════════
+   OPCIONES DEL DROPDOWN — color por bioma
+══════════════════════════════════════════════════════════════ */
+.biome-selector__option[data-biome="Ocean"] {
+    color: #7dd8f0;
+}
+
+.biome-selector__option[data-biome="Farm"] {
+    color: #a8d85a;
+}
+
+.biome-selector__option[data-biome="Legend"] {
+    color: #ffe066;
+}
+
+.biome-selector__option[data-biome="Desert"] {
+    color: #f5c842;
+}
+
+.biome-selector__option[data-biome="Swamp"] {
+    color: #88cc77;
+}
+
+.biome-selector__option[data-biome="Jungle"] {
+    color: #5dfc8a;
+}
+
+.biome-selector__option[data-biome="Savanna"] {
+    color: #f0c84a;
+}
+
+.biome-selector__option[data-biome="Jurassic"] {
+    color: #d4a84b;
+}
+
+.biome-selector__option[data-biome="Urban"] {
+    color: #ff9f4a;
+}
+
+.biome-selector__option[data-biome="Ocean"]:hover {
+    background: rgba(125, 216, 240, 0.1);
+}
+
+.biome-selector__option[data-biome="Farm"]:hover {
+    background: rgba(168, 216, 90, 0.1);
+}
+
+.biome-selector__option[data-biome="Legend"]:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.biome-selector__option[data-biome="Desert"]:hover {
+    background: rgba(245, 166, 35, 0.1);
+}
+
+.biome-selector__option[data-biome="Swamp"]:hover {
+    background: rgba(100, 170, 80, 0.1);
+}
+
+.biome-selector__option[data-biome="Jungle"]:hover {
+    background: rgba(60, 220, 100, 0.1);
+}
+
+.biome-selector__option[data-biome="Savanna"]:hover {
+    background: rgba(232, 184, 75, 0.1);
+}
+
+.biome-selector__option[data-biome="Jurassic"]:hover {
+    background: rgba(200, 168, 75, 0.1);
+}
+
+.biome-selector__option[data-biome="Urban"]:hover {
+    background: rgba(255, 140, 60, 0.1);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   ANIMACIONES — reutilizadas del BackButton
+══════════════════════════════════════════════════════════════ */
+@keyframes legend-pulse {
+    0%, 100% {
+        box-shadow: 0 0 14px rgba(212, 175, 55, 0.6), 0 0 35px rgba(150, 60, 240, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 26px rgba(212, 175, 55, 0.9), 0 0 55px rgba(180, 90, 255, 0.65);
+    }
+}
+
+@keyframes desert-heat {
+    0%, 100% {
+        box-shadow: 0 0 12px rgba(245, 166, 35, 0.5), 0 0 30px rgba(210, 80, 10, 0.35);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(245, 166, 35, 0.7), 0 0 45px rgba(220, 60, 5, 0.5);
+    }
+}
+
+@keyframes swamp-fog {
+    0%, 100% {
+        filter: saturate(0.85) brightness(0.95);
+    }
+
+    50% {
+        filter: saturate(0.9) brightness(1.05);
+    }
+}
+
+@keyframes jungle-flicker {
+    0%, 100% {
+        box-shadow: 0 0 12px rgba(60, 220, 100, 0.45), 0 0 30px rgba(10, 100, 35, 0.5);
+    }
+
+    40% {
+        box-shadow: 0 0 20px rgba(60, 220, 100, 0.65), 0 0 44px rgba(10, 130, 45, 0.65);
+    }
+
+    70% {
+        box-shadow: 0 0 10px rgba(60, 220, 100, 0.35), 0 0 24px rgba(10, 90, 30, 0.4);
+    }
+}
+
+@keyframes savanna-dust {
+    0%, 100% {
+        box-shadow: 0 0 12px rgba(232, 184, 75, 0.5), 0 0 30px rgba(190, 100, 10, 0.35);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(232, 184, 75, 0.7), 0 0 44px rgba(200, 110, 10, 0.5);
+    }
+}
+
+@keyframes jurassic-rumble {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-1px);
+    }
+
+    40% {
+        transform: translateX(1px);
+    }
+
+    60% {
+        transform: translateX(-0.5px);
+    }
+
+    80% {
+        transform: translateX(0.5px);
+    }
+}
+
+@keyframes urban-neon {
+    0%, 100% {
+        box-shadow: 0 0 12px rgba(255, 140, 60, 0.5), 0 0 30px rgba(200, 60, 10, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(255, 140, 60, 0.75), 0 0 46px rgba(220, 70, 10, 0.6);
+    }
+}

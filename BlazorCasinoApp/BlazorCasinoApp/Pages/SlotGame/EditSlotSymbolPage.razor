@@ -1,0 +1,167 @@
+﻿@page "/slot-symbol/edit/{SymbolId:guid}"
+
+@using Chaos.BlazorCasinoApp.IApiService.Slots
+@using Chaos.Shared.RequestEntity.SlotGame
+@using Chaos.Shared.ResponseEntity.SlotGame
+
+@inject ISlotSymbolService SlotSymbolService
+@inject ISlotGameService SlotGameConfigService
+@inject NavigationManager Nav
+
+<PageTitle>Editar Símbolo — Slot Game</PageTitle>
+
+<div class="casino-page">
+
+    <div class="casino-form-header">
+        <button class="btn-casino-secondary" @onclick="GoBack">← Volver</button>
+        <h4>🎴 Editar Símbolo</h4>
+    </div>
+
+    @if (isLoading)
+    {
+        <div class="casino-loading">
+            <div class="casino-spinner" role="status">🛞</div>
+            <p class="text-gold">Cargando datos...</p>
+        </div>
+    }
+    else if (errorMessage is not null)
+    {
+        <div class="alert alert-danger">⚠️ @errorMessage</div>
+    }
+    else
+    {
+        <div class="card">
+            <div class="card-body">
+
+                <div class="casino-id-box">
+                    <small>ID de Símbolo</small>
+                    <span>@SymbolId</span>
+                </div>
+
+                <EditForm Model="request" OnValidSubmit="HandleSubmit">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary class="alert alert-danger" />
+
+                    <div class="form-group">
+                        <label class="form-label">Nombre del Símbolo</label>
+                        <InputText class="form-control" @bind-Value="request.SymbolName" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Código del Símbolo</label>
+                        <InputText class="form-control" @bind-Value="request.SymbolCode" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Rareza</label>
+                        <InputText class="form-control" @bind-Value="request.Rarity" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Valor Base</label>
+                        <InputNumber class="form-control" @bind-Value="request.BaseValue" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Slot Config</label>
+                        <InputSelect class="form-select casino-select" @bind-Value="request.SlotGameConfigId">
+                            <option value="">-- Selecciona una configuración --</option>
+                            @foreach (var config in configs)
+                            {
+                                <option value="@config.Id">@config.MachineName</option>
+                            }
+                        </InputSelect>
+                    </div>
+
+                    <div class="casino-toggle-row">
+                        <button type="button"
+                                class="casino-toggle-btn @(request.IsActive ? "badge-casino-active" : "badge-casino-inactive")"
+                                @onclick="() => request.IsActive = !request.IsActive">
+                            @if (request.IsActive)
+                            {
+                                <span>● Activo</span>
+                            }
+                            else
+                            {
+                                <span>● Inactivo</span>
+                            }
+                        </button>
+                    </div>
+
+                    <div class="casino-form-actions">
+                        <button type="button" class="btn-casino-secondary" @onclick="GoBack">
+                            ✖ Cancelar
+                        </button>
+                        <button type="submit" class="btn-casino-primary" disabled="@isSaving">
+                            @if (isSaving)
+                            {
+                                <span class="casino-spinner-sm">🎰</span>
+                            }
+                            💾 Guardar Cambios
+                        </button>
+                    </div>
+
+                </EditForm>
+            </div>
+        </div>
+    }
+
+</div>
+
+@code {
+    [Parameter] public Guid SymbolId { get; set; }
+
+    private UpdateSlotSymbolRequest request = new();
+    private List<SlotGameConfigResponse> configs = new();
+    private bool isLoading = true;
+    private bool isSaving = false;
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            configs = await SlotGameConfigService.GetAllAsync();
+
+            var symbol = await SlotSymbolService.GetByIdAsync(SymbolId);
+            request = new UpdateSlotSymbolRequest
+            {
+                SymbolName = symbol.SymbolName,
+                SymbolCode = symbol.SymbolCode,
+                Rarity = symbol.Rarity,
+                BaseValue = symbol.BaseValue,
+                IsActive = symbol.IsActive,
+                SlotGameConfigId = symbol.SlotGameConfigId
+            };
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al cargar símbolo: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task HandleSubmit()
+    {
+        isSaving = true;
+        errorMessage = null;
+        try
+        {
+            await SlotSymbolService.UpdateAsync(SymbolId, request);
+            GoBack();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al guardar cambios: {ex.Message}";
+        }
+        finally
+        {
+            isSaving = false;
+        }
+    }
+
+    private void GoBack() => Nav.NavigateTo("/SlotGamePage");
+}

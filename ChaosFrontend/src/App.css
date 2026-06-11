@@ -1,0 +1,647 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&display=swap');
+/* RESET RAIZ DEL COMPONENTE */
+html, body, #root
+
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #08060d;
+}
+
+html.scrollable-page,
+html.scrollable-page body,
+html.scrollable-page #root {
+    height: auto;
+    min-height: 100%;
+    overflow: visible;
+}
+
+/* ESTILOS PERSONALIZADOS DE SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6e0f19;
+    border-radius: 10px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #b30000;
+    }
+
+/* CONTENEDOR DE FONDO DINAMICO */
+.app-main-layout {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+
+/* Add to your main CSS */
+html.scrollable-page .app-main-layout,
+html.scrollable-page .content-layer {
+    height: auto;
+    min-height: 100%;
+    overflow: visible;
+}
+
+/* CAPA OSCURA DE TRANSICION CINESTESICA */
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    z-index: 2;
+    pointer-events: none;
+}
+
+    .dark-overlay.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+/* CONTENEDOR FRONTAL */
+.content-layer {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+/* CONTENEDOR GENERAL DEL MENU DE JUEGOS (LOBBY) */
+.menu-container-royale {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* LOBBY DASHBOARD PANELS LAYOUT */
+.lobby-dashboard-layout {
+    display: flex;
+    flex: 1;
+    padding: 20px 40px;
+    gap: 30px;
+    height: 100vh; /* Adjusting for Header (90px) and Bottom Bar (75px) */
+    box-sizing: border-box;
+    z-index: 5;
+    overflow: hidden;
+}
+
+/* COMMON SIDE PANEL STYLING (GLASSMORPHISM + ROYAL GOLD BORDER) */
+.lobby-panel-left, .lobby-panel-right {
+    width: 320px;
+    min-width: 300px;
+    background: rgba(14, 11, 22, 0.75);
+    backdrop-filter: blur(10px);
+    border: 2px solid #bf953f;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(191, 149, 63, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.lobby-panel-right {
+    overflow-y: scroll;
+}
+
+    .lobby-panel-left:hover, .lobby-panel-right:hover {
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 0 0 15px rgba(212, 175, 55, 0.2);
+        border-color: #fcf6ba;
+    }
+
+.panel-title {
+    margin: 0 0 15px 0;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #e6c687;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-bottom: 1px solid rgba(191, 149, 63, 0.3);
+    padding-bottom: 10px;
+}
+
+/* ANIMALS LIST SCROLLER (LEFT SIDE) */
+.animals-list-wrapper {
+    margin-bottom: 50px;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+    /* Customize Scroller Bar for Casino Elegance */
+    .animals-list-wrapper::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .animals-list-wrapper::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 3px;
+    }
+
+    .animals-list-wrapper::-webkit-scrollbar-thumb {
+        background: #bf953f;
+        border-radius: 3px;
+    }
+
+.loading-text, .no-animals-text {
+    font-size: 0.9rem;
+    color: #8c8594;
+    text-align: center;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+/* ANIMAL CARD */
+.animal-card-mini {
+    background: rgba(30, 24, 40, 0.6);
+    border: 1px solid rgba(191, 149, 63, 0.3);
+    border-radius: 6px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+    .animal-card-mini:hover {
+        background: rgba(45, 36, 60, 0.8);
+        border-color: #bf953f;
+        transform: translateY(-2px);
+    }
+
+.animal-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.animal-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.animal-health-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 12px;
+    color: #ffffff;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.animal-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.8rem;
+    color: #b0a8ba;
+}
+
+    .animal-card-body strong {
+        color: #ffffff;
+    }
+
+.gold-text {
+    color: #e6c687 !important;
+    font-weight: bold;
+}
+
+/* CENTER BILLBOARD PANEL */
+.lobby-panel-center {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    box-sizing: border-box;
+    padding-bottom: 100px;
+    gap: 32px;
+}
+
+.casino-welcome-billboard {
+    background: rgba(14, 11, 22, 0.2);
+    border: 2px solid rgba(191, 149, 63, 0.6);
+    border-radius: 16px;
+    padding: 22px 30px;
+    text-align: center;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(212, 175, 55, 0.15);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+    .casino-welcome-billboard:hover {
+        border-color: rgba(252, 246, 186, 0.7);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.25);
+    }
+
+.las-vegas-subtitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 3px;
+    line-height: 1.6;
+    background: linear-gradient(90deg, #bf953f 0%, #fcf6ba 25%, #fcd725 50%, #fcf6ba 75%, #bf953f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 20px rgba(212, 175, 55, 0.3), 2px 2px 20px rgba(0, 0, 0, 0.3), 2px 2px 20px rgba(212, 175, 55, 0.3), 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.las-vegas-chips-deco {
+    width: 55px;
+    height: 55px;
+    margin: 15px auto 0 auto;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="none" stroke="%23f0c040" stroke-width="8" stroke-dasharray="10 5"/><circle cx="50" cy="50" r="30" fill="none" stroke="%23f0c040" stroke-width="2"/><text x="50" y="56" font-size="20" font-weight="bold" fill="%23f0c040" text-anchor="middle">777</text></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    animation: rotateChip 20s linear infinite;
+    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.9));
+}
+
+@keyframes rotateChip {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* WALLET CONTAINER (RIGHT SIDE) */
+.wallet-card {
+    background: radial-gradient(circle at center, #1b0c10 0%, #0e0507 100%);
+    border: 1px solid #bf953f;
+    border-radius: 8px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.9);
+    margin-top: 20px;
+}
+
+.wallet-chip-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4));
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-5px) rotate(5deg);
+    }
+}
+
+.wallet-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #8c8594;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.wallet-amount {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fcf6ba;
+    text-shadow: 0 0 10px rgba(252, 246, 186, 0.5), 0 2px 4px rgba(0,0,0,0.8);
+    letter-spacing: 1px;
+}
+
+    .wallet-amount.loading {
+        letter-spacing: 5px;
+        animation: pulse 1.5s infinite;
+    }
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* BOTTOM PLAY GAMES BAR */
+.lobby-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0 24px 0;
+    background: linear-gradient( to top, rgba(8, 6, 13, 0.98) 60%, rgba(8, 6, 13, 0.0) 100% );
+    z-index: 100;
+}
+
+/* PLAY GAMES ROYAL BUTTON */
+.btn-play-games {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 60px;
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #fcf6ba;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #1f0305, #42080e, #6e0f19, #42080e) padding-box, linear-gradient(to right, #bf953f, #fcf6ba, #b38728) border-box;
+    background-size: 300% 300%, 100% 100%;
+    animation: nobleFluidRed 8s ease infinite;
+    cursor: pointer;
+    box-shadow: 1px 10px 30px rgba(0, 0, 0, 0.7), 1px 1px 20px rgba(191, 149, 63, 0.2), 1px 1px 20px rgba(191, 149, 63, 0.2), 2px 2px 5px rgba(191, 149, 63, 0.2);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-origin: center;
+    text-shadow: 2px 2px 20px rgba(212, 175, 55, 0.3), 2px 2px 20px rgba(212, 175, 55, 0.3);
+}
+
+    /* El destello cinemático dorado que cruza el botón */
+    .btn-play-games::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -150%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient( 90deg, transparent, rgba(252, 246, 186, 0.4), transparent );
+        transform: skewX(-25deg);
+        animation: goldShine 4s infinite ease-in-out;
+    }
+
+    /* --- CINEMÁTICA EN HOVER (ESPECTACULAR) --- */
+    .btn-play-games:hover {
+        color: #ffffff;
+        /* El rojo se vuelve más vivo y rápido al pasar el ratón */
+        background: linear-gradient(135deg, #540c15, #aa1c29, #d42232, #540c15);
+        background-size: 200% 200%;
+        animation: nobleFluidRed 2s ease infinite;
+        /* El borde brilla más */
+        border-image: linear-gradient(to right, #fcf6ba, #ffffff, #fcf6ba) 1;
+        /* Explosión de sombra dorada y elevación */
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 35px rgba(212, 175, 55, 0.6), 0 0 10px rgba(255, 255, 255, 0.3);
+        transform: translateY(-6px) scale(1.06);
+        letter-spacing: 6px; /* Las letras se separan ligeramente de forma elegante */
+    }
+
+    .btn-play-games:active {
+        transform: translateY(-1px) scale(0.98);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9), 0 0 15px rgba(212, 175, 55, 0.4);
+        transition: all 0.1s ease;
+    }
+
+/* --- ANIMACIONES (KEYFRAMES) --- */
+
+/* Movimiento fluido del fondo rojo (como seda o sangre real flotando) */
+@keyframes nobleFluidRed {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* El destello místico dorado */
+@keyframes goldShine {
+    0% {
+        left: -150%;
+    }
+
+    30% {
+        left: 150%;
+    }
+
+    100% {
+        left: 150%;
+    }
+    /* Pausa antes de volver a pasar */
+}
+
+.btn-play-games.active {
+    background: linear-gradient(135deg, #1f1115 0%, #3a181e 100%);
+    border-color: #fcf6ba;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+/* GAMES OVERLAY SELECTION MODAL */
+.games-overlay-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 2, 3, 0.85);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 50;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 150px;
+}
+
+.games-modal-content {
+    width: 95%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.games-modal-title {
+    width: 100%;
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 4px;
+    line-height: 1.3;
+    background: linear-gradient( 90deg, #bf953f 0%, #fcf6ba 20%, #fff5a0 35%, #fcf6ba 50%, #bf953f 65%, #fcf6ba 80%, #bf953f 100% );
+    background-size: 300% 100%;
+    background-position: 0% 50%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: metallicText 4s linear infinite;
+}
+
+/* Only declare this once globally — both components share it */
+@keyframes metallicText {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 300% 50%;
+    }
+}
+
+/* Animations */
+.animate-fade-in {
+    animation: fadeIn 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MEDIA BREAKPOINTS FOR Las Vegas LOBBY)
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .lobby-dashboard-layout {
+        padding: 15px 20px;
+        gap: 20px;
+    }
+
+    .lobby-panel-left, .lobby-panel-right {
+        width: 270px;
+        min-width: 250px;
+    }
+
+    .las-vegas-neon-title {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .menu-container-royale {
+        overflow-y: auto;
+    }
+
+    .lobby-dashboard-layout {
+        flex-direction: column;
+        height: auto;
+        overflow: visible;
+        padding-bottom: 120px;
+    }
+
+    .lobby-panel-left, .lobby-panel-right {
+        width: 100%;
+        min-width: 100%;
+        height: auto;
+        max-height: 400px;
+    }
+
+    .lobby-panel-center {
+        order: -1;
+        margin-bottom: 10px;
+    }
+
+    .games-overlay-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 50;
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-header {
+        padding: 0 15px;
+        height: 80px;
+    }
+
+    .logo-menu {
+        height: 42px;
+    }
+
+    .boton-logout {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+
+    .header-nav {
+        gap: 8px;
+    }
+
+    .boton-mute {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+
+    .las-vegas-neon-title {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+
+    .las-vegas-subtitle {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+
+    .casino-welcome-billboard {
+        padding: 25px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-play-games {
+        width: 90%;
+    }
+}

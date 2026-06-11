@@ -1,0 +1,294 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums.AnimalEnum
+  commentId: T:Chaos.Api.Enums.AnimalEnum
+  id: AnimalEnum
+  parent: Chaos.Api.Enums
+  children:
+  - Chaos.Api.Enums.AnimalEnum.CAT
+  - Chaos.Api.Enums.AnimalEnum.COW
+  - Chaos.Api.Enums.AnimalEnum.CROCODILE
+  - Chaos.Api.Enums.AnimalEnum.DOG
+  - Chaos.Api.Enums.AnimalEnum.FLY
+  - Chaos.Api.Enums.AnimalEnum.HAMSTER
+  - Chaos.Api.Enums.AnimalEnum.HORSE
+  - Chaos.Api.Enums.AnimalEnum.SHARK
+  - Chaos.Api.Enums.AnimalEnum.SHEEP
+  - Chaos.Api.Enums.AnimalEnum.WHALE
+  langs:
+  - csharp
+  - vb
+  name: AnimalEnum
+  nameWithType: AnimalEnum
+  fullName: Chaos.Api.Enums.AnimalEnum
+  type: Enum
+  source:
+    id: AnimalEnum
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\AnimalEmun.cs
+    startLine: 5
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  summary: Enum representing the type of an animal.
+  example: []
+  syntax:
+    content: public enum AnimalEnum
+    content.vb: Public Enum AnimalEnum
+- uid: Chaos.Api.Enums.AnimalEnum.FLY
+  commentId: F:Chaos.Api.Enums.AnimalEnum.FLY
+  id: FLY
+  parent: Chaos.Api.Enums.AnimalEnum
+  langs:
+  - csharp
+  - vb
+  name: FLY
+  nameWithType: AnimalEnum.FLY
+  fullName: Chaos.Api.Enums.AnimalEnum.FLY
+  type: Field
+  source:
+    id: FLY
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\AnimalEmun.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: FLY = 0
+    return:
+      type: Chaos.Api.Enums.AnimalEnum
+- uid: Chaos.Api.Enums.AnimalEnum.HAMSTER
+  commentId: F:Chaos.Api.Enums.AnimalEnum.HAMSTER
+  id: HAMSTER
+  parent: Chaos.Api.Enums.AnimalEnum
+  langs:
+  - csharp
+  - vb
+  name: HAMSTER
+  nameWithType: AnimalEnum.HAMSTER
+  fullName: Chaos.Api.Enums.AnimalEnum.HAMSTER
+  type: Field
+  source:
+    id: HAMSTER
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\AnimalEmun.cs
+    startLine: 8
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: HAMSTER = 1
+    return:
+      type: Chaos.Api.Enums.AnimalEnum
+- uid: Chaos.Api.Enums.AnimalEnum.CAT
+  commentId: F:Chaos.Api.Enums.AnimalEnum.CAT
+  id: CAT
+  parent: Chaos.Api.Enums.AnimalEnum
+  langs:
+  - csharp
+  - vb
+  name: CAT
+  nameWithType: AnimalEnum.CAT
+  fullName: Chaos.Api.Enums.AnimalEnum.CAT
+  type: Field
+  source:
+    id: CAT
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\AnimalEmun.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: CAT = 2
+    return:
+      type: Chaos.Api.Enums.AnimalEnum
+- uid: Chaos.Api.Enums.AnimalEnum.DOG
+  commentId: F:Chaos.Api.Enums.AnimalEnum.DOG
+  id: DOG
+  parent: Chaos.Api.Enums.AnimalEnum
+  langs:
+  - csharp
+  - vb
+  name: DOG
+  nameWithType: AnimalEnum.DOG
+  fullName: Chaos.Api.Enums.AnimalEnum.DOG
+  type: Field
+  source:
+    id: DOG
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\AnimalEmun.cs
+    startLine: 10
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: DOG = 3
+    return:
+      type: Chaos.Api.Enums.AnimalEnum
+- uid: Chaos.Api.Enums.AnimalEnum.SHEEP
+  commentId: F:Chaos.Api.Enums.AnimalEnum.SHEEP
+  id: SHEEP
+  parent: Chaos.Api.Enums.AnimalEnum
+  langs:
+  - csharp
+  - vb
+  name: SHEEP
+  nameWithType: AnimalEnum.SHEEP
+  fullName: Chaos.Api.Enums.AnimalEnum.SHEEP
+  type: Field
+  source:
+    id: SHEEP
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\AnimalEmun.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: SHEEP = 4
+    return:
+      type: Chaos.Api.Enums.AnimalEnum
+- uid: Chaos.Api.Enums.AnimalEnum.COW
+  commentId: F:Chaos.Api.Enums.AnimalEnum.COW
+  id: COW
+  parent: Chaos.Api.Enums.AnimalEnum
+  langs:
+  - csharp
+  - vb
+  name: COW
+  nameWithType: AnimalEnum.COW
+  fullName: Chaos.Api.Enums.AnimalEnum.COW
+  type: Field
+  source:
+    id: COW
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\AnimalEmun.cs
+    startLine: 12
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: COW = 5
+    return:
+      type: Chaos.Api.Enums.AnimalEnum
+- uid: Chaos.Api.Enums.AnimalEnum.HORSE
+  commentId: F:Chaos.Api.Enums.AnimalEnum.HORSE
+  id: HORSE
+  parent: Chaos.Api.Enums.AnimalEnum
+  langs:
+  - csharp
+  - vb
+  name: HORSE
+  nameWithType: AnimalEnum.HORSE
+  fullName: Chaos.Api.Enums.AnimalEnum.HORSE
+  type: Field
+  source:
+    id: HORSE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\AnimalEmun.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: HORSE = 6
+    return:
+      type: Chaos.Api.Enums.AnimalEnum
+- uid: Chaos.Api.Enums.AnimalEnum.CROCODILE
+  commentId: F:Chaos.Api.Enums.AnimalEnum.CROCODILE
+  id: CROCODILE
+  parent: Chaos.Api.Enums.AnimalEnum
+  langs:
+  - csharp
+  - vb
+  name: CROCODILE
+  nameWithType: AnimalEnum.CROCODILE
+  fullName: Chaos.Api.Enums.AnimalEnum.CROCODILE
+  type: Field
+  source:
+    id: CROCODILE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\AnimalEmun.cs
+    startLine: 14
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: CROCODILE = 7
+    return:
+      type: Chaos.Api.Enums.AnimalEnum
+- uid: Chaos.Api.Enums.AnimalEnum.SHARK
+  commentId: F:Chaos.Api.Enums.AnimalEnum.SHARK
+  id: SHARK
+  parent: Chaos.Api.Enums.AnimalEnum
+  langs:
+  - csharp
+  - vb
+  name: SHARK
+  nameWithType: AnimalEnum.SHARK
+  fullName: Chaos.Api.Enums.AnimalEnum.SHARK
+  type: Field
+  source:
+    id: SHARK
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\AnimalEmun.cs
+    startLine: 15
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: SHARK = 8
+    return:
+      type: Chaos.Api.Enums.AnimalEnum
+- uid: Chaos.Api.Enums.AnimalEnum.WHALE
+  commentId: F:Chaos.Api.Enums.AnimalEnum.WHALE
+  id: WHALE
+  parent: Chaos.Api.Enums.AnimalEnum
+  langs:
+  - csharp
+  - vb
+  name: WHALE
+  nameWithType: AnimalEnum.WHALE
+  fullName: Chaos.Api.Enums.AnimalEnum.WHALE
+  type: Field
+  source:
+    id: WHALE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\AnimalEmun.cs
+    startLine: 16
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: WHALE = 9
+    return:
+      type: Chaos.Api.Enums.AnimalEnum
+references:
+- uid: Chaos.Api.Enums
+  commentId: N:Chaos.Api.Enums
+  href: Chaos.html
+  name: Chaos.Api.Enums
+  nameWithType: Chaos.Api.Enums
+  fullName: Chaos.Api.Enums
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+- uid: Chaos.Api.Enums.AnimalEnum
+  commentId: T:Chaos.Api.Enums.AnimalEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.AnimalEnum.html
+  name: AnimalEnum
+  nameWithType: AnimalEnum
+  fullName: Chaos.Api.Enums.AnimalEnum

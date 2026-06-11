@@ -1,0 +1,85 @@
+.notfound-container {
+  min-height: 100vh;
+  background-image: url('../assets/casino_404.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+}
+
+.notfound-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.notfound-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  padding: 40px 30px;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.notfound-content h1 {
+  font-size: 6rem;
+  margin: 0;
+  color: #FFD700;
+  line-height: 1;
+}
+
+.notfound-content h2 {
+  margin: 12px 0;
+  font-size: 2rem;
+}
+
+.notfound-content p {
+  margin: 0 0 24px;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.notfound-button {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #000;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.notfound-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .notfound-content {
+    padding: 30px 20px;
+  }
+
+  .notfound-content h1 {
+    font-size: 4.5rem;
+  }
+
+  .notfound-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .notfound-content p {
+    font-size: 1rem;
+  }
+}

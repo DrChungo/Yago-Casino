@@ -1,0 +1,128 @@
+/* FORM CONTAINER AND SHARED CENTERING */
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.form-container-royale {
+    background: rgba(15, 15, 15, 0.7);
+    border: 2px solid #d4af37;
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 1);
+    animation: fadeInForm 1.5s ease;
+}
+
+@keyframes fadeInForm {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-container-royale .logo {
+    height: 200px;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* TEXT INPUTS */
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+    .input-group input:focus {
+        border-color: #d4af37;
+        outline: none;
+    }
+
+/* GOLDEN SUBMIT BUTTON IN ROYALE STYLE */
+.boton-submit {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #1a1a1a; /* Dark text for contrast against the gold background */
+    background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+    background-size: 200% auto;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+    /* HOVER EFFECT: MULTILAYER GLOW AND SPARKS */
+    .boton-submit:hover {
+        color: #000;
+        background-position: right center; /* Moves the gradient to simulate metallic glow */
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(255, 215, 0, 0.6), 0 0 35px rgba(212, 175, 55, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.6);
+        transform: translateY(-2px);
+    }
+
+    .boton-submit:active {
+        transform: translateY(1px);
+        box-shadow: 0 2px 8px rgba(212, 175, 55, 0.5);
+    }
+
+    /* DISABLED STATE (WHEN LOADING IS TRUE) */
+    .boton-submit:disabled {
+        background: #444 !important;
+        color: #888 !important;
+        border-color: #555 !important;
+        box-shadow: none !important;
+        transform: none !important;
+        cursor: not-allowed;
+    }
+
+/* BACKEND ERROR MESSAGES */
+.error-message-royale {
+    background-color: rgba(255, 0, 0, 0.15);
+    border: 1px solid #ff4d4d;
+    color: #ff4d4d;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* RECOVERY LINKS */
+.form-links {
+    color: #888;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+    transition: color 300ms;
+}
+
+    .form-links:hover {
+        color: #d4af37;
+    }

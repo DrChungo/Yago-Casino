@@ -1,0 +1,118 @@
+﻿## Build results
+bin/
+obj/
+out/
+artifacts/
+
+## VS / Rider / VSCode
+.vs/
+.idea/
+.vscode/
+*.suo
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+.vscode/
+
+## Rider
+*.dotCover
+
+## Logs
+*.log
+logs/
+log/
+
+## Test Results
+TestResults/
+*.trx
+
+## Publish
+publish/
+*.Publish.xml
+
+## NuGet
+*.nupkg
+*.snupkg
+nuget-packages/
+packages/
+# keep lock file if needed
+#packages.lock.json
+
+## Local tools
+.dotnet-tools/
+
+## ASP.NET / Web
+wwwroot/dist/
+wwwroot/lib/
+
+## EF Core
+Migrations/*Snapshot.cs
+
+## Environment files
+.env
+.env.*
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+appsettings.local.json
+appsettings.Development.json
+
+## OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+## Visual Studio Code
+.history/
+
+## Azure
+.azure/
+
+## User-specific files
+*.rsuser
+
+## Resharper
+_ReSharper*/
+*.DotSettings.user
+
+## Coverlet / code coverage
+coverage/
+coverage*.json
+*.coverage
+*.coveragexml
+*.trx
+
+# ---------------------------
+# Docker
+# ---------------------------
+# (Comenta si usas Docker y quieres versionar estos archivos)
+# docker-compose.override.yml
+
+## Temporary files
+*.tmp
+*.temp
+
+## Backup files
+*.bak
+*.old
+
+## Docker
+docker-compose.override.yml
+
+## Blazor / WASM
+wwwroot/_framework/
+
+## Node (if used in frontend)
+node_modules/
+package-lock.json
+yarn.lock
+
+## Generated files
+Generated/
+*.g.cs
+
+## MSBuild
+*.props.user
+*.targets.user

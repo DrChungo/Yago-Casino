@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Controllers
+  commentId: N:Chaos.Api.Controllers
+  id: Chaos.Api.Controllers
+  children:
+  - Chaos.Api.Controllers.AnimalController
+  - Chaos.Api.Controllers.AuthController
+  - Chaos.Api.Controllers.CasinoController
+  - Chaos.Api.Controllers.HealthController
+  - Chaos.Api.Controllers.UserController
+  langs:
+  - csharp
+  - vb
+  name: Chaos.Api.Controllers
+  nameWithType: Chaos.Api.Controllers
+  fullName: Chaos.Api.Controllers
+  type: Namespace
+  assemblies:
+  - Chaos.Api
+references:
+- uid: Chaos.Api.Controllers.AnimalController
+  commentId: T:Chaos.Api.Controllers.AnimalController
+  href: Chaos.Api.Controllers.AnimalController.html
+  name: AnimalController
+  nameWithType: AnimalController
+  fullName: Chaos.Api.Controllers.AnimalController
+- uid: Chaos.Api.Controllers.AuthController
+  commentId: T:Chaos.Api.Controllers.AuthController
+  href: Chaos.Api.Controllers.AuthController.html
+  name: AuthController
+  nameWithType: AuthController
+  fullName: Chaos.Api.Controllers.AuthController
+- uid: Chaos.Api.Controllers.CasinoController
+  commentId: T:Chaos.Api.Controllers.CasinoController
+  href: Chaos.Api.Controllers.CasinoController.html
+  name: CasinoController
+  nameWithType: CasinoController
+  fullName: Chaos.Api.Controllers.CasinoController
+- uid: Chaos.Api.Controllers.HealthController
+  commentId: T:Chaos.Api.Controllers.HealthController
+  href: Chaos.Api.Controllers.HealthController.html
+  name: HealthController
+  nameWithType: HealthController
+  fullName: Chaos.Api.Controllers.HealthController
+- uid: Chaos.Api.Controllers.UserController
+  commentId: T:Chaos.Api.Controllers.UserController
+  href: Chaos.Api.Controllers.UserController.html
+  name: UserController
+  nameWithType: UserController
+  fullName: Chaos.Api.Controllers.UserController

@@ -1,0 +1,2685 @@
+﻿/* ========================================
+   LAS VEGAS CASINO - app.css
+   Sin Bootstrap — 100% custom 🎰
+   ======================================== */
+
+/* --- Variables --- */
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #111111;
+    --bg-card: #1a1208;
+    --bg-hover: #221a0a;
+    --gold: #ffd700;
+    --gold-light: #ffe566;
+    --gold-dark: #b8960c;
+    --gold-glow: rgba(255, 215, 0, 0.3);
+    --red: #cc0000;
+    --red-bright: #ff1a1a;
+    --red-glow: rgba(204, 0, 0, 0.4);
+    --green-bright: #00ff88;
+    --text-primary: #ffd700;
+    --text-secondary: #c8a84b;
+    --text-muted: #7a6030;
+    --border-gold: #8b6914;
+    --success: #00ff88;
+    --danger: #ff1a1a;
+    --sidebar-width: 250px;
+}
+
+/* --- Animaciones --- */
+@keyframes neonPulse {
+    0%, 100% {
+        text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 40px #b8960c;
+    }
+
+    50% {
+        text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 40px #ffd700, 0 0 80px #b8960c;
+    }
+}
+
+@keyframes borderGlow {
+    0%, 100% {
+        box-shadow: 0 0 5px var(--gold-glow), inset 0 0 5px var(--gold-glow);
+    }
+
+    50% {
+        box-shadow: 0 0 20px var(--gold-glow), 0 0 40px var(--gold-glow), inset 0 0 10px var(--gold-glow);
+    }
+}
+
+@keyframes redFlicker {
+    0%, 95%, 100% {
+        opacity: 1;
+    }
+
+    96% {
+        opacity: 0.8;
+    }
+
+    98% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes marqueeGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================
+   RESET
+   ======================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--bg-primary);
+    background-image: radial-gradient(ellipse at 20% 50%, rgba(204,0,0,0.05) 0%, transparent 50%), radial-gradient(ellipse at 80% 50%, rgba(255,215,0,0.05) 0%, transparent 50%);
+    color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--gold);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    animation: neonPulse 3s ease-in-out infinite;
+}
+
+a {
+    color: var(--gold);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+    a:hover {
+        color: var(--gold-light);
+        text-shadow: 0 0 8px var(--gold-glow);
+    }
+
+/* ========================================
+   LAYOUT
+   ======================================== */
+.page {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Contenedor de cada item del menu */
+.casino-nav-item {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.casino-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.65rem 1rem;
+    margin: 0.2rem 0.5rem;
+    border-radius: 8px;
+    color: #aaa;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.25s, background 0.25s;
+}
+    /* ── Línea izquierda animada ── */
+    .casino-nav-link::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) scaleY(0);
+        width: 3px;
+        height: 70%;
+        background: #f5c518;
+        border-radius: 0 3px 3px 0;
+        transition: transform 0.25s ease;
+    }
+    /* ── Hover state ── */
+    .casino-nav-link:hover {
+        color: #f5c518;
+        background: #f5c51810;
+        text-shadow: 0 0 8px #f5c51866;
+    }
+
+        .casino-nav-link:hover::before {
+            transform: translateY(-50%) scaleY(1);
+        }
+
+        .casino-nav-link:hover::after {
+            transform: translateX(0);
+        }
+
+    /* ── Link activo (página actual) ── */
+    .casino-nav-link.active {
+        color: #f5c518;
+        background: linear-gradient(90deg, #f5c51820, #f5c51808);
+        font-weight: 700;
+        text-shadow: 0 0 10px #f5c51877;
+    }
+
+        .casino-nav-link.active::before {
+            transform: translateY(-50%) scaleY(1);
+            background: #f5c518;
+            box-shadow: 0 0 8px #f5c518;
+        }
+
+        /* ── Icono / emoji escala en hover ── */
+        .casino-nav-link:hover .nav-icon,
+        .casino-nav-link.active .nav-icon {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 4px #f5c518);
+        }
+
+
+    /* ── Brillo sweep de izquierda a derecha ── */
+    .casino-nav-link::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient( 90deg, transparent 0%, #f5c51812 40%, #f5c51822 60%, transparent 100% );
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
+        border-radius: 8px;
+    }
+
+
+
+/* El span del icono NO crece, se queda fijo arriba */
+.nav-icon {
+    display: inline-block;
+    transition: transform 0.25s, filter 0.25s;
+    font-size: 1.1rem;
+}
+
+
+.sidebar {
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+    z-index: 100;
+    flex-shrink: 0;
+ 
+    border-right: 1px solid var(--border-gold);
+}
+
+main {
+    flex: 1;
+    min-width: 0;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-row {
+    height: 3.5rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1.5rem;
+    background: linear-gradient(90deg, #0d0000, #1a0800, #0d0000);
+    border-bottom: 1px solid var(--border-gold);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+    .top-row a {
+        color: var(--text-secondary);
+        margin-left: 1.5rem;
+        font-size: 0.85rem;
+    }
+
+        .top-row a:hover {
+            color: var(--gold);
+        }
+
+article.content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+/* ========================================
+   PÁGINA CASINO — contenedor de cada page
+   ======================================== */
+.casino-page {
+    width: 100%;
+    max-width: 1100px; /* límite cómodo */
+    margin: 0 auto; /* centrado horizontal */
+}
+
+.casino-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+    .casino-toolbar h5 {
+        margin-bottom: 0;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+    }
+
+.casino-loading {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/* ========================================
+   PÁGINA CASINO — contenedor de cada page
+   ======================================== */
+.casino-page {
+    width: 100%;
+    max-width: 100%; /* ✅ ocupa todo el ancho disponible */
+    margin: 0 auto;
+    padding: 0;
+}
+
+.casino-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+    .casino-toolbar h5 {
+        margin-bottom: 0;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+    }
+
+/* ========================================
+   TABLA CASINO
+   ======================================== */
+.casino-table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* ✅ scroll horizontal si hace falta */
+    border-radius: 8px;
+    border: 1px solid var(--border-gold);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.casino-table {
+    width: 100%;
+    min-width: 750px; /* ✅ mínimo para que no se aplaste */
+    border-collapse: collapse;
+    color: var(--text-secondary);
+    table-layout: auto; /* ✅ columnas se ajustan al contenido */
+}
+
+    .casino-table thead th {
+        background: linear-gradient(90deg, #1a0a00, #2d1a00, #1a0a00);
+        color: var(--gold);
+        border-bottom: 1px solid var(--border-gold);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 800;
+        padding: 0.85rem 0.75rem; /* ✅ reducido un poco para ganar espacio */
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .casino-table td {
+        padding: 0.7rem 0.75rem; /* ✅ igual que th */
+        vertical-align: middle;
+        white-space: nowrap; /* ✅ evita saltos de línea en celdas */
+    }
+
+    .casino-table tbody tr {
+        border-bottom: 1px solid rgba(139, 105, 20, 0.2);
+        transition: background 0.15s ease;
+    }
+
+        .casino-table tbody tr:hover {
+            background-color: rgba(255, 215, 0, 0.05);
+            color: var(--gold);
+        }
+
+        .casino-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+.acciones-cell {
+    white-space: nowrap;
+    text-align: center;
+    width: 1%; /* ✅ se encoge al mínimo necesario */
+}
+
+/* ========================================
+   LAYOUT — article.content menos padding
+   ======================================== */
+article.content {
+    flex: 1;
+    padding: 1.5rem 1.5rem; /* ✅ menos padding lateral */
+    overflow-y: auto;
+}
+
+/* ========================================
+   FORMULARIOS
+   ======================================== */
+.form-control,
+.form-select {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    background-color: #0d0d0d;
+    border: 1px solid var(--border-gold);
+    color: var(--gold);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+    .form-control:focus,
+    .form-select:focus {
+        background-color: #111108;
+        border-color: var(--gold);
+        color: var(--gold);
+        box-shadow: 0 0 0 3px var(--gold-glow), 0 0 15px var(--gold-glow);
+    }
+
+    .form-control::placeholder {
+        color: var(--text-muted);
+    }
+
+.form-label {
+    display: block;
+    color: var(--text-secondary);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.35rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-check-input {
+    width: 1.1em;
+    height: 1.1em;
+    background-color: #0d0d0d;
+    border: 1px solid var(--border-gold);
+    border-radius: 3px;
+    cursor: pointer;
+    accent-color: var(--gold-dark);
+}
+
+.form-check-label {
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+/* Grid de 2 columnas para formularios */
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1.5rem;
+}
+
+/* ========================================
+   VALIDACIONES
+   ======================================== */
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid var(--success);
+    box-shadow: 0 0 8px rgba(0,255,136,0.3);
+}
+
+.invalid {
+    outline: 1px solid var(--danger);
+    box-shadow: 0 0 8px rgba(255,26,26,0.3);
+}
+
+.validation-message {
+    color: var(--danger);
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* ========================================
+   CARDS
+   ======================================== */
+.card {
+    background: linear-gradient(145deg, #1a1208, #0d0d0d);
+    border: 1px solid var(--border-gold);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,215,0,0.1);
+    animation: borderGlow 4s ease-in-out infinite;
+}
+
+.card-body {
+    padding: 1.75rem 2rem;
+    color: var(--text-secondary);
+}
+
+/* ========================================
+   ALERTS
+   ======================================== */
+.alert {
+    padding: 0.85rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, rgba(204,0,0,0.15), rgba(204,0,0,0.05));
+    border: 1px solid rgba(204,0,0,0.5);
+    color: var(--red-bright);
+    text-shadow: 0 0 8px var(--red-glow);
+    animation: redFlicker 5s infinite;
+}
+
+.alert-success {
+    background: linear-gradient(135deg, rgba(0,255,136,0.1), rgba(0,255,136,0.03));
+    border: 1px solid rgba(0,255,136,0.4);
+    color: var(--green-bright);
+}
+
+.alert-warning {
+    background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,215,0,0.03));
+    border: 1px solid rgba(255,215,0,0.4);
+    color: var(--gold);
+}
+
+/* ========================================
+   BOTONES CASINO
+   ======================================== */
+.btn-casino-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.4rem;
+    background: linear-gradient(135deg, #ffd700 0%, #ff8c00 50%, #ffd700 100%);
+    background-size: 200% 200%;
+    border: 2px solid var(--gold-dark);
+    border-radius: 6px;
+    color: #000;
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--gold-glow), inset 0 1px 0 rgba(255,255,255,0.3);
+    animation: marqueeGlow 3s ease infinite;
+    transition: all 0.3s ease;
+}
+
+    .btn-casino-primary:hover {
+        background: linear-gradient(135deg, #ffe566 0%, #ffaa00 50%, #ffe566 100%);
+        box-shadow: 0 0 25px var(--gold-glow), 0 0 50px var(--gold-glow);
+        transform: translateY(-2px) scale(1.02);
+        border-color: var(--gold);
+        color: #000;
+    }
+
+    .btn-casino-primary:active {
+        transform: translateY(0) scale(0.98);
+    }
+
+    .btn-casino-primary:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+.btn-casino-icon {
+    font-size: 1rem;
+}
+
+.btn-casino-edit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.75rem;
+    background: transparent;
+    border: 1px solid var(--border-gold);
+    border-radius: 5px;
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-right: 0.4rem;
+    white-space: nowrap;
+}
+
+    .btn-casino-edit:hover {
+        background: rgba(255,215,0,0.12);
+        border-color: var(--gold);
+        color: var(--gold-light);
+        box-shadow: 0 0 12px var(--gold-glow);
+        transform: translateY(-1px);
+    }
+
+.btn-casino-delete {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.75rem;
+    background: transparent;
+    border: 1px solid rgba(204,0,0,0.6);
+    border-radius: 5px;
+    color: var(--red-bright);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+    .btn-casino-delete:hover {
+        background: rgba(204,0,0,0.15);
+        border-color: var(--red-bright);
+        color: #fff;
+        box-shadow: 0 0 12px var(--red-glow);
+        transform: translateY(-1px);
+    }
+
+.btn-casino-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.45rem 1.1rem;
+    background: transparent;
+    border: 1px solid var(--border-gold);
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+    .btn-casino-secondary:hover {
+        color: var(--gold);
+        border-color: var(--gold);
+        box-shadow: 0 0 10px var(--gold-glow);
+        background: rgba(255,215,0,0.05);
+    }
+
+/* ========================================
+   BADGES
+   ======================================== */
+.badge-casino-active {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.25rem 0.65rem;
+    background: rgba(0,255,136,0.1);
+    border: 1px solid rgba(0,255,136,0.5);
+    border-radius: 20px;
+    color: var(--green-bright);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-shadow: 0 0 8px rgba(0,255,136,0.6);
+}
+
+.badge-casino-inactive {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.25rem 0.65rem;
+    background: rgba(100,100,100,0.1);
+    border: 1px solid rgba(100,100,100,0.4);
+    border-radius: 20px;
+    color: #666;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* ========================================
+   UTILIDADES
+   ======================================== */
+.casino-spinner {
+    font-size: 3rem;
+    display: block;
+    animation: spin 1s linear infinite;
+}
+
+.casino-spinner-sm {
+    display: inline-block;
+    animation: spin 1s linear infinite;
+    font-size: 0.85rem;
+}
+
+.text-gold {
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.mt-1 {
+    margin-top: 0.25rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mb-1 {
+    margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+/* ========================================
+   SCROLLBAR
+   ======================================== */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--gold-dark), var(--border-gold));
+    border-radius: 3px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, var(--gold), var(--gold-dark));
+        box-shadow: 0 0 6px var(--gold-glow);
+    }
+
+/* ========================================
+   BLAZOR
+   ======================================== */
+#blazor-error-ui {
+    background: linear-gradient(90deg, #1a0000, #2d0000);
+    border-top: 2px solid var(--red-bright);
+    color: var(--red-bright);
+    bottom: 0;
+    box-shadow: 0 -4px 20px var(--red-glow);
+    box-sizing: border-box;
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+        color: var(--gold);
+    }
+
+.loading-progress {
+    position: relative;
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    margin: 20vh auto 1rem auto;
+}
+
+    .loading-progress circle {
+        fill: none;
+        stroke: #1a1208;
+        stroke-width: 0.6rem;
+        transform-origin: 50% 50%;
+        transform: rotate(-90deg);
+    }
+
+        .loading-progress circle:last-child {
+            stroke: var(--gold);
+            stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+            transition: stroke-dasharray 0.05s ease-in-out;
+            filter: drop-shadow(0 0 6px var(--gold-glow));
+        }
+
+.loading-progress-text {
+    position: absolute;
+    text-align: center;
+    font-weight: 800;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.7rem;
+    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+}
+
+    .loading-progress-text:after {
+        content: var(--blazor-load-percentage-text, "🎰 Loading...");
+    }
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 640px) {
+    .page {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: unset;
+        height: auto;
+        position: relative;
+    }
+
+    main {
+        height: auto;
+    }
+
+    article.content {
+        padding: 1rem;
+    }
+
+    .casino-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .form-grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   FORMULARIO — Header y Actions
+   ======================================== */
+.casino-form-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+    .casino-form-header h4 {
+        margin-bottom: 0; /* anula el margin-bottom del h4 global */
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+.casino-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 215, 0, 0.15);
+    margin-top: 0.5rem;
+}
+
+/* Ancho máximo cómodo para formularios — centrado */
+.casino-page .card {
+    max-width: 700px;
+    margin: 0 auto;
+}
+/* ========================================
+   TOGGLE ROW — checkbox con badge inline
+   ======================================== */
+.casino-toggle-row {
+    margin-bottom: 1.25rem;
+}
+
+.casino-toggle-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    background: rgba(255, 215, 0, 0.04);
+    border: 1px solid var(--border-gold);
+    border-radius: 6px;
+}
+
+    .casino-toggle-box .form-check-input {
+        width: 1.1em;
+        height: 1.1em;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+/* ========================================
+   CLASES COMPARTIDAS — Tablas y estados
+   ======================================== */
+
+.cell-gold-bold {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.cell-secondary {
+    color: var(--text-secondary);
+}
+
+.cell-muted {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Botón Toggle azul */
+.btn-casino-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.75rem;
+    background: transparent;
+    border: 1px solid rgba(0, 170, 255, 0.6);
+    border-radius: 5px;
+    color: #00aaff;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-right: 0.4rem;
+    white-space: nowrap;
+}
+
+    .btn-casino-toggle:hover {
+        background: rgba(0, 170, 255, 0.12);
+        border-color: #00aaff;
+        color: #66ccff;
+        box-shadow: 0 0 12px rgba(0, 170, 255, 0.4);
+        transform: translateY(-1px);
+    }
+
+/* Alert con dismiss */
+.casino-alert-dismissible {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.btn-casino-dismiss {
+    background: transparent;
+    border: 1px solid rgba(255, 26, 26, 0.5);
+    border-radius: 4px;
+    color: var(--red-bright);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+    .btn-casino-dismiss:hover {
+        background: rgba(255, 26, 26, 0.15);
+        border-color: var(--red-bright);
+        box-shadow: 0 0 8px var(--red-glow);
+    }
+
+/* Estado vacío */
+.casino-empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(255,215,0,0.03), rgba(255,215,0,0.01));
+}
+
+.casino-empty-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.casino-empty-state h5 {
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.casino-empty-state p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* ========================================
+   COIN GAME — Clases nuevas
+   ======================================== */
+
+/* Celdas con color semántico */
+.cell-gold-bold {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.cell-secondary {
+    color: var(--text-secondary);
+}
+
+.cell-muted {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* Botón Toggle — azul neon */
+.btn-casino-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.75rem;
+    background: transparent;
+    border: 1px solid rgba(0, 170, 255, 0.6);
+    border-radius: 5px;
+    color: #00aaff;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-right: 0.4rem;
+    white-space: nowrap;
+}
+
+    .btn-casino-toggle:hover {
+        background: rgba(0, 170, 255, 0.12);
+        border-color: #00aaff;
+        color: #66ccff;
+        box-shadow: 0 0 12px rgba(0, 170, 255, 0.4);
+        transform: translateY(-1px);
+    }
+
+    .btn-casino-toggle:active {
+        transform: translateY(0);
+    }
+
+/* Alert con botón dismiss */
+.casino-alert-dismissible {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.btn-casino-dismiss {
+    background: transparent;
+    border: 1px solid rgba(255, 26, 26, 0.5);
+    border-radius: 4px;
+    color: var(--red-bright);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+    .btn-casino-dismiss:hover {
+        background: rgba(255, 26, 26, 0.15);
+        border-color: var(--red-bright);
+        box-shadow: 0 0 8px var(--red-glow);
+    }
+
+/* Estado vacío */
+.casino-empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(255,215,0,0.03), rgba(255,215,0,0.01));
+}
+
+.casino-empty-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.casino-empty-state h5 {
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.casino-empty-state p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ========================================
+   ID BOX — muestra el GUID de registro
+   ======================================== */
+.casino-id-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.6rem 1rem;
+    margin-bottom: 1.25rem;
+    background: rgba(255, 215, 0, 0.03);
+    border: 1px solid rgba(139, 105, 20, 0.3);
+    border-radius: 6px;
+}
+
+    .casino-id-box small {
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.7rem;
+    }
+
+    .casino-id-box span {
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        font-family: monospace;
+    }
+/* ========================================
+   CASINO TABS
+   ======================================== */
+.casino-tabs {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.2);
+    padding-bottom: 0;
+}
+
+.casino-tab {
+    background: transparent;
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.6rem 1.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    bottom: -2px;
+}
+
+    .casino-tab:hover {
+        color: var(--gold);
+        background: rgba(255, 215, 0, 0.05);
+        border-color: rgba(255, 215, 0, 0.3);
+    }
+
+.casino-tab-active {
+    color: var(--gold) !important;
+    background: rgba(255, 215, 0, 0.08) !important;
+    border-color: rgba(255, 215, 0, 0.4) !important;
+    border-bottom: 2px solid var(--casino-bg) !important;
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.15);
+}
+
+/* ========================================
+   FORM ROW — grid de columnas iguales
+   ======================================== */
+.casino-form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 0;
+}
+
+    .casino-form-row .form-group {
+        margin-bottom: 1.25rem;
+    }
+
+/* ========================================
+   SELECT — estilo casino
+   ======================================== */
+.casino-select {
+    background-color: var(--input-bg, #1a1a2e) !important;
+    color: var(--text-primary, #e0e0e0) !important;
+    border: 1px solid rgba(255, 215, 0, 0.25) !important;
+    border-radius: 5px !important;
+}
+
+    .casino-select:focus {
+        border-color: var(--gold) !important;
+        box-shadow: 0 0 8px rgba(255, 215, 0, 0.25) !important;
+        outline: none !important;
+    }
+
+    .casino-select option {
+        background-color: #1a1a2e;
+        color: #e0e0e0;
+    }
+
+
+.drop-zone--active {
+    background: rgba(255, 215, 0, 0.15);
+    border-color: #fff;
+    transform: scale(1.02);
+}
+
+td svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+.svg-preview-wrapper {
+    position: relative;
+    cursor: pointer;
+    font-size:200%
+}
+
+.svg-tooltip {
+    display: none;
+    position: fixed; /* 👈 fixed en vez de absolute */
+    width: 200px;
+    height: 200px;
+    background: #1a1a2e;
+    border: 1px solid gold;
+    border-radius: 8px;
+    padding: 5px;
+    z-index: 99999; /* 👈 z-index muy alto */
+    pointer-events: none;
+}
+
+.svg-preview-wrapper:hover .svg-tooltip {
+    display: block;
+    top: auto;
+    left: auto;
+}
+/* ══════════════════════════════════════════
+   SVG PREVIEW — Botón de vista previa
+   ══════════════════════════════════════════ */
+
+.svg-preview-wrapper {
+    display: none;
+}
+
+.svg-tooltip {
+    display: none;
+}
+
+.btn-svg-preview {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.25rem 0.6rem;
+    margin: 0 0.2rem;
+    background: transparent;
+    border: 1px solid rgba(255, 215, 0, 0.35);
+    border-radius: 5px;
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+    .btn-svg-preview:hover {
+        background: rgba(255, 215, 0, 0.1);
+        border-color: var(--gold);
+        color: var(--gold);
+        box-shadow: 0 0 10px var(--gold-glow);
+        transform: translateY(-1px);
+    }
+
+/* ══════════════════════════════════════════
+   SVG MODAL — Centrado en pantalla
+   ══════════════════════════════════════════ */
+
+.svg-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: modal-fade-in 0.2s ease;
+}
+
+.svg-modal-box {
+    background: linear-gradient(145deg, #1a1208, #0d0d0d);
+    border: 1px solid var(--border-gold);
+    border-radius: 14px;
+    box-shadow: 0 0 0 1px rgba(255,215,0,0.08), 0 8px 40px rgba(0, 0, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.08);
+    width: clamp(280px, 90vw, 420px);
+    overflow: hidden;
+    animation: modal-scale-in 0.2s ease;
+}
+
+.svg-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1.25rem;
+    background: linear-gradient(90deg, #1a0a00, #2d1a00, #1a0a00);
+    border-bottom: 1px solid var(--border-gold);
+}
+
+.svg-modal-title {
+    color: var(--gold);
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.svg-modal-close {
+    background: transparent;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 5px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    line-height: 1;
+}
+
+    .svg-modal-close:hover {
+        background: rgba(255, 215, 0, 0.1);
+        border-color: var(--gold);
+        color: var(--gold);
+        box-shadow: 0 0 8px var(--gold-glow);
+    }
+
+/* DESPUÉS — tamaño fijo uniforme */
+.svg-modal-body {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    background: radial-gradient(ellipse at center, rgba(255,215,0,0.04) 0%, transparent 70% );
+}
+
+    .svg-modal-body svg {
+        width: 280px !important;
+        height: 280px !important;
+        max-width: 280px !important;
+        max-height: 280px !important;
+        object-fit: contain;
+        filter: drop-shadow(0 0 12px var(--gold-glow));
+        /* Fuerza que el contenido SVG se centre y no se recorte */
+        overflow: visible;
+    }
+@keyframes modal-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modal-scale-in {
+    from {
+        opacity: 0;
+        transform: scale(0.92) translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+/* ========================================
+   MAIN LAYOUT — Top Bar
+   ======================================== */
+
+.top-bar {
+    height: 3.5rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1.5rem;
+    background: linear-gradient(90deg, #0d0000, #1a0800, #0d0000);
+    border-bottom: 1px solid var(--border-gold);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.top-bar__user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* ── USER BADGE ──────────────────────────────────────── */
+.user-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.9rem;
+    background: rgba(255, 215, 0, 0.04);
+    border: 1px solid var(--border-gold);
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+    .user-badge:hover {
+        background: rgba(255, 215, 0, 0.08);
+        box-shadow: 0 0 10px var(--gold-glow);
+    }
+
+.user-avatar {
+    font-size: 0.9rem;
+}
+
+.user-name {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* ── BOTÓN CERRAR SESIÓN ─────────────────────────────── */
+.btn-logout {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.85rem;
+    background: transparent;
+    border: 1px solid rgba(204, 0, 0, 0.6);
+    border-radius: 5px;
+    color: var(--red-bright);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+    .btn-logout:hover {
+        background: rgba(204, 0, 0, 0.15);
+        border-color: var(--red-bright);
+        color: #fff;
+        box-shadow: 0 0 12px var(--red-glow);
+        transform: translateY(-1px);
+    }
+
+    .btn-logout:active {
+        transform: translateY(0);
+    }
+
+/* ── BOTÓN INICIAR SESIÓN ────────────────────────────── */
+.btn-login {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.85rem;
+    background: transparent;
+    border: 1px solid rgba(0, 255, 136, 0.5);
+    border-radius: 5px;
+    color: var(--green-bright);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+    .btn-login:hover {
+        background: rgba(0, 255, 136, 0.1);
+        border-color: var(--green-bright);
+        color: #fff;
+        box-shadow: 0 0 12px rgba(0, 255, 136, 0.4);
+        transform: translateY(-1px);
+    }
+
+    .btn-login:active {
+        transform: translateY(0);
+    }
+
+.btn-icon {
+    font-size: 0.85rem;
+}
+
+.btn-text {
+    letter-spacing: 0.06em;
+}
+
+/* ══════════════════════════════════════════
+   CASINO FILTERS — Barra de búsqueda
+   ══════════════════════════════════════════ */
+
+.casino-filters {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* ── Input de búsqueda ── */
+.casino-input {
+    background: #0d0d1a;
+    color: #f5c518;
+    border: 1px solid #f5c51866;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    min-width: 260px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    outline: none;
+}
+
+    .casino-input::placeholder {
+        color: #666;
+        font-style: italic;
+    }
+
+    .casino-input:focus {
+        border-color: #f5c518;
+        box-shadow: 0 0 0 3px #f5c51822, 0 0 12px #f5c51833;
+        background: #12122a;
+    }
+
+/* ── Selects ── */
+.casino-select {
+    background: #0d0d1a;
+    color: #f5c518;
+    border: 1px solid #f5c51866;
+    border-radius: 8px;
+    padding: 0.5rem 2rem 0.5rem 0.85rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    /* Flecha personalizada dorada */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23f5c518' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    outline: none;
+}
+
+    .casino-select:focus {
+        border-color: #f5c518;
+        box-shadow: 0 0 0 3px #f5c51822, 0 0 12px #f5c51833;
+        background-color: #12122a;
+    }
+
+    /* Opciones del select — navegadores que lo soporten */
+    .casino-select option {
+        background: #1a1a2e;
+        color: #f5c518;
+    }
+
+/* ══════════════════════════════════════════
+   CASINO TOOLBAR — Contenedor superior
+   ══════════════════════════════════════════ */
+
+.casino-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: linear-gradient(135deg, #12122a, #1a1a2e);
+    border: 1px solid #f5c51833;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+    .casino-toolbar h5 {
+        color: #f5c518;
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+/* ── Badge contador ── */
+.badge-casino {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    background: #f5c518;
+    color: #1a1a2e;
+    min-width: 1.6rem;
+}
+
+/* Variantes de badge */
+.badge-gold {
+    background: #f5c518;
+    color: #1a1a2e;
+}
+
+.badge-muted {
+    background: #2e2e4e;
+    color: #aaa;
+    border: 1px solid #444;
+}
+
+.badge-success {
+    background: #1a7a3a;
+    color: #a3ffb0;
+    border: 1px solid #28a745;
+}
+
+.badge-danger {
+    background: #7a1a1a;
+    color: #ffb0b0;
+    border: 1px solid #dc3545;
+}
+
+/* ══════════════════════════════════════════
+   CASINO TOAST — Notificaciones
+   ══════════════════════════════════════════ */
+
+.casino-toast {
+    position: fixed;
+    bottom: 1.75rem;
+    right: 1.75rem;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1.4rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(245, 197, 24, 0.15);
+    animation: toast-in 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.toast-success {
+    background: #1a7a3a;
+    color: #a3ffb0;
+    border-color: #28a745;
+}
+
+.toast-warning {
+    background: #7a6200;
+    color: #f5c518;
+    border-color: #f5c518;
+}
+
+.toast-danger {
+    background: #7a1a1a;
+    color: #ffb0b0;
+    border-color: #dc3545;
+}
+
+.casino-toast button {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    line-height: 1;
+    padding: 0;
+}
+
+    .casino-toast button:hover {
+        opacity: 1;
+    }
+
+@keyframes toast-in {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — Mobile
+   ══════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+    .casino-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .casino-filters {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .casino-input,
+    .casino-select {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+/* ══════════════════════════════════════════
+   SESSION HEADER — Volver + Título
+   ══════════════════════════════════════════ */
+
+.casino-session-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+    .casino-session-header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+        color: #f5c518;
+        text-shadow: 0 0 12px #f5c51844;
+    }
+
+.btn-casino-back {
+    background: transparent;
+    border: 1px solid #f5c51888;
+    color: #f5c518;
+    border-radius: 8px;
+    padding: 0.45rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
+}
+
+    .btn-casino-back:hover {
+        background: #f5c51818;
+        box-shadow: 0 0 10px #f5c51833;
+    }
+
+/* ══════════════════════════════════════════
+   STATS GRID — Tarjetas de resumen
+   ══════════════════════════════════════════ */
+
+.casino-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.casino-stat-card {
+    border-radius: 12px;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .casino-stat-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+/* Variantes */
+.stat-neutral {
+    background: linear-gradient(135deg, #12122a, #1e1e3a);
+    border-color: #f5c51844;
+    color: #f5c518;
+}
+
+.stat-win {
+    background: linear-gradient(135deg, #0d2b1a, #1a4a2e);
+    border-color: #28a74566;
+    color: #a3ffb0;
+}
+
+.stat-loss {
+    background: linear-gradient(135deg, #2b0d0d, #4a1a1a);
+    border-color: #dc354566;
+    color: #ffb0b0;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    opacity: 0.75;
+    margin-top: 0.35rem;
+    font-weight: 500;
+}
+
+/* ══════════════════════════════════════════
+   TABLE — Celdas especiales de sesiones
+   ══════════════════════════════════════════ */
+
+.text-muted-casino {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.money-positive {
+    color: #a3ffb0;
+    font-weight: 700;
+}
+
+.money-negative {
+    color: #ffb0b0;
+    font-weight: 700;
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════ */
+
+@media (max-width: 576px) {
+    .casino-session-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+        .casino-session-header h1 {
+            font-size: 1.4rem;
+        }
+
+    .casino-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .casino-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ══════════════════════════════════════════
+   CASINO NAVBAR — Top row
+   ══════════════════════════════════════════ */
+
+.casino-navbar {
+    background: linear-gradient(135deg, #0a0a1a, #12122a);
+    border-bottom: 2px solid #f5c51844;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5), 0 0 24px #f5c51811;
+    padding: 0 1.25rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.casino-navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    max-width: 100%;
+}
+
+/* ── Brand / Logo ── */
+.casino-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #f5c518;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 12px #f5c51866;
+    transition: text-shadow 0.3s, transform 0.3s;
+}
+
+    .casino-brand:hover {
+        transform: scale(1.04);
+        text-shadow: 0 0 24px #f5c518cc, 0 0 48px #f5c51844;
+    }
+
+    /* Emoji ruleta gira en hover */
+    .casino-brand .brand-icon {
+        display: inline-block;
+        transition: transform 0.5s ease;
+    }
+
+    .casino-brand:hover .brand-icon {
+        transform: rotate(180deg);
+    }
+
+    .casino-brand span {
+        background: linear-gradient(90deg, #f5c518, #ffe066, #f5c518);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shine-brand 3s linear infinite;
+    }
+
+@keyframes shine-brand {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+
+/* ══════════════════════════════════════════
+   CASINO NAV TOGGLER — Animación X al abrir
+   ══════════════════════════════════════════ */
+
+.casino-nav-toggler.is-open .toggler-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.casino-nav-toggler.is-open .toggler-bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.casino-nav-toggler.is-open .toggler-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.toggler-bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #f5c518;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* ══════════════════════════════════════════
+   CASINO NAV MENU — Contenedor lateral
+   ══════════════════════════════════════════ */
+
+.casino-nav-menu {
+   
+    border-right: 1px solid #f5c51822;
+    padding: 0.5rem 0;
+    min-height: 100%;
+}
+
+.casino-nav-section {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f5c51815;
+    margin-bottom: 0.25rem;
+}
+
+.casino-nav-section-title {
+    font-size: 0.7rem;
+    font-weight: 1000;
+    color: #c1be4d;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 0.5rem 1.25rem 0.25rem;
+    
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE — Mobile
+   ══════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+    .casino-nav-toggler {
+        display: flex;
+    }
+}
+.nav-title {
+    animation: neonPulse 3s ease-in-out infinite;
+
+}
+
+/* ══════════════════════════════════════════
+   MANAGE GRID — 2 paneles lado a lado
+   ══════════════════════════════════════════ */
+
+.casino-manage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 0;
+}
+
+/* ══════════════════════════════════════════
+   MANAGE BODY — Interior de panel de acción
+   ══════════════════════════════════════════ */
+
+.casino-manage-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+    .casino-manage-body .casino-input {
+        width: 100%;
+    }
+
+    .casino-manage-body .btn-casino-primary {
+        align-self: flex-start;
+    }
+
+@media (max-width: 576px) {
+    .casino-manage-body .btn-casino-primary {
+        align-self: stretch;
+        justify-content: center;
+    }
+
+}
+/* ══════════════════════════════════════════
+   MANAGE PAGE — Fila superior
+   ══════════════════════════════════════════ */
+
+.manage-top-row {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1.4fr;
+    gap: 1.25rem;
+    margin-bottom: 0;
+    align-items: stretch;
+}
+
+/* ── Tarjeta de perfil ── */
+.manage-profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.75rem 1.25rem;
+    background: linear-gradient(145deg, #1a1208, #0d0d0d);
+    border: 1px solid var(--border-gold);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,215,0,0.08);
+    animation: borderGlow 4s ease-in-out infinite;
+    text-align: center;
+}
+
+.manage-profile-avatar {
+    font-size: 3.5rem;
+    line-height: 1;
+    filter: drop-shadow(0 0 14px var(--gold-glow));
+}
+
+.manage-profile-data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.manage-profile-name {
+    color: var(--gold);
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-shadow: 0 0 10px var(--gold-glow);
+    margin: 0;
+}
+
+.manage-profile-balance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.5rem 1.1rem;
+    background: rgba(255,215,0,0.05);
+    border: 1px solid rgba(139,105,20,0.4);
+    border-radius: 8px;
+}
+
+.manage-balance-label {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.manage-balance-value {
+    color: var(--gold);
+    font-size: 1.35rem;
+    font-weight: 800;
+    text-shadow: 0 0 10px var(--gold-glow);
+}
+
+/* ── Tarjetas de acción ── */
+.manage-action-card {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(145deg, #12120a, #0d0d0d);
+    border: 1px solid var(--border-gold);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+    .manage-action-card:hover {
+        box-shadow: 0 6px 28px rgba(0,0,0,0.6), 0 0 20px rgba(255,215,0,0.08);
+    }
+
+.manage-action-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.25rem;
+    background: linear-gradient(90deg, #1a0a00, #2d1a00, #1a0a00);
+    border-bottom: 1px solid var(--border-gold);
+}
+
+.manage-action-icon {
+    font-size: 1.1rem;
+}
+
+.manage-action-title {
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.manage-action-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 1.25rem;
+    flex: 1;
+}
+
+.manage-action-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.manage-action-btn {
+    align-self: flex-start;
+    width: 100%;
+    justify-content: center;
+}
+
+/* ── Header animales ── */
+.manage-animals-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255,215,0,0.15);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .manage-top-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .manage-profile-card {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .manage-profile-data {
+        align-items: flex-start;
+    }
+
+    .manage-profile-balance {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .manage-top-row {
+        grid-template-columns: 1fr;
+    }
+
+    .manage-profile-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .manage-profile-data {
+        align-items: center;
+    }
+}
+
+/* ══════════════════════════════════════════
+   USER INFO CARD — Tarjeta perfil de usuario
+   ══════════════════════════════════════════ */
+
+.user-info-card {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 2.25rem;
+    background: linear-gradient(135deg, #1a1208 0%, #110e04 60%, #0d0d0d 100%);
+    border: 1px solid var(--border-gold);
+    border-radius: 14px;
+    box-shadow: 0 6px 32px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,215,0,0.1), 0 0 0 1px rgba(255,215,0,0.04);
+    animation: borderGlow 4s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+    /* Línea decorativa superior dorada */
+    .user-info-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--gold-dark), var(--gold), var(--gold-dark), transparent );
+    }
+
+/* ── Avatar ── */
+.user-info-avatar-col {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-info-avatar-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #2a1f08, #0d0d0d);
+    border: 2px solid var(--border-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+    box-shadow: 0 0 20px rgba(255,215,0,0.15), inset 0 0 20px rgba(0,0,0,0.5);
+    filter: drop-shadow(0 0 8px var(--gold-glow));
+}
+
+/* ── Datos ── */
+.user-info-data-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.user-info-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-shadow: 0 0 14px var(--gold-glow);
+    line-height: 1;
+}
+
+.user-info-email {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+
+.user-info-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* ── Balance + botón en la misma fila ── */
+.user-info-balance-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.25rem;
+}
+
+.user-info-balance-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.55rem 1.1rem;
+    background: rgba(255,215,0,0.05);
+    border: 1px solid rgba(139,105,20,0.5);
+    border-radius: 8px;
+}
+
+.user-info-balance-label {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.user-info-balance-value {
+    color: var(--gold);
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-shadow: 0 0 10px var(--gold-glow);
+    line-height: 1.1;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+    .user-info-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem 1.25rem;
+        gap: 1.25rem;
+    }
+
+    .user-info-badges {
+        justify-content: center;
+    }
+
+    .user-info-balance-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .user-info-balance-box {
+        align-items: center;
+        width: 100%;
+    }
+
+    .btn-casino-primary {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ══ PAGINACIÓN ══ */
+.casino-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.btn-casino-page {
+    background: transparent;
+    border: 1px solid var(--gold, #c9a84c);
+    color: var(--gold, #c9a84c);
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+    .btn-casino-page:hover:not(:disabled) {
+        background: var(--gold, #c9a84c);
+        color: #1a1a2e;
+    }
+
+    .btn-casino-page.active {
+        background: var(--gold, #c9a84c);
+        color: #1a1a2e;
+        font-weight: bold;
+        pointer-events: none;
+    }
+
+    .btn-casino-page:disabled {
+        opacity: 0.35;
+        cursor: not-allowed;
+
+    }
+
+/* ── Buscador ── */
+.casino-search-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 8px;
+    padding: 0.4rem 0.75rem;
+    gap: 0.5rem;
+    flex: 1;
+    max-width: 320px;
+}
+
+.casino-search-icon {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.casino-search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #f0e6c8;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+    .casino-search-input::placeholder {
+        color: rgba(240, 230, 200, 0.4);
+    }
+
+.casino-search-clear {
+    background: transparent;
+    border: none;
+    color: rgba(240, 230, 200, 0.6);
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+    .casino-search-clear:hover {
+        color: #e74c3c;
+    }
+
+/* ── Contador de resultados ── */
+.casino-results-count {
+    text-align: right;
+    font-size: 0.85rem;
+    color: rgba(240, 230, 200, 0.6);
+    margin-top: 0.5rem;
+
+
+}
+
+/* ── Fila Par (0, 2, 4...) ── */
+.casino-row-even {
+    background-color: rgba(255, 255, 255, 0.03);
+    transition: background-color 0.2s ease;
+}
+
+/* ── Fila Impar (1, 3, 5...) ── */
+.casino-row-odd {
+    background-color: rgb(229, 189, 86, 0,00);
+    transition: background-color 0.2s ease;
+}
+
+    /* ── Hover sobre cualquier fila ── */
+    .casino-row-even:hover,
+    .casino-row-odd:hover {
+        background-color: rgba(212, 175, 55, 0.18);
+        cursor: default;
+    }
+/* ── Info del archivo SVG seleccionado ── */
+.svg-file-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* ── Botón preview inline ── */
+.btn-svg-preview-inline {
+    background: transparent;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    color: #d4af37;
+    border-radius: 6px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+    .btn-svg-preview-inline:hover {
+        background: rgba(212, 175, 55, 0.15);
+        border-color: #d4af37;
+    }
+
+/* ── Toast de éxito ── */
+.casino-toast {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 9999;
+    padding: 0.85rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    animation: toastFadeIn 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.casino-toast-success {
+    background: rgba(39, 174, 96, 0.15);
+    border: 1px solid #27ae60;
+    color: #2ecc71;
+}
+
+@keyframes toastFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ══ Footer paginación ══ */
+.casino-pagination-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0 0.25rem;
+}
+
+.casino-results-count {
+    font-size: 0.85rem;
+    color: rgba(240, 230, 200, 0.6);
+    margin: 0;
+}
+
+/* ── Controles ── */
+.casino-pagination {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+}
+
+.casino-page-btn {
+    min-width: 2.2rem;
+    height: 2.2rem;
+    padding: 0 0.5rem;
+    border-radius: 6px;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    background: rgba(255, 255, 255, 0.04);
+    color: #f0e6c8;
+    font-size: 0.88rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .casino-page-btn:hover:not(:disabled) {
+        background: rgba(212, 175, 55, 0.2);
+        border-color: #d4af37;
+        color: #d4af37;
+    }
+
+    .casino-page-btn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+
+/* Página activa */
+.casino-page-btn--active {
+    background: rgba(212, 175, 55, 0.25);
+    border-color: #d4af37;
+    color: #d4af37;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+/* Separador "..." */
+.casino-page-ellipsis {
+    color: rgba(240, 230, 200, 0.4);
+    font-size: 0.9rem;
+    padding: 0 0.2rem;
+    user-select: none;
+}
+
+/* ── Selector items por página ── */
+.casino-page-size-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.casino-page-size-label {
+    font-size: 0.85rem;
+    color: rgba(240, 230, 200, 0.6);
+    white-space: nowrap;
+}
+
+.casino-page-size-select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 6px;
+    color: #f0e6c8;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    outline: none;
+}
+
+    .casino-page-size-select:focus {
+        border-color: #d4af37;
+    }

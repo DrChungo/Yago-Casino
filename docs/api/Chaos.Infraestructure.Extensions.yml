@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Infraestructure.Extensions
+  commentId: N:Chaos.Infraestructure.Extensions
+  id: Chaos.Infraestructure.Extensions
+  children:
+  - Chaos.Infraestructure.Extensions.ApplicationBuilderExtensions
+  - Chaos.Infraestructure.Extensions.ServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: Chaos.Infraestructure.Extensions
+  nameWithType: Chaos.Infraestructure.Extensions
+  fullName: Chaos.Infraestructure.Extensions
+  type: Namespace
+  assemblies:
+  - Chaos.Infraestructure
+references:
+- uid: Chaos.Infraestructure.Extensions.ApplicationBuilderExtensions
+  commentId: T:Chaos.Infraestructure.Extensions.ApplicationBuilderExtensions
+  href: Chaos.Infraestructure.Extensions.ApplicationBuilderExtensions.html
+  name: ApplicationBuilderExtensions
+  nameWithType: ApplicationBuilderExtensions
+  fullName: Chaos.Infraestructure.Extensions.ApplicationBuilderExtensions
+- uid: Chaos.Infraestructure.Extensions.ServiceCollectionExtensions
+  commentId: T:Chaos.Infraestructure.Extensions.ServiceCollectionExtensions
+  href: Chaos.Infraestructure.Extensions.ServiceCollectionExtensions.html
+  name: ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+  fullName: Chaos.Infraestructure.Extensions.ServiceCollectionExtensions

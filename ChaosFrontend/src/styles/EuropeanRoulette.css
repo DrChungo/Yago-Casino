@@ -1,0 +1,114 @@
+:root{
+    --text-color: white;
+    --black-opacity-background: rgba(0, 0, 0, 0.616);
+}
+#european-roulette{
+    height: 100vh;
+    display: flex;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url(../assets/casino_ruleEuropea.png);
+    
+}
+#table {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50vh;             
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;     
+    perspective: 700px;
+    perspective-origin: 50% -25%;  
+}
+
+#table table {
+    transform: rotateX(55deg);
+    transform-origin: bottom center; 
+    transform-style: preserve-3d;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.9),
+        0 60px 120px rgba(0, 0, 0, 0.5);
+
+   
+   
+}
+
+#resultRoulette{
+    background-color:var(--black-opacity-background);
+    position:absolute;
+    font-size: 30px;
+    height: 25vh;
+    max-width: 40%;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 15px;
+    top: -10px;
+    color: var(--text-color);
+}
+#numbers_table{   
+    border-radius:15px ;
+    margin: 1rem;   
+    border:1px solid gold;
+    width: 95%;
+}
+#numbers_table > tbody > tr > td{
+    transition: all 0.1s ease;
+   
+    height: 4vh;
+   
+    
+}
+.bet-error{
+    position: absolute;
+    top: 31.5%;
+    left: 40%;
+    background-origin: border-box;
+    background-color:var(--black-opacity-background);
+    border: 3px dashed gold ;
+    border-radius: 15px;
+    padding: 1rem;
+}
+#start-button{
+    position: inherit;
+    top: -25rem;
+    background-color: rgba(0, 0, 0,0.80);
+    border: 3px solid gold;
+    color: gold;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    transition: all 300ms ;
+    border-radius: 15px;
+}
+#start-button:hover{
+ transform: scale(1.05);
+}
+#start-button:active{
+    transform: scale(0.98);
+}
+#numbers_table > tbody > tr > td:hover{
+transform: translate3d(0,-0.5rem,0);
+ box-shadow: 30px 30px 100px gold; 
+}
+
+#numbers_table > tbody > tr > td:active{
+    transform: scale(0.98);
+}
+#roulette{   
+    border: 2px solid gold;   
+   
+}
+
+
+@media (max-width: 600px){
+    #table table{
+         transform: scale(0.45);
+         ;
+    }
+}

@@ -1,0 +1,108 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums.CoinSideEnum
+  commentId: T:Chaos.Api.Enums.CoinSideEnum
+  id: CoinSideEnum
+  parent: Chaos.Api.Enums
+  children:
+  - Chaos.Api.Enums.CoinSideEnum.HEADS
+  - Chaos.Api.Enums.CoinSideEnum.TAILS
+  langs:
+  - csharp
+  - vb
+  name: CoinSideEnum
+  nameWithType: CoinSideEnum
+  fullName: Chaos.Api.Enums.CoinSideEnum
+  type: Enum
+  source:
+    id: CoinSideEnum
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CoinSideEnum.cs
+    startLine: 2
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: public enum CoinSideEnum
+    content.vb: Public Enum CoinSideEnum
+- uid: Chaos.Api.Enums.CoinSideEnum.HEADS
+  commentId: F:Chaos.Api.Enums.CoinSideEnum.HEADS
+  id: HEADS
+  parent: Chaos.Api.Enums.CoinSideEnum
+  langs:
+  - csharp
+  - vb
+  name: HEADS
+  nameWithType: CoinSideEnum.HEADS
+  fullName: Chaos.Api.Enums.CoinSideEnum.HEADS
+  type: Field
+  source:
+    id: HEADS
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CoinSideEnum.cs
+    startLine: 4
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: HEADS = 0
+    return:
+      type: Chaos.Api.Enums.CoinSideEnum
+- uid: Chaos.Api.Enums.CoinSideEnum.TAILS
+  commentId: F:Chaos.Api.Enums.CoinSideEnum.TAILS
+  id: TAILS
+  parent: Chaos.Api.Enums.CoinSideEnum
+  langs:
+  - csharp
+  - vb
+  name: TAILS
+  nameWithType: CoinSideEnum.TAILS
+  fullName: Chaos.Api.Enums.CoinSideEnum.TAILS
+  type: Field
+  source:
+    id: TAILS
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CoinSideEnum.cs
+    startLine: 5
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: TAILS = 1
+    return:
+      type: Chaos.Api.Enums.CoinSideEnum
+references:
+- uid: Chaos.Api.Enums
+  commentId: N:Chaos.Api.Enums
+  href: Chaos.html
+  name: Chaos.Api.Enums
+  nameWithType: Chaos.Api.Enums
+  fullName: Chaos.Api.Enums
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+- uid: Chaos.Api.Enums.CoinSideEnum
+  commentId: T:Chaos.Api.Enums.CoinSideEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.CoinSideEnum.html
+  name: CoinSideEnum
+  nameWithType: CoinSideEnum
+  fullName: Chaos.Api.Enums.CoinSideEnum

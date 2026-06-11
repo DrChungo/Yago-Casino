@@ -1,0 +1,808 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Interface.IUserService
+  commentId: T:Chaos.Api.Interface.IUserService
+  id: IUserService
+  parent: Chaos.Api.Interface
+  children:
+  - Chaos.Api.Interface.IUserService.AddIntoWallet(System.Guid,System.Int32)
+  - Chaos.Api.Interface.IUserService.CreateNUsers(System.Int32)
+  - Chaos.Api.Interface.IUserService.CreateUser(Chaos.Api.RequestEntity.UserRequest)
+  - Chaos.Api.Interface.IUserService.GetAllUsers
+  - Chaos.Api.Interface.IUserService.GetUserByEmail(System.String)
+  - Chaos.Api.Interface.IUserService.GetUserById(System.Guid)
+  - Chaos.Api.Interface.IUserService.SelectedUsers(System.Collections.Generic.List{System.Guid})
+  - Chaos.Api.Interface.IUserService.SendUserToGraveyard(System.Guid)
+  langs:
+  - csharp
+  - vb
+  name: IUserService
+  nameWithType: IUserService
+  fullName: Chaos.Api.Interface.IUserService
+  type: Interface
+  source:
+    id: IUserService
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\IUserService.cs
+    startLine: 8
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: public interface IUserService
+    content.vb: Public Interface IUserService
+  derivedClasses:
+  - Chaos.Api.Service.UserService
+- uid: Chaos.Api.Interface.IUserService.CreateUser(Chaos.Api.RequestEntity.UserRequest)
+  commentId: M:Chaos.Api.Interface.IUserService.CreateUser(Chaos.Api.RequestEntity.UserRequest)
+  id: CreateUser(Chaos.Api.RequestEntity.UserRequest)
+  parent: Chaos.Api.Interface.IUserService
+  langs:
+  - csharp
+  - vb
+  name: CreateUser(UserRequest)
+  nameWithType: IUserService.CreateUser(UserRequest)
+  fullName: Chaos.Api.Interface.IUserService.CreateUser(Chaos.Api.RequestEntity.UserRequest)
+  type: Method
+  source:
+    id: CreateUser
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\IUserService.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: Task<UserResponse> CreateUser(UserRequest request)
+    parameters:
+    - id: request
+      type: Chaos.Api.RequestEntity.UserRequest
+    return:
+      type: System.Threading.Tasks.Task{Chaos.Api.ResponseEntity.UserResponse}
+    content.vb: Function CreateUser(request As UserRequest) As Task(Of UserResponse)
+  overload: Chaos.Api.Interface.IUserService.CreateUser*
+- uid: Chaos.Api.Interface.IUserService.CreateNUsers(System.Int32)
+  commentId: M:Chaos.Api.Interface.IUserService.CreateNUsers(System.Int32)
+  id: CreateNUsers(System.Int32)
+  parent: Chaos.Api.Interface.IUserService
+  langs:
+  - csharp
+  - vb
+  name: CreateNUsers(int)
+  nameWithType: IUserService.CreateNUsers(int)
+  fullName: Chaos.Api.Interface.IUserService.CreateNUsers(int)
+  type: Method
+  source:
+    id: CreateNUsers
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\IUserService.cs
+    startLine: 14
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: Task<List<UserResponse>> CreateNUsers(int NumUsers)
+    parameters:
+    - id: NumUsers
+      type: System.Int32
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{Chaos.Api.ResponseEntity.UserResponse}}
+    content.vb: Function CreateNUsers(NumUsers As Integer) As Task(Of List(Of UserResponse))
+  overload: Chaos.Api.Interface.IUserService.CreateNUsers*
+  nameWithType.vb: IUserService.CreateNUsers(Integer)
+  fullName.vb: Chaos.Api.Interface.IUserService.CreateNUsers(Integer)
+  name.vb: CreateNUsers(Integer)
+- uid: Chaos.Api.Interface.IUserService.GetAllUsers
+  commentId: M:Chaos.Api.Interface.IUserService.GetAllUsers
+  id: GetAllUsers
+  parent: Chaos.Api.Interface.IUserService
+  langs:
+  - csharp
+  - vb
+  name: GetAllUsers()
+  nameWithType: IUserService.GetAllUsers()
+  fullName: Chaos.Api.Interface.IUserService.GetAllUsers()
+  type: Method
+  source:
+    id: GetAllUsers
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\IUserService.cs
+    startLine: 17
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: List<UserResponse> GetAllUsers()
+    return:
+      type: System.Collections.Generic.List{Chaos.Api.ResponseEntity.UserResponse}
+    content.vb: Function GetAllUsers() As List(Of UserResponse)
+  overload: Chaos.Api.Interface.IUserService.GetAllUsers*
+- uid: Chaos.Api.Interface.IUserService.GetUserById(System.Guid)
+  commentId: M:Chaos.Api.Interface.IUserService.GetUserById(System.Guid)
+  id: GetUserById(System.Guid)
+  parent: Chaos.Api.Interface.IUserService
+  langs:
+  - csharp
+  - vb
+  name: GetUserById(Guid)
+  nameWithType: IUserService.GetUserById(Guid)
+  fullName: Chaos.Api.Interface.IUserService.GetUserById(System.Guid)
+  type: Method
+  source:
+    id: GetUserById
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\IUserService.cs
+    startLine: 20
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: UserResponse? GetUserById(Guid Id)
+    parameters:
+    - id: Id
+      type: System.Guid
+    return:
+      type: Chaos.Api.ResponseEntity.UserResponse
+    content.vb: Function GetUserById(Id As Guid) As UserResponse
+  overload: Chaos.Api.Interface.IUserService.GetUserById*
+- uid: Chaos.Api.Interface.IUserService.AddIntoWallet(System.Guid,System.Int32)
+  commentId: M:Chaos.Api.Interface.IUserService.AddIntoWallet(System.Guid,System.Int32)
+  id: AddIntoWallet(System.Guid,System.Int32)
+  parent: Chaos.Api.Interface.IUserService
+  langs:
+  - csharp
+  - vb
+  name: AddIntoWallet(Guid, int)
+  nameWithType: IUserService.AddIntoWallet(Guid, int)
+  fullName: Chaos.Api.Interface.IUserService.AddIntoWallet(System.Guid, int)
+  type: Method
+  source:
+    id: AddIntoWallet
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\IUserService.cs
+    startLine: 23
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: bool AddIntoWallet(Guid WalletId, int AddAmount)
+    parameters:
+    - id: WalletId
+      type: System.Guid
+    - id: AddAmount
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Function AddIntoWallet(WalletId As Guid, AddAmount As Integer) As Boolean
+  overload: Chaos.Api.Interface.IUserService.AddIntoWallet*
+  nameWithType.vb: IUserService.AddIntoWallet(Guid, Integer)
+  fullName.vb: Chaos.Api.Interface.IUserService.AddIntoWallet(System.Guid, Integer)
+  name.vb: AddIntoWallet(Guid, Integer)
+- uid: Chaos.Api.Interface.IUserService.GetUserByEmail(System.String)
+  commentId: M:Chaos.Api.Interface.IUserService.GetUserByEmail(System.String)
+  id: GetUserByEmail(System.String)
+  parent: Chaos.Api.Interface.IUserService
+  langs:
+  - csharp
+  - vb
+  name: GetUserByEmail(string)
+  nameWithType: IUserService.GetUserByEmail(string)
+  fullName: Chaos.Api.Interface.IUserService.GetUserByEmail(string)
+  type: Method
+  source:
+    id: GetUserByEmail
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\IUserService.cs
+    startLine: 26
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: User? GetUserByEmail(string email)
+    parameters:
+    - id: email
+      type: System.String
+    return:
+      type: Chaos.Infraestructure.Models.User
+    content.vb: Function GetUserByEmail(email As String) As User
+  overload: Chaos.Api.Interface.IUserService.GetUserByEmail*
+  nameWithType.vb: IUserService.GetUserByEmail(String)
+  fullName.vb: Chaos.Api.Interface.IUserService.GetUserByEmail(String)
+  name.vb: GetUserByEmail(String)
+- uid: Chaos.Api.Interface.IUserService.SendUserToGraveyard(System.Guid)
+  commentId: M:Chaos.Api.Interface.IUserService.SendUserToGraveyard(System.Guid)
+  id: SendUserToGraveyard(System.Guid)
+  parent: Chaos.Api.Interface.IUserService
+  langs:
+  - csharp
+  - vb
+  name: SendUserToGraveyard(Guid)
+  nameWithType: IUserService.SendUserToGraveyard(Guid)
+  fullName: Chaos.Api.Interface.IUserService.SendUserToGraveyard(System.Guid)
+  type: Method
+  source:
+    id: SendUserToGraveyard
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\IUserService.cs
+    startLine: 29
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: bool SendUserToGraveyard(Guid IdUser)
+    parameters:
+    - id: IdUser
+      type: System.Guid
+    return:
+      type: System.Boolean
+    content.vb: Function SendUserToGraveyard(IdUser As Guid) As Boolean
+  overload: Chaos.Api.Interface.IUserService.SendUserToGraveyard*
+- uid: Chaos.Api.Interface.IUserService.SelectedUsers(System.Collections.Generic.List{System.Guid})
+  commentId: M:Chaos.Api.Interface.IUserService.SelectedUsers(System.Collections.Generic.List{System.Guid})
+  id: SelectedUsers(System.Collections.Generic.List{System.Guid})
+  parent: Chaos.Api.Interface.IUserService
+  langs:
+  - csharp
+  - vb
+  name: SelectedUsers(List<Guid>)
+  nameWithType: IUserService.SelectedUsers(List<Guid>)
+  fullName: Chaos.Api.Interface.IUserService.SelectedUsers(System.Collections.Generic.List<System.Guid>)
+  type: Method
+  source:
+    id: SelectedUsers
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\IUserService.cs
+    startLine: 32
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: List<User> SelectedUsers(List<Guid> idPlayers)
+    parameters:
+    - id: idPlayers
+      type: System.Collections.Generic.List{System.Guid}
+    return:
+      type: System.Collections.Generic.List{Chaos.Infraestructure.Models.User}
+    content.vb: Function SelectedUsers(idPlayers As List(Of Guid)) As List(Of User)
+  overload: Chaos.Api.Interface.IUserService.SelectedUsers*
+  nameWithType.vb: IUserService.SelectedUsers(List(Of Guid))
+  fullName.vb: Chaos.Api.Interface.IUserService.SelectedUsers(System.Collections.Generic.List(Of System.Guid))
+  name.vb: SelectedUsers(List(Of Guid))
+references:
+- uid: Chaos.Api.Interface
+  commentId: N:Chaos.Api.Interface
+  href: Chaos.html
+  name: Chaos.Api.Interface
+  nameWithType: Chaos.Api.Interface
+  fullName: Chaos.Api.Interface
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Interface
+    name: Interface
+    href: Chaos.Api.Interface.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Interface
+    name: Interface
+    href: Chaos.Api.Interface.html
+- uid: Chaos.Api.Interface.IUserService.CreateUser*
+  commentId: Overload:Chaos.Api.Interface.IUserService.CreateUser
+  href: Chaos.Api.Interface.IUserService.html#Chaos_Api_Interface_IUserService_CreateUser_Chaos_Api_RequestEntity_UserRequest_
+  name: CreateUser
+  nameWithType: IUserService.CreateUser
+  fullName: Chaos.Api.Interface.IUserService.CreateUser
+- uid: Chaos.Api.RequestEntity.UserRequest
+  commentId: T:Chaos.Api.RequestEntity.UserRequest
+  parent: Chaos.Api.RequestEntity
+  href: Chaos.Api.RequestEntity.UserRequest.html
+  name: UserRequest
+  nameWithType: UserRequest
+  fullName: Chaos.Api.RequestEntity.UserRequest
+- uid: System.Threading.Tasks.Task{Chaos.Api.ResponseEntity.UserResponse}
+  commentId: T:System.Threading.Tasks.Task{Chaos.Api.ResponseEntity.UserResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<UserResponse>
+  nameWithType: Task<UserResponse>
+  fullName: System.Threading.Tasks.Task<Chaos.Api.ResponseEntity.UserResponse>
+  nameWithType.vb: Task(Of UserResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of Chaos.Api.ResponseEntity.UserResponse)
+  name.vb: Task(Of UserResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Chaos.Api.ResponseEntity.UserResponse
+    name: UserResponse
+    href: Chaos.Api.ResponseEntity.UserResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Chaos.Api.ResponseEntity.UserResponse
+    name: UserResponse
+    href: Chaos.Api.ResponseEntity.UserResponse.html
+  - name: )
+- uid: Chaos.Api.RequestEntity
+  commentId: N:Chaos.Api.RequestEntity
+  href: Chaos.html
+  name: Chaos.Api.RequestEntity
+  nameWithType: Chaos.Api.RequestEntity
+  fullName: Chaos.Api.RequestEntity
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.RequestEntity
+    name: RequestEntity
+    href: Chaos.Api.RequestEntity.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.RequestEntity
+    name: RequestEntity
+    href: Chaos.Api.RequestEntity.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Chaos.Api.Interface.IUserService.CreateNUsers*
+  commentId: Overload:Chaos.Api.Interface.IUserService.CreateNUsers
+  href: Chaos.Api.Interface.IUserService.html#Chaos_Api_Interface_IUserService_CreateNUsers_System_Int32_
+  name: CreateNUsers
+  nameWithType: IUserService.CreateNUsers
+  fullName: Chaos.Api.Interface.IUserService.CreateNUsers
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{Chaos.Api.ResponseEntity.UserResponse}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{Chaos.Api.ResponseEntity.UserResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<UserResponse>>
+  nameWithType: Task<List<UserResponse>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<Chaos.Api.ResponseEntity.UserResponse>>
+  nameWithType.vb: Task(Of List(Of UserResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of Chaos.Api.ResponseEntity.UserResponse))
+  name.vb: Task(Of List(Of UserResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Chaos.Api.ResponseEntity.UserResponse
+    name: UserResponse
+    href: Chaos.Api.ResponseEntity.UserResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Chaos.Api.ResponseEntity.UserResponse
+    name: UserResponse
+    href: Chaos.Api.ResponseEntity.UserResponse.html
+  - name: )
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chaos.Api.Interface.IUserService.GetAllUsers*
+  commentId: Overload:Chaos.Api.Interface.IUserService.GetAllUsers
+  href: Chaos.Api.Interface.IUserService.html#Chaos_Api_Interface_IUserService_GetAllUsers
+  name: GetAllUsers
+  nameWithType: IUserService.GetAllUsers
+  fullName: Chaos.Api.Interface.IUserService.GetAllUsers
+- uid: System.Collections.Generic.List{Chaos.Api.ResponseEntity.UserResponse}
+  commentId: T:System.Collections.Generic.List{Chaos.Api.ResponseEntity.UserResponse}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<UserResponse>
+  nameWithType: List<UserResponse>
+  fullName: System.Collections.Generic.List<Chaos.Api.ResponseEntity.UserResponse>
+  nameWithType.vb: List(Of UserResponse)
+  fullName.vb: System.Collections.Generic.List(Of Chaos.Api.ResponseEntity.UserResponse)
+  name.vb: List(Of UserResponse)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Chaos.Api.ResponseEntity.UserResponse
+    name: UserResponse
+    href: Chaos.Api.ResponseEntity.UserResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Chaos.Api.ResponseEntity.UserResponse
+    name: UserResponse
+    href: Chaos.Api.ResponseEntity.UserResponse.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Chaos.Api.Interface.IUserService.GetUserById*
+  commentId: Overload:Chaos.Api.Interface.IUserService.GetUserById
+  href: Chaos.Api.Interface.IUserService.html#Chaos_Api_Interface_IUserService_GetUserById_System_Guid_
+  name: GetUserById
+  nameWithType: IUserService.GetUserById
+  fullName: Chaos.Api.Interface.IUserService.GetUserById
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Chaos.Api.ResponseEntity.UserResponse
+  commentId: T:Chaos.Api.ResponseEntity.UserResponse
+  parent: Chaos.Api.ResponseEntity
+  href: Chaos.Api.ResponseEntity.UserResponse.html
+  name: UserResponse
+  nameWithType: UserResponse
+  fullName: Chaos.Api.ResponseEntity.UserResponse
+- uid: Chaos.Api.ResponseEntity
+  commentId: N:Chaos.Api.ResponseEntity
+  href: Chaos.html
+  name: Chaos.Api.ResponseEntity
+  nameWithType: Chaos.Api.ResponseEntity
+  fullName: Chaos.Api.ResponseEntity
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.ResponseEntity
+    name: ResponseEntity
+    href: Chaos.Api.ResponseEntity.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.ResponseEntity
+    name: ResponseEntity
+    href: Chaos.Api.ResponseEntity.html
+- uid: Chaos.Api.Interface.IUserService.AddIntoWallet*
+  commentId: Overload:Chaos.Api.Interface.IUserService.AddIntoWallet
+  href: Chaos.Api.Interface.IUserService.html#Chaos_Api_Interface_IUserService_AddIntoWallet_System_Guid_System_Int32_
+  name: AddIntoWallet
+  nameWithType: IUserService.AddIntoWallet
+  fullName: Chaos.Api.Interface.IUserService.AddIntoWallet
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Chaos.Api.Interface.IUserService.GetUserByEmail*
+  commentId: Overload:Chaos.Api.Interface.IUserService.GetUserByEmail
+  href: Chaos.Api.Interface.IUserService.html#Chaos_Api_Interface_IUserService_GetUserByEmail_System_String_
+  name: GetUserByEmail
+  nameWithType: IUserService.GetUserByEmail
+  fullName: Chaos.Api.Interface.IUserService.GetUserByEmail
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Chaos.Infraestructure.Models.User
+  commentId: T:Chaos.Infraestructure.Models.User
+  parent: Chaos.Infraestructure.Models
+  href: Chaos.Infraestructure.Models.User.html
+  name: User
+  nameWithType: User
+  fullName: Chaos.Infraestructure.Models.User
+- uid: Chaos.Infraestructure.Models
+  commentId: N:Chaos.Infraestructure.Models
+  href: Chaos.html
+  name: Chaos.Infraestructure.Models
+  nameWithType: Chaos.Infraestructure.Models
+  fullName: Chaos.Infraestructure.Models
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Infraestructure
+    name: Infraestructure
+    href: Chaos.Infraestructure.html
+  - name: .
+  - uid: Chaos.Infraestructure.Models
+    name: Models
+    href: Chaos.Infraestructure.Models.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Infraestructure
+    name: Infraestructure
+    href: Chaos.Infraestructure.html
+  - name: .
+  - uid: Chaos.Infraestructure.Models
+    name: Models
+    href: Chaos.Infraestructure.Models.html
+- uid: Chaos.Api.Interface.IUserService.SendUserToGraveyard*
+  commentId: Overload:Chaos.Api.Interface.IUserService.SendUserToGraveyard
+  href: Chaos.Api.Interface.IUserService.html#Chaos_Api_Interface_IUserService_SendUserToGraveyard_System_Guid_
+  name: SendUserToGraveyard
+  nameWithType: IUserService.SendUserToGraveyard
+  fullName: Chaos.Api.Interface.IUserService.SendUserToGraveyard
+- uid: Chaos.Api.Interface.IUserService.SelectedUsers*
+  commentId: Overload:Chaos.Api.Interface.IUserService.SelectedUsers
+  href: Chaos.Api.Interface.IUserService.html#Chaos_Api_Interface_IUserService_SelectedUsers_System_Collections_Generic_List_System_Guid__
+  name: SelectedUsers
+  nameWithType: IUserService.SelectedUsers
+  fullName: Chaos.Api.Interface.IUserService.SelectedUsers
+- uid: System.Collections.Generic.List{System.Guid}
+  commentId: T:System.Collections.Generic.List{System.Guid}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Guid>
+  nameWithType: List<Guid>
+  fullName: System.Collections.Generic.List<System.Guid>
+  nameWithType.vb: List(Of Guid)
+  fullName.vb: System.Collections.Generic.List(Of System.Guid)
+  name.vb: List(Of Guid)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: System.Collections.Generic.List{Chaos.Infraestructure.Models.User}
+  commentId: T:System.Collections.Generic.List{Chaos.Infraestructure.Models.User}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<User>
+  nameWithType: List<User>
+  fullName: System.Collections.Generic.List<Chaos.Infraestructure.Models.User>
+  nameWithType.vb: List(Of User)
+  fullName.vb: System.Collections.Generic.List(Of Chaos.Infraestructure.Models.User)
+  name.vb: List(Of User)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Chaos.Infraestructure.Models.User
+    name: User
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Chaos.Infraestructure.Models.User
+    name: User
+  - name: )

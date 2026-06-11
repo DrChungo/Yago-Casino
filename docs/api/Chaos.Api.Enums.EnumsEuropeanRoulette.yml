@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+  commentId: N:Chaos.Api.Enums.EnumsEuropeanRoulette
+  id: Chaos.Api.Enums.EnumsEuropeanRoulette
+  children:
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.FirstDozen
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.FirstHalf
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.FirstRow
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.RedNumbers
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondRow
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdDozen
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  langs:
+  - csharp
+  - vb
+  name: Chaos.Api.Enums.EnumsEuropeanRoulette
+  nameWithType: Chaos.Api.Enums.EnumsEuropeanRoulette
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette
+  type: Namespace
+  assemblies:
+  - Chaos.Api
+references:
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.html
+  name: BlackNumbers
+  nameWithType: BlackNumbers
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstDozen
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.FirstDozen
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstDozen.html
+  name: FirstDozen
+  nameWithType: FirstDozen
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstHalf
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.FirstHalf
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstHalf.html
+  name: FirstHalf
+  nameWithType: FirstHalf
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstRow
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.FirstRow
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstRow.html
+  name: FirstRow
+  nameWithType: FirstRow
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.RedNumbers
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.RedNumbers
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.RedNumbers.html
+  name: RedNumbers
+  nameWithType: RedNumbers
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.RedNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.html
+  name: SecondDozen
+  nameWithType: SecondDozen
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.html
+  name: SecondHalf
+  nameWithType: SecondHalf
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondRow
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondRow
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondRow.html
+  name: SecondRow
+  nameWithType: SecondRow
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdDozen
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdDozen
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdDozen.html
+  name: ThirdDozen
+  nameWithType: ThirdDozen
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.html
+  name: ThirdRow
+  nameWithType: ThirdRow
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+  commentId: N:Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.html
+  name: Chaos.Api.Enums.EnumsEuropeanRoulette
+  nameWithType: Chaos.Api.Enums.EnumsEuropeanRoulette
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  - name: .
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+    name: EnumsEuropeanRoulette
+    href: Chaos.Api.Enums.EnumsEuropeanRoulette.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  - name: .
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+    name: EnumsEuropeanRoulette
+    href: Chaos.Api.Enums.EnumsEuropeanRoulette.html

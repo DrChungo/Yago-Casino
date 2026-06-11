@@ -1,0 +1,157 @@
+﻿@page "/BlackjackPage/create"
+@using Chaos.BlazorCasinoApp.IApiService
+
+@using Chaos.Shared.RequestEntity
+@inject IBlackjackConfigService BlackjackService
+@inject NavigationManager Navigation
+
+<PageTitle>Nueva Configuración — Blackjack</PageTitle>
+
+<div class="casino-page">
+
+    <div class="casino-form-header">
+        <button class="btn-casino-secondary" @onclick="GoBack">← Volver</button>
+        <h4>➕ Nueva Configuración Blackjack</h4>
+    </div>
+
+    @if (errorMessage is not null)
+    {
+        <div class="alert alert-danger">⚠️ @errorMessage</div>
+    }
+
+    <div class="card">
+        <div class="card-body">
+
+            <div class="form-group">
+                <label class="form-label">Nombre de la Mesa</label>
+                <input class="form-control"
+                       @bind="request.TableName"
+                       placeholder="Ej: Mesa VIP Blackjack" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Número de Mazos</label>
+                <input class="form-control" type="number"
+                       @bind="request.NumberOfDecks"
+                       min="1" max="8" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Máximo de Jugadores</label>
+                <input class="form-control" type="number"
+                       @bind="request.MaxPlayers"
+                       min="1" max="12" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Dealer Se Para En</label>
+                <input class="form-control" type="number"
+                       @bind="request.DealerStandsOn"
+                       min="1" max="21" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Pago Blackjack (multiplicador)</label>
+                <input class="form-control" type="number" step="0.01"
+                       @bind="request.BlackjackPayout"
+                       min="1" />
+            </div>
+
+            <div class="casino-toggle-row">
+                <label class="form-label">Permitir Doble Apuesta</label>
+                <button type="button"
+                        class="casino-toggle-btn @(request.AllowDoubleDown ? "badge-casino-active" : "badge-casino-inactive")"
+                        @onclick="() => request.AllowDoubleDown = !request.AllowDoubleDown">
+                    @if (request.AllowDoubleDown)
+                    {
+                        <span>● Activo</span>
+                    }
+                    else
+                    {
+                        <span>● Inactivo</span>
+                    }
+                </button>
+            </div>
+
+            <div class="casino-toggle-row">
+                <label class="form-label">Permitir Seguro</label>
+                <button type="button"
+                        class="casino-toggle-btn @(request.AllowInsurance ? "badge-casino-active" : "badge-casino-inactive")"
+                        @onclick="() => request.AllowInsurance = !request.AllowInsurance">
+                    @if (request.AllowInsurance)
+                    {
+                        <span>● Activo</span>
+                    }
+                    else
+                    {
+                        <span>● Inactivo</span>
+                    }
+                </button>
+            </div>
+
+            <div class="casino-toggle-row">
+                <label class="form-label">Estado</label>
+                <button type="button"
+                        class="casino-toggle-btn @(request.IsActive ? "badge-casino-active" : "badge-casino-inactive")"
+                        @onclick="() => request.IsActive = !request.IsActive">
+                    @if (request.IsActive)
+                    {
+                        <span>● Activo</span>
+                    }
+                    else
+                    {
+                        <span>● Inactivo</span>
+                    }
+                </button>
+            </div>
+
+            <div class="casino-form-actions">
+                <button class="btn-casino-secondary" @onclick="GoBack">
+                    ✖ Cancelar
+                </button>
+                <button class="btn-casino-primary" @onclick="HandleCreate" disabled="@isSaving">
+                    @if (isSaving)
+                    {
+                        <span class="casino-spinner-sm">🛞</span>
+                    }
+                    💾 Guardar
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+@code {
+    private BlackjackRequest request = new();
+    private bool isSaving = false;
+    private string? errorMessage;
+
+    private async Task HandleCreate()
+    {
+        if (string.IsNullOrWhiteSpace(request.TableName))
+        {
+            errorMessage = "El nombre de la mesa es obligatorio.";
+            return;
+        }
+
+        try
+        {
+            isSaving = true;
+            errorMessage = null;
+            await BlackjackService.CreateAsync(request);
+            Navigation.NavigateTo("/BlackjackPage");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al crear: {ex.Message}";
+        }
+        finally
+        {
+            isSaving = false;
+        }
+    }
+
+    private void GoBack() => Navigation.NavigateTo("/BlackjackPage");
+}

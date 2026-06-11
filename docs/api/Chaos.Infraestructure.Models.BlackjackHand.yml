@@ -1,0 +1,881 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Infraestructure.Models.BlackjackHand
+  commentId: T:Chaos.Infraestructure.Models.BlackjackHand
+  id: BlackjackHand
+  parent: Chaos.Infraestructure.Models
+  children:
+  - Chaos.Infraestructure.Models.BlackjackHand.BlackjackActions
+  - Chaos.Infraestructure.Models.BlackjackHand.BlackjackCards
+  - Chaos.Infraestructure.Models.BlackjackHand.BlackjackSession
+  - Chaos.Infraestructure.Models.BlackjackHand.BlackjackSessionId
+  - Chaos.Infraestructure.Models.BlackjackHand.FinalScore
+  - Chaos.Infraestructure.Models.BlackjackHand.HandNumber
+  - Chaos.Infraestructure.Models.BlackjackHand.HandOwner
+  - Chaos.Infraestructure.Models.BlackjackHand.Id
+  - Chaos.Infraestructure.Models.BlackjackHand.IsBlackjack
+  - Chaos.Infraestructure.Models.BlackjackHand.IsBust
+  - Chaos.Infraestructure.Models.BlackjackHand.IsSplit
+  langs:
+  - csharp
+  - vb
+  name: BlackjackHand
+  nameWithType: BlackjackHand
+  fullName: Chaos.Infraestructure.Models.BlackjackHand
+  type: Class
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/BlackjackHand.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: BlackjackHand
+    path: ../Chaos.Infraestructure/Models/BlackjackHand.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public class BlackjackHand
+    content.vb: Public Class BlackjackHand
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Chaos.Infraestructure.Models.BlackjackHand.Id
+  commentId: P:Chaos.Infraestructure.Models.BlackjackHand.Id
+  id: Id
+  parent: Chaos.Infraestructure.Models.BlackjackHand
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: BlackjackHand.Id
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.Id
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/BlackjackHand.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: Id
+    path: ../Chaos.Infraestructure/Models/BlackjackHand.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid Id { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Id As Guid
+  overload: Chaos.Infraestructure.Models.BlackjackHand.Id*
+- uid: Chaos.Infraestructure.Models.BlackjackHand.HandOwner
+  commentId: P:Chaos.Infraestructure.Models.BlackjackHand.HandOwner
+  id: HandOwner
+  parent: Chaos.Infraestructure.Models.BlackjackHand
+  langs:
+  - csharp
+  - vb
+  name: HandOwner
+  nameWithType: BlackjackHand.HandOwner
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.HandOwner
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/BlackjackHand.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: HandOwner
+    path: ../Chaos.Infraestructure/Models/BlackjackHand.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string HandOwner { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property HandOwner As String
+  overload: Chaos.Infraestructure.Models.BlackjackHand.HandOwner*
+- uid: Chaos.Infraestructure.Models.BlackjackHand.HandNumber
+  commentId: P:Chaos.Infraestructure.Models.BlackjackHand.HandNumber
+  id: HandNumber
+  parent: Chaos.Infraestructure.Models.BlackjackHand
+  langs:
+  - csharp
+  - vb
+  name: HandNumber
+  nameWithType: BlackjackHand.HandNumber
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.HandNumber
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/BlackjackHand.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: HandNumber
+    path: ../Chaos.Infraestructure/Models/BlackjackHand.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public int HandNumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property HandNumber As Integer
+  overload: Chaos.Infraestructure.Models.BlackjackHand.HandNumber*
+- uid: Chaos.Infraestructure.Models.BlackjackHand.FinalScore
+  commentId: P:Chaos.Infraestructure.Models.BlackjackHand.FinalScore
+  id: FinalScore
+  parent: Chaos.Infraestructure.Models.BlackjackHand
+  langs:
+  - csharp
+  - vb
+  name: FinalScore
+  nameWithType: BlackjackHand.FinalScore
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.FinalScore
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/BlackjackHand.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: FinalScore
+    path: ../Chaos.Infraestructure/Models/BlackjackHand.cs
+    startLine: 15
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public int FinalScore { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property FinalScore As Integer
+  overload: Chaos.Infraestructure.Models.BlackjackHand.FinalScore*
+- uid: Chaos.Infraestructure.Models.BlackjackHand.IsBust
+  commentId: P:Chaos.Infraestructure.Models.BlackjackHand.IsBust
+  id: IsBust
+  parent: Chaos.Infraestructure.Models.BlackjackHand
+  langs:
+  - csharp
+  - vb
+  name: IsBust
+  nameWithType: BlackjackHand.IsBust
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.IsBust
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/BlackjackHand.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: IsBust
+    path: ../Chaos.Infraestructure/Models/BlackjackHand.cs
+    startLine: 17
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public bool IsBust { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsBust As Boolean
+  overload: Chaos.Infraestructure.Models.BlackjackHand.IsBust*
+- uid: Chaos.Infraestructure.Models.BlackjackHand.IsBlackjack
+  commentId: P:Chaos.Infraestructure.Models.BlackjackHand.IsBlackjack
+  id: IsBlackjack
+  parent: Chaos.Infraestructure.Models.BlackjackHand
+  langs:
+  - csharp
+  - vb
+  name: IsBlackjack
+  nameWithType: BlackjackHand.IsBlackjack
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.IsBlackjack
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/BlackjackHand.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: IsBlackjack
+    path: ../Chaos.Infraestructure/Models/BlackjackHand.cs
+    startLine: 19
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public bool IsBlackjack { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsBlackjack As Boolean
+  overload: Chaos.Infraestructure.Models.BlackjackHand.IsBlackjack*
+- uid: Chaos.Infraestructure.Models.BlackjackHand.IsSplit
+  commentId: P:Chaos.Infraestructure.Models.BlackjackHand.IsSplit
+  id: IsSplit
+  parent: Chaos.Infraestructure.Models.BlackjackHand
+  langs:
+  - csharp
+  - vb
+  name: IsSplit
+  nameWithType: BlackjackHand.IsSplit
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.IsSplit
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/BlackjackHand.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: IsSplit
+    path: ../Chaos.Infraestructure/Models/BlackjackHand.cs
+    startLine: 21
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public bool IsSplit { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsSplit As Boolean
+  overload: Chaos.Infraestructure.Models.BlackjackHand.IsSplit*
+- uid: Chaos.Infraestructure.Models.BlackjackHand.BlackjackSessionId
+  commentId: P:Chaos.Infraestructure.Models.BlackjackHand.BlackjackSessionId
+  id: BlackjackSessionId
+  parent: Chaos.Infraestructure.Models.BlackjackHand
+  langs:
+  - csharp
+  - vb
+  name: BlackjackSessionId
+  nameWithType: BlackjackHand.BlackjackSessionId
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.BlackjackSessionId
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/BlackjackHand.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: BlackjackSessionId
+    path: ../Chaos.Infraestructure/Models/BlackjackHand.cs
+    startLine: 23
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid BlackjackSessionId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property BlackjackSessionId As Guid
+  overload: Chaos.Infraestructure.Models.BlackjackHand.BlackjackSessionId*
+- uid: Chaos.Infraestructure.Models.BlackjackHand.BlackjackActions
+  commentId: P:Chaos.Infraestructure.Models.BlackjackHand.BlackjackActions
+  id: BlackjackActions
+  parent: Chaos.Infraestructure.Models.BlackjackHand
+  langs:
+  - csharp
+  - vb
+  name: BlackjackActions
+  nameWithType: BlackjackHand.BlackjackActions
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.BlackjackActions
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/BlackjackHand.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: BlackjackActions
+    path: ../Chaos.Infraestructure/Models/BlackjackHand.cs
+    startLine: 25
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual ICollection<BlackjackAction> BlackjackActions { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.BlackjackAction}
+    content.vb: Public Overridable Property BlackjackActions As ICollection(Of BlackjackAction)
+  overload: Chaos.Infraestructure.Models.BlackjackHand.BlackjackActions*
+- uid: Chaos.Infraestructure.Models.BlackjackHand.BlackjackCards
+  commentId: P:Chaos.Infraestructure.Models.BlackjackHand.BlackjackCards
+  id: BlackjackCards
+  parent: Chaos.Infraestructure.Models.BlackjackHand
+  langs:
+  - csharp
+  - vb
+  name: BlackjackCards
+  nameWithType: BlackjackHand.BlackjackCards
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.BlackjackCards
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/BlackjackHand.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: BlackjackCards
+    path: ../Chaos.Infraestructure/Models/BlackjackHand.cs
+    startLine: 27
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual ICollection<BlackjackCard> BlackjackCards { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.BlackjackCard}
+    content.vb: Public Overridable Property BlackjackCards As ICollection(Of BlackjackCard)
+  overload: Chaos.Infraestructure.Models.BlackjackHand.BlackjackCards*
+- uid: Chaos.Infraestructure.Models.BlackjackHand.BlackjackSession
+  commentId: P:Chaos.Infraestructure.Models.BlackjackHand.BlackjackSession
+  id: BlackjackSession
+  parent: Chaos.Infraestructure.Models.BlackjackHand
+  langs:
+  - csharp
+  - vb
+  name: BlackjackSession
+  nameWithType: BlackjackHand.BlackjackSession
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.BlackjackSession
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/BlackjackHand.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: BlackjackSession
+    path: ../Chaos.Infraestructure/Models/BlackjackHand.cs
+    startLine: 29
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual BlackjackSession BlackjackSession { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Infraestructure.Models.BlackjackSession
+    content.vb: Public Overridable Property BlackjackSession As BlackjackSession
+  overload: Chaos.Infraestructure.Models.BlackjackHand.BlackjackSession*
+references:
+- uid: Chaos.Infraestructure.Models
+  commentId: N:Chaos.Infraestructure.Models
+  href: Chaos.html
+  name: Chaos.Infraestructure.Models
+  nameWithType: Chaos.Infraestructure.Models
+  fullName: Chaos.Infraestructure.Models
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Infraestructure
+    name: Infraestructure
+    href: Chaos.Infraestructure.html
+  - name: .
+  - uid: Chaos.Infraestructure.Models
+    name: Models
+    href: Chaos.Infraestructure.Models.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Infraestructure
+    name: Infraestructure
+    href: Chaos.Infraestructure.html
+  - name: .
+  - uid: Chaos.Infraestructure.Models
+    name: Models
+    href: Chaos.Infraestructure.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chaos.Infraestructure.Models.BlackjackHand.Id*
+  commentId: Overload:Chaos.Infraestructure.Models.BlackjackHand.Id
+  href: Chaos.Infraestructure.Models.BlackjackHand.html#Chaos_Infraestructure_Models_BlackjackHand_Id
+  name: Id
+  nameWithType: BlackjackHand.Id
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.Id
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Chaos.Infraestructure.Models.BlackjackHand.HandOwner*
+  commentId: Overload:Chaos.Infraestructure.Models.BlackjackHand.HandOwner
+  href: Chaos.Infraestructure.Models.BlackjackHand.html#Chaos_Infraestructure_Models_BlackjackHand_HandOwner
+  name: HandOwner
+  nameWithType: BlackjackHand.HandOwner
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.HandOwner
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Chaos.Infraestructure.Models.BlackjackHand.HandNumber*
+  commentId: Overload:Chaos.Infraestructure.Models.BlackjackHand.HandNumber
+  href: Chaos.Infraestructure.Models.BlackjackHand.html#Chaos_Infraestructure_Models_BlackjackHand_HandNumber
+  name: HandNumber
+  nameWithType: BlackjackHand.HandNumber
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.HandNumber
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Chaos.Infraestructure.Models.BlackjackHand.FinalScore*
+  commentId: Overload:Chaos.Infraestructure.Models.BlackjackHand.FinalScore
+  href: Chaos.Infraestructure.Models.BlackjackHand.html#Chaos_Infraestructure_Models_BlackjackHand_FinalScore
+  name: FinalScore
+  nameWithType: BlackjackHand.FinalScore
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.FinalScore
+- uid: Chaos.Infraestructure.Models.BlackjackHand.IsBust*
+  commentId: Overload:Chaos.Infraestructure.Models.BlackjackHand.IsBust
+  href: Chaos.Infraestructure.Models.BlackjackHand.html#Chaos_Infraestructure_Models_BlackjackHand_IsBust
+  name: IsBust
+  nameWithType: BlackjackHand.IsBust
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.IsBust
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Chaos.Infraestructure.Models.BlackjackHand.IsBlackjack*
+  commentId: Overload:Chaos.Infraestructure.Models.BlackjackHand.IsBlackjack
+  href: Chaos.Infraestructure.Models.BlackjackHand.html#Chaos_Infraestructure_Models_BlackjackHand_IsBlackjack
+  name: IsBlackjack
+  nameWithType: BlackjackHand.IsBlackjack
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.IsBlackjack
+- uid: Chaos.Infraestructure.Models.BlackjackHand.IsSplit*
+  commentId: Overload:Chaos.Infraestructure.Models.BlackjackHand.IsSplit
+  href: Chaos.Infraestructure.Models.BlackjackHand.html#Chaos_Infraestructure_Models_BlackjackHand_IsSplit
+  name: IsSplit
+  nameWithType: BlackjackHand.IsSplit
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.IsSplit
+- uid: Chaos.Infraestructure.Models.BlackjackHand.BlackjackSessionId*
+  commentId: Overload:Chaos.Infraestructure.Models.BlackjackHand.BlackjackSessionId
+  href: Chaos.Infraestructure.Models.BlackjackHand.html#Chaos_Infraestructure_Models_BlackjackHand_BlackjackSessionId
+  name: BlackjackSessionId
+  nameWithType: BlackjackHand.BlackjackSessionId
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.BlackjackSessionId
+- uid: Chaos.Infraestructure.Models.BlackjackHand.BlackjackActions*
+  commentId: Overload:Chaos.Infraestructure.Models.BlackjackHand.BlackjackActions
+  href: Chaos.Infraestructure.Models.BlackjackHand.html#Chaos_Infraestructure_Models_BlackjackHand_BlackjackActions
+  name: BlackjackActions
+  nameWithType: BlackjackHand.BlackjackActions
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.BlackjackActions
+- uid: System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.BlackjackAction}
+  commentId: T:System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.BlackjackAction}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<BlackjackAction>
+  nameWithType: ICollection<BlackjackAction>
+  fullName: System.Collections.Generic.ICollection<Chaos.Infraestructure.Models.BlackjackAction>
+  nameWithType.vb: ICollection(Of BlackjackAction)
+  fullName.vb: System.Collections.Generic.ICollection(Of Chaos.Infraestructure.Models.BlackjackAction)
+  name.vb: ICollection(Of BlackjackAction)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: Chaos.Infraestructure.Models.BlackjackAction
+    name: BlackjackAction
+    href: Chaos.Infraestructure.Models.BlackjackAction.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Chaos.Infraestructure.Models.BlackjackAction
+    name: BlackjackAction
+    href: Chaos.Infraestructure.Models.BlackjackAction.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Chaos.Infraestructure.Models.BlackjackHand.BlackjackCards*
+  commentId: Overload:Chaos.Infraestructure.Models.BlackjackHand.BlackjackCards
+  href: Chaos.Infraestructure.Models.BlackjackHand.html#Chaos_Infraestructure_Models_BlackjackHand_BlackjackCards
+  name: BlackjackCards
+  nameWithType: BlackjackHand.BlackjackCards
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.BlackjackCards
+- uid: System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.BlackjackCard}
+  commentId: T:System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.BlackjackCard}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<BlackjackCard>
+  nameWithType: ICollection<BlackjackCard>
+  fullName: System.Collections.Generic.ICollection<Chaos.Infraestructure.Models.BlackjackCard>
+  nameWithType.vb: ICollection(Of BlackjackCard)
+  fullName.vb: System.Collections.Generic.ICollection(Of Chaos.Infraestructure.Models.BlackjackCard)
+  name.vb: ICollection(Of BlackjackCard)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: Chaos.Infraestructure.Models.BlackjackCard
+    name: BlackjackCard
+    href: Chaos.Infraestructure.Models.BlackjackCard.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Chaos.Infraestructure.Models.BlackjackCard
+    name: BlackjackCard
+    href: Chaos.Infraestructure.Models.BlackjackCard.html
+  - name: )
+- uid: Chaos.Infraestructure.Models.BlackjackHand.BlackjackSession*
+  commentId: Overload:Chaos.Infraestructure.Models.BlackjackHand.BlackjackSession
+  href: Chaos.Infraestructure.Models.BlackjackHand.html#Chaos_Infraestructure_Models_BlackjackHand_BlackjackSession
+  name: BlackjackSession
+  nameWithType: BlackjackHand.BlackjackSession
+  fullName: Chaos.Infraestructure.Models.BlackjackHand.BlackjackSession
+- uid: Chaos.Infraestructure.Models.BlackjackSession
+  commentId: T:Chaos.Infraestructure.Models.BlackjackSession
+  parent: Chaos.Infraestructure.Models
+  href: Chaos.Infraestructure.Models.BlackjackSession.html
+  name: BlackjackSession
+  nameWithType: BlackjackSession
+  fullName: Chaos.Infraestructure.Models.BlackjackSession

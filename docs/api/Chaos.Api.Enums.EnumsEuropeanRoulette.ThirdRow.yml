@@ -1,0 +1,348 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  id: ThirdRow
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  children:
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.EIGHTEEN
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.FIFTEEN
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.NINE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.SIX
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.THIRTY
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.THIRTY_SIX
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.THIRTY_THREE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.THREE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.TWELVE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.TWENTY_FOUR
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.TWENTY_ONE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.TWENTY_SEVEN
+  langs:
+  - csharp
+  - vb
+  name: ThirdRow
+  nameWithType: ThirdRow
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  type: Enum
+  source:
+    id: ThirdRow
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\ThirdRow.cs
+    startLine: 5
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  summary: Third row of the table
+  example: []
+  syntax:
+    content: public enum ThirdRow
+    content.vb: Public Enum ThirdRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.THREE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.THREE
+  id: THREE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  langs:
+  - csharp
+  - vb
+  name: THREE
+  nameWithType: ThirdRow.THREE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.THREE
+  type: Field
+  source:
+    id: THREE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\ThirdRow.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: THREE = 3
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.SIX
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.SIX
+  id: SIX
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  langs:
+  - csharp
+  - vb
+  name: SIX
+  nameWithType: ThirdRow.SIX
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.SIX
+  type: Field
+  source:
+    id: SIX
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\ThirdRow.cs
+    startLine: 8
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: SIX = 6
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.NINE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.NINE
+  id: NINE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  langs:
+  - csharp
+  - vb
+  name: NINE
+  nameWithType: ThirdRow.NINE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.NINE
+  type: Field
+  source:
+    id: NINE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\ThirdRow.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: NINE = 9
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.TWELVE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.TWELVE
+  id: TWELVE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  langs:
+  - csharp
+  - vb
+  name: TWELVE
+  nameWithType: ThirdRow.TWELVE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.TWELVE
+  type: Field
+  source:
+    id: TWELVE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\ThirdRow.cs
+    startLine: 10
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWELVE = 12
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.FIFTEEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.FIFTEEN
+  id: FIFTEEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  langs:
+  - csharp
+  - vb
+  name: FIFTEEN
+  nameWithType: ThirdRow.FIFTEEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.FIFTEEN
+  type: Field
+  source:
+    id: FIFTEEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\ThirdRow.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: FIFTEEN = 15
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.EIGHTEEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.EIGHTEEN
+  id: EIGHTEEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  langs:
+  - csharp
+  - vb
+  name: EIGHTEEN
+  nameWithType: ThirdRow.EIGHTEEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.EIGHTEEN
+  type: Field
+  source:
+    id: EIGHTEEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\ThirdRow.cs
+    startLine: 12
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: EIGHTEEN = 18
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.TWENTY_ONE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.TWENTY_ONE
+  id: TWENTY_ONE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_ONE
+  nameWithType: ThirdRow.TWENTY_ONE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.TWENTY_ONE
+  type: Field
+  source:
+    id: TWENTY_ONE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\ThirdRow.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_ONE = 21
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.TWENTY_FOUR
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.TWENTY_FOUR
+  id: TWENTY_FOUR
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_FOUR
+  nameWithType: ThirdRow.TWENTY_FOUR
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.TWENTY_FOUR
+  type: Field
+  source:
+    id: TWENTY_FOUR
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\ThirdRow.cs
+    startLine: 14
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_FOUR = 24
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.TWENTY_SEVEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.TWENTY_SEVEN
+  id: TWENTY_SEVEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_SEVEN
+  nameWithType: ThirdRow.TWENTY_SEVEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.TWENTY_SEVEN
+  type: Field
+  source:
+    id: TWENTY_SEVEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\ThirdRow.cs
+    startLine: 15
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_SEVEN = 27
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.THIRTY
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.THIRTY
+  id: THIRTY
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  langs:
+  - csharp
+  - vb
+  name: THIRTY
+  nameWithType: ThirdRow.THIRTY
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.THIRTY
+  type: Field
+  source:
+    id: THIRTY
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\ThirdRow.cs
+    startLine: 16
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: THIRTY = 30
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.THIRTY_THREE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.THIRTY_THREE
+  id: THIRTY_THREE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  langs:
+  - csharp
+  - vb
+  name: THIRTY_THREE
+  nameWithType: ThirdRow.THIRTY_THREE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.THIRTY_THREE
+  type: Field
+  source:
+    id: THIRTY_THREE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\ThirdRow.cs
+    startLine: 17
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: THIRTY_THREE = 33
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.THIRTY_SIX
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.THIRTY_SIX
+  id: THIRTY_SIX
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  langs:
+  - csharp
+  - vb
+  name: THIRTY_SIX
+  nameWithType: ThirdRow.THIRTY_SIX
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.THIRTY_SIX
+  type: Field
+  source:
+    id: THIRTY_SIX
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\ThirdRow.cs
+    startLine: 18
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: THIRTY_SIX = 36
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+references:
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+  commentId: N:Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.html
+  name: Chaos.Api.Enums.EnumsEuropeanRoulette
+  nameWithType: Chaos.Api.Enums.EnumsEuropeanRoulette
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  - name: .
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+    name: EnumsEuropeanRoulette
+    href: Chaos.Api.Enums.EnumsEuropeanRoulette.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  - name: .
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+    name: EnumsEuropeanRoulette
+    href: Chaos.Api.Enums.EnumsEuropeanRoulette.html
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.html
+  name: ThirdRow
+  nameWithType: ThirdRow
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow

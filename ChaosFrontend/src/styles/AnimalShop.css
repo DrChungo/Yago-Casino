@@ -1,0 +1,180 @@
+﻿/* CONTENEDOR PRINCIPAL */
+.lienzo-corral {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* ✅ Nada se sale */
+}
+
+/* IMAGEN DE FONDO */
+.imagen-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* CONTENIDO ENCIMA */
+.coinflip-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch; /* ✅ Los 3 paneles misma altura */
+    gap: clamp(6px, 1.5vw, 30px);
+    padding: clamp(8px, 1.5vh, 20px) clamp(8px, 1.5vw, 20px);
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh; /* ✅ Ocupa exactamente la pantalla */
+    overflow: hidden; /* ✅ Sin scroll en el contenedor */
+}
+
+/* PANELES LATERALES */
+.left-panel,
+.right-panel {
+    flex: 0 0 clamp(140px, 20%, 260px);
+    width: clamp(140px, 20%, 260px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(6px, 1vh, 16px);
+    min-width: 0;
+    height: 100%; /* ✅ Ocupa toda la altura disponible */
+    overflow: hidden; /* ✅ Sin barras laterales */
+    box-sizing: border-box;
+}
+
+/* ── Panel central ─────────────────────────────────────────── */
+.center-panel {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: clamp(8px, 1.5vh, 16px) clamp(6px, 1vw, 12px);
+    backdrop-filter: blur(8px);
+    overflow: hidden; /* ✅ Sin scroll en el centro */
+    height: 100%;
+    gap: clamp(8px, 1.5vh, 16px);
+    box-sizing: border-box;
+}
+
+/* PANEL DE COMPRA — siempre reserva espacio */
+.buy-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: clamp(8px, 1.2vw, 14px);
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    width: 100%;
+    flex-shrink: 0; /* ✅ No se encoge nunca */
+}
+
+/* ✅ Oculto pero reserva espacio */
+.buy-panel--hidden {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* INPUT */
+.buy-input {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    font-size: clamp(11px, 1.1vw, 14px);
+}
+
+    .buy-input:focus {
+        border: 1px solid #27ae60;
+        box-shadow: 0 0 6px rgba(39, 174, 96, 0.6);
+    }
+
+/* BOTONES */
+.buy-button,
+.sell-button {
+    padding: clamp(7px, 1vh, 12px) 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ffd700, #2ecc71);
+    color: white;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
+    transition: all 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: clamp(11px, 1.1vw, 14px);
+}
+
+    .buy-button:hover,
+    .sell-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(39, 174, 96, 0.6);
+    }
+
+/* ✅ El componente de lista de animales ocupa el espacio restante */
+.left-panel > *:first-child,
+.right-panel > *:first-child {
+    min-height: 0; /* ✅ Clave para que flex no desborde */
+    overflow: hidden;
+}
+
+.lienzo-corral::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+/* ── Media Queries ───────────────────────────────────────────────────────── */
+
+@media (max-width: 1100px) {
+    .left-panel,
+    .right-panel {
+        flex: 0 0 175px;
+        width: 175px;
+    }
+}
+
+@media (max-width: 850px) {
+    .coinflip-content {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .left-panel,
+    .right-panel,
+    .center-panel {
+        width: 100%;
+        flex: unset;
+        max-width: 600px;
+        height: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .left-panel,
+    .right-panel,
+    .center-panel {
+        max-width: 100%;
+    }
+}

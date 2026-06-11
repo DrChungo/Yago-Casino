@@ -1,0 +1,271 @@
+/* ========== BASE ========== */
+.disco-container {
+  min-height: 100vh;
+  background-image: url('../assets/CasinoImages/casino_disco.png');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 20px;
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;  
+    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+  font-family: 'Georgia', serif;
+}
+
+.music-room-title {
+  font-size: 2.5rem;
+  color: #ffd700;
+  text-shadow: 0 0 20px #ffd70088;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  padding: 20px 40px;
+  border-radius: 20pxs;
+  border: 1px solid rgba(255,215,0,0.3);
+}
+
+.btn-back-music {
+  align-self: flex-start;
+  background: transparent;
+  border: 1px solid #ffd700;
+  color: #ffd700;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+/* ── Player Card ── */
+.music-player-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,215,0,0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+
+/* ── Progress ── */
+.progress-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.progress-bar, .volume-bar {
+  flex: 1;
+  accent-color: #ffd700;
+  cursor: pointer;
+}
+
+.time-label {
+  font-size: 0.8rem;
+  color: #aaa;
+  min-width: 35px;
+  text-align: center;
+}
+
+/* ── Controls ── */
+.player-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-control {
+  background: rgba(255,215,0,0.1);
+  border: 1px solid #ffd70066;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-control:hover {
+  background: rgba(255,215,0,0.25);
+}
+
+.btn-play-pause {
+  font-size: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255,215,0,0.2);
+}
+
+/* ── Volume ── */
+.volume-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+/* ── Track List ── */
+.track-list {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 2rem;
+  margin-bottom: 125px;
+  padding:  1rem;
+  border-radius: 20px;
+
+    height: 330px;
+  overflow-y: auto;
+  padding-right: 6px; 
+}
+
+.track-list-title {
+  color: #ffd700;
+  margin-bottom: 1rem;
+  text-align: center;
+
+    backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    border-radius: 20pxs;
+    border: 1px solid rgba(255,215,0,0.3);
+}
+
+.track-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,215,0,0.2);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  backdrop-filter: blur(10px);
+  padding: 20px 40px;
+  border-radius: 20pxs;
+  border: 1px solid rgba(255,215,0,0.3);
+}
+
+.track-item:hover {
+  background: rgba(255,215,0,0.1);
+}
+
+.track-item.active {
+  border-color: #ffd700;
+  background: rgba(255,215,0,0.15);
+}
+
+.track-playing-indicator {
+  margin-left: auto;
+  color: #ffd700;
+  font-size: 0.8rem;
+}
+
+.track-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.track-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.track-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 0.4);
+  border-radius: 10px;
+}
+
+.track-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.7);
+}
+
+/* SYMBOLS OVERLAY */
+.symbols-overlay {
+  position: fixed;
+  inset: 0;                    /* cubre toda la ventana */
+  pointer-events: none;        /* el overlay no bloquea clicks del resto */
+  z-index: 50;
+  overflow: hidden;
+}
+
+.floating-symbol {
+  position:         absolute;
+  background:       none;
+  border:           none;
+  cursor:           pointer;
+  pointer-events:   all;
+  user-select:      none;
+  line-height:      1;
+  filter:           drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+  transition:       transform 0.15s;
+}
+
+.floating-symbol:hover {
+  transform: scale(1.3) rotate(0deg) !important;
+  filter: drop-shadow(0 0 16px #ffd700);
+}
+
+/* Animación de entrada */
+.floating-symbol.spawning {
+  animation: symbolSpawn 0.4s ease-out forwards;
+}
+
+@keyframes symbolSpawn {
+  from {
+    opacity:   0;
+    transform: scale(0) rotate(-30deg);
+  }
+  to {
+    opacity:   1;
+    transform: scale(1);
+  }
+}
+
+/* Animación de salida (tiempo agotado o clickado) */
+.floating-symbol.dying {
+  animation: symbolDie 0.35s ease-in forwards;
+}
+
+@keyframes symbolDie {
+  from {
+    opacity:   1;
+    transform: scale(1);
+  }
+  to {
+    opacity:   0;
+    transform: scale(2.5);
+    filter:    blur(4px);
+  }
+}
+
+/* HUD del juego de símbolos */
+.symbol-game-hud {
+  position:        fixed;
+  bottom:          1.5rem;
+  left:            50%;
+  transform:       translateX(-50%);
+  background:      rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  border:          1px solid rgba(255, 215, 0, 0.4);
+  border-radius:   50px;
+  padding:         0.6rem 1.8rem;
+  display:         flex;
+  gap:             1.5rem;
+  color:           white;
+  font-size:       1rem;
+  z-index:         51;
+}
+
+.symbol-game-hud strong {
+  color: #ffd700;
+}

@@ -1,0 +1,154 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums.BlackJackGameResultEnum
+  commentId: T:Chaos.Api.Enums.BlackJackGameResultEnum
+  id: BlackJackGameResultEnum
+  parent: Chaos.Api.Enums
+  children:
+  - Chaos.Api.Enums.BlackJackGameResultEnum.DRAW
+  - Chaos.Api.Enums.BlackJackGameResultEnum.LOSE
+  - Chaos.Api.Enums.BlackJackGameResultEnum.PENDING
+  - Chaos.Api.Enums.BlackJackGameResultEnum.WIN
+  langs:
+  - csharp
+  - vb
+  name: BlackJackGameResultEnum
+  nameWithType: BlackJackGameResultEnum
+  fullName: Chaos.Api.Enums.BlackJackGameResultEnum
+  type: Enum
+  source:
+    id: BlackJackGameResultEnum
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\BlackJackGameResultEnum.cs
+    startLine: 4
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: public enum BlackJackGameResultEnum
+    content.vb: Public Enum BlackJackGameResultEnum
+- uid: Chaos.Api.Enums.BlackJackGameResultEnum.PENDING
+  commentId: F:Chaos.Api.Enums.BlackJackGameResultEnum.PENDING
+  id: PENDING
+  parent: Chaos.Api.Enums.BlackJackGameResultEnum
+  langs:
+  - csharp
+  - vb
+  name: PENDING
+  nameWithType: BlackJackGameResultEnum.PENDING
+  fullName: Chaos.Api.Enums.BlackJackGameResultEnum.PENDING
+  type: Field
+  source:
+    id: PENDING
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\BlackJackGameResultEnum.cs
+    startLine: 6
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: PENDING = 0
+    return:
+      type: Chaos.Api.Enums.BlackJackGameResultEnum
+- uid: Chaos.Api.Enums.BlackJackGameResultEnum.LOSE
+  commentId: F:Chaos.Api.Enums.BlackJackGameResultEnum.LOSE
+  id: LOSE
+  parent: Chaos.Api.Enums.BlackJackGameResultEnum
+  langs:
+  - csharp
+  - vb
+  name: LOSE
+  nameWithType: BlackJackGameResultEnum.LOSE
+  fullName: Chaos.Api.Enums.BlackJackGameResultEnum.LOSE
+  type: Field
+  source:
+    id: LOSE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\BlackJackGameResultEnum.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: LOSE = 1
+    return:
+      type: Chaos.Api.Enums.BlackJackGameResultEnum
+- uid: Chaos.Api.Enums.BlackJackGameResultEnum.WIN
+  commentId: F:Chaos.Api.Enums.BlackJackGameResultEnum.WIN
+  id: WIN
+  parent: Chaos.Api.Enums.BlackJackGameResultEnum
+  langs:
+  - csharp
+  - vb
+  name: WIN
+  nameWithType: BlackJackGameResultEnum.WIN
+  fullName: Chaos.Api.Enums.BlackJackGameResultEnum.WIN
+  type: Field
+  source:
+    id: WIN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\BlackJackGameResultEnum.cs
+    startLine: 8
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: WIN = 2
+    return:
+      type: Chaos.Api.Enums.BlackJackGameResultEnum
+- uid: Chaos.Api.Enums.BlackJackGameResultEnum.DRAW
+  commentId: F:Chaos.Api.Enums.BlackJackGameResultEnum.DRAW
+  id: DRAW
+  parent: Chaos.Api.Enums.BlackJackGameResultEnum
+  langs:
+  - csharp
+  - vb
+  name: DRAW
+  nameWithType: BlackJackGameResultEnum.DRAW
+  fullName: Chaos.Api.Enums.BlackJackGameResultEnum.DRAW
+  type: Field
+  source:
+    id: DRAW
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\BlackJackGameResultEnum.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: DRAW = 3
+    return:
+      type: Chaos.Api.Enums.BlackJackGameResultEnum
+references:
+- uid: Chaos.Api.Enums
+  commentId: N:Chaos.Api.Enums
+  href: Chaos.html
+  name: Chaos.Api.Enums
+  nameWithType: Chaos.Api.Enums
+  fullName: Chaos.Api.Enums
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+- uid: Chaos.Api.Enums.BlackJackGameResultEnum
+  commentId: T:Chaos.Api.Enums.BlackJackGameResultEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.BlackJackGameResultEnum.html
+  name: BlackJackGameResultEnum
+  nameWithType: BlackJackGameResultEnum
+  fullName: Chaos.Api.Enums.BlackJackGameResultEnum

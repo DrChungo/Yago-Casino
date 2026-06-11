@@ -1,0 +1,263 @@
+﻿/* ========================================
+   NAVMENU - Las Vegas Casino Edition 🎰
+   ======================================== */
+
+@keyframes signFlicker {
+    0%, 90%, 100% {
+        opacity: 1;
+    }
+
+    91% {
+        opacity: 0.7;
+    }
+
+    93% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 0.5;
+    }
+
+    97% {
+        opacity: 1;
+    }
+}
+
+@keyframes goldPulse {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(255,215,0,0.3), inset 0 0 5px rgba(255,215,0,0.05);
+    }
+
+    50% {
+        box-shadow: 0 0 15px rgba(255,215,0,0.5), inset 0 0 10px rgba(255,215,0,0.1);
+    }
+}
+
+/* --- Toggler --- */
+.navbar-toggler {
+    background-color: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+    .navbar-toggler:hover {
+        background-color: rgba(255, 215, 0, 0.2);
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    }
+
+/* --- Top Row --- */
+.top-row {
+    min-height: 3.5rem;
+    background: linear-gradient(90deg, #0d0000, #1a0800, #0d0000);
+    border-bottom: 2px solid #8b6914;
+    box-shadow: 0 2px 15px rgba(255, 215, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+    /* Línea brillante top */
+    .top-row::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #ffd700, transparent);
+        animation: signFlicker 4s infinite;
+    }
+
+/* --- Brand / Logo --- */
+.navbar-brand {
+    font-size: 1.1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: linear-gradient(90deg, #ffd700, #ff8c00, #ffd700);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: marqueeGlow 2s linear infinite, signFlicker 6s infinite;
+    text-shadow: none;
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5));
+}
+
+@keyframes marqueeGlow {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* --- Iconos --- */
+.bi {
+    display: inline-block;
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.75rem;
+    top: -1px;
+    background-size: cover;
+    filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.4));
+    transition: filter 0.2s ease;
+}
+
+.bi-house-door-fill-nav-menu {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffd700' class='bi bi-house-door-fill' viewBox='0 0 16 16'%3E%3Cpath d='M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z'/%3E%3C/svg%3E");
+}
+
+.bi-plus-square-fill-nav-menu {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffd700' class='bi bi-plus-square-fill' viewBox='0 0 16 16'%3E%3Cpath d='M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z'/%3E%3C/svg%3E");
+}
+
+.bi-list-nested-nav-menu {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffd700' class='bi bi-list-nested' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z'/%3E%3C/svg%3E");
+}
+
+/* --- Nav Items --- */
+.nav-item {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item ::deep a {
+        color: #c8a84b;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+        padding: 0 1rem;
+        margin: 0 0.5rem;
+        transition: all 0.2s ease;
+        position: relative;
+        border: 1px solid transparent;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.05em;
+    }
+
+        /* Decoración esquinas estilo casino */
+        .nav-item ::deep a::before,
+        .nav-item ::deep a::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-color: transparent;
+            border-style: solid;
+            transition: border-color 0.2s ease;
+        }
+
+        .nav-item ::deep a::before {
+            top: 4px;
+            left: 4px;
+            border-width: 1px 0 0 1px;
+        }
+
+        .nav-item ::deep a::after {
+            bottom: 4px;
+            right: 4px;
+            border-width: 0 1px 1px 0;
+        }
+
+        .nav-item ::deep a:hover::before,
+        .nav-item ::deep a:hover::after,
+        .nav-item ::deep a.active::before,
+        .nav-item ::deep a.active::after {
+            border-color: #ffd700;
+        }
+
+        .nav-item ::deep a.active {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.12), rgba(255, 140, 0, 0.08));
+            color: #ffd700;
+            border-color: rgba(255, 215, 0, 0.25);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.1), inset 0 0 15px rgba(255, 215, 0, 0.05);
+            animation: goldPulse 3s ease-in-out infinite;
+        }
+
+            .nav-item ::deep a.active .bi {
+                filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.8));
+            }
+
+        .nav-item ::deep a:hover {
+            background: rgba(255, 215, 0, 0.06);
+            color: #ffd700;
+            border-color: rgba(255, 215, 0, 0.15);
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+            text-decoration: none;
+        }
+
+            .nav-item ::deep a:hover .bi {
+                filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.7));
+            }
+
+    /* Separador decorativo entre items */
+    .nav-item + .nav-item::before {
+        content: '';
+        display: block;
+        height: 1px;
+        margin: 0 1.5rem;
+        background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+    }
+
+/* --- Scrollable nav --- */
+.nav-scrollable {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 215, 0, 0.3) transparent;
+}
+
+    .nav-scrollable::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .nav-scrollable::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .nav-scrollable::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #8b6914, #ffd700);
+        border-radius: 2px;
+    }
+
+/* --- Responsive --- */
+@media (min-width: 641px) {
+    .navbar-toggler {
+        display: none;
+    }
+
+    .collapse {
+        display: block;
+    }
+
+    .nav-scrollable {
+        height: calc(100vh - 3.5rem);
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 640.98px) {
+    .top-row {
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
+    .nav-item ::deep a {
+        margin: 0 0.25rem;
+    }
+}

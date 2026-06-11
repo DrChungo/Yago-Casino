@@ -1,0 +1,200 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums.HealthEnum
+  commentId: T:Chaos.Api.Enums.HealthEnum
+  id: HealthEnum
+  parent: Chaos.Api.Enums
+  children:
+  - Chaos.Api.Enums.HealthEnum.CRITICAL
+  - Chaos.Api.Enums.HealthEnum.EXCELENT
+  - Chaos.Api.Enums.HealthEnum.HEALTHY
+  - Chaos.Api.Enums.HealthEnum.RECOVERING
+  - Chaos.Api.Enums.HealthEnum.SICK
+  - Chaos.Api.Enums.HealthEnum.YAGUETE
+  langs:
+  - csharp
+  - vb
+  name: HealthEnum
+  nameWithType: HealthEnum
+  fullName: Chaos.Api.Enums.HealthEnum
+  type: Enum
+  source:
+    id: HealthEnum
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\HealthStatusEnum.cs
+    startLine: 2
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: public enum HealthEnum
+    content.vb: Public Enum HealthEnum
+- uid: Chaos.Api.Enums.HealthEnum.YAGUETE
+  commentId: F:Chaos.Api.Enums.HealthEnum.YAGUETE
+  id: YAGUETE
+  parent: Chaos.Api.Enums.HealthEnum
+  langs:
+  - csharp
+  - vb
+  name: YAGUETE
+  nameWithType: HealthEnum.YAGUETE
+  fullName: Chaos.Api.Enums.HealthEnum.YAGUETE
+  type: Field
+  source:
+    id: YAGUETE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\HealthStatusEnum.cs
+    startLine: 4
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: YAGUETE = 0
+    return:
+      type: Chaos.Api.Enums.HealthEnum
+- uid: Chaos.Api.Enums.HealthEnum.EXCELENT
+  commentId: F:Chaos.Api.Enums.HealthEnum.EXCELENT
+  id: EXCELENT
+  parent: Chaos.Api.Enums.HealthEnum
+  langs:
+  - csharp
+  - vb
+  name: EXCELENT
+  nameWithType: HealthEnum.EXCELENT
+  fullName: Chaos.Api.Enums.HealthEnum.EXCELENT
+  type: Field
+  source:
+    id: EXCELENT
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\HealthStatusEnum.cs
+    startLine: 5
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: EXCELENT = 1
+    return:
+      type: Chaos.Api.Enums.HealthEnum
+- uid: Chaos.Api.Enums.HealthEnum.HEALTHY
+  commentId: F:Chaos.Api.Enums.HealthEnum.HEALTHY
+  id: HEALTHY
+  parent: Chaos.Api.Enums.HealthEnum
+  langs:
+  - csharp
+  - vb
+  name: HEALTHY
+  nameWithType: HealthEnum.HEALTHY
+  fullName: Chaos.Api.Enums.HealthEnum.HEALTHY
+  type: Field
+  source:
+    id: HEALTHY
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\HealthStatusEnum.cs
+    startLine: 6
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: HEALTHY = 2
+    return:
+      type: Chaos.Api.Enums.HealthEnum
+- uid: Chaos.Api.Enums.HealthEnum.RECOVERING
+  commentId: F:Chaos.Api.Enums.HealthEnum.RECOVERING
+  id: RECOVERING
+  parent: Chaos.Api.Enums.HealthEnum
+  langs:
+  - csharp
+  - vb
+  name: RECOVERING
+  nameWithType: HealthEnum.RECOVERING
+  fullName: Chaos.Api.Enums.HealthEnum.RECOVERING
+  type: Field
+  source:
+    id: RECOVERING
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\HealthStatusEnum.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: RECOVERING = 3
+    return:
+      type: Chaos.Api.Enums.HealthEnum
+- uid: Chaos.Api.Enums.HealthEnum.SICK
+  commentId: F:Chaos.Api.Enums.HealthEnum.SICK
+  id: SICK
+  parent: Chaos.Api.Enums.HealthEnum
+  langs:
+  - csharp
+  - vb
+  name: SICK
+  nameWithType: HealthEnum.SICK
+  fullName: Chaos.Api.Enums.HealthEnum.SICK
+  type: Field
+  source:
+    id: SICK
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\HealthStatusEnum.cs
+    startLine: 8
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: SICK = 4
+    return:
+      type: Chaos.Api.Enums.HealthEnum
+- uid: Chaos.Api.Enums.HealthEnum.CRITICAL
+  commentId: F:Chaos.Api.Enums.HealthEnum.CRITICAL
+  id: CRITICAL
+  parent: Chaos.Api.Enums.HealthEnum
+  langs:
+  - csharp
+  - vb
+  name: CRITICAL
+  nameWithType: HealthEnum.CRITICAL
+  fullName: Chaos.Api.Enums.HealthEnum.CRITICAL
+  type: Field
+  source:
+    id: CRITICAL
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\HealthStatusEnum.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: CRITICAL = 5
+    return:
+      type: Chaos.Api.Enums.HealthEnum
+references:
+- uid: Chaos.Api.Enums
+  commentId: N:Chaos.Api.Enums
+  href: Chaos.html
+  name: Chaos.Api.Enums
+  nameWithType: Chaos.Api.Enums
+  fullName: Chaos.Api.Enums
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+- uid: Chaos.Api.Enums.HealthEnum
+  commentId: T:Chaos.Api.Enums.HealthEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.HealthEnum.html
+  name: HealthEnum
+  nameWithType: HealthEnum
+  fullName: Chaos.Api.Enums.HealthEnum

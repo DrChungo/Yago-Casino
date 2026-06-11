@@ -1,0 +1,599 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Models.CoinGame
+  commentId: T:Chaos.Api.Models.CoinGame
+  id: CoinGame
+  parent: Chaos.Api.Models
+  children:
+  - Chaos.Api.Models.CoinGame.AnimalName
+  - Chaos.Api.Models.CoinGame.AnimalValue
+  - Chaos.Api.Models.CoinGame.GameId
+  - Chaos.Api.Models.CoinGame.Message
+  - Chaos.Api.Models.CoinGame.PlayerId
+  - Chaos.Api.Models.CoinGame.Possibility
+  - Chaos.Api.Models.CoinGame.Reward
+  - Chaos.Api.Models.CoinGame.Won
+  langs:
+  - csharp
+  - vb
+  name: CoinGame
+  nameWithType: CoinGame
+  fullName: Chaos.Api.Models.CoinGame
+  type: Class
+  source:
+    id: CoinGame
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\CoinGame.cs
+    startLine: 2
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public class CoinGame
+    content.vb: Public Class CoinGame
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Chaos.Api.Models.CoinGame.GameId
+  commentId: P:Chaos.Api.Models.CoinGame.GameId
+  id: GameId
+  parent: Chaos.Api.Models.CoinGame
+  langs:
+  - csharp
+  - vb
+  name: GameId
+  nameWithType: CoinGame.GameId
+  fullName: Chaos.Api.Models.CoinGame.GameId
+  type: Property
+  source:
+    id: GameId
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\CoinGame.cs
+    startLine: 5
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public Guid GameId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property GameId As Guid
+  overload: Chaos.Api.Models.CoinGame.GameId*
+- uid: Chaos.Api.Models.CoinGame.PlayerId
+  commentId: P:Chaos.Api.Models.CoinGame.PlayerId
+  id: PlayerId
+  parent: Chaos.Api.Models.CoinGame
+  langs:
+  - csharp
+  - vb
+  name: PlayerId
+  nameWithType: CoinGame.PlayerId
+  fullName: Chaos.Api.Models.CoinGame.PlayerId
+  type: Property
+  source:
+    id: PlayerId
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\CoinGame.cs
+    startLine: 6
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public Guid PlayerId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property PlayerId As Guid
+  overload: Chaos.Api.Models.CoinGame.PlayerId*
+- uid: Chaos.Api.Models.CoinGame.AnimalName
+  commentId: P:Chaos.Api.Models.CoinGame.AnimalName
+  id: AnimalName
+  parent: Chaos.Api.Models.CoinGame
+  langs:
+  - csharp
+  - vb
+  name: AnimalName
+  nameWithType: CoinGame.AnimalName
+  fullName: Chaos.Api.Models.CoinGame.AnimalName
+  type: Property
+  source:
+    id: AnimalName
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\CoinGame.cs
+    startLine: 8
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public string AnimalName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AnimalName As String
+  overload: Chaos.Api.Models.CoinGame.AnimalName*
+- uid: Chaos.Api.Models.CoinGame.AnimalValue
+  commentId: P:Chaos.Api.Models.CoinGame.AnimalValue
+  id: AnimalValue
+  parent: Chaos.Api.Models.CoinGame
+  langs:
+  - csharp
+  - vb
+  name: AnimalValue
+  nameWithType: CoinGame.AnimalValue
+  fullName: Chaos.Api.Models.CoinGame.AnimalValue
+  type: Property
+  source:
+    id: AnimalValue
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\CoinGame.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public int AnimalValue { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property AnimalValue As Integer
+  overload: Chaos.Api.Models.CoinGame.AnimalValue*
+- uid: Chaos.Api.Models.CoinGame.Possibility
+  commentId: P:Chaos.Api.Models.CoinGame.Possibility
+  id: Possibility
+  parent: Chaos.Api.Models.CoinGame
+  langs:
+  - csharp
+  - vb
+  name: Possibility
+  nameWithType: CoinGame.Possibility
+  fullName: Chaos.Api.Models.CoinGame.Possibility
+  type: Property
+  source:
+    id: Possibility
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\CoinGame.cs
+    startLine: 10
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public int Possibility { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Possibility As Integer
+  overload: Chaos.Api.Models.CoinGame.Possibility*
+- uid: Chaos.Api.Models.CoinGame.Reward
+  commentId: P:Chaos.Api.Models.CoinGame.Reward
+  id: Reward
+  parent: Chaos.Api.Models.CoinGame
+  langs:
+  - csharp
+  - vb
+  name: Reward
+  nameWithType: CoinGame.Reward
+  fullName: Chaos.Api.Models.CoinGame.Reward
+  type: Property
+  source:
+    id: Reward
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\CoinGame.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public int Reward { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Reward As Integer
+  overload: Chaos.Api.Models.CoinGame.Reward*
+- uid: Chaos.Api.Models.CoinGame.Won
+  commentId: P:Chaos.Api.Models.CoinGame.Won
+  id: Won
+  parent: Chaos.Api.Models.CoinGame
+  langs:
+  - csharp
+  - vb
+  name: Won
+  nameWithType: CoinGame.Won
+  fullName: Chaos.Api.Models.CoinGame.Won
+  type: Property
+  source:
+    id: Won
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\CoinGame.cs
+    startLine: 12
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public bool Won { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Won As Boolean
+  overload: Chaos.Api.Models.CoinGame.Won*
+- uid: Chaos.Api.Models.CoinGame.Message
+  commentId: P:Chaos.Api.Models.CoinGame.Message
+  id: Message
+  parent: Chaos.Api.Models.CoinGame
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: CoinGame.Message
+  fullName: Chaos.Api.Models.CoinGame.Message
+  type: Property
+  source:
+    id: Message
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\CoinGame.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public string Message { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Message As String
+  overload: Chaos.Api.Models.CoinGame.Message*
+references:
+- uid: Chaos.Api.Models
+  commentId: N:Chaos.Api.Models
+  href: Chaos.html
+  name: Chaos.Api.Models
+  nameWithType: Chaos.Api.Models
+  fullName: Chaos.Api.Models
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Models
+    name: Models
+    href: Chaos.Api.Models.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Models
+    name: Models
+    href: Chaos.Api.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chaos.Api.Models.CoinGame.GameId*
+  commentId: Overload:Chaos.Api.Models.CoinGame.GameId
+  href: Chaos.Api.Models.CoinGame.html#Chaos_Api_Models_CoinGame_GameId
+  name: GameId
+  nameWithType: CoinGame.GameId
+  fullName: Chaos.Api.Models.CoinGame.GameId
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Chaos.Api.Models.CoinGame.PlayerId*
+  commentId: Overload:Chaos.Api.Models.CoinGame.PlayerId
+  href: Chaos.Api.Models.CoinGame.html#Chaos_Api_Models_CoinGame_PlayerId
+  name: PlayerId
+  nameWithType: CoinGame.PlayerId
+  fullName: Chaos.Api.Models.CoinGame.PlayerId
+- uid: Chaos.Api.Models.CoinGame.AnimalName*
+  commentId: Overload:Chaos.Api.Models.CoinGame.AnimalName
+  href: Chaos.Api.Models.CoinGame.html#Chaos_Api_Models_CoinGame_AnimalName
+  name: AnimalName
+  nameWithType: CoinGame.AnimalName
+  fullName: Chaos.Api.Models.CoinGame.AnimalName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Chaos.Api.Models.CoinGame.AnimalValue*
+  commentId: Overload:Chaos.Api.Models.CoinGame.AnimalValue
+  href: Chaos.Api.Models.CoinGame.html#Chaos_Api_Models_CoinGame_AnimalValue
+  name: AnimalValue
+  nameWithType: CoinGame.AnimalValue
+  fullName: Chaos.Api.Models.CoinGame.AnimalValue
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Chaos.Api.Models.CoinGame.Possibility*
+  commentId: Overload:Chaos.Api.Models.CoinGame.Possibility
+  href: Chaos.Api.Models.CoinGame.html#Chaos_Api_Models_CoinGame_Possibility
+  name: Possibility
+  nameWithType: CoinGame.Possibility
+  fullName: Chaos.Api.Models.CoinGame.Possibility
+- uid: Chaos.Api.Models.CoinGame.Reward*
+  commentId: Overload:Chaos.Api.Models.CoinGame.Reward
+  href: Chaos.Api.Models.CoinGame.html#Chaos_Api_Models_CoinGame_Reward
+  name: Reward
+  nameWithType: CoinGame.Reward
+  fullName: Chaos.Api.Models.CoinGame.Reward
+- uid: Chaos.Api.Models.CoinGame.Won*
+  commentId: Overload:Chaos.Api.Models.CoinGame.Won
+  href: Chaos.Api.Models.CoinGame.html#Chaos_Api_Models_CoinGame_Won
+  name: Won
+  nameWithType: CoinGame.Won
+  fullName: Chaos.Api.Models.CoinGame.Won
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Chaos.Api.Models.CoinGame.Message*
+  commentId: Overload:Chaos.Api.Models.CoinGame.Message
+  href: Chaos.Api.Models.CoinGame.html#Chaos_Api_Models_CoinGame_Message
+  name: Message
+  nameWithType: CoinGame.Message
+  fullName: Chaos.Api.Models.CoinGame.Message

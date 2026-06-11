@@ -1,0 +1,431 @@
+﻿/* ─── Wrapper ────────────────────────────────────────────────────────────────── */
+.roulette-wrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    /* ─── Título — blindado contra index.css h2 global ──────────────────────────── */
+    .roulette-wrapper h2.roulette-title {
+        all: unset !important;
+        display: block !important;
+        color: #FFD700 !important;
+        text-align: center !important;
+        margin: 0 0 20px 0 !important;
+        font-size: 1.5rem !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 2px !important;
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+    }
+
+/* ─── Main wheel section ─────────────────────────────────────────────────────── */
+.main-wheel-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.8rem;
+}
+
+/* ─── Difficulty ─────────────────────────────────────────────────────────────── */
+.difficulty-selector {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.difficulty-title {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 0.8rem;
+}
+
+.difficulty-options {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.difficulty-btn {
+    background: rgba(255, 255, 255, 0.07);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    transition: all 0.2s ease;
+    min-width: 110px;
+}
+
+    .difficulty-btn:hover:not(:disabled) {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+    }
+
+    .difficulty-btn.active {
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 12px #aa3bff;
+    }
+
+    .difficulty-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+.diff-label {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.diff-desc {
+    font-size: 0.72rem;
+    color: #bbb;
+}
+
+/* ─── Wheel wrapper ──────────────────────────────────────────────────────────── */
+.wheel-wrapper {
+    position: relative;
+    margin: 1rem auto;
+    filter: drop-shadow(0 8px 32px rgba(255, 215, 0, 0.35));
+}
+
+/* ─── Spin Button principal — blindado con all:unset ────────────────────────── */
+.roulette-wrapper button.spin-btn.primary {
+    all: unset !important;
+    display: inline-block !important;
+    background: linear-gradient(135deg, #ffd700, #ff9500) !important;
+    color: #1a0533 !important;
+    font-size: 1.15rem !important;
+    font-weight: 800 !important;
+    padding: 0.85rem 2.5rem !important;
+    border-radius: 50px !important;
+    box-shadow: 0 4px 20px rgba(255, 165, 0, 0.5) !important;
+    cursor: pointer !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.2s ease !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+    .roulette-wrapper button.spin-btn.primary:hover:not(:disabled) {
+        transform: translateY(-3px) scale(1.04) !important;
+        box-shadow: 0 8px 28px rgba(255, 165, 0, 0.7) !important;
+    }
+
+    .roulette-wrapper button.spin-btn.primary:disabled {
+        background: linear-gradient(135deg, #555, #444) !important;
+        color: #aaa !important;
+        cursor: not-allowed !important;
+        opacity: 0.6 !important;
+        transform: none !important;
+        box-shadow: none !important;
+    }
+
+/* ─── Spin Button en AnimalSpinWheel ─────────────────────────────────────────── */
+.animal-spin-screen button.spin-btn.primary {
+    all: unset !important;
+    display: inline-block !important;
+    background: linear-gradient(135deg, #ffd700, #ff9500) !important;
+    color: #1a0533 !important;
+    font-size: 1.15rem !important;
+    font-weight: 800 !important;
+    padding: 0.85rem 2.5rem !important;
+    border-radius: 50px !important;
+    box-shadow: 0 4px 20px rgba(255, 165, 0, 0.5) !important;
+    cursor: pointer !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.2s ease !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+    .animal-spin-screen button.spin-btn.primary:hover {
+        transform: translateY(-3px) scale(1.04) !important;
+        box-shadow: 0 8px 28px rgba(255, 165, 0, 0.7) !important;
+    }
+
+/* ─── Spin Button en DoneScreen ──────────────────────────────────────────────── */
+.done-section button.spin-btn.primary {
+    all: unset !important;
+    display: inline-block !important;
+    background: linear-gradient(135deg, #ffd700, #ff9500) !important;
+    color: #1a0533 !important;
+    font-size: 1.15rem !important;
+    font-weight: 800 !important;
+    padding: 0.85rem 2.5rem !important;
+    border-radius: 50px !important;
+    box-shadow: 0 4px 20px rgba(255, 165, 0, 0.5) !important;
+    cursor: pointer !important;
+    letter-spacing: 0.5px !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+    .done-section button.spin-btn.primary:hover {
+        transform: translateY(-3px) scale(1.04) !important;
+        box-shadow: 0 8px 28px rgba(255, 165, 0, 0.7) !important;
+    }
+
+/* ─── Botón small ────────────────────────────────────────────────────────────── */
+.spin-btn.small {
+    background: linear-gradient(135deg, #7b2fbe, #5c35cc);
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 0.5rem 1.2rem;
+    margin-top: 0.6rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+    .spin-btn.small:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 14px rgba(92, 53, 204, 0.6);
+    }
+
+/* ─── Spinning label ─────────────────────────────────────────────────────────── */
+.spinning-label {
+    font-size: 1.1rem;
+    color: #ffd700;
+    margin-top: 0.8rem;
+    animation: roulette-pulse 1s infinite;
+}
+
+/* ─── Spin screen ────────────────────────────────────────────────────────────── */
+.animal-spin-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+    animation: fadeIn 0.4s ease;
+}
+
+.spin-counter {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.spin-counter-current {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #FFD700;
+}
+
+.spin-counter-total {
+    font-weight: 700;
+    color: #aaa;
+}
+
+.wheel-number {
+    font-size: 1rem;
+    color: #ffd700;
+    margin-bottom: 0.5rem;
+}
+
+/* ─── Resultado grande ───────────────────────────────────────────────────────── */
+.wheel-result-big {
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding: 0.7rem 1.5rem;
+    border-radius: 16px;
+    text-align: center;
+    animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+    .wheel-result-big.win {
+        background: rgba(76, 175, 80, 0.25);
+        color: #81c784;
+        border: 2px solid #4caf50;
+        box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+    }
+
+    .wheel-result-big.empty {
+        background: rgba(244, 67, 54, 0.2);
+        color: #ef9a9a;
+        border: 2px solid #f44336;
+    }
+
+/* ─── Done section ───────────────────────────────────────────────────────────── */
+.done-section {
+    text-align: center;
+    max-width: 500px;
+    padding: 0 clamp(4px, 0.8vw, 12px);
+}
+
+.done-title,
+.done-message {
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.animals-summary {
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+    .animals-summary h3 {
+        color: #ffd700;
+        margin-bottom: 0.5rem;
+    }
+
+    .animals-summary ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+.animal-item {
+    padding: 0.3rem 0;
+    color: #81c784;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* ─── Error ──────────────────────────────────────────────────────────────────── */
+.error-msg {
+    color: #ef9a9a;
+    background: rgba(244, 67, 54, 0.15);
+    border: 1px solid #f44336;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    margin-top: 0.8rem;
+    text-align: center;
+}
+
+/* ─── Historial ──────────────────────────────────────────────────────────────── */
+.results-history {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.history-chip {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+    .history-chip.win {
+        background: rgba(76, 175, 80, 0.25);
+        color: #81c784;
+        border: 1px solid #4caf50;
+    }
+
+    .history-chip.empty {
+        background: rgba(244, 67, 54, 0.2);
+        color: #ef9a9a;
+        border: 1px solid #f44336;
+    }
+
+.waiting-label {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-top: 0.4rem;
+    font-style: italic;
+}
+
+/* ─── Animaciones ────────────────────────────────────────────────────────────── */
+@keyframes roulette-pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ─── Media queries ──────────────────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+    .roulette-wrapper button.spin-btn.primary,
+    .animal-spin-screen button.spin-btn.primary,
+    .done-section button.spin-btn.primary {
+        font-size: clamp(0.7rem, 1vw, 1rem) !important;
+        padding: 0.55rem 1rem !important;
+    }
+
+    .difficulty-btn {
+        min-width: 60px;
+    }
+}
+
+@media (max-width: 850px) {
+    .roulette-wrapper {
+        padding: 10px 12px;
+    }
+
+        .roulette-wrapper button.spin-btn.primary,
+        .animal-spin-screen button.spin-btn.primary,
+        .done-section button.spin-btn.primary {
+            font-size: 0.95rem !important;
+            padding: 0.7rem 1.5rem !important;
+        }
+
+    .difficulty-btn {
+        min-width: 90px;
+    }
+}
+
+@media (max-width: 500px) {
+    .roulette-wrapper button.spin-btn.primary,
+    .animal-spin-screen button.spin-btn.primary,
+    .done-section button.spin-btn.primary {
+        font-size: 0.82rem !important;
+        padding: 0.6rem 1rem !important;
+    }
+
+    .difficulty-options {
+        gap: 0.4rem;
+    }
+
+    .difficulty-btn {
+        min-width: 75px;
+    }
+}

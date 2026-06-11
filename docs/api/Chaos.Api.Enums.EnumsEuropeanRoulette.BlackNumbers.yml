@@ -1,0 +1,486 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  id: BlackNumbers
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  children:
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.EIGHT
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.ELEVEN
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.FIFTEEN
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.FOUR
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.SEVENTEEN
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.SIX
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TEN
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.THIRTEEN
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.THIRTY_FIVE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.THIRTY_ONE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.THIRTY_THREE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_EIGHT
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_FOUR
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_NINE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_SIX
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_TWO
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWO
+  langs:
+  - csharp
+  - vb
+  name: BlackNumbers
+  nameWithType: BlackNumbers
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  type: Enum
+  source:
+    id: BlackNumbers
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 5
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  summary: Black Numbers of the european Roulette.
+  example: []
+  syntax:
+    content: public enum BlackNumbers
+    content.vb: Public Enum BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWO
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWO
+  id: TWO
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: TWO
+  nameWithType: BlackNumbers.TWO
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWO
+  type: Field
+  source:
+    id: TWO
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWO = 2
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.FOUR
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.FOUR
+  id: FOUR
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: FOUR
+  nameWithType: BlackNumbers.FOUR
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.FOUR
+  type: Field
+  source:
+    id: FOUR
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 8
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: FOUR = 4
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.SIX
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.SIX
+  id: SIX
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: SIX
+  nameWithType: BlackNumbers.SIX
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.SIX
+  type: Field
+  source:
+    id: SIX
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: SIX = 6
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.EIGHT
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.EIGHT
+  id: EIGHT
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: EIGHT
+  nameWithType: BlackNumbers.EIGHT
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.EIGHT
+  type: Field
+  source:
+    id: EIGHT
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 10
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: EIGHT = 8
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TEN
+  id: TEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: TEN
+  nameWithType: BlackNumbers.TEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TEN
+  type: Field
+  source:
+    id: TEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TEN = 10
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.ELEVEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.ELEVEN
+  id: ELEVEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: ELEVEN
+  nameWithType: BlackNumbers.ELEVEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.ELEVEN
+  type: Field
+  source:
+    id: ELEVEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 12
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: ELEVEN = 11
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.THIRTEEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.THIRTEEN
+  id: THIRTEEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: THIRTEEN
+  nameWithType: BlackNumbers.THIRTEEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.THIRTEEN
+  type: Field
+  source:
+    id: THIRTEEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: THIRTEEN = 13
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.FIFTEEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.FIFTEEN
+  id: FIFTEEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: FIFTEEN
+  nameWithType: BlackNumbers.FIFTEEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.FIFTEEN
+  type: Field
+  source:
+    id: FIFTEEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 14
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: FIFTEEN = 15
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.SEVENTEEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.SEVENTEEN
+  id: SEVENTEEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: SEVENTEEN
+  nameWithType: BlackNumbers.SEVENTEEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.SEVENTEEN
+  type: Field
+  source:
+    id: SEVENTEEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 15
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: SEVENTEEN = 17
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY
+  id: TWENTY
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: TWENTY
+  nameWithType: BlackNumbers.TWENTY
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY
+  type: Field
+  source:
+    id: TWENTY
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 16
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY = 20
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_TWO
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_TWO
+  id: TWENTY_TWO
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_TWO
+  nameWithType: BlackNumbers.TWENTY_TWO
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_TWO
+  type: Field
+  source:
+    id: TWENTY_TWO
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 17
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_TWO = 22
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_FOUR
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_FOUR
+  id: TWENTY_FOUR
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_FOUR
+  nameWithType: BlackNumbers.TWENTY_FOUR
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_FOUR
+  type: Field
+  source:
+    id: TWENTY_FOUR
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 18
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_FOUR = 24
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_SIX
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_SIX
+  id: TWENTY_SIX
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_SIX
+  nameWithType: BlackNumbers.TWENTY_SIX
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_SIX
+  type: Field
+  source:
+    id: TWENTY_SIX
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 19
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_SIX = 26
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_EIGHT
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_EIGHT
+  id: TWENTY_EIGHT
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_EIGHT
+  nameWithType: BlackNumbers.TWENTY_EIGHT
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_EIGHT
+  type: Field
+  source:
+    id: TWENTY_EIGHT
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 20
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_EIGHT = 28
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_NINE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_NINE
+  id: TWENTY_NINE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_NINE
+  nameWithType: BlackNumbers.TWENTY_NINE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.TWENTY_NINE
+  type: Field
+  source:
+    id: TWENTY_NINE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 21
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_NINE = 29
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.THIRTY_ONE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.THIRTY_ONE
+  id: THIRTY_ONE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: THIRTY_ONE
+  nameWithType: BlackNumbers.THIRTY_ONE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.THIRTY_ONE
+  type: Field
+  source:
+    id: THIRTY_ONE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 22
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: THIRTY_ONE = 31
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.THIRTY_THREE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.THIRTY_THREE
+  id: THIRTY_THREE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: THIRTY_THREE
+  nameWithType: BlackNumbers.THIRTY_THREE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.THIRTY_THREE
+  type: Field
+  source:
+    id: THIRTY_THREE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 23
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: THIRTY_THREE = 33
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.THIRTY_FIVE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.THIRTY_FIVE
+  id: THIRTY_FIVE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  langs:
+  - csharp
+  - vb
+  name: THIRTY_FIVE
+  nameWithType: BlackNumbers.THIRTY_FIVE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.THIRTY_FIVE
+  type: Field
+  source:
+    id: THIRTY_FIVE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\BlackNumbers.cs
+    startLine: 24
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: THIRTY_FIVE = 35
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+references:
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+  commentId: N:Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.html
+  name: Chaos.Api.Enums.EnumsEuropeanRoulette
+  nameWithType: Chaos.Api.Enums.EnumsEuropeanRoulette
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  - name: .
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+    name: EnumsEuropeanRoulette
+    href: Chaos.Api.Enums.EnumsEuropeanRoulette.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  - name: .
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+    name: EnumsEuropeanRoulette
+    href: Chaos.Api.Enums.EnumsEuropeanRoulette.html
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.html
+  name: BlackNumbers
+  nameWithType: BlackNumbers
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers

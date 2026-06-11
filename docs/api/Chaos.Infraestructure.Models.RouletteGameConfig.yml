@@ -1,0 +1,848 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig
+  commentId: T:Chaos.Infraestructure.Models.RouletteGameConfig
+  id: RouletteGameConfig
+  parent: Chaos.Infraestructure.Models
+  children:
+  - Chaos.Infraestructure.Models.RouletteGameConfig.CreatedAt
+  - Chaos.Infraestructure.Models.RouletteGameConfig.Game
+  - Chaos.Infraestructure.Models.RouletteGameConfig.GameId
+  - Chaos.Infraestructure.Models.RouletteGameConfig.HasDoubleZero
+  - Chaos.Infraestructure.Models.RouletteGameConfig.HasZero
+  - Chaos.Infraestructure.Models.RouletteGameConfig.Id
+  - Chaos.Infraestructure.Models.RouletteGameConfig.IsActive
+  - Chaos.Infraestructure.Models.RouletteGameConfig.RouletteBetTypes
+  - Chaos.Infraestructure.Models.RouletteGameConfig.RouletteType
+  - Chaos.Infraestructure.Models.RouletteGameConfig.TableName
+  - Chaos.Infraestructure.Models.RouletteGameConfig.TotalNumbers
+  langs:
+  - csharp
+  - vb
+  name: RouletteGameConfig
+  nameWithType: RouletteGameConfig
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig
+  type: Class
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RouletteGameConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: RouletteGameConfig
+    path: ../Chaos.Infraestructure/Models/RouletteGameConfig.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public class RouletteGameConfig
+    content.vb: Public Class RouletteGameConfig
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.Id
+  commentId: P:Chaos.Infraestructure.Models.RouletteGameConfig.Id
+  id: Id
+  parent: Chaos.Infraestructure.Models.RouletteGameConfig
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: RouletteGameConfig.Id
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.Id
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RouletteGameConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: Id
+    path: ../Chaos.Infraestructure/Models/RouletteGameConfig.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid Id { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Id As Guid
+  overload: Chaos.Infraestructure.Models.RouletteGameConfig.Id*
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.TableName
+  commentId: P:Chaos.Infraestructure.Models.RouletteGameConfig.TableName
+  id: TableName
+  parent: Chaos.Infraestructure.Models.RouletteGameConfig
+  langs:
+  - csharp
+  - vb
+  name: TableName
+  nameWithType: RouletteGameConfig.TableName
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.TableName
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RouletteGameConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: TableName
+    path: ../Chaos.Infraestructure/Models/RouletteGameConfig.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string TableName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TableName As String
+  overload: Chaos.Infraestructure.Models.RouletteGameConfig.TableName*
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.RouletteType
+  commentId: P:Chaos.Infraestructure.Models.RouletteGameConfig.RouletteType
+  id: RouletteType
+  parent: Chaos.Infraestructure.Models.RouletteGameConfig
+  langs:
+  - csharp
+  - vb
+  name: RouletteType
+  nameWithType: RouletteGameConfig.RouletteType
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.RouletteType
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RouletteGameConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: RouletteType
+    path: ../Chaos.Infraestructure/Models/RouletteGameConfig.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string RouletteType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RouletteType As String
+  overload: Chaos.Infraestructure.Models.RouletteGameConfig.RouletteType*
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.HasZero
+  commentId: P:Chaos.Infraestructure.Models.RouletteGameConfig.HasZero
+  id: HasZero
+  parent: Chaos.Infraestructure.Models.RouletteGameConfig
+  langs:
+  - csharp
+  - vb
+  name: HasZero
+  nameWithType: RouletteGameConfig.HasZero
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.HasZero
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RouletteGameConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: HasZero
+    path: ../Chaos.Infraestructure/Models/RouletteGameConfig.cs
+    startLine: 15
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public bool HasZero { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasZero As Boolean
+  overload: Chaos.Infraestructure.Models.RouletteGameConfig.HasZero*
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.HasDoubleZero
+  commentId: P:Chaos.Infraestructure.Models.RouletteGameConfig.HasDoubleZero
+  id: HasDoubleZero
+  parent: Chaos.Infraestructure.Models.RouletteGameConfig
+  langs:
+  - csharp
+  - vb
+  name: HasDoubleZero
+  nameWithType: RouletteGameConfig.HasDoubleZero
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.HasDoubleZero
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RouletteGameConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: HasDoubleZero
+    path: ../Chaos.Infraestructure/Models/RouletteGameConfig.cs
+    startLine: 17
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public bool HasDoubleZero { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasDoubleZero As Boolean
+  overload: Chaos.Infraestructure.Models.RouletteGameConfig.HasDoubleZero*
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.TotalNumbers
+  commentId: P:Chaos.Infraestructure.Models.RouletteGameConfig.TotalNumbers
+  id: TotalNumbers
+  parent: Chaos.Infraestructure.Models.RouletteGameConfig
+  langs:
+  - csharp
+  - vb
+  name: TotalNumbers
+  nameWithType: RouletteGameConfig.TotalNumbers
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.TotalNumbers
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RouletteGameConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: TotalNumbers
+    path: ../Chaos.Infraestructure/Models/RouletteGameConfig.cs
+    startLine: 19
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public int TotalNumbers { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TotalNumbers As Integer
+  overload: Chaos.Infraestructure.Models.RouletteGameConfig.TotalNumbers*
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.IsActive
+  commentId: P:Chaos.Infraestructure.Models.RouletteGameConfig.IsActive
+  id: IsActive
+  parent: Chaos.Infraestructure.Models.RouletteGameConfig
+  langs:
+  - csharp
+  - vb
+  name: IsActive
+  nameWithType: RouletteGameConfig.IsActive
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.IsActive
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RouletteGameConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: IsActive
+    path: ../Chaos.Infraestructure/Models/RouletteGameConfig.cs
+    startLine: 21
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public bool IsActive { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsActive As Boolean
+  overload: Chaos.Infraestructure.Models.RouletteGameConfig.IsActive*
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.CreatedAt
+  commentId: P:Chaos.Infraestructure.Models.RouletteGameConfig.CreatedAt
+  id: CreatedAt
+  parent: Chaos.Infraestructure.Models.RouletteGameConfig
+  langs:
+  - csharp
+  - vb
+  name: CreatedAt
+  nameWithType: RouletteGameConfig.CreatedAt
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.CreatedAt
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RouletteGameConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: CreatedAt
+    path: ../Chaos.Infraestructure/Models/RouletteGameConfig.cs
+    startLine: 23
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string CreatedAt { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CreatedAt As String
+  overload: Chaos.Infraestructure.Models.RouletteGameConfig.CreatedAt*
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.GameId
+  commentId: P:Chaos.Infraestructure.Models.RouletteGameConfig.GameId
+  id: GameId
+  parent: Chaos.Infraestructure.Models.RouletteGameConfig
+  langs:
+  - csharp
+  - vb
+  name: GameId
+  nameWithType: RouletteGameConfig.GameId
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.GameId
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RouletteGameConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: GameId
+    path: ../Chaos.Infraestructure/Models/RouletteGameConfig.cs
+    startLine: 25
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid GameId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property GameId As Guid
+  overload: Chaos.Infraestructure.Models.RouletteGameConfig.GameId*
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.Game
+  commentId: P:Chaos.Infraestructure.Models.RouletteGameConfig.Game
+  id: Game
+  parent: Chaos.Infraestructure.Models.RouletteGameConfig
+  langs:
+  - csharp
+  - vb
+  name: Game
+  nameWithType: RouletteGameConfig.Game
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.Game
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RouletteGameConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: Game
+    path: ../Chaos.Infraestructure/Models/RouletteGameConfig.cs
+    startLine: 27
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual Game Game { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Infraestructure.Models.Game
+    content.vb: Public Overridable Property Game As Game
+  overload: Chaos.Infraestructure.Models.RouletteGameConfig.Game*
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.RouletteBetTypes
+  commentId: P:Chaos.Infraestructure.Models.RouletteGameConfig.RouletteBetTypes
+  id: RouletteBetTypes
+  parent: Chaos.Infraestructure.Models.RouletteGameConfig
+  langs:
+  - csharp
+  - vb
+  name: RouletteBetTypes
+  nameWithType: RouletteGameConfig.RouletteBetTypes
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.RouletteBetTypes
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RouletteGameConfig.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: RouletteBetTypes
+    path: ../Chaos.Infraestructure/Models/RouletteGameConfig.cs
+    startLine: 29
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual ICollection<RouletteBetType> RouletteBetTypes { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.RouletteBetType}
+    content.vb: Public Overridable Property RouletteBetTypes As ICollection(Of RouletteBetType)
+  overload: Chaos.Infraestructure.Models.RouletteGameConfig.RouletteBetTypes*
+references:
+- uid: Chaos.Infraestructure.Models
+  commentId: N:Chaos.Infraestructure.Models
+  href: Chaos.html
+  name: Chaos.Infraestructure.Models
+  nameWithType: Chaos.Infraestructure.Models
+  fullName: Chaos.Infraestructure.Models
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Infraestructure
+    name: Infraestructure
+    href: Chaos.Infraestructure.html
+  - name: .
+  - uid: Chaos.Infraestructure.Models
+    name: Models
+    href: Chaos.Infraestructure.Models.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Infraestructure
+    name: Infraestructure
+    href: Chaos.Infraestructure.html
+  - name: .
+  - uid: Chaos.Infraestructure.Models
+    name: Models
+    href: Chaos.Infraestructure.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.Id*
+  commentId: Overload:Chaos.Infraestructure.Models.RouletteGameConfig.Id
+  href: Chaos.Infraestructure.Models.RouletteGameConfig.html#Chaos_Infraestructure_Models_RouletteGameConfig_Id
+  name: Id
+  nameWithType: RouletteGameConfig.Id
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.Id
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.TableName*
+  commentId: Overload:Chaos.Infraestructure.Models.RouletteGameConfig.TableName
+  href: Chaos.Infraestructure.Models.RouletteGameConfig.html#Chaos_Infraestructure_Models_RouletteGameConfig_TableName
+  name: TableName
+  nameWithType: RouletteGameConfig.TableName
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.TableName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.RouletteType*
+  commentId: Overload:Chaos.Infraestructure.Models.RouletteGameConfig.RouletteType
+  href: Chaos.Infraestructure.Models.RouletteGameConfig.html#Chaos_Infraestructure_Models_RouletteGameConfig_RouletteType
+  name: RouletteType
+  nameWithType: RouletteGameConfig.RouletteType
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.RouletteType
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.HasZero*
+  commentId: Overload:Chaos.Infraestructure.Models.RouletteGameConfig.HasZero
+  href: Chaos.Infraestructure.Models.RouletteGameConfig.html#Chaos_Infraestructure_Models_RouletteGameConfig_HasZero
+  name: HasZero
+  nameWithType: RouletteGameConfig.HasZero
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.HasZero
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.HasDoubleZero*
+  commentId: Overload:Chaos.Infraestructure.Models.RouletteGameConfig.HasDoubleZero
+  href: Chaos.Infraestructure.Models.RouletteGameConfig.html#Chaos_Infraestructure_Models_RouletteGameConfig_HasDoubleZero
+  name: HasDoubleZero
+  nameWithType: RouletteGameConfig.HasDoubleZero
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.HasDoubleZero
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.TotalNumbers*
+  commentId: Overload:Chaos.Infraestructure.Models.RouletteGameConfig.TotalNumbers
+  href: Chaos.Infraestructure.Models.RouletteGameConfig.html#Chaos_Infraestructure_Models_RouletteGameConfig_TotalNumbers
+  name: TotalNumbers
+  nameWithType: RouletteGameConfig.TotalNumbers
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.TotalNumbers
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.IsActive*
+  commentId: Overload:Chaos.Infraestructure.Models.RouletteGameConfig.IsActive
+  href: Chaos.Infraestructure.Models.RouletteGameConfig.html#Chaos_Infraestructure_Models_RouletteGameConfig_IsActive
+  name: IsActive
+  nameWithType: RouletteGameConfig.IsActive
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.IsActive
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.CreatedAt*
+  commentId: Overload:Chaos.Infraestructure.Models.RouletteGameConfig.CreatedAt
+  href: Chaos.Infraestructure.Models.RouletteGameConfig.html#Chaos_Infraestructure_Models_RouletteGameConfig_CreatedAt
+  name: CreatedAt
+  nameWithType: RouletteGameConfig.CreatedAt
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.CreatedAt
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.GameId*
+  commentId: Overload:Chaos.Infraestructure.Models.RouletteGameConfig.GameId
+  href: Chaos.Infraestructure.Models.RouletteGameConfig.html#Chaos_Infraestructure_Models_RouletteGameConfig_GameId
+  name: GameId
+  nameWithType: RouletteGameConfig.GameId
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.GameId
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.Game*
+  commentId: Overload:Chaos.Infraestructure.Models.RouletteGameConfig.Game
+  href: Chaos.Infraestructure.Models.RouletteGameConfig.html#Chaos_Infraestructure_Models_RouletteGameConfig_Game
+  name: Game
+  nameWithType: RouletteGameConfig.Game
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.Game
+- uid: Chaos.Infraestructure.Models.Game
+  commentId: T:Chaos.Infraestructure.Models.Game
+  parent: Chaos.Infraestructure.Models
+  href: Chaos.Infraestructure.Models.Game.html
+  name: Game
+  nameWithType: Game
+  fullName: Chaos.Infraestructure.Models.Game
+- uid: Chaos.Infraestructure.Models.RouletteGameConfig.RouletteBetTypes*
+  commentId: Overload:Chaos.Infraestructure.Models.RouletteGameConfig.RouletteBetTypes
+  href: Chaos.Infraestructure.Models.RouletteGameConfig.html#Chaos_Infraestructure_Models_RouletteGameConfig_RouletteBetTypes
+  name: RouletteBetTypes
+  nameWithType: RouletteGameConfig.RouletteBetTypes
+  fullName: Chaos.Infraestructure.Models.RouletteGameConfig.RouletteBetTypes
+- uid: System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.RouletteBetType}
+  commentId: T:System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.RouletteBetType}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<RouletteBetType>
+  nameWithType: ICollection<RouletteBetType>
+  fullName: System.Collections.Generic.ICollection<Chaos.Infraestructure.Models.RouletteBetType>
+  nameWithType.vb: ICollection(Of RouletteBetType)
+  fullName.vb: System.Collections.Generic.ICollection(Of Chaos.Infraestructure.Models.RouletteBetType)
+  name.vb: ICollection(Of RouletteBetType)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: Chaos.Infraestructure.Models.RouletteBetType
+    name: RouletteBetType
+    href: Chaos.Infraestructure.Models.RouletteBetType.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Chaos.Infraestructure.Models.RouletteBetType
+    name: RouletteBetType
+    href: Chaos.Infraestructure.Models.RouletteBetType.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

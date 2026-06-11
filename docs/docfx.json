@@ -1,0 +1,50 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "..",
+          "files": [
+            "Chaos/*.csproj",
+            "Chaos.Infraestructure/*.csproj"
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/index.md",
+          "articles/**.md",
+          "index.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**",
+          "styles/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern",
+      "templates/custom"
+    ],
+    "globalMetadata": {
+      "_appName": "CasinoRoyalYago",
+      "_appTitle": "CasinoRoyalYago",
+      "_enableSearch": true,
+      "_appLogoPath": "images/logo.svg",
+      "_appFaviconPath": "images/favicon.ico"
+    }
+  }
+}

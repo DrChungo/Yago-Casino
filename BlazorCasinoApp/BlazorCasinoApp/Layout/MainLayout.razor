@@ -1,0 +1,51 @@
+﻿@inherits LayoutComponentBase
+@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthStateProvider
+@inject Chaos.BlazorCasinoApp.Service.AuthBackOfficeService AuthService
+@inject NavigationManager Navigation
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-bar">
+            <AuthorizeView>
+                <Authorized>
+                    <div class="top-bar__user">
+                        <div class="user-badge">
+                            <span class="user-avatar">👤</span>
+                            <span class="user-name">@context.User.Identity?.Name</span>
+                        </div>
+                        <button class="btn-logout" @onclick="HandleLogout">
+                            <span class="btn-icon">🚪</span>
+                            <span class="btn-text">Cerrar Sesión</span>
+                        </button>
+                    </div>
+                </Authorized>
+
+                <NotAuthorized>
+                    <div class="top-bar__user">
+                        <a class="btn-login" href="/login">
+                            <span class="btn-icon">🔑</span>
+                            <span class="btn-text">Iniciar Sesión</span>
+                        </a>
+                    </div>
+                </NotAuthorized>
+            </AuthorizeView>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+@code {
+    private async Task HandleLogout()
+    {
+        await AuthService.LogoutAsync();
+        Navigation.NavigateTo("/login", forceLoad: true);
+    }
+}

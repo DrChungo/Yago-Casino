@@ -1,0 +1,194 @@
+﻿@page "/RussianRoulettePage"
+@using Chaos.BlazorCasinoApp.IApiService
+@using Chaos.Shared.ResponseEntity
+@inject IRussianRouletteService RussianRouletteService
+@inject NavigationManager Navigation
+
+<PageTitle>Backoffice — Russian Roulette</PageTitle>
+
+<div class="casino-page">
+
+    <h3>🔫 Configuraciones Russian Roulette</h3>
+
+    @if (isLoading)
+    {
+        <div class="casino-loading">
+            <div class="casino-spinner" role="status">🎰</div>
+            <p class="text-gold">Cargando configuraciones...</p>
+        </div>
+    }
+    else if (errorMessage is not null)
+    {
+        <div class="alert alert-danger">⚠️ @errorMessage</div>
+    }
+    else
+    {
+        @if (deleteError is not null)
+        {
+            <div class="alert alert-danger casino-alert-dismissible">
+                <span>⚠️ @deleteError</span>
+                <button class="btn-casino-dismiss" @onclick="() => deleteError = null">✖ Cerrar</button>
+            </div>
+        }
+
+        <div class="casino-toolbar">
+            <h5>Configuraciones</h5>
+            <button class="btn-casino-primary" @onclick="GoToCreate">
+                <span class="btn-casino-icon">➕</span>
+                Nueva Configuración
+            </button>
+        </div>
+
+        @if (configs is null || configs.Count == 0)
+        {
+            <div class="casino-empty-state">
+                <div class="casino-empty-icon">🔫</div>
+                <h5>NO HAY CONFIGURACIONES</h5>
+                <p>El revólver está vacío. ¡Crea tu primera configuración!</p>
+                <button class="btn-casino-primary" @onclick="GoToCreate">
+                    <span class="btn-casino-icon">➕</span>
+                    Nueva Configuración
+                </button>
+            </div>
+        }
+        else
+        {
+            <div class="casino-table-wrapper">
+                <table class="casino-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre Config</th>
+                            <th>Juego</th>
+                            <th>Cámaras</th>
+                            <th>Balas</th>
+                            <th>Min Jugadores</th>
+                            <th>Max Jugadores</th>
+                            <th>Premio Fijo</th>
+                            <th>Bots</th>
+                            <th>Estado</th>
+                            <th>Creado</th>
+                            <th style="text-align:center;">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var config in configs)
+                        {
+                            <tr>
+                                <td class="cell-gold-bold">@config.ConfigName</td>
+                                <td class="cell-secondary">@config.GameName</td>
+                                <td class="cell-secondary">@config.TotalChambers</td>
+                                <td class="cell-secondary">@config.BulletCount</td>
+                                <td class="cell-secondary">@config.MinPlayers</td>
+                                <td class="cell-secondary">@config.MaxPlayers</td>
+                                <td class="cell-secondary">$@config.FixedPrizePool.ToString("F2")</td>
+                                <td class="cell-secondary">
+                                    @if (config.AllowBots)
+                                    {
+                                        <span class="badge-casino-active">✔ Sí</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge-casino-inactive">✖ No</span>
+                                    }
+                                </td>
+                                <td>
+                                    @if (config.IsActive)
+                                    {
+                                        <span class="badge-casino-active">● Activo</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge-casino-inactive">● Inactivo</span>
+                                    }
+                                </td>
+                                <td class="cell-muted">@config.CreatedAt</td>
+                                <td class="acciones-cell">
+                                    <button class="btn-casino-edit"
+                                            @onclick="() => GoToEdit(config.Id)">
+                                        ✏️ Editar
+                                    </button>
+                                    <button class="btn-casino-toggle"
+                                            @onclick="() => ToggleActive(config.Id)">
+                                        🔄 Toggle
+                                    </button>
+                                    <button class="btn-casino-delete"
+                                            @onclick="() => Delete(config.Id)">
+                                        🗑️ Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    }
+
+</div>
+
+@code {
+    private List<RussianRouletteResponse>? configs;
+    private bool isLoading = true;
+    private string? errorMessage;
+    private string? deleteError;
+
+    protected override async Task OnInitializedAsync() => await LoadConfigs();
+
+    private async Task LoadConfigs()
+    {
+        try
+        {
+            isLoading = true;
+            errorMessage = null;
+            var result = await RussianRouletteService.GetAllAsync();
+            // ✅ Orden estable por fecha de creación
+            configs = result.OrderBy(c => c.CreatedAt).ToList();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al cargar configuraciones: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private void GoToCreate() => Navigation.NavigateTo("/RussianRoulettePage/create");
+    private void GoToEdit(Guid id) => Navigation.NavigateTo($"/RussianRoulettePage/edit/{id}");
+
+    private async Task ToggleActive(Guid id)
+    {
+        try
+        {
+            await RussianRouletteService.ToggleActiveAsync(id);
+
+            // ✅ Solo actualiza en memoria, sin recargar toda la lista
+            var item = configs?.FirstOrDefault(c => c.Id == id);
+            if (item is not null)
+            {
+                item.IsActive = !item.IsActive;
+                StateHasChanged();
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al cambiar estado: {ex.Message}";
+        }
+    }
+
+    private async Task Delete(Guid id)
+    {
+        deleteError = null;
+        try
+        {
+            await RussianRouletteService.DeleteAsync(id);
+            await LoadConfigs();
+        }
+        catch (Exception ex)
+        {
+            deleteError = ex.Message;
+            StateHasChanged();
+        }
+    }
+}

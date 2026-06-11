@@ -1,0 +1,683 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Service.DeckService
+  commentId: T:Chaos.Api.Service.DeckService
+  id: DeckService
+  parent: Chaos.Api.Service
+  children:
+  - Chaos.Api.Service.DeckService.#ctor(System.Random)
+  - Chaos.Api.Service.DeckService.CatchCard
+  - Chaos.Api.Service.DeckService.InitializeDeck
+  - Chaos.Api.Service.DeckService.RemainingCards
+  - Chaos.Api.Service.DeckService.Reset
+  - Chaos.Api.Service.DeckService.Shuffle
+  langs:
+  - csharp
+  - vb
+  name: DeckService
+  nameWithType: DeckService
+  fullName: Chaos.Api.Service.DeckService
+  type: Class
+  source:
+    id: DeckService
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\DeckService.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  syntax:
+    content: 'public class DeckService : IDeckService'
+    content.vb: Public Class DeckService Implements IDeckService
+  inheritance:
+  - System.Object
+  implements:
+  - Chaos.Api.Interface.IDeckService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Chaos.Api.Service.DeckService.RemainingCards
+  commentId: P:Chaos.Api.Service.DeckService.RemainingCards
+  id: RemainingCards
+  parent: Chaos.Api.Service.DeckService
+  langs:
+  - csharp
+  - vb
+  name: RemainingCards
+  nameWithType: DeckService.RemainingCards
+  fullName: Chaos.Api.Service.DeckService.RemainingCards
+  type: Property
+  source:
+    id: RemainingCards
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\DeckService.cs
+    startLine: 14
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  example: []
+  syntax:
+    content: public int RemainingCards { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property RemainingCards As Integer
+  overload: Chaos.Api.Service.DeckService.RemainingCards*
+  implements:
+  - Chaos.Api.Interface.IDeckService.RemainingCards
+- uid: Chaos.Api.Service.DeckService.#ctor(System.Random)
+  commentId: M:Chaos.Api.Service.DeckService.#ctor(System.Random)
+  id: '#ctor(System.Random)'
+  parent: Chaos.Api.Service.DeckService
+  langs:
+  - csharp
+  - vb
+  name: DeckService(Random)
+  nameWithType: DeckService.DeckService(Random)
+  fullName: Chaos.Api.Service.DeckService.DeckService(System.Random)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\DeckService.cs
+    startLine: 16
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  syntax:
+    content: public DeckService(Random random)
+    parameters:
+    - id: random
+      type: System.Random
+    content.vb: Public Sub New(random As Random)
+  overload: Chaos.Api.Service.DeckService.#ctor*
+  nameWithType.vb: DeckService.New(Random)
+  fullName.vb: Chaos.Api.Service.DeckService.New(System.Random)
+  name.vb: New(Random)
+- uid: Chaos.Api.Service.DeckService.InitializeDeck
+  commentId: M:Chaos.Api.Service.DeckService.InitializeDeck
+  id: InitializeDeck
+  parent: Chaos.Api.Service.DeckService
+  langs:
+  - csharp
+  - vb
+  name: InitializeDeck()
+  nameWithType: DeckService.InitializeDeck()
+  fullName: Chaos.Api.Service.DeckService.InitializeDeck()
+  type: Method
+  source:
+    id: InitializeDeck
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\DeckService.cs
+    startLine: 24
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  example: []
+  syntax:
+    content: public void InitializeDeck()
+    content.vb: Public Sub InitializeDeck()
+  overload: Chaos.Api.Service.DeckService.InitializeDeck*
+  implements:
+  - Chaos.Api.Interface.IDeckService.InitializeDeck
+- uid: Chaos.Api.Service.DeckService.Shuffle
+  commentId: M:Chaos.Api.Service.DeckService.Shuffle
+  id: Shuffle
+  parent: Chaos.Api.Service.DeckService
+  langs:
+  - csharp
+  - vb
+  name: Shuffle()
+  nameWithType: DeckService.Shuffle()
+  fullName: Chaos.Api.Service.DeckService.Shuffle()
+  type: Method
+  source:
+    id: Shuffle
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\DeckService.cs
+    startLine: 37
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  example: []
+  syntax:
+    content: public void Shuffle()
+    content.vb: Public Sub Shuffle()
+  overload: Chaos.Api.Service.DeckService.Shuffle*
+  implements:
+  - Chaos.Api.Interface.IDeckService.Shuffle
+- uid: Chaos.Api.Service.DeckService.CatchCard
+  commentId: M:Chaos.Api.Service.DeckService.CatchCard
+  id: CatchCard
+  parent: Chaos.Api.Service.DeckService
+  langs:
+  - csharp
+  - vb
+  name: CatchCard()
+  nameWithType: DeckService.CatchCard()
+  fullName: Chaos.Api.Service.DeckService.CatchCard()
+  type: Method
+  source:
+    id: CatchCard
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\DeckService.cs
+    startLine: 42
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  example: []
+  syntax:
+    content: public Card CatchCard()
+    return:
+      type: Chaos.Api.Models.Card
+    content.vb: Public Function CatchCard() As Card
+  overload: Chaos.Api.Service.DeckService.CatchCard*
+  implements:
+  - Chaos.Api.Interface.IDeckService.CatchCard
+- uid: Chaos.Api.Service.DeckService.Reset
+  commentId: M:Chaos.Api.Service.DeckService.Reset
+  id: Reset
+  parent: Chaos.Api.Service.DeckService
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: DeckService.Reset()
+  fullName: Chaos.Api.Service.DeckService.Reset()
+  type: Method
+  source:
+    id: Reset
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\DeckService.cs
+    startLine: 54
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  example: []
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: Chaos.Api.Service.DeckService.Reset*
+  implements:
+  - Chaos.Api.Interface.IDeckService.Reset
+references:
+- uid: Chaos.Api.Service
+  commentId: N:Chaos.Api.Service
+  href: Chaos.html
+  name: Chaos.Api.Service
+  nameWithType: Chaos.Api.Service
+  fullName: Chaos.Api.Service
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Service
+    name: Service
+    href: Chaos.Api.Service.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Service
+    name: Service
+    href: Chaos.Api.Service.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Chaos.Api.Interface.IDeckService
+  commentId: T:Chaos.Api.Interface.IDeckService
+  parent: Chaos.Api.Interface
+  href: Chaos.Api.Interface.IDeckService.html
+  name: IDeckService
+  nameWithType: IDeckService
+  fullName: Chaos.Api.Interface.IDeckService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chaos.Api.Interface
+  commentId: N:Chaos.Api.Interface
+  href: Chaos.html
+  name: Chaos.Api.Interface
+  nameWithType: Chaos.Api.Interface
+  fullName: Chaos.Api.Interface
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Interface
+    name: Interface
+    href: Chaos.Api.Interface.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Interface
+    name: Interface
+    href: Chaos.Api.Interface.html
+- uid: Chaos.Api.Service.DeckService.RemainingCards*
+  commentId: Overload:Chaos.Api.Service.DeckService.RemainingCards
+  href: Chaos.Api.Service.DeckService.html#Chaos_Api_Service_DeckService_RemainingCards
+  name: RemainingCards
+  nameWithType: DeckService.RemainingCards
+  fullName: Chaos.Api.Service.DeckService.RemainingCards
+- uid: Chaos.Api.Interface.IDeckService.RemainingCards
+  commentId: P:Chaos.Api.Interface.IDeckService.RemainingCards
+  parent: Chaos.Api.Interface.IDeckService
+  href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_RemainingCards
+  name: RemainingCards
+  nameWithType: IDeckService.RemainingCards
+  fullName: Chaos.Api.Interface.IDeckService.RemainingCards
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Chaos.Api.Service.DeckService.#ctor*
+  commentId: Overload:Chaos.Api.Service.DeckService.#ctor
+  href: Chaos.Api.Service.DeckService.html#Chaos_Api_Service_DeckService__ctor_System_Random_
+  name: DeckService
+  nameWithType: DeckService.DeckService
+  fullName: Chaos.Api.Service.DeckService.DeckService
+  nameWithType.vb: DeckService.New
+  fullName.vb: Chaos.Api.Service.DeckService.New
+  name.vb: New
+- uid: System.Random
+  commentId: T:System.Random
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.random
+  name: Random
+  nameWithType: Random
+  fullName: System.Random
+- uid: Chaos.Api.Service.DeckService.InitializeDeck*
+  commentId: Overload:Chaos.Api.Service.DeckService.InitializeDeck
+  href: Chaos.Api.Service.DeckService.html#Chaos_Api_Service_DeckService_InitializeDeck
+  name: InitializeDeck
+  nameWithType: DeckService.InitializeDeck
+  fullName: Chaos.Api.Service.DeckService.InitializeDeck
+- uid: Chaos.Api.Interface.IDeckService.InitializeDeck
+  commentId: M:Chaos.Api.Interface.IDeckService.InitializeDeck
+  parent: Chaos.Api.Interface.IDeckService
+  href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_InitializeDeck
+  name: InitializeDeck()
+  nameWithType: IDeckService.InitializeDeck()
+  fullName: Chaos.Api.Interface.IDeckService.InitializeDeck()
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IDeckService.InitializeDeck
+    name: InitializeDeck
+    href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_InitializeDeck
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IDeckService.InitializeDeck
+    name: InitializeDeck
+    href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_InitializeDeck
+  - name: (
+  - name: )
+- uid: Chaos.Api.Service.DeckService.Shuffle*
+  commentId: Overload:Chaos.Api.Service.DeckService.Shuffle
+  href: Chaos.Api.Service.DeckService.html#Chaos_Api_Service_DeckService_Shuffle
+  name: Shuffle
+  nameWithType: DeckService.Shuffle
+  fullName: Chaos.Api.Service.DeckService.Shuffle
+- uid: Chaos.Api.Interface.IDeckService.Shuffle
+  commentId: M:Chaos.Api.Interface.IDeckService.Shuffle
+  parent: Chaos.Api.Interface.IDeckService
+  href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_Shuffle
+  name: Shuffle()
+  nameWithType: IDeckService.Shuffle()
+  fullName: Chaos.Api.Interface.IDeckService.Shuffle()
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IDeckService.Shuffle
+    name: Shuffle
+    href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_Shuffle
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IDeckService.Shuffle
+    name: Shuffle
+    href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_Shuffle
+  - name: (
+  - name: )
+- uid: Chaos.Api.Service.DeckService.CatchCard*
+  commentId: Overload:Chaos.Api.Service.DeckService.CatchCard
+  href: Chaos.Api.Service.DeckService.html#Chaos_Api_Service_DeckService_CatchCard
+  name: CatchCard
+  nameWithType: DeckService.CatchCard
+  fullName: Chaos.Api.Service.DeckService.CatchCard
+- uid: Chaos.Api.Interface.IDeckService.CatchCard
+  commentId: M:Chaos.Api.Interface.IDeckService.CatchCard
+  parent: Chaos.Api.Interface.IDeckService
+  href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_CatchCard
+  name: CatchCard()
+  nameWithType: IDeckService.CatchCard()
+  fullName: Chaos.Api.Interface.IDeckService.CatchCard()
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IDeckService.CatchCard
+    name: CatchCard
+    href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_CatchCard
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IDeckService.CatchCard
+    name: CatchCard
+    href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_CatchCard
+  - name: (
+  - name: )
+- uid: Chaos.Api.Models.Card
+  commentId: T:Chaos.Api.Models.Card
+  parent: Chaos.Api.Models
+  href: Chaos.Api.Models.Card.html
+  name: Card
+  nameWithType: Card
+  fullName: Chaos.Api.Models.Card
+- uid: Chaos.Api.Models
+  commentId: N:Chaos.Api.Models
+  href: Chaos.html
+  name: Chaos.Api.Models
+  nameWithType: Chaos.Api.Models
+  fullName: Chaos.Api.Models
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Models
+    name: Models
+    href: Chaos.Api.Models.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Models
+    name: Models
+    href: Chaos.Api.Models.html
+- uid: Chaos.Api.Service.DeckService.Reset*
+  commentId: Overload:Chaos.Api.Service.DeckService.Reset
+  href: Chaos.Api.Service.DeckService.html#Chaos_Api_Service_DeckService_Reset
+  name: Reset
+  nameWithType: DeckService.Reset
+  fullName: Chaos.Api.Service.DeckService.Reset
+- uid: Chaos.Api.Interface.IDeckService.Reset
+  commentId: M:Chaos.Api.Interface.IDeckService.Reset
+  parent: Chaos.Api.Interface.IDeckService
+  href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_Reset
+  name: Reset()
+  nameWithType: IDeckService.Reset()
+  fullName: Chaos.Api.Interface.IDeckService.Reset()
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IDeckService.Reset
+    name: Reset
+    href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_Reset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IDeckService.Reset
+    name: Reset
+    href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_Reset
+  - name: (
+  - name: )

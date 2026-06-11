@@ -1,0 +1,359 @@
+/* ── FONTS ────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@700&display=swap');
+
+:root {
+  --text-color: white;
+  --gold: #ffd700;
+  --gold-dark: #b8860b;
+  --bg-panel: rgba(10, 0, 20, 0.75);
+  --bg-card: rgba(0, 0, 0, 0.50);
+  --danger: #cc2200;
+  --safe: #2ecc71;
+}
+
+/* ── MAIN GAME WRAPPER ────────────────────────────────── */
+#game {
+  background-image: url(../assets/gamesImages/casino_russia.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--text-color);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: 'Cinzel', serif;
+  position: relative;
+  cursor: url(/cursor/revolver_chiquito.png) 4 4, auto;
+}
+
+#game::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* ← sube este valor para más oscuridad */
+  pointer-events: none;
+  z-index: 0;
+}
+
+#game > * {
+  position: relative;
+  z-index: 1;
+}
+/* ── PANEL CIRCULAR ───────────────────────────────────── */
+.game_state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(40, 5, 65, 0.88) 0%,
+    rgba(10, 0, 20, 0.80) 70%,
+    rgba(5, 0, 10, 0.60) 100%
+  );
+  border: 2px solid var(--gold-dark);
+  box-shadow:
+    0 0 40px rgba(184, 134, 11, 0.45),
+    0 0 80px rgba(100, 0, 150, 0.25),
+     0 0 200px rgba(0, 0, 0, 0.8),  
+    inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.5s ease, border-color 0.5s ease;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ── HEADER DENTRO DEL CÍRCULO ────────────────────────── */
+.game_state .roulette-crown {
+  font-size: 1.8rem;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.9));
+  animation: float 3s ease-in-out infinite;
+  line-height: 1;
+}
+
+.game_state h2 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--gold);
+  margin: 0;
+  text-shadow:
+    0 0 15px rgba(255, 215, 0, 0.8),
+    0 0 30px rgba(255, 215, 0, 0.3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.game_state .roulette-divider {
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold-dark),
+    var(--gold),
+    var(--gold-dark),
+    transparent
+  );
+  margin: 0.2rem 0;
+}
+
+/* ── TEXTOS DE ESTADO ─────────────────────────────────── */
+.game_state p {
+  margin: 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  color: #f0e6c8;
+  line-height: 1.6;
+}
+
+.game_state p span.label {
+  color: var(--gold-dark);
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.1rem;
+}
+
+.game_state p span.value {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+/* ── ESTADOS DEL PANEL ────────────────────────────────── */
+#game.state--danger .game_state {
+  border-color: var(--danger) !important;
+  box-shadow:
+    0 0 50px rgba(200, 30, 0, 0.7),
+    0 0 100px rgba(200, 30, 0, 0.3),
+    inset 0 0 40px rgba(80, 0, 0, 0.6) !important;
+  animation: shake 0.5s ease;
+}
+
+#game.state--safe .game_state {
+  border-color: var(--safe) !important;
+  box-shadow:
+    0 0 40px rgba(46, 204, 113, 0.5),
+    0 0 80px rgba(46, 204, 113, 0.2),
+    inset 0 0 30px rgba(0, 60, 20, 0.4) !important;
+}
+
+#game.state--winner .game_state {
+  border-color: var(--gold) !important;
+  box-shadow:
+    0 0 60px rgba(255, 215, 0, 0.7),
+    0 0 120px rgba(255, 215, 0, 0.3),
+    inset 0 0 40px rgba(60, 40, 0, 0.5) !important;
+  animation: winner-pulse 1.5s ease-in-out infinite;
+}
+
+/* ── BOTÓN PLAY ROUND ─────────────────────────────────── */
+#play_round {
+  cursor: url(/cursor/revolver_chiquito.png) 4 4, auto;
+  padding: 0.9rem 3rem;
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: linear-gradient(135deg, #5a0000 0%, #8b0000 40%, #6b0000 100%);
+  border: 2px solid var(--gold-dark);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 4px 20px rgba(139, 0, 0, 0.6),
+    0 0 10px rgba(184, 134, 11, 0.2),
+    inset 0 1px 0 rgba(255, 215, 0, 0.15);
+}
+
+#play_round:hover:not(:disabled) {
+  background: linear-gradient(135deg, #8b0000 0%, #aa0000 50%, #8b0000 100%);
+  border-color: var(--gold);
+  box-shadow:
+    0 6px 30px rgba(200, 0, 0, 0.7),
+    0 0 25px rgba(255, 215, 0, 0.35),
+    inset 0 1px 0 rgba(255, 215, 0, 0.25);
+  transform: translateY(-3px);
+}
+
+#play_round:active {
+  cursor: url(/cursor/revolver_chiquito_shooting.png) 4 4, auto;
+  transform: translateY(1px);
+  box-shadow:
+    0 2px 10px rgba(139, 0, 0, 0.5),
+    inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#play_round:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── BOTÓN RUNNING ────────────────────────────────────── */
+#play_round.btn--running {
+  background: linear-gradient(135deg, #003a00 0%, #005500 50%, #003a00 100%);
+  border-color: #2ecc71;
+  color: #7dffb3;
+  box-shadow:
+    0 4px 20px rgba(46, 204, 113, 0.5),
+    0 0 15px rgba(46, 204, 113, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: pulse-btn 1s ease-in-out infinite;
+}
+
+#play_round.btn--running:hover {
+  border-color: #7dffb3;
+  box-shadow:
+    0 6px 30px rgba(46, 204, 113, 0.7),
+    0 0 25px rgba(46, 204, 113, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ── MENSAJES ─────────────────────────────────────────── */
+.game-message {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #f0e6c8;
+  max-width: 260px;
+  text-align: center;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.game-message--danger { color: #ff6b6b; }
+.game-message--safe   { color: #7dffb3; }
+.game-message--winner { color: var(--gold); }
+
+/* ── PRIZE POOL ───────────────────────────────────────── */
+.game-prize {
+  font-size: 0.8rem;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ── BOTÓN LEAVE ──────────────────────────────────────── */
+.btn--leave {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  padding: 0.6rem 1.4rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #f0e6c8;
+  background: rgba(20, 10, 35, 0.85);
+  border: 1px solid rgba(184, 134, 11, 0.5);
+  border-radius: 8px;
+  cursor: url(/cursor/revolver_chiquito.png) 4 4, auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.btn--leave:hover:not(:disabled) {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(40, 15, 60, 0.9);
+  box-shadow:
+    0 4px 15px rgba(184, 134, 11, 0.3),
+    0 0 10px rgba(255, 215, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.btn--leave:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── MENSAJES GANADOR / PERDEDOR ──────────────────────── */
+.loser-msg {
+  animation: blink-danger 0.8s ease-in-out infinite;
+  font-size: 0.85rem !important;
+}
+
+.winner-msg {
+  animation: winner-glow 1.2s ease-in-out infinite;
+  font-size: 0.9rem !important;
+}
+
+/* ── CURSOR DISPARO ───────────────────────────────────── */
+#game.is-shooting,
+#game.is-shooting *,
+#game.is-shooting #play_round {
+  cursor: url(/cursor/revolver_chiquito_shooting.png) 4 4, auto !important;
+}
+
+/* ── FLASH AL DISPARAR ────────────────────────────────── */
+#game.is-shooting::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 100, 0, 0.08);
+  pointer-events: none;
+  animation: muzzle-flash 0.3s ease-out forwards;
+  z-index: 999;
+}
+
+/* ── ANIMATIONS ───────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px);   }
+  50%       { transform: translateY(-7px);  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0);     }
+  20%       { transform: translateX(-10px); }
+  40%       { transform: translateX(10px);  }
+  60%       { transform: translateX(-6px);  }
+  80%       { transform: translateX(6px);   }
+}
+
+@keyframes winner-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 60px rgba(255, 215, 0, 0.7),
+      0 0 120px rgba(255, 215, 0, 0.3),
+      inset 0 0 40px rgba(60, 40, 0, 0.5);
+  }
+  50% {
+    box-shadow:
+      0 0 80px rgba(255, 215, 0, 1),
+      0 0 160px rgba(255, 215, 0, 0.5),
+      inset 0 0 40px rgba(60, 40, 0, 0.5);
+  }
+}
+
+@keyframes muzzle-flash {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes pulse-btn {
+  0%, 100% { opacity: 1;   }
+  50%       { opacity: 0.7; }
+}
+
+@keyframes blink-danger {
+  0%, 100% { opacity: 1;   color: #ff6b6b; }
+  50%       { opacity: 0.5; color: #ff0000; }
+}
+
+@keyframes winner-glow {
+  0%, 100% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+  50%       { text-shadow: 0 0 25px rgba(255, 215, 0, 1);   }
+}

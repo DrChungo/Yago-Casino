@@ -1,0 +1,154 @@
+﻿@page "/CoinGamePage/edit/{Id:guid}"
+@using Chaos.BlazorCasinoApp.IApiService
+@using Chaos.Shared.ResponseEntity
+@using Chaos.Shared.RequestEntity
+@inject ICoinGameService CoinGameService
+@inject NavigationManager Navigation
+
+<PageTitle>Editar Configuración — CoinGame</PageTitle>
+
+<div class="casino-page">
+
+    <div class="casino-form-header">
+        <button class="btn-casino-secondary" @onclick="GoBack">← Volver</button>
+        <h4>✏️ Editar Configuración CoinGame</h4>
+    </div>
+
+    @if (isLoading)
+    {
+        <div class="casino-loading">
+            <div class="casino-spinner" role="status">🛞</div>
+            <p class="text-gold">Cargando datos...</p>
+        </div>
+    }
+    else
+    {
+        @if (errorMessage is not null)
+        {
+            <div class="alert alert-danger">⚠️ @errorMessage</div>
+        }
+
+        <div class="card">
+            <div class="card-body">
+
+                <div class="casino-id-box">
+                    <small>ID de Configuración</small>
+                    <span>@Id</span>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Nombre Config</label>
+                    <input class="form-control" @bind="configName" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Nombre del Juego</label>
+                    <input class="form-control" @bind="gameName" />
+                </div>
+
+                <div class="casino-toggle-row">
+                    <button type="button"
+                            class="casino-toggle-btn @(isActive ? "badge-casino-active" : "badge-casino-inactive")"
+                            @onclick="() => isActive = !isActive">
+                        @if (isActive)
+                        {
+                            <span>● Activo</span>
+                        }
+                        else
+                        {
+                            <span>● Inactivo</span>
+                        }
+                    </button>
+                </div>
+
+                <div class="casino-form-actions">
+                    <button class="btn-casino-secondary" @onclick="GoBack">
+                        ✖ Cancelar
+                    </button>
+                    <button class="btn-casino-primary" @onclick="HandleEdit" disabled="@isSaving">
+                        @if (isSaving)
+                        {
+                            <span class="casino-spinner-sm">🛞</span>
+                        }
+                        💾 Actualizar
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    }
+
+</div>
+
+@code {
+    [Parameter] public Guid Id { get; set; }
+
+    private string configName = "";
+    private string gameName = "";
+    private bool isActive = true;
+    private bool isLoading = true;
+    private bool isSaving = false;
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var config = await CoinGameService.GetByIdAsync(Id);
+
+            if (config is not null)
+            {
+                configName = config.ConfigName;
+                gameName = config.GameName;
+                isActive = config.IsActive;
+            }
+            else
+            {
+                errorMessage = "No se encontró la configuración.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al cargar: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task HandleEdit()
+    {
+        if (string.IsNullOrWhiteSpace(configName) || string.IsNullOrWhiteSpace(gameName))
+        {
+            errorMessage = "Todos los campos son obligatorios.";
+            return;
+        }
+
+        try
+        {
+            isSaving = true;
+            errorMessage = null;
+
+            var request = new CoinGameRequest
+            {
+                ConfigName = configName,
+                GameName = gameName,
+                IsActive = isActive
+            };
+
+            await CoinGameService.UpdateAsync(Id, request);
+            Navigation.NavigateTo("/CoinGamePage");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al actualizar: {ex.Message}";
+        }
+        finally
+        {
+            isSaving = false;
+        }
+    }
+
+    private void GoBack() => Navigation.NavigateTo("/CoinGamePage");
+}

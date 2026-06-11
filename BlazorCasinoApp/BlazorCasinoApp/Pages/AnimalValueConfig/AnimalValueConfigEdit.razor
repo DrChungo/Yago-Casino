@@ -1,0 +1,275 @@
+﻿@page "/AnimalValueConfigPage/edit/{Id:guid}"
+
+@using Chaos.BlazorCasinoApp.IApiService
+@using Chaos.Shared.RequestEntity.AnimalValue
+
+@inject IAnimalValueConfigService AnimalValueConfigService
+@inject NavigationManager Nav
+@inject IJSRuntime JS
+
+<PageTitle>Editar Configuración Animal</PageTitle>
+
+<div class="casino-page">
+
+    <div class="casino-form-header">
+        <button class="btn-casino-secondary" @onclick="GoBack">← Volver</button>
+        <h4>✏️ Editar Configuración de Animal</h4>
+    </div>
+
+    @if (isLoading)
+    {
+        <div class="casino-loading">
+            <div class="casino-spinner" role="status">🛞</div>
+            <p class="text-gold">Cargando datos...</p>
+        </div>
+    }
+    else
+    {
+        @if (errorMessage is not null)
+        {
+            <div class="alert alert-danger">@errorMessage</div>
+        }
+
+        <div class="card">
+            <div class="card-body">
+                <EditForm Model="request" OnValidSubmit="HandleSubmit">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary class="alert alert-danger" />
+
+                    <div class="form-group">
+                        <label class="form-label">Tipo de Animal</label>
+                        <InputText class="form-control" @bind-Value="request.AnimalType" />
+                        <ValidationMessage For="() => request.AnimalType" />
+                    </div>
+
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label class="form-label">Edad Mínima</label>
+                            <InputNumber class="form-control" @bind-Value="request.MinAge" />
+                            <ValidationMessage For="() => request.MinAge" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Edad Máxima</label>
+                            <InputNumber class="form-control" @bind-Value="request.MaxAge" />
+                            <ValidationMessage For="() => request.MaxAge" />
+                        </div>
+                    </div>
+
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label class="form-label">Peso Mínimo</label>
+                            <InputNumber class="form-control" @bind-Value="request.MinWeight" />
+                            <ValidationMessage For="() => request.MinWeight" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Peso Máximo</label>
+                            <InputNumber class="form-control" @bind-Value="request.MaxWeight" />
+                            <ValidationMessage For="() => request.MaxWeight" />
+                        </div>
+                    </div>
+
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label class="form-label">Altura Mínima</label>
+                            <InputNumber class="form-control" @bind-Value="request.MinHeight" />
+                            <ValidationMessage For="() => request.MinHeight" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Altura Máxima</label>
+                            <InputNumber class="form-control" @bind-Value="request.MaxHeight" />
+                            <ValidationMessage For="() => request.MaxHeight" />
+                        </div>
+                    </div>
+
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label class="form-label">Salud Mínima</label>
+                            <InputNumber class="form-control" @bind-Value="request.MinHealth" />
+                            <ValidationMessage For="() => request.MinHealth" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Salud Máxima</label>
+                            <InputNumber class="form-control" @bind-Value="request.MaxHealth" />
+                            <ValidationMessage For="() => request.MaxHealth" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Hábitat</label>
+                        <InputSelect class="form-control" @bind-Value="request.Habitat">
+                            <option value="">-- Selecciona un hábitat --</option>
+
+                           <option value="">-- Selecciona un hábitat --</option>
+
+                        <option value="Desset"> Desierto</option>
+
+                        <option value="Ocean"> Ocean</option>
+
+                        <option value="Farm"> Farm</option>
+                        <option value="Farm / Sky"> Farm / Sky</option>
+
+                        <option value="Savanna">Savanna</option>
+
+                        <option value="Jungle"> Jungle</option>
+                        <option value="Jungle / Sky"> Jungle / Sky</option>
+                        
+                        <option value="Legend"> Legend</option>
+                        <option value="Legend / Sky"> Legend / Sky</option>
+
+                        <option value="Swamp"> Swamp</option>
+                        <option value="Jurassic"> Jurassic</option>
+                        <option value="Jurassic / Sky"> Jurassic / Sky</option>
+
+                        <option value="Urban"> Urban</option>
+                        <option value="Urban / Sky"> Urban / Sky</option>
+                        </InputSelect>
+                        <ValidationMessage For="() => request.Habitat" />
+                    </div>
+
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label class="form-label">Imagen Normal</label>
+                            <InputFile id="fileNormal" OnChange="e => LoadSvg(e, true)" accept=".svg" style="display:none" />
+                            <label for="fileNormal" class="btn-casino-secondary" style="cursor:pointer">
+                                📁 Seleccionar SVG Normal
+                            </label>
+                            @if (!string.IsNullOrEmpty(request.ImageUrlNormal))
+                            {
+                                <span class="text-gold ms-2">
+                                    ✅ @(svgNormalName ?? "SVG existente")
+                                </span>
+                            }
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Imagen Mecha</label>
+                            <InputFile id="fileMecha" OnChange="e => LoadSvg(e, false)" accept=".svg" style="display:none" />
+                            <label for="fileMecha" class="btn-casino-secondary" style="cursor:pointer">
+                                📁 Seleccionar SVG Mecha
+                            </label>
+                            @if (!string.IsNullOrEmpty(request.ImageUrlMecha))
+                            {
+                                <span class="text-gold ms-2">
+                                    ✅ @(svgMechaName ?? "SVG existente")
+                                </span>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="form-check mb-4">
+                        <InputCheckbox class="form-check-input" @bind-Value="request.IsActive" />
+                        <label class="form-check-label">Activo</label>
+                    </div>
+
+                    <div class="casino-form-actions">
+                        <button type="button" class="btn-casino-delete" @onclick="GoBack">
+                            ✖ Cancelar
+                        </button>
+                        <button type="submit" class="btn-casino-primary" disabled="@isSaving">
+                            @if (isSaving)
+                            {
+                                <span class="casino-spinner-sm">🎰</span>
+                            }
+                            💾 Guardar Cambios
+                        </button>
+                    </div>
+
+                </EditForm>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public Guid Id { get; set; }
+
+    private UpdateAnimalValueRequest request = new();
+    private bool isLoading = true;
+    private bool isSaving = false;
+    private string? errorMessage;
+    private string? svgNormalName;
+    private string? svgMechaName;
+
+
+    private async Task LoadSvg(InputFileChangeEventArgs e, bool isNormal)
+    {
+        try
+        {
+            var file = e.File;
+            using var stream = file.OpenReadStream(maxAllowedSize: 5 * 1024 * 1024);
+            using var reader = new StreamReader(stream);
+            var content = await reader.ReadToEndAsync();
+
+            if (isNormal)
+            {
+                request.ImageUrlNormal = content;
+                svgNormalName = file.Name; 
+            }
+            else
+            {
+                request.ImageUrlMecha = content;
+                svgMechaName = file.Name; 
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al leer el SVG: {ex.Message}";
+        }
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        isLoading = true;
+        errorMessage = null;
+        try
+        {
+            var existing = await AnimalValueConfigService.GetByIdAsync(Id);
+            request = new UpdateAnimalValueRequest
+            {
+                AnimalType = existing.AnimalType,
+                MinAge = existing.MinAge,
+                MaxAge = existing.MaxAge,
+                MinWeight = existing.MinWeight,
+                MaxWeight = existing.MaxWeight,
+                MinHeight = existing.MinHeight,
+                MaxHeight = existing.MaxHeight,
+                MinHealth = existing.MinHealth,
+                MaxHealth = existing.MaxHealth,
+                IsActive = existing.IsActive,
+                Habitat = existing.Habitat,
+                ImageUrlNormal = existing.ImageUrlNormal,
+                ImageUrlMecha = existing.ImageUrlMecha,
+                UpdatedBy = existing.UpdatedBy
+            };
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al cargar datos: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task HandleSubmit()
+    {
+        isSaving = true;
+        errorMessage = null;
+        try
+        {
+            await AnimalValueConfigService.UpdateAsync(Id, request);
+            GoBack();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al guardar cambios: {ex.Message}";
+        }
+        finally
+        {
+            isSaving = false;
+        }
+    }
+
+    private void GoBack() => Nav.NavigateTo("/AnimalValueConfigPage");
+}

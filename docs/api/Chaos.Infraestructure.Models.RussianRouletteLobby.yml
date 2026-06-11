@@ -1,0 +1,997 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby
+  commentId: T:Chaos.Infraestructure.Models.RussianRouletteLobby
+  id: RussianRouletteLobby
+  parent: Chaos.Infraestructure.Models
+  children:
+  - Chaos.Infraestructure.Models.RussianRouletteLobby.CreatedAt
+  - Chaos.Infraestructure.Models.RussianRouletteLobby.CurrentPrizePool
+  - Chaos.Infraestructure.Models.RussianRouletteLobby.FinishedAt
+  - Chaos.Infraestructure.Models.RussianRouletteLobby.Id
+  - Chaos.Infraestructure.Models.RussianRouletteLobby.LobbyCode
+  - Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteGameConfig
+  - Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteGameConfigId
+  - Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRoulettePlayers
+  - Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteRounds
+  - Chaos.Infraestructure.Models.RussianRouletteLobby.StartedAt
+  - Chaos.Infraestructure.Models.RussianRouletteLobby.Status
+  - Chaos.Infraestructure.Models.RussianRouletteLobby.Winner
+  - Chaos.Infraestructure.Models.RussianRouletteLobby.WinnerId
+  langs:
+  - csharp
+  - vb
+  name: RussianRouletteLobby
+  nameWithType: RussianRouletteLobby
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby
+  type: Class
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: RussianRouletteLobby
+    path: ../Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public class RussianRouletteLobby
+    content.vb: Public Class RussianRouletteLobby
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.Id
+  commentId: P:Chaos.Infraestructure.Models.RussianRouletteLobby.Id
+  id: Id
+  parent: Chaos.Infraestructure.Models.RussianRouletteLobby
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: RussianRouletteLobby.Id
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.Id
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: Id
+    path: ../Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid Id { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Id As Guid
+  overload: Chaos.Infraestructure.Models.RussianRouletteLobby.Id*
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.LobbyCode
+  commentId: P:Chaos.Infraestructure.Models.RussianRouletteLobby.LobbyCode
+  id: LobbyCode
+  parent: Chaos.Infraestructure.Models.RussianRouletteLobby
+  langs:
+  - csharp
+  - vb
+  name: LobbyCode
+  nameWithType: RussianRouletteLobby.LobbyCode
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.LobbyCode
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: LobbyCode
+    path: ../Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string LobbyCode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LobbyCode As String
+  overload: Chaos.Infraestructure.Models.RussianRouletteLobby.LobbyCode*
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.Status
+  commentId: P:Chaos.Infraestructure.Models.RussianRouletteLobby.Status
+  id: Status
+  parent: Chaos.Infraestructure.Models.RussianRouletteLobby
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: RussianRouletteLobby.Status
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.Status
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: Status
+    path: ../Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string Status { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Status As String
+  overload: Chaos.Infraestructure.Models.RussianRouletteLobby.Status*
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.CurrentPrizePool
+  commentId: P:Chaos.Infraestructure.Models.RussianRouletteLobby.CurrentPrizePool
+  id: CurrentPrizePool
+  parent: Chaos.Infraestructure.Models.RussianRouletteLobby
+  langs:
+  - csharp
+  - vb
+  name: CurrentPrizePool
+  nameWithType: RussianRouletteLobby.CurrentPrizePool
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.CurrentPrizePool
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: CurrentPrizePool
+    path: ../Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+    startLine: 15
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public decimal CurrentPrizePool { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property CurrentPrizePool As Decimal
+  overload: Chaos.Infraestructure.Models.RussianRouletteLobby.CurrentPrizePool*
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.WinnerId
+  commentId: P:Chaos.Infraestructure.Models.RussianRouletteLobby.WinnerId
+  id: WinnerId
+  parent: Chaos.Infraestructure.Models.RussianRouletteLobby
+  langs:
+  - csharp
+  - vb
+  name: WinnerId
+  nameWithType: RussianRouletteLobby.WinnerId
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.WinnerId
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: WinnerId
+    path: ../Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+    startLine: 17
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid? WinnerId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Guid}
+    content.vb: Public Property WinnerId As Guid?
+  overload: Chaos.Infraestructure.Models.RussianRouletteLobby.WinnerId*
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.CreatedAt
+  commentId: P:Chaos.Infraestructure.Models.RussianRouletteLobby.CreatedAt
+  id: CreatedAt
+  parent: Chaos.Infraestructure.Models.RussianRouletteLobby
+  langs:
+  - csharp
+  - vb
+  name: CreatedAt
+  nameWithType: RussianRouletteLobby.CreatedAt
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.CreatedAt
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: CreatedAt
+    path: ../Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+    startLine: 19
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string CreatedAt { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CreatedAt As String
+  overload: Chaos.Infraestructure.Models.RussianRouletteLobby.CreatedAt*
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.StartedAt
+  commentId: P:Chaos.Infraestructure.Models.RussianRouletteLobby.StartedAt
+  id: StartedAt
+  parent: Chaos.Infraestructure.Models.RussianRouletteLobby
+  langs:
+  - csharp
+  - vb
+  name: StartedAt
+  nameWithType: RussianRouletteLobby.StartedAt
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.StartedAt
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: StartedAt
+    path: ../Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+    startLine: 21
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string StartedAt { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property StartedAt As String
+  overload: Chaos.Infraestructure.Models.RussianRouletteLobby.StartedAt*
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.FinishedAt
+  commentId: P:Chaos.Infraestructure.Models.RussianRouletteLobby.FinishedAt
+  id: FinishedAt
+  parent: Chaos.Infraestructure.Models.RussianRouletteLobby
+  langs:
+  - csharp
+  - vb
+  name: FinishedAt
+  nameWithType: RussianRouletteLobby.FinishedAt
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.FinishedAt
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: FinishedAt
+    path: ../Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+    startLine: 23
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string FinishedAt { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FinishedAt As String
+  overload: Chaos.Infraestructure.Models.RussianRouletteLobby.FinishedAt*
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteGameConfigId
+  commentId: P:Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteGameConfigId
+  id: RussianRouletteGameConfigId
+  parent: Chaos.Infraestructure.Models.RussianRouletteLobby
+  langs:
+  - csharp
+  - vb
+  name: RussianRouletteGameConfigId
+  nameWithType: RussianRouletteLobby.RussianRouletteGameConfigId
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteGameConfigId
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: RussianRouletteGameConfigId
+    path: ../Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+    startLine: 25
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid RussianRouletteGameConfigId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property RussianRouletteGameConfigId As Guid
+  overload: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteGameConfigId*
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteGameConfig
+  commentId: P:Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteGameConfig
+  id: RussianRouletteGameConfig
+  parent: Chaos.Infraestructure.Models.RussianRouletteLobby
+  langs:
+  - csharp
+  - vb
+  name: RussianRouletteGameConfig
+  nameWithType: RussianRouletteLobby.RussianRouletteGameConfig
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteGameConfig
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: RussianRouletteGameConfig
+    path: ../Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+    startLine: 27
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual RussianRouletteGameConfig RussianRouletteGameConfig { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Infraestructure.Models.RussianRouletteGameConfig
+    content.vb: Public Overridable Property RussianRouletteGameConfig As RussianRouletteGameConfig
+  overload: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteGameConfig*
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRoulettePlayers
+  commentId: P:Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRoulettePlayers
+  id: RussianRoulettePlayers
+  parent: Chaos.Infraestructure.Models.RussianRouletteLobby
+  langs:
+  - csharp
+  - vb
+  name: RussianRoulettePlayers
+  nameWithType: RussianRouletteLobby.RussianRoulettePlayers
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRoulettePlayers
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: RussianRoulettePlayers
+    path: ../Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+    startLine: 29
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual ICollection<RussianRoulettePlayer> RussianRoulettePlayers { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.RussianRoulettePlayer}
+    content.vb: Public Overridable Property RussianRoulettePlayers As ICollection(Of RussianRoulettePlayer)
+  overload: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRoulettePlayers*
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteRounds
+  commentId: P:Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteRounds
+  id: RussianRouletteRounds
+  parent: Chaos.Infraestructure.Models.RussianRouletteLobby
+  langs:
+  - csharp
+  - vb
+  name: RussianRouletteRounds
+  nameWithType: RussianRouletteLobby.RussianRouletteRounds
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteRounds
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: RussianRouletteRounds
+    path: ../Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+    startLine: 31
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual ICollection<RussianRouletteRound> RussianRouletteRounds { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.RussianRouletteRound}
+    content.vb: Public Overridable Property RussianRouletteRounds As ICollection(Of RussianRouletteRound)
+  overload: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteRounds*
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.Winner
+  commentId: P:Chaos.Infraestructure.Models.RussianRouletteLobby.Winner
+  id: Winner
+  parent: Chaos.Infraestructure.Models.RussianRouletteLobby
+  langs:
+  - csharp
+  - vb
+  name: Winner
+  nameWithType: RussianRouletteLobby.Winner
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.Winner
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: Winner
+    path: ../Chaos.Infraestructure/Models/RussianRouletteLobby.cs
+    startLine: 33
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual User Winner { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Infraestructure.Models.User
+    content.vb: Public Overridable Property Winner As User
+  overload: Chaos.Infraestructure.Models.RussianRouletteLobby.Winner*
+references:
+- uid: Chaos.Infraestructure.Models
+  commentId: N:Chaos.Infraestructure.Models
+  href: Chaos.html
+  name: Chaos.Infraestructure.Models
+  nameWithType: Chaos.Infraestructure.Models
+  fullName: Chaos.Infraestructure.Models
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Infraestructure
+    name: Infraestructure
+    href: Chaos.Infraestructure.html
+  - name: .
+  - uid: Chaos.Infraestructure.Models
+    name: Models
+    href: Chaos.Infraestructure.Models.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Infraestructure
+    name: Infraestructure
+    href: Chaos.Infraestructure.html
+  - name: .
+  - uid: Chaos.Infraestructure.Models
+    name: Models
+    href: Chaos.Infraestructure.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.Id*
+  commentId: Overload:Chaos.Infraestructure.Models.RussianRouletteLobby.Id
+  href: Chaos.Infraestructure.Models.RussianRouletteLobby.html#Chaos_Infraestructure_Models_RussianRouletteLobby_Id
+  name: Id
+  nameWithType: RussianRouletteLobby.Id
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.Id
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.LobbyCode*
+  commentId: Overload:Chaos.Infraestructure.Models.RussianRouletteLobby.LobbyCode
+  href: Chaos.Infraestructure.Models.RussianRouletteLobby.html#Chaos_Infraestructure_Models_RussianRouletteLobby_LobbyCode
+  name: LobbyCode
+  nameWithType: RussianRouletteLobby.LobbyCode
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.LobbyCode
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.Status*
+  commentId: Overload:Chaos.Infraestructure.Models.RussianRouletteLobby.Status
+  href: Chaos.Infraestructure.Models.RussianRouletteLobby.html#Chaos_Infraestructure_Models_RussianRouletteLobby_Status
+  name: Status
+  nameWithType: RussianRouletteLobby.Status
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.Status
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.CurrentPrizePool*
+  commentId: Overload:Chaos.Infraestructure.Models.RussianRouletteLobby.CurrentPrizePool
+  href: Chaos.Infraestructure.Models.RussianRouletteLobby.html#Chaos_Infraestructure_Models_RussianRouletteLobby_CurrentPrizePool
+  name: CurrentPrizePool
+  nameWithType: RussianRouletteLobby.CurrentPrizePool
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.CurrentPrizePool
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.WinnerId*
+  commentId: Overload:Chaos.Infraestructure.Models.RussianRouletteLobby.WinnerId
+  href: Chaos.Infraestructure.Models.RussianRouletteLobby.html#Chaos_Infraestructure_Models_RussianRouletteLobby_WinnerId
+  name: WinnerId
+  nameWithType: RussianRouletteLobby.WinnerId
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.WinnerId
+- uid: System.Nullable{System.Guid}
+  commentId: T:System.Nullable{System.Guid}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid?
+  nameWithType: Guid?
+  fullName: System.Guid?
+  spec.csharp:
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '?'
+  spec.vb:
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.CreatedAt*
+  commentId: Overload:Chaos.Infraestructure.Models.RussianRouletteLobby.CreatedAt
+  href: Chaos.Infraestructure.Models.RussianRouletteLobby.html#Chaos_Infraestructure_Models_RussianRouletteLobby_CreatedAt
+  name: CreatedAt
+  nameWithType: RussianRouletteLobby.CreatedAt
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.CreatedAt
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.StartedAt*
+  commentId: Overload:Chaos.Infraestructure.Models.RussianRouletteLobby.StartedAt
+  href: Chaos.Infraestructure.Models.RussianRouletteLobby.html#Chaos_Infraestructure_Models_RussianRouletteLobby_StartedAt
+  name: StartedAt
+  nameWithType: RussianRouletteLobby.StartedAt
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.StartedAt
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.FinishedAt*
+  commentId: Overload:Chaos.Infraestructure.Models.RussianRouletteLobby.FinishedAt
+  href: Chaos.Infraestructure.Models.RussianRouletteLobby.html#Chaos_Infraestructure_Models_RussianRouletteLobby_FinishedAt
+  name: FinishedAt
+  nameWithType: RussianRouletteLobby.FinishedAt
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.FinishedAt
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteGameConfigId*
+  commentId: Overload:Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteGameConfigId
+  href: Chaos.Infraestructure.Models.RussianRouletteLobby.html#Chaos_Infraestructure_Models_RussianRouletteLobby_RussianRouletteGameConfigId
+  name: RussianRouletteGameConfigId
+  nameWithType: RussianRouletteLobby.RussianRouletteGameConfigId
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteGameConfigId
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteGameConfig*
+  commentId: Overload:Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteGameConfig
+  href: Chaos.Infraestructure.Models.RussianRouletteLobby.html#Chaos_Infraestructure_Models_RussianRouletteLobby_RussianRouletteGameConfig
+  name: RussianRouletteGameConfig
+  nameWithType: RussianRouletteLobby.RussianRouletteGameConfig
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteGameConfig
+- uid: Chaos.Infraestructure.Models.RussianRouletteGameConfig
+  commentId: T:Chaos.Infraestructure.Models.RussianRouletteGameConfig
+  parent: Chaos.Infraestructure.Models
+  href: Chaos.Infraestructure.Models.RussianRouletteGameConfig.html
+  name: RussianRouletteGameConfig
+  nameWithType: RussianRouletteGameConfig
+  fullName: Chaos.Infraestructure.Models.RussianRouletteGameConfig
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRoulettePlayers*
+  commentId: Overload:Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRoulettePlayers
+  href: Chaos.Infraestructure.Models.RussianRouletteLobby.html#Chaos_Infraestructure_Models_RussianRouletteLobby_RussianRoulettePlayers
+  name: RussianRoulettePlayers
+  nameWithType: RussianRouletteLobby.RussianRoulettePlayers
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRoulettePlayers
+- uid: System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.RussianRoulettePlayer}
+  commentId: T:System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.RussianRoulettePlayer}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<RussianRoulettePlayer>
+  nameWithType: ICollection<RussianRoulettePlayer>
+  fullName: System.Collections.Generic.ICollection<Chaos.Infraestructure.Models.RussianRoulettePlayer>
+  nameWithType.vb: ICollection(Of RussianRoulettePlayer)
+  fullName.vb: System.Collections.Generic.ICollection(Of Chaos.Infraestructure.Models.RussianRoulettePlayer)
+  name.vb: ICollection(Of RussianRoulettePlayer)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: Chaos.Infraestructure.Models.RussianRoulettePlayer
+    name: RussianRoulettePlayer
+    href: Chaos.Infraestructure.Models.RussianRoulettePlayer.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Chaos.Infraestructure.Models.RussianRoulettePlayer
+    name: RussianRoulettePlayer
+    href: Chaos.Infraestructure.Models.RussianRoulettePlayer.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteRounds*
+  commentId: Overload:Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteRounds
+  href: Chaos.Infraestructure.Models.RussianRouletteLobby.html#Chaos_Infraestructure_Models_RussianRouletteLobby_RussianRouletteRounds
+  name: RussianRouletteRounds
+  nameWithType: RussianRouletteLobby.RussianRouletteRounds
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.RussianRouletteRounds
+- uid: System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.RussianRouletteRound}
+  commentId: T:System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.RussianRouletteRound}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<RussianRouletteRound>
+  nameWithType: ICollection<RussianRouletteRound>
+  fullName: System.Collections.Generic.ICollection<Chaos.Infraestructure.Models.RussianRouletteRound>
+  nameWithType.vb: ICollection(Of RussianRouletteRound)
+  fullName.vb: System.Collections.Generic.ICollection(Of Chaos.Infraestructure.Models.RussianRouletteRound)
+  name.vb: ICollection(Of RussianRouletteRound)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: Chaos.Infraestructure.Models.RussianRouletteRound
+    name: RussianRouletteRound
+    href: Chaos.Infraestructure.Models.RussianRouletteRound.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Chaos.Infraestructure.Models.RussianRouletteRound
+    name: RussianRouletteRound
+    href: Chaos.Infraestructure.Models.RussianRouletteRound.html
+  - name: )
+- uid: Chaos.Infraestructure.Models.RussianRouletteLobby.Winner*
+  commentId: Overload:Chaos.Infraestructure.Models.RussianRouletteLobby.Winner
+  href: Chaos.Infraestructure.Models.RussianRouletteLobby.html#Chaos_Infraestructure_Models_RussianRouletteLobby_Winner
+  name: Winner
+  nameWithType: RussianRouletteLobby.Winner
+  fullName: Chaos.Infraestructure.Models.RussianRouletteLobby.Winner
+- uid: Chaos.Infraestructure.Models.User
+  commentId: T:Chaos.Infraestructure.Models.User
+  parent: Chaos.Infraestructure.Models
+  href: Chaos.Infraestructure.Models.User.html
+  name: User
+  nameWithType: User
+  fullName: Chaos.Infraestructure.Models.User

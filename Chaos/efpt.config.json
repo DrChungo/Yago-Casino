@@ -1,0 +1,162 @@
+﻿{
+   "CodeGenerationMode": 4,
+   "ContextClassName": "CasinoDBContext",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "IrregularWords": null,
+   "MinimumProductVersion": "2.6.1465",
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "ModelsDB",
+   "PluralRules": null,
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "Chaos.Api",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "SingularRules": null,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[Animals]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AnimalShop]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AnimalValueConfig]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BlackjackActions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BlackjackCards]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BlackjackGameConfig]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BlackjackHands]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Casino]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CoinFlipGameConfig]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CoinFlipSessions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Games]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[GameSessions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HigherLowerGameConfig]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HigherLowerRounds]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HigherLowerSessions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RouletteBetTypes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RouletteGameConfig]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RussianRouletteGameConfig]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RussianRouletteLobbies]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RussianRoulettePlayers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RussianRouletteRounds]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ShopAnimalListings]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ShopTransactions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SlotGameConfig]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SlotPayoutRules]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SlotSessions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SlotSymbols]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Users]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseAsyncStoredProcedureCalls": true,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDatabaseNamesForRoutines": true,
+   "UseDateOnlyTimeOnly": true,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseInternalAccessModifiersForSprocsAndFunctions": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false,
+   "UseT4Split": false,
+   "UseTypedTvpParameters": true
+}

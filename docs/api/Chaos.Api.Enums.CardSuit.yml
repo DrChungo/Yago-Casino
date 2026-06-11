@@ -1,0 +1,154 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums.CardSuit
+  commentId: T:Chaos.Api.Enums.CardSuit
+  id: CardSuit
+  parent: Chaos.Api.Enums
+  children:
+  - Chaos.Api.Enums.CardSuit.Clubs
+  - Chaos.Api.Enums.CardSuit.Diamonds
+  - Chaos.Api.Enums.CardSuit.Hearts
+  - Chaos.Api.Enums.CardSuit.Spades
+  langs:
+  - csharp
+  - vb
+  name: CardSuit
+  nameWithType: CardSuit
+  fullName: Chaos.Api.Enums.CardSuit
+  type: Enum
+  source:
+    id: CardSuit
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 2
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: public enum CardSuit
+    content.vb: Public Enum CardSuit
+- uid: Chaos.Api.Enums.CardSuit.Hearts
+  commentId: F:Chaos.Api.Enums.CardSuit.Hearts
+  id: Hearts
+  parent: Chaos.Api.Enums.CardSuit
+  langs:
+  - csharp
+  - vb
+  name: Hearts
+  nameWithType: CardSuit.Hearts
+  fullName: Chaos.Api.Enums.CardSuit.Hearts
+  type: Field
+  source:
+    id: Hearts
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 4
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Hearts = 0
+    return:
+      type: Chaos.Api.Enums.CardSuit
+- uid: Chaos.Api.Enums.CardSuit.Diamonds
+  commentId: F:Chaos.Api.Enums.CardSuit.Diamonds
+  id: Diamonds
+  parent: Chaos.Api.Enums.CardSuit
+  langs:
+  - csharp
+  - vb
+  name: Diamonds
+  nameWithType: CardSuit.Diamonds
+  fullName: Chaos.Api.Enums.CardSuit.Diamonds
+  type: Field
+  source:
+    id: Diamonds
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 5
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Diamonds = 1
+    return:
+      type: Chaos.Api.Enums.CardSuit
+- uid: Chaos.Api.Enums.CardSuit.Clubs
+  commentId: F:Chaos.Api.Enums.CardSuit.Clubs
+  id: Clubs
+  parent: Chaos.Api.Enums.CardSuit
+  langs:
+  - csharp
+  - vb
+  name: Clubs
+  nameWithType: CardSuit.Clubs
+  fullName: Chaos.Api.Enums.CardSuit.Clubs
+  type: Field
+  source:
+    id: Clubs
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 6
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Clubs = 2
+    return:
+      type: Chaos.Api.Enums.CardSuit
+- uid: Chaos.Api.Enums.CardSuit.Spades
+  commentId: F:Chaos.Api.Enums.CardSuit.Spades
+  id: Spades
+  parent: Chaos.Api.Enums.CardSuit
+  langs:
+  - csharp
+  - vb
+  name: Spades
+  nameWithType: CardSuit.Spades
+  fullName: Chaos.Api.Enums.CardSuit.Spades
+  type: Field
+  source:
+    id: Spades
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Spades = 3
+    return:
+      type: Chaos.Api.Enums.CardSuit
+references:
+- uid: Chaos.Api.Enums
+  commentId: N:Chaos.Api.Enums
+  href: Chaos.html
+  name: Chaos.Api.Enums
+  nameWithType: Chaos.Api.Enums
+  fullName: Chaos.Api.Enums
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+- uid: Chaos.Api.Enums.CardSuit
+  commentId: T:Chaos.Api.Enums.CardSuit
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.CardSuit.html
+  name: CardSuit
+  nameWithType: CardSuit
+  fullName: Chaos.Api.Enums.CardSuit

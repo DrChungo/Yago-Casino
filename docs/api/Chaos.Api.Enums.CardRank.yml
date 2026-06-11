@@ -1,0 +1,361 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums.CardRank
+  commentId: T:Chaos.Api.Enums.CardRank
+  id: CardRank
+  parent: Chaos.Api.Enums
+  children:
+  - Chaos.Api.Enums.CardRank.Ace
+  - Chaos.Api.Enums.CardRank.Eight
+  - Chaos.Api.Enums.CardRank.Five
+  - Chaos.Api.Enums.CardRank.Four
+  - Chaos.Api.Enums.CardRank.Jack
+  - Chaos.Api.Enums.CardRank.King
+  - Chaos.Api.Enums.CardRank.Nine
+  - Chaos.Api.Enums.CardRank.Queen
+  - Chaos.Api.Enums.CardRank.Seven
+  - Chaos.Api.Enums.CardRank.Six
+  - Chaos.Api.Enums.CardRank.Ten
+  - Chaos.Api.Enums.CardRank.Three
+  - Chaos.Api.Enums.CardRank.Two
+  langs:
+  - csharp
+  - vb
+  name: CardRank
+  nameWithType: CardRank
+  fullName: Chaos.Api.Enums.CardRank
+  type: Enum
+  source:
+    id: CardRank
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 10
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: public enum CardRank
+    content.vb: Public Enum CardRank
+- uid: Chaos.Api.Enums.CardRank.Two
+  commentId: F:Chaos.Api.Enums.CardRank.Two
+  id: Two
+  parent: Chaos.Api.Enums.CardRank
+  langs:
+  - csharp
+  - vb
+  name: Two
+  nameWithType: CardRank.Two
+  fullName: Chaos.Api.Enums.CardRank.Two
+  type: Field
+  source:
+    id: Two
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 12
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Two = 2
+    return:
+      type: Chaos.Api.Enums.CardRank
+- uid: Chaos.Api.Enums.CardRank.Three
+  commentId: F:Chaos.Api.Enums.CardRank.Three
+  id: Three
+  parent: Chaos.Api.Enums.CardRank
+  langs:
+  - csharp
+  - vb
+  name: Three
+  nameWithType: CardRank.Three
+  fullName: Chaos.Api.Enums.CardRank.Three
+  type: Field
+  source:
+    id: Three
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Three = 3
+    return:
+      type: Chaos.Api.Enums.CardRank
+- uid: Chaos.Api.Enums.CardRank.Four
+  commentId: F:Chaos.Api.Enums.CardRank.Four
+  id: Four
+  parent: Chaos.Api.Enums.CardRank
+  langs:
+  - csharp
+  - vb
+  name: Four
+  nameWithType: CardRank.Four
+  fullName: Chaos.Api.Enums.CardRank.Four
+  type: Field
+  source:
+    id: Four
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 14
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Four = 4
+    return:
+      type: Chaos.Api.Enums.CardRank
+- uid: Chaos.Api.Enums.CardRank.Five
+  commentId: F:Chaos.Api.Enums.CardRank.Five
+  id: Five
+  parent: Chaos.Api.Enums.CardRank
+  langs:
+  - csharp
+  - vb
+  name: Five
+  nameWithType: CardRank.Five
+  fullName: Chaos.Api.Enums.CardRank.Five
+  type: Field
+  source:
+    id: Five
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 15
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Five = 5
+    return:
+      type: Chaos.Api.Enums.CardRank
+- uid: Chaos.Api.Enums.CardRank.Six
+  commentId: F:Chaos.Api.Enums.CardRank.Six
+  id: Six
+  parent: Chaos.Api.Enums.CardRank
+  langs:
+  - csharp
+  - vb
+  name: Six
+  nameWithType: CardRank.Six
+  fullName: Chaos.Api.Enums.CardRank.Six
+  type: Field
+  source:
+    id: Six
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 16
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Six = 6
+    return:
+      type: Chaos.Api.Enums.CardRank
+- uid: Chaos.Api.Enums.CardRank.Seven
+  commentId: F:Chaos.Api.Enums.CardRank.Seven
+  id: Seven
+  parent: Chaos.Api.Enums.CardRank
+  langs:
+  - csharp
+  - vb
+  name: Seven
+  nameWithType: CardRank.Seven
+  fullName: Chaos.Api.Enums.CardRank.Seven
+  type: Field
+  source:
+    id: Seven
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 17
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Seven = 7
+    return:
+      type: Chaos.Api.Enums.CardRank
+- uid: Chaos.Api.Enums.CardRank.Eight
+  commentId: F:Chaos.Api.Enums.CardRank.Eight
+  id: Eight
+  parent: Chaos.Api.Enums.CardRank
+  langs:
+  - csharp
+  - vb
+  name: Eight
+  nameWithType: CardRank.Eight
+  fullName: Chaos.Api.Enums.CardRank.Eight
+  type: Field
+  source:
+    id: Eight
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 18
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Eight = 8
+    return:
+      type: Chaos.Api.Enums.CardRank
+- uid: Chaos.Api.Enums.CardRank.Nine
+  commentId: F:Chaos.Api.Enums.CardRank.Nine
+  id: Nine
+  parent: Chaos.Api.Enums.CardRank
+  langs:
+  - csharp
+  - vb
+  name: Nine
+  nameWithType: CardRank.Nine
+  fullName: Chaos.Api.Enums.CardRank.Nine
+  type: Field
+  source:
+    id: Nine
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 19
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Nine = 9
+    return:
+      type: Chaos.Api.Enums.CardRank
+- uid: Chaos.Api.Enums.CardRank.Ten
+  commentId: F:Chaos.Api.Enums.CardRank.Ten
+  id: Ten
+  parent: Chaos.Api.Enums.CardRank
+  langs:
+  - csharp
+  - vb
+  name: Ten
+  nameWithType: CardRank.Ten
+  fullName: Chaos.Api.Enums.CardRank.Ten
+  type: Field
+  source:
+    id: Ten
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 20
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Ten = 10
+    return:
+      type: Chaos.Api.Enums.CardRank
+- uid: Chaos.Api.Enums.CardRank.Jack
+  commentId: F:Chaos.Api.Enums.CardRank.Jack
+  id: Jack
+  parent: Chaos.Api.Enums.CardRank
+  langs:
+  - csharp
+  - vb
+  name: Jack
+  nameWithType: CardRank.Jack
+  fullName: Chaos.Api.Enums.CardRank.Jack
+  type: Field
+  source:
+    id: Jack
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 21
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Jack = 10
+    return:
+      type: Chaos.Api.Enums.CardRank
+- uid: Chaos.Api.Enums.CardRank.Queen
+  commentId: F:Chaos.Api.Enums.CardRank.Queen
+  id: Queen
+  parent: Chaos.Api.Enums.CardRank
+  langs:
+  - csharp
+  - vb
+  name: Queen
+  nameWithType: CardRank.Queen
+  fullName: Chaos.Api.Enums.CardRank.Queen
+  type: Field
+  source:
+    id: Queen
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 22
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Queen = 10
+    return:
+      type: Chaos.Api.Enums.CardRank
+- uid: Chaos.Api.Enums.CardRank.King
+  commentId: F:Chaos.Api.Enums.CardRank.King
+  id: King
+  parent: Chaos.Api.Enums.CardRank
+  langs:
+  - csharp
+  - vb
+  name: King
+  nameWithType: CardRank.King
+  fullName: Chaos.Api.Enums.CardRank.King
+  type: Field
+  source:
+    id: King
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 23
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: King = 10
+    return:
+      type: Chaos.Api.Enums.CardRank
+- uid: Chaos.Api.Enums.CardRank.Ace
+  commentId: F:Chaos.Api.Enums.CardRank.Ace
+  id: Ace
+  parent: Chaos.Api.Enums.CardRank
+  langs:
+  - csharp
+  - vb
+  name: Ace
+  nameWithType: CardRank.Ace
+  fullName: Chaos.Api.Enums.CardRank.Ace
+  type: Field
+  source:
+    id: Ace
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\CardEnum.cs
+    startLine: 24
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Ace = 11
+    return:
+      type: Chaos.Api.Enums.CardRank
+references:
+- uid: Chaos.Api.Enums
+  commentId: N:Chaos.Api.Enums
+  href: Chaos.html
+  name: Chaos.Api.Enums
+  nameWithType: Chaos.Api.Enums
+  fullName: Chaos.Api.Enums
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+- uid: Chaos.Api.Enums.CardRank
+  commentId: T:Chaos.Api.Enums.CardRank
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.CardRank.html
+  name: CardRank
+  nameWithType: CardRank
+  fullName: Chaos.Api.Enums.CardRank

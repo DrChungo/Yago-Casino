@@ -1,0 +1,93 @@
+
+.ListAnimals {
+    position: absolute;              
+    overflow: hidden;              
+    display: flex;
+    flex-direction: column;
+
+    width: 12rem;
+    max-height: 60vh;
+    border-radius: 12px;
+    padding: 0.5rem;
+    
+    color: white;
+    user-select: none;
+    z-index: 999;
+
+    
+    background: rgba(10, 10, 10, 0.85);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.2s ease;
+}
+
+.ListAnimals--dragging {
+    box-shadow:
+        0 16px 48px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+
+.drag-handle {
+    flex-shrink: 0;         
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #D4AF37;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    cursor: grab;
+}
+
+.drag-handle span {
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+
+
+.animals-scroll {
+    flex: 1;                
+    overflow-y: auto;       
+    scrollbar-width: none;
+}
+
+.animals-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.animals-scroll > div {
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.55);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    height: 3.5rem;
+}
+
+.animals-scroll > div:hover {
+    background-color: rgba(8, 8, 8, 0.082);
+    border: 0.15rem solid gold;
+    height: 15rem;
+    animation: parpadeo 2s infinite ease-in-out;
+}
+
+#animal-selected {
+    border: 0.15rem solid gold;
+    background-color: rgba(255, 217, 0, 0.404);
+    height: auto;
+    animation: none;
+}
+
+@keyframes parpadeo {
+    0%   { border-color: gold; background-color: rgba(0, 0, 0, 0.55); }
+    50%  { border-color: rgba(255, 217, 0, 0.753); background-color: rgba(255, 217, 0, 0.096); }
+    100% { border-color: gold; background-color: rgba(0, 0, 0, 0.55); }
+}

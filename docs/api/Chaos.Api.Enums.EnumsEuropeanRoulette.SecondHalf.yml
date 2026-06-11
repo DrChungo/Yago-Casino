@@ -1,0 +1,486 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  id: SecondHalf
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  children:
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.NINETEEN
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_FIVE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_FOUR
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_ONE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_SIX
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_THREE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_TWO
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_EIGHT
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_FIVE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_FOUR
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_NINE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_ONE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_SEVEN
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_SIX
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_THREE
+  - Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_TWO
+  langs:
+  - csharp
+  - vb
+  name: SecondHalf
+  nameWithType: SecondHalf
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  type: Enum
+  source:
+    id: SecondHalf
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 5
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  summary: The last part of the numbers from the 19 to the 36.
+  example: []
+  syntax:
+    content: public enum SecondHalf
+    content.vb: Public Enum SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.NINETEEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.NINETEEN
+  id: NINETEEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: NINETEEN
+  nameWithType: SecondHalf.NINETEEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.NINETEEN
+  type: Field
+  source:
+    id: NINETEEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: NINETEEN = 19
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY
+  id: TWENTY
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: TWENTY
+  nameWithType: SecondHalf.TWENTY
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY
+  type: Field
+  source:
+    id: TWENTY
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 8
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY = 20
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_ONE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_ONE
+  id: TWENTY_ONE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_ONE
+  nameWithType: SecondHalf.TWENTY_ONE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_ONE
+  type: Field
+  source:
+    id: TWENTY_ONE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_ONE = 21
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_TWO
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_TWO
+  id: TWENTY_TWO
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_TWO
+  nameWithType: SecondHalf.TWENTY_TWO
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_TWO
+  type: Field
+  source:
+    id: TWENTY_TWO
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 10
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_TWO = 22
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_THREE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_THREE
+  id: TWENTY_THREE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_THREE
+  nameWithType: SecondHalf.TWENTY_THREE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_THREE
+  type: Field
+  source:
+    id: TWENTY_THREE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_THREE = 23
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_FOUR
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_FOUR
+  id: TWENTY_FOUR
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_FOUR
+  nameWithType: SecondHalf.TWENTY_FOUR
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_FOUR
+  type: Field
+  source:
+    id: TWENTY_FOUR
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 12
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_FOUR = 24
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_FIVE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_FIVE
+  id: TWENTY_FIVE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_FIVE
+  nameWithType: SecondHalf.TWENTY_FIVE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_FIVE
+  type: Field
+  source:
+    id: TWENTY_FIVE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_FIVE = 25
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_SIX
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_SIX
+  id: TWENTY_SIX
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_SIX
+  nameWithType: SecondHalf.TWENTY_SIX
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_SIX
+  type: Field
+  source:
+    id: TWENTY_SIX
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 14
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_SIX = 26
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_SEVEN
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_SEVEN
+  id: TWENTY_SEVEN
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_SEVEN
+  nameWithType: SecondHalf.TWENTY_SEVEN
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_SEVEN
+  type: Field
+  source:
+    id: TWENTY_SEVEN
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 15
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_SEVEN = 27
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_EIGHT
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_EIGHT
+  id: TWENTY_EIGHT
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_EIGHT
+  nameWithType: SecondHalf.TWENTY_EIGHT
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_EIGHT
+  type: Field
+  source:
+    id: TWENTY_EIGHT
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 16
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_EIGHT = 28
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_NINE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_NINE
+  id: TWENTY_NINE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: TWENTY_NINE
+  nameWithType: SecondHalf.TWENTY_NINE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.TWENTY_NINE
+  type: Field
+  source:
+    id: TWENTY_NINE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 17
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: TWENTY_NINE = 29
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY
+  id: THIRTY
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: THIRTY
+  nameWithType: SecondHalf.THIRTY
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY
+  type: Field
+  source:
+    id: THIRTY
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 18
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: THIRTY = 30
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_ONE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_ONE
+  id: THIRTY_ONE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: THIRTY_ONE
+  nameWithType: SecondHalf.THIRTY_ONE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_ONE
+  type: Field
+  source:
+    id: THIRTY_ONE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 19
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: THIRTY_ONE = 31
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_TWO
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_TWO
+  id: THIRTY_TWO
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: THIRTY_TWO
+  nameWithType: SecondHalf.THIRTY_TWO
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_TWO
+  type: Field
+  source:
+    id: THIRTY_TWO
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 20
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: THIRTY_TWO = 32
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_THREE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_THREE
+  id: THIRTY_THREE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: THIRTY_THREE
+  nameWithType: SecondHalf.THIRTY_THREE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_THREE
+  type: Field
+  source:
+    id: THIRTY_THREE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 21
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: THIRTY_THREE = 33
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_FOUR
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_FOUR
+  id: THIRTY_FOUR
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: THIRTY_FOUR
+  nameWithType: SecondHalf.THIRTY_FOUR
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_FOUR
+  type: Field
+  source:
+    id: THIRTY_FOUR
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 22
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: THIRTY_FOUR = 34
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_FIVE
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_FIVE
+  id: THIRTY_FIVE
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: THIRTY_FIVE
+  nameWithType: SecondHalf.THIRTY_FIVE
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_FIVE
+  type: Field
+  source:
+    id: THIRTY_FIVE
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 23
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: THIRTY_FIVE = 35
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_SIX
+  commentId: F:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_SIX
+  id: THIRTY_SIX
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  langs:
+  - csharp
+  - vb
+  name: THIRTY_SIX
+  nameWithType: SecondHalf.THIRTY_SIX
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.THIRTY_SIX
+  type: Field
+  source:
+    id: THIRTY_SIX
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\EnumsEuropeanRoulette\SecondHalf.cs
+    startLine: 24
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums.EnumsEuropeanRoulette
+  syntax:
+    content: THIRTY_SIX = 36
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+references:
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+  commentId: N:Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.html
+  name: Chaos.Api.Enums.EnumsEuropeanRoulette
+  nameWithType: Chaos.Api.Enums.EnumsEuropeanRoulette
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  - name: .
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+    name: EnumsEuropeanRoulette
+    href: Chaos.Api.Enums.EnumsEuropeanRoulette.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  - name: .
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+    name: EnumsEuropeanRoulette
+    href: Chaos.Api.Enums.EnumsEuropeanRoulette.html
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.html
+  name: SecondHalf
+  nameWithType: SecondHalf
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf

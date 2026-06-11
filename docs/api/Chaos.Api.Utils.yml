@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Utils
+  commentId: N:Chaos.Api.Utils
+  id: Chaos.Api.Utils
+  children:
+  - Chaos.Api.Utils.AnimalNameHelper
+  - Chaos.Api.Utils.DrawMoney
+  - Chaos.Api.Utils.GetImageAnimals
+  langs:
+  - csharp
+  - vb
+  name: Chaos.Api.Utils
+  nameWithType: Chaos.Api.Utils
+  fullName: Chaos.Api.Utils
+  type: Namespace
+  assemblies:
+  - Chaos.Api
+references:
+- uid: Chaos.Api.Utils.AnimalNameHelper
+  commentId: T:Chaos.Api.Utils.AnimalNameHelper
+  href: Chaos.Api.Utils.AnimalNameHelper.html
+  name: AnimalNameHelper
+  nameWithType: AnimalNameHelper
+  fullName: Chaos.Api.Utils.AnimalNameHelper
+- uid: Chaos.Api.Utils.DrawMoney
+  commentId: T:Chaos.Api.Utils.DrawMoney
+  href: Chaos.Api.Utils.DrawMoney.html
+  name: DrawMoney
+  nameWithType: DrawMoney
+  fullName: Chaos.Api.Utils.DrawMoney
+- uid: Chaos.Api.Utils.GetImageAnimals
+  commentId: T:Chaos.Api.Utils.GetImageAnimals
+  href: Chaos.Api.Utils.GetImageAnimals.html
+  name: GetImageAnimals
+  nameWithType: GetImageAnimals
+  fullName: Chaos.Api.Utils.GetImageAnimals

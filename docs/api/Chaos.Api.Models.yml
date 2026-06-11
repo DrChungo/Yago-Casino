@@ -1,0 +1,166 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Models
+  commentId: N:Chaos.Api.Models
+  id: Chaos.Api.Models
+  children:
+  - Chaos.Api.Models.Animal
+  - Chaos.Api.Models.AnimalRequest
+  - Chaos.Api.Models.AnimalShop
+  - Chaos.Api.Models.BlackJackGame
+  - Chaos.Api.Models.BlackJackHand
+  - Chaos.Api.Models.Card
+  - Chaos.Api.Models.Casino
+  - Chaos.Api.Models.CoinGame
+  - Chaos.Api.Models.Deck
+  - Chaos.Api.Models.EuropeanRoulette
+  - Chaos.Api.Models.HigherLowerGame
+  - Chaos.Api.Models.RoundEliminated
+  - Chaos.Api.Models.StatusResponse
+  - Chaos.Api.Models.Tragaperras
+  - Chaos.Api.Models.UserOld
+  - Chaos.Api.Models.Wallet
+  langs:
+  - csharp
+  - vb
+  name: Chaos.Api.Models
+  nameWithType: Chaos.Api.Models
+  fullName: Chaos.Api.Models
+  type: Namespace
+  assemblies:
+  - Chaos.Api
+references:
+- uid: Chaos.Api.Models.Animal
+  commentId: T:Chaos.Api.Models.Animal
+  href: Chaos.Api.Models.Animal.html
+  name: Animal
+  nameWithType: Animal
+  fullName: Chaos.Api.Models.Animal
+- uid: Chaos.Api.Models.AnimalShop
+  commentId: T:Chaos.Api.Models.AnimalShop
+  parent: Chaos.Api.Models
+  href: Chaos.Api.Models.AnimalShop.html
+  name: AnimalShop
+  nameWithType: AnimalShop
+  fullName: Chaos.Api.Models.AnimalShop
+- uid: Chaos.Api.Models.BlackJackGame
+  commentId: T:Chaos.Api.Models.BlackJackGame
+  parent: Chaos.Api.Models
+  href: Chaos.Api.Models.BlackJackGame.html
+  name: BlackJackGame
+  nameWithType: BlackJackGame
+  fullName: Chaos.Api.Models.BlackJackGame
+- uid: Chaos.Api.Models.BlackJackHand
+  commentId: T:Chaos.Api.Models.BlackJackHand
+  parent: Chaos.Api.Models
+  href: Chaos.Api.Models.BlackJackHand.html
+  name: BlackJackHand
+  nameWithType: BlackJackHand
+  fullName: Chaos.Api.Models.BlackJackHand
+- uid: Chaos.Api.Models.Card
+  commentId: T:Chaos.Api.Models.Card
+  parent: Chaos.Api.Models
+  href: Chaos.Api.Models.Card.html
+  name: Card
+  nameWithType: Card
+  fullName: Chaos.Api.Models.Card
+- uid: Chaos.Api.Models.Casino
+  commentId: T:Chaos.Api.Models.Casino
+  parent: Chaos.Api.Models
+  href: Chaos.Api.Models.Casino.html
+  name: Casino
+  nameWithType: Casino
+  fullName: Chaos.Api.Models.Casino
+- uid: Chaos.Api.Models.CoinGame
+  commentId: T:Chaos.Api.Models.CoinGame
+  parent: Chaos.Api.Models
+  href: Chaos.Api.Models.CoinGame.html
+  name: CoinGame
+  nameWithType: CoinGame
+  fullName: Chaos.Api.Models.CoinGame
+- uid: Chaos.Api.Models.Deck
+  commentId: T:Chaos.Api.Models.Deck
+  href: Chaos.Api.Models.Deck.html
+  name: Deck
+  nameWithType: Deck
+  fullName: Chaos.Api.Models.Deck
+- uid: Chaos.Api.Models.EuropeanRoulette
+  commentId: T:Chaos.Api.Models.EuropeanRoulette
+  href: Chaos.Api.Models.EuropeanRoulette.html
+  name: EuropeanRoulette
+  nameWithType: EuropeanRoulette
+  fullName: Chaos.Api.Models.EuropeanRoulette
+- uid: Chaos.Api.Models.HigherLowerGame
+  commentId: T:Chaos.Api.Models.HigherLowerGame
+  parent: Chaos.Api.Models
+  href: Chaos.Api.Models.HigherLowerGame.html
+  name: HigherLowerGame
+  nameWithType: HigherLowerGame
+  fullName: Chaos.Api.Models.HigherLowerGame
+- uid: Chaos.Api.Models.RoundEliminated
+  commentId: T:Chaos.Api.Models.RoundEliminated
+  href: Chaos.Api.Models.RoundEliminated.html
+  name: RoundEliminated
+  nameWithType: RoundEliminated
+  fullName: Chaos.Api.Models.RoundEliminated
+- uid: Chaos.Api.Models.StatusResponse
+  commentId: T:Chaos.Api.Models.StatusResponse
+  href: Chaos.Api.Models.StatusResponse.html
+  name: StatusResponse
+  nameWithType: StatusResponse
+  fullName: Chaos.Api.Models.StatusResponse
+- uid: Chaos.Api.Models.Tragaperras
+  commentId: T:Chaos.Api.Models.Tragaperras
+  href: Chaos.Api.Models.Tragaperras.html
+  name: Tragaperras
+  nameWithType: Tragaperras
+  fullName: Chaos.Api.Models.Tragaperras
+- uid: Chaos.Api.Models.UserOld
+  commentId: T:Chaos.Api.Models.UserOld
+  href: Chaos.Api.Models.UserOld.html
+  name: UserOld
+  nameWithType: UserOld
+  fullName: Chaos.Api.Models.UserOld
+- uid: Chaos.Api.Models.Wallet
+  commentId: T:Chaos.Api.Models.Wallet
+  href: Chaos.Api.Models.Wallet.html
+  name: Wallet
+  nameWithType: Wallet
+  fullName: Chaos.Api.Models.Wallet
+- uid: Chaos.Api.Models.AnimalRequest
+  commentId: T:Chaos.Api.Models.AnimalRequest
+  parent: Chaos.Api.Models
+  href: Chaos.Api.Models.AnimalRequest.html
+  name: AnimalRequest
+  nameWithType: AnimalRequest
+  fullName: Chaos.Api.Models.AnimalRequest
+- uid: Chaos.Api.Models
+  commentId: N:Chaos.Api.Models
+  href: Chaos.html
+  name: Chaos.Api.Models
+  nameWithType: Chaos.Api.Models
+  fullName: Chaos.Api.Models
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Models
+    name: Models
+    href: Chaos.Api.Models.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Models
+    name: Models
+    href: Chaos.Api.Models.html

@@ -1,0 +1,343 @@
+[33m6d86287[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32m2026/A[m[33m, [m[1;31morigin/2026/A_Yuk[m[33m, [m[1;31morigin/2026/A[m[33m, [m[1;32m2026/A_Yuk[m[33m)[m React project created
+[33m55b62b9[m Merge branch 'practices_2026' into 2026/A_Yuk
+[33mf0ae422[m[33m ([m[1;31morigin/practices_2026[m[33m, [m[1;31morigin/2026/B_Aaron[m[33m, [m[1;31morigin/2026/B[m[33m, [m[1;32mpractices_2026[m[33m)[m Merge B
+[33ma6dbb11[m Merge aaron/B to B
+[33m0593b6c[m Juegos CoinGame, BlackJack y HigherOrLower interacuan con la DB
+[33m8236b1e[m[33m ([m[1;31morigin/Miguel/2026/B[m[33m)[m Merge branch '2026/B' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into 2026/B
+[33m6c3bfeb[m merge the last commit of european Roullete
+[33mec136dc[m update Europea Roullete, now check the user was the owner of the animals he bet, the animal exist and if the animal not duplicated, update the wallet of the user and turn disabled the animals losted in the game.
+[33m355c0cd[m ahora si merge con prac
+[33m115eab7[m merge con yuk
+[33meb4a4ce[m merge with practices 2026
+[33m76391af[m AnimalService commented. Also warnings and messages solved
+[33m9535926[m merge changes from practias_2026 branch
+[33m1e9202e[m add data verification on EuropeansRoullete endpoint (duplicated Animal in the same Bet)
+[33mbabe3bd[m Rapair some methods y tan ancho jefe
+[33m5738736[m Merge branch '2026/B' into 2026/B_Aaron
+[33mc25b1d6[m Merge branch 'practices_2026' into 2026/B
+[33m973d030[m Merge branch '2026/B' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into 2026/B
+[33m063bdec[m Me he quedado sin token y lo tengo que generar yo asi que solo dire que: Yago te quiero
+[33mb524c5c[m[33m ([m[1;31morigin/2026/C_ESA[m[33m)[m commit
+[33m1431f8c[m Merge branch 'practices_2026' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into practices_2026
+[33m70418f2[m now yes verified if the animal exist
+[33m58ebc22[m merge
+[33m5b3122c[m Refactor and clean up CasinoGamesController and services
+[33mac92087[m Merge branch '2026/B' into 2026/B_Aaron
+[33m4a2d7f9[m change private to public CalculateMultiplyerByRaririty
+[33m4be802e[m El BUENO DE VELDA
+[33mcca99cf[m Creo que esta no?
+[33mbf49128[m Animals and user already connected with the best DB in south africa
+[33m61aae13[m creo?
+[33m14ce274[m imagino?
+[33m9a7f8a3[m program.cs deleted duplicade services
+[33m28fbdbb[m Branch B updated, games Coin and BlackJack save the final stage on DB
+[33m592f69b[m Merge
+[33m320bb23[m All animals already connected with the greatest and the most insane BD in 1905
+[33m9b24df8[m Ultimos cambios para hacer merge
+[33mc675c22[m Juegos CoinGame y BlackJack actualizan resultados a la DB, no interactua con borrado de animales ni wallet para que funcione
+[33m2406e8f[m commit
+[33ma405a79[m mergin the ginger data merg from Yago Boyfriend's
+[33m40a2672[m Refactor slot machine logic and improve API response
+[33m59cc112[m merge de cositillas
+[33m269a786[m Ad Scalar to fresh doc
+[33m0d1a96d[m Add comments to progam
+[33m86681eb[m Add Swagger redirection and cleanup initialization code
+[33mf9d77e7[m Merge branch '2026/C' into practices_2026
+[33m47fa94e[m add comments (Yuk pitochico)
+[33ma531ca4[m mergeo de B a B/Aaron
+[33m10cef7e[m update database
+[33mf575de5[m merge
+[33m2f6880c[m Merge branch '2026/C' into practices_2026
+[33m3e81bdf[m le he mitido toda la p.... digo datos he metido datos
+[33mf35515e[m update Tragaperrillas
+[33mdb1c809[m Merge remote-tracking branch 'origin/practices_2026' into 2026/A_Pere
+[33m7184b79[m NEW MERGE
+[33md81e8d3[m merge with now db models
+[33m74401d7[m Some animalservice changes
+[33mf801e46[m qa
+[33mde8e1cd[m q
+[33m7772b34[m Merge branch '2026/C' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into 2026/C
+[33m29fa7e7[m new ddbb
+[33m5471756[m Muestra del logo del casino en la documentación
+[33m9956b01[m CoinGame estado avanzado + Adaptación de pulls
+[33m12503a9[m Documentation generation with docfx
+[33m42fd533[m Merge branch '2026/C' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into 2026/C
+[33m7790bbf[m Merge branch '2026/C_ESA' into 2026/C
+[33m9bacdda[m Add XML docs to Animal and Auth controller endpoints
+[33m7d04c82[m merge with userService update
+[33m66fd68e[m Merge C with Pere_A
+[33mf26456f[m _animals now is from DB
+[33m055cc88[m Merge branch '2026/C' into practices_2026
+[33mda44e3e[m delete
+[33m5565374[m Merge branch '2026/C' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into 2026/C
+[33m0d231f7[m commit jimena
+[33mbe9a6f2[m Merge branch '2026/C_ESA' into 2026/C
+[33m067df2a[m rwer
+[33mfbd400a[m aesfr
+[33m71b6890[m qwe
+[33m3b5f409[m 345
+[33m43ec9fe[m Refactor: new DB schema, seeding, and Russian Roulette cleanup
+[33me4352f0[m Check for constraints in the database
+[33m50a100f[m Objetos para mandar a la base de datos de los juegos Coin y BlackJack creados, no de hace nada con ellos
+[33m1338eee[m Remove the wallet method
+[33mf3a2abc[m merge the last branch adding the UserService and the endpoint for Russian Roulette
+[33m7e9428c[m modify the Russian Roulette, now can change the boolean isActive and add the money into the user's Wallet
+[33m66ce4b0[m staged with UserServices methods
+[33m0428983[m UserService methods integrated with the database
+[33m7e429fe[m Punto de partida para iniciar implementación de la DB a los juegos
+[33m32aa7e4[m Merge branch '2026/C_JJF' into 2026/C
+[33m45f6eb9[m Merge branch '2026/C' into 2026/C_ESA
+[33m2752957[m Merge branch 'practices_2026' into 2026/C
+[33mfc4b278[m Merge branch 'practices_2026' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into practices_2026
+[33md57ac49[m Merge con practicas
+[33m527db48[m merge otra vez
+[33md8e731d[m Merge con los cambios de Base de Datos
+[33m8b9011c[m Merge de crazys
+[33m76cf8ca[m ad
+[33mfbe3f60[m delete
+[33m7408cc3[m m
+[33me5f4aa5[m merge
+[33md649218[m Merge branch 'practices_2026' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into practices_2026
+[33m7be2092[m Refactor: unify casino games, animals, and user API
+[33m290016b[m push
+[33m91293c4[m Initial EF Core models, migrations, and schema for Casino app
+[33m8be7279[m Merge remote-tracking branch 'origin/2026/A' into 2026/A_Pere
+[33md63fdce[m Refactor: move data layer to infrastructure project
+[33m3e5f593[m Casino Service request fixed
+[33m5702005[m Prices directory added
+[33m658f60d[m Merge
+[33m9f09546[m Ruleta europea con animales
+[33mfe430cb[m merge con a
+[33m645193b[m mege con a
+[33m0ac3260[m Updated buy animal, sell animal and now all animals have one avg value for buy with that avg
+[33m5f3dd93[m Merge branch '2026/B' into practices_2026
+[33m642679e[m arreglos
+[33m62e6210[m Revert "Comprovación en juegos si el animal pertenece al usuario"
+[33m0553852[m merge practiques2026 to B/Aaron
+[33m412b3f7[m Merge B to Practicas2026
+[33m31fed90[m Comprovación en juegos si el animal pertenece al usuario
+[33m5141225[m Manejo error wallet no encontrada, regiones en CasinoGameService, cambios de proabilidades de coingame y cambio de nombre de archivos de juegos de casino
+[33mfae4308[m Wallet update in Casino games
+[33mfbbc799[m Animal shop added and working, also added a casino and shop animal model.
+[33m12717d6[m merge B
+[33m7854ef1[m merge y arreglar codigo cuajao
+[33mdd95369[m Creacion de regiones en casinoService, proabilidades de coingame rehechas, creacuón de funciones de wallet para casinoservice
+[33meaad3b9[m merge de ramas con la de practicas
+[33m2c0fa34[m Coments for the European Roulette and change the name who references the games of the casino from CasinoService -> CasinoGamesServices
+[33m30f945e[m Ajuste de comentarios en juegos
+[33m41f8ad3[m Merge branch '2026/B' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into 2026/B
+[33m0dbde9c[m Add Draw for endpoints
+[33ma42f535[m añadido dibujos
+[33m5e9dbb2[m Merge branch 'practices_2026' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into practices_2026
+[33m4f860c7[m 2 detalles tontos
+[33m6443b62[m Merge branch '2026/C' into 2026/C_ESA
+[33m93d6292[m merge
+[33m4ad94f0[m try
+[33mf9523ba[m Merge branch 'practices_2026' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into practices_2026
+[33m17c52ba[m try
+[33mbc3498f[m qwe
+[33m5c8e5d1[m aw
+[33m8d48b97[m qwe
+[33md897d94[m Merge con casino con cambios de program.cs
+[33m373947f[m Merge con Casino
+[33m9632a0e[m qwe
+[33m1102bdf[m qwe
+[33mdcad1fe[m merge
+[33m6df5374[m Merge B to Practicas2026
+[33md6ba7f0[m Separación de wallet y user
+[33m9ce0e47[m Merge Aaton/B to B
+[33m7c76952[m repair issues about identation
+[33m78c3174[m merge from Aaron Branch and Miguel Branch
+[33m5dc42b6[m Separar logica del modelo Deck y hacer uso de wallet en los juegos BlackJack y Higher or Lower
+[33maf5c323[m merge con rama yuk y rama pere
+[33mbb5dc24[m Add endpoint for European Roulette and the logical in the service
+[33me7843f1[m Password now yes 100% no fails hashed
+[33m7e303c9[m Enpoints con UserId, Wallet actualizada, implementada con la BBDD
+[33m5665ab1[m cambios de A
+[33m2c5d6ed[m Merge con lo de BBDD
+[33md0e3c49[m Merge con lo de BBDD
+[33me0d56df[m QWD
+[33m7d2625a[m ASD
+[33m03ef28f[m controller update
+[33m756d68e[m Add casino ownership, animal purchase, and bulk user creation
+[33mdf56793[m Refactor EF Core models to use *DB naming convention
+[33me948011[m Login implementado
+[33m2ffc049[m Added attribute OwnerId into animal change the BuyAnimal method and added CreateAnimal method
+[33m6c30f90[m Hogher Lower Game Created + Wallet funcional
+[33mec2b738[m Initial EF Core schema for casino app, add models & setup
+[33m0608c72[m Refactor: add JWT auth, casino games, user mgmt, docs
+[33mc396422[m Integrate EF Core with PostgreSQL and add initial migration
+[33m6788a9c[m asembly
+[33m125a8d8[m Integrate EF Core with PostgreSQL and add initial schema
+[33mff77ec9[m test
+[33mabd629f[m Merge branch '2026/A_Pere' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into 2026/A_Pere
+[33m071f0d1[m Cambios de depuración de código
+[33m2623f03[m nuse
+[33m3b5c52f[m qwe
+[33m8f52656[m por si acaso
+[33mc75572a[m Integración de JWT con endpoints de animales y casino
+[33med5bd7a[m Delete Chaos/obj/Debug/net9.0 directory
+[33m7c19600[m Integrar JWT con Casino Controller
+[33m3c1f32a[m qw
+[33m6a0d761[m CHA
+[33m39027bb[m SAVE CH<ANGE
+[33ma0fd093[m Add namespace and using directive to User.cs
+[33m58cdf3a[m Rename HealthStatusEnum to HealthEnum, update ShopTransaction
+[33m887f72e[m Autenticación con JWT
+[33mdecb858[m Refactor models and enums for consistency and clarity
+[33mece3ed7[m no se que cambios hay2
+[33m82eaa6b[m Merge branch '2026/B' into 2026/B_Aaron
+[33m372a543[m merge with the current branch
+[33md93f39c[m add European Roullete
+[33mfbb8650[m Merge branch '2026/A_Yuk' into practices_2026
+[33me9feef8[m GetWalletById added for u Miguel Angel bby
+[33m2e13c2e[m remove use of _logger in CasinoService
+[33m37d9572[m try
+[33m2ac26a9[m try2
+[33m07a8114[m Merge branch 'practices_2026' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into practices_2026
+[33mac8d663[m Merge branch to B
+[33m81a1ca2[m BlackJackGame created
+[33mb640197[m Merge branch '2026/C' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into 2026/C
+[33mc586e51[m 5rt
+[33mdcba59c[m try
+[33m1e7a687[m Merge branch '2026/A' into practices_2026
+[33mb3e7cf1[m Refactor data model: casino, user, shop, games overhaul
+[33ma120ba3[m asembly
+[33m40ca4db[m Refactor domain model: casino, animal, and game entities
+[33mf8ccf95[m Refactor domain model: casino, shop, user, security
+[33mcfde576[m User and wallets models, also create user endpoint and function for sell an animal where we put usr id and animal id and get the animal value and added into user wallet
+[33m13f7851[m Merge branch '2026/B' into practices_2026
+[33m91ae10e[m add comment for Russian Rulet endpoint
+[33maf22129[m Merge branch 'practices_2026' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into practices_2026
+[33m1c9fd2e[m Add Russian Roulette game feature and standardize endpoints
+[33mea52c13[m dentro de rama
+[33m8dc0079[m segunda prueba pere
+[33m51040a8[m prueba pere
+[33ma3fe8a9[m mensaje de commit de prueba para Teams
+[33m3d2ad17[m test
+[33m241d49e[m test
+[33m34563e4[m Merge remote-tracking branch 'origin/practices_2026' into 2026/A_Pere
+[33m6789eb0[m test
+[33mabe3f0c[m test
+[33m8fbd42f[m test
+[33m4749dfa[m test
+[33m07ce0ec[m Delete .github/workflows directory
+[33m387871a[m test
+[33mfab50f3[m test for the mail
+[33m65e3f7f[m comment on animalService sellanimal
+[33m5225abe[m Prueba de push para correo
+[33m078665b[m Delete .github/workflows directory
+[33m69fc73c[m Cambios mergeados con el endpoint de SellAnimal
+[33m4a54f29[m SellAnimal function
+[33mbd4b83c[m Update main.yml
+[33m3ff81cc[m Update main.yml
+[33meda47cc[m Update main.yml
+[33mc097b3b[m Merge branch '2026/B' into 2026/B_Aaron
+[33m4e66053[m BlackJack model and enum created
+[33m03463fa[m Update main.yml
+[33m6dea401[m unificar Coin
+[33mcaeb30c[m Create main.yml
+[33m8339b46[m Merge branch 'practices_2026' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into practices_2026
+[33m354091c[m merge branch games from casino
+[33m3d2e162[m merge juegos de casino
+[33m8658aee[m fixed issue removed Id animal when user trys to play tragaperrillas
+[33mc61c97c[m Merge branch '2026/B_Aaron' into 2026/B
+[33ma7c49d0[m CoinGame, manejo de error animal not found
+[33m885cc7b[m Comentarios updates con comentario del casino
+[33mbc8b1ab[m Comentarios actualizados
+[33m0ec0421[m Delete Chaos/obj/Debug/net9.0 directory
+[33m7333223[m Todos los comentarios y correciones de controller introducidos.
+[33m3b9e6c6[m Merge to B
+[33m74ed971[m Game coin created
+[33m388a67f[m Modificado endpoint tragaperrillas y trasladado al controlador de animal por problemas de compatibilidad hasta que haya base de datos
+[33m1ba1a15[m Merge remote-tracking branch 'origin/practices_2026' into 2026/B
+[33m3e870df[m Add core models for casino, shop, and user systems
+[33m45e1b32[m Merge de la rama B a la rama B/Aaron
+[33mf54d20d[m Commit inicial de juego de la moneda
+[33m8193bd6[m Merge remote-tracking branch 'origin/2026/C' into practices_2026
+[33m7da7610[m añadido metodo para tragaperrillas
+[33m898982f[m Primeros comentarios agregados.
+[33m0f50d56[m Merge pull request #10 from antonio-bestard/2026/A_Pere
+[33m5a15521[m Refactor AnimalService value calc, DI, and namespaces
+[33m0b132da[m Depuración de código. Optimización del cálculo de stats. Añadido el endpoint de GetAnimalById
+[33mda9198e[m Update cache files with new build and input hashes
+[33m8a3f356[m Add core domain models for animal shop and casino system
+[33mae4b9ab[m creado los archivos necesarios para el controlador,servicio e interfaz para el casino
+[33mf09a414[m merge
+[33mf3d9921[m Upgrade to .NET 9, update Swagger, and refactor DI
+[33m79b7c5d[m Merge branch '2026/A' into practices_2026
+[33m52a80ad[m La mama de la mama
+[33md9baab4[m Update to .NET 9, Swashbuckle 10, and improve null safety
+[33m8473881[m Refactor Animal API to async, add initial animals endpoint
+[33me0a95e9[m Remove build artifacts and API docs from Chaos.Api
+[33m0cb57fb[m Refactor Animal API: enums, endpoints, and models
+[33m552ecfa[m up!
+[33m0dd7c0f[m adios asembly
+[33mb4f91a7[m Refactor Animal API to async, add InitialAnimals endpoint
+[33mbee99ac[m Delete Chaos/obj directory
+[33m8b50ed7[m Refactor AnimalController to async; update value formula
+[33m24cd8d9[m 
+[33m7614489[m Update assembly informational version for new build
+[33m82ca243[m Messi
+[33m06dafa3[m Update assembly version and build cache hashes
+[33m45c4678[m Remove assembly info files and update .gitignore
+[33mcba9002[m merge historico
+[33m771d821[m recuperado los metodos para la lista en el endpoit de getAllAnimals
+[33m9dfb45b[m recuperado datos del último comit UP!
+[33me004eb3[m Merge pull request #7 from antonio-bestard/2026/C
+[33mbe0f9f6[m Update AssemblyInformationalVersion for new build
+[33m091f889[m Refactor Animal models, service, and API endpoints
+[33mf4b07cd[m Merge remote-tracking branch 'origin/practices_2026' into 2026/C
+[33mfc01971[m up!
+[33m8f62937[m Merge branch 'practices_2026' into 2026/C
+[33m0a9748a[m up!
+[33me147f4b[m cambio 06/05/2026
+[33m04f7950[m push animales 06/05/2026
+[33m06593d6[m ultimo cambio dia 06/05/2026
+[33ma6615ad[m codigo mejorado de animal
+[33m17cc5af[m Remove HealthEnum and update assembly metadata
+[33m965f85a[m Switch animal IDs to Guid, add YAGO health state
+[33m4fb31f5[m Refactor animal ID to Guid and update models
+[33med40e39[m Refactor animal models and API; remove AnimalPen logic
+[33mb35c432[m Refactor animal IDs to Guid and centralize value logic
+[33ma1268a9[m merge
+[33m754d9c4[m Merge branch 'practices_2026' into 2026/C
+[33mf2f6ecd[m Merge branch 'practices_2026' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into practices_2026
+[33m3500540[m Merge branch 'practices_2026' of https://github.siemens.cloud/antonio-bestard/Chaos-Api into practices_2026
+[33m5f178bb[m Merge branch 'practices_2026' into 2026/C
+[33mb6102af[m Merge remote-tracking branch 'origin/practices_2026' into practices_2026
+[33m9dc7743[m Cambios finales en común 06/05/2026
+[33m78bc153[m Adaptación de las clases Animals
+[33ma0822d9[m merge
+[33md584021[m cambio gratuito
+[33mc2b4e65[m Merge pull request #4 from antonio-bestard/2026/C
+[33m19ee014[m Delete Chaos/Dockerfile
+[33mc761cad[m 2 Merge
+[33m5bf518a[m MERGE
+[33mc2fdfc9[m Delete Chaos/obj directory
+[33md25b9cc[m Clean build artifacts
+[33m74cac52[m comentario de prueba
+[33m5b64c4c[m .
+[33m2b3760a[m  modificar archivo .gitignore
+[33m5cc75de[m Clean build artifacts
+[33m0b366ec[m Add Monkey, Rabbit, Parrot support & web UI; enable CORS
+[33m28ae933[m Merge remote-tracking branch 'origin/2026/B' into practices_2026
+[33m3db4313[m creación de modelo animal y funcionamiento de creación de animales
+[33m5ef5a16[m modificado el obj y añadido el gitignore
+[33m87c1f72[m revert del revert
+[33m4fe2c12[m cambio
+[33m3eef476[m Revert "adaptado el endpoint para añadir una lista de animales"
+[33m406bb23[m Revert "test"
+[33m2fa16ad[m añadido el .gitignore
+[33m1416a15[m cambios con el gitignore
+[33ma16ae3e[m Add cat price calculation support and API endpoint
+[33mb60eb4d[m test
+[33m031ff3b[m Merge pull request #1 from antonio-bestard/2026/B
+[33m4d62aea[m adaptado el endpoint para añadir una lista de animales
+[33m1bb756f[m Add animal price calculation API with dog support
+[33m2b88f7e[m first add to remote repository modify endpoint health for /time/now and add to app the different endpoint health from the controller healthController
+[33m57678c9[m Add Path property to StatusResponse and update POST logic
+[33ma50d5c3[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m Delete Chaos/bin/Debug/net9.0 directory
+[33mfbcfebe[m add project
+[33m22ce7b8[m Create .gitignore
+[33m635166b[m Initial commit

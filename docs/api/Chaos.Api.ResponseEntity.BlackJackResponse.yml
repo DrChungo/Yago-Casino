@@ -1,0 +1,593 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse
+  commentId: T:Chaos.Api.ResponseEntity.BlackJackResponse
+  id: BlackJackResponse
+  parent: Chaos.Api.ResponseEntity
+  children:
+  - Chaos.Api.ResponseEntity.BlackJackResponse.AnimalName
+  - Chaos.Api.ResponseEntity.BlackJackResponse.DealerScore
+  - Chaos.Api.ResponseEntity.BlackJackResponse.GameId
+  - Chaos.Api.ResponseEntity.BlackJackResponse.Message
+  - Chaos.Api.ResponseEntity.BlackJackResponse.PlayerScore
+  - Chaos.Api.ResponseEntity.BlackJackResponse.Result
+  - Chaos.Api.ResponseEntity.BlackJackResponse.Reward
+  langs:
+  - csharp
+  - vb
+  name: BlackJackResponse
+  nameWithType: BlackJackResponse
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse
+  type: Class
+  source:
+    id: BlackJackResponse
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\ResponseEntity\BlackJackResponse.cs
+    startLine: 4
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.ResponseEntity
+  syntax:
+    content: public class BlackJackResponse
+    content.vb: Public Class BlackJackResponse
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse.GameId
+  commentId: P:Chaos.Api.ResponseEntity.BlackJackResponse.GameId
+  id: GameId
+  parent: Chaos.Api.ResponseEntity.BlackJackResponse
+  langs:
+  - csharp
+  - vb
+  name: GameId
+  nameWithType: BlackJackResponse.GameId
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse.GameId
+  type: Property
+  source:
+    id: GameId
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\ResponseEntity\BlackJackResponse.cs
+    startLine: 6
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.ResponseEntity
+  syntax:
+    content: public Guid GameId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property GameId As Guid
+  overload: Chaos.Api.ResponseEntity.BlackJackResponse.GameId*
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse.AnimalName
+  commentId: P:Chaos.Api.ResponseEntity.BlackJackResponse.AnimalName
+  id: AnimalName
+  parent: Chaos.Api.ResponseEntity.BlackJackResponse
+  langs:
+  - csharp
+  - vb
+  name: AnimalName
+  nameWithType: BlackJackResponse.AnimalName
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse.AnimalName
+  type: Property
+  source:
+    id: AnimalName
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\ResponseEntity\BlackJackResponse.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.ResponseEntity
+  syntax:
+    content: public string AnimalName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AnimalName As String
+  overload: Chaos.Api.ResponseEntity.BlackJackResponse.AnimalName*
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse.Reward
+  commentId: P:Chaos.Api.ResponseEntity.BlackJackResponse.Reward
+  id: Reward
+  parent: Chaos.Api.ResponseEntity.BlackJackResponse
+  langs:
+  - csharp
+  - vb
+  name: Reward
+  nameWithType: BlackJackResponse.Reward
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse.Reward
+  type: Property
+  source:
+    id: Reward
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\ResponseEntity\BlackJackResponse.cs
+    startLine: 8
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.ResponseEntity
+  syntax:
+    content: public int Reward { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Reward As Integer
+  overload: Chaos.Api.ResponseEntity.BlackJackResponse.Reward*
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse.Message
+  commentId: P:Chaos.Api.ResponseEntity.BlackJackResponse.Message
+  id: Message
+  parent: Chaos.Api.ResponseEntity.BlackJackResponse
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: BlackJackResponse.Message
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse.Message
+  type: Property
+  source:
+    id: Message
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\ResponseEntity\BlackJackResponse.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.ResponseEntity
+  syntax:
+    content: public string Message { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Message As String
+  overload: Chaos.Api.ResponseEntity.BlackJackResponse.Message*
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse.Result
+  commentId: P:Chaos.Api.ResponseEntity.BlackJackResponse.Result
+  id: Result
+  parent: Chaos.Api.ResponseEntity.BlackJackResponse
+  langs:
+  - csharp
+  - vb
+  name: Result
+  nameWithType: BlackJackResponse.Result
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse.Result
+  type: Property
+  source:
+    id: Result
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\ResponseEntity\BlackJackResponse.cs
+    startLine: 10
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.ResponseEntity
+  syntax:
+    content: public BlackJackGameResultEnum Result { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Api.Enums.BlackJackGameResultEnum
+    content.vb: Public Property Result As BlackJackGameResultEnum
+  overload: Chaos.Api.ResponseEntity.BlackJackResponse.Result*
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse.PlayerScore
+  commentId: P:Chaos.Api.ResponseEntity.BlackJackResponse.PlayerScore
+  id: PlayerScore
+  parent: Chaos.Api.ResponseEntity.BlackJackResponse
+  langs:
+  - csharp
+  - vb
+  name: PlayerScore
+  nameWithType: BlackJackResponse.PlayerScore
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse.PlayerScore
+  type: Property
+  source:
+    id: PlayerScore
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\ResponseEntity\BlackJackResponse.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.ResponseEntity
+  syntax:
+    content: public int PlayerScore { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property PlayerScore As Integer
+  overload: Chaos.Api.ResponseEntity.BlackJackResponse.PlayerScore*
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse.DealerScore
+  commentId: P:Chaos.Api.ResponseEntity.BlackJackResponse.DealerScore
+  id: DealerScore
+  parent: Chaos.Api.ResponseEntity.BlackJackResponse
+  langs:
+  - csharp
+  - vb
+  name: DealerScore
+  nameWithType: BlackJackResponse.DealerScore
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse.DealerScore
+  type: Property
+  source:
+    id: DealerScore
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\ResponseEntity\BlackJackResponse.cs
+    startLine: 12
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.ResponseEntity
+  syntax:
+    content: public int DealerScore { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DealerScore As Integer
+  overload: Chaos.Api.ResponseEntity.BlackJackResponse.DealerScore*
+references:
+- uid: Chaos.Api.ResponseEntity
+  commentId: N:Chaos.Api.ResponseEntity
+  href: Chaos.html
+  name: Chaos.Api.ResponseEntity
+  nameWithType: Chaos.Api.ResponseEntity
+  fullName: Chaos.Api.ResponseEntity
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.ResponseEntity
+    name: ResponseEntity
+    href: Chaos.Api.ResponseEntity.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.ResponseEntity
+    name: ResponseEntity
+    href: Chaos.Api.ResponseEntity.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse.GameId*
+  commentId: Overload:Chaos.Api.ResponseEntity.BlackJackResponse.GameId
+  href: Chaos.Api.ResponseEntity.BlackJackResponse.html#Chaos_Api_ResponseEntity_BlackJackResponse_GameId
+  name: GameId
+  nameWithType: BlackJackResponse.GameId
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse.GameId
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse.AnimalName*
+  commentId: Overload:Chaos.Api.ResponseEntity.BlackJackResponse.AnimalName
+  href: Chaos.Api.ResponseEntity.BlackJackResponse.html#Chaos_Api_ResponseEntity_BlackJackResponse_AnimalName
+  name: AnimalName
+  nameWithType: BlackJackResponse.AnimalName
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse.AnimalName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse.Reward*
+  commentId: Overload:Chaos.Api.ResponseEntity.BlackJackResponse.Reward
+  href: Chaos.Api.ResponseEntity.BlackJackResponse.html#Chaos_Api_ResponseEntity_BlackJackResponse_Reward
+  name: Reward
+  nameWithType: BlackJackResponse.Reward
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse.Reward
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse.Message*
+  commentId: Overload:Chaos.Api.ResponseEntity.BlackJackResponse.Message
+  href: Chaos.Api.ResponseEntity.BlackJackResponse.html#Chaos_Api_ResponseEntity_BlackJackResponse_Message
+  name: Message
+  nameWithType: BlackJackResponse.Message
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse.Message
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse.Result*
+  commentId: Overload:Chaos.Api.ResponseEntity.BlackJackResponse.Result
+  href: Chaos.Api.ResponseEntity.BlackJackResponse.html#Chaos_Api_ResponseEntity_BlackJackResponse_Result
+  name: Result
+  nameWithType: BlackJackResponse.Result
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse.Result
+- uid: Chaos.Api.Enums.BlackJackGameResultEnum
+  commentId: T:Chaos.Api.Enums.BlackJackGameResultEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.BlackJackGameResultEnum.html
+  name: BlackJackGameResultEnum
+  nameWithType: BlackJackGameResultEnum
+  fullName: Chaos.Api.Enums.BlackJackGameResultEnum
+- uid: Chaos.Api.Enums
+  commentId: N:Chaos.Api.Enums
+  href: Chaos.html
+  name: Chaos.Api.Enums
+  nameWithType: Chaos.Api.Enums
+  fullName: Chaos.Api.Enums
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse.PlayerScore*
+  commentId: Overload:Chaos.Api.ResponseEntity.BlackJackResponse.PlayerScore
+  href: Chaos.Api.ResponseEntity.BlackJackResponse.html#Chaos_Api_ResponseEntity_BlackJackResponse_PlayerScore
+  name: PlayerScore
+  nameWithType: BlackJackResponse.PlayerScore
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse.PlayerScore
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse.DealerScore*
+  commentId: Overload:Chaos.Api.ResponseEntity.BlackJackResponse.DealerScore
+  href: Chaos.Api.ResponseEntity.BlackJackResponse.html#Chaos_Api_ResponseEntity_BlackJackResponse_DealerScore
+  name: DealerScore
+  nameWithType: BlackJackResponse.DealerScore
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse.DealerScore

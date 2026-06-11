@@ -1,0 +1,323 @@
+﻿@page "/SlotGamePage"
+
+@using Chaos.BlazorCasinoApp.IApiService.Slots
+@using Chaos.Shared.ResponseEntity.SlotGame
+
+@inject ISlotGameService SlotGameConfigService
+@inject ISlotSymbolService SlotSymbolService
+@inject ISlotPayoutRuleService SlotPayoutRuleService
+@inject NavigationManager Nav
+
+<PageTitle>Backoffice — Slot Game</PageTitle>
+
+<div class="casino-page">
+
+    <h3>🎰 Slot Game — Configuración</h3>
+
+   
+    <div class="casino-tabs">
+        <button class="casino-tab @(activeTab == "config" ? "casino-tab-active" : "")"
+                @onclick='() => SetTab("config")'>
+            🎰 Slot Config
+        </button>
+        <button class="casino-tab @(activeTab == "symbols" ? "casino-tab-active" : "")"
+                @onclick='() => SetTab("symbols")'>
+            🎴 Símbolos
+        </button>
+        <button class="casino-tab @(activeTab == "payout" ? "casino-tab-active" : "")"
+                @onclick='() => SetTab("payout")'>
+            💰 Payout Rules
+        </button>
+    </div>
+
+    @if (isLoading)
+    {
+        <div class="casino-loading">
+            <div class="casino-spinner" role="status">🛞</div>
+            <p class="text-gold">Cargando datos...</p>
+        </div>
+    }
+    else if (errorMessage is not null)
+    {
+        <div class="alert alert-danger">⚠️ @errorMessage</div>
+    }
+    else
+    {
+     
+        @if (activeTab == "config")
+        {
+            <div class="casino-toolbar">
+                <h5>Configuraciones</h5>
+                <button class="btn-casino-primary"
+                        @onclick='() => Nav.NavigateTo("/SlotGamePage/create")'>
+                    <span class="btn-casino-icon">➕</span>
+                    Nueva Configuración
+                </button>
+            </div>
+
+            @if (configs.Count == 0)
+            {
+                <div class="casino-empty-state">
+                    <div class="casino-empty-icon">🎰</div>
+                    <h5>NO HAY CONFIGURACIONES</h5>
+                    <p>La mesa está vacía. ¡Crea tu primera configuración!</p>
+                </div>
+            }
+            else
+            {
+                <div class="casino-table-wrapper">
+                    <table class="casino-table">
+                        <thead>
+                            <tr>
+                                <th>Máquina</th>
+                                <th>Juego</th>
+                                <th>Multiplicador</th>
+                                <th>Reels</th>
+                                <th>Rows</th>
+                                <th>PayLines</th>
+                                <th>Estado</th>
+                                <th>Creado</th>
+                                <th style="text-align:center;">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var config in configs)
+                            {
+                                <tr>
+                                    <td class="cell-gold-bold">@config.MachineName</td>
+                                    <td class="cell-secondary">@config.GameName</td>
+                                    <td>@config.Multiplier</td>
+                                    <td>@config.NumberOfReels</td>
+                                    <td>@config.NumberOfRows</td>
+                                    <td>@config.PayLines</td>
+                                    <td>
+                                        @if (config.IsActive)
+                                        {
+                                            <span class="badge-casino-active">● Activo</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge-casino-inactive">● Inactivo</span>
+                                        }
+                                    </td>
+                                    <td class="cell-muted">@config.CreatedAt</td>
+                                    <td class="acciones-cell">
+                                        <button class="btn-casino-edit"
+                                                @onclick='() => Nav.NavigateTo($"/slot-config/edit/{config.Id}")'>
+                                            ✏️ Editar
+                                        </button>
+                                        <button class="btn-casino-delete"
+                                                @onclick='() => DeleteConfig(config.Id)'>
+                                            🗑️ Eliminar
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        }
+
+       
+        @if (activeTab == "symbols")
+        {
+            <div class="casino-toolbar">
+                <h5>Símbolos</h5>
+                <button class="btn-casino-primary"
+                        @onclick='() => Nav.NavigateTo("/slot-symbol/create")'>
+                    <span class="btn-casino-icon">➕</span>
+                    Nuevo Símbolo
+                </button>
+            </div>
+
+            @if (symbols.Count == 0)
+            {
+                <div class="casino-empty-state">
+                    <div class="casino-empty-icon">🎴</div>
+                    <h5>NO HAY SÍMBOLOS</h5>
+                    <p>No se han creado símbolos todavía.</p>
+                </div>
+            }
+            else
+            {
+                <div class="casino-table-wrapper">
+                    <table class="casino-table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Código</th>
+                                <th>Rareza</th>
+                                <th>Valor Base</th>
+                                <th>Config</th>
+                                <th>Estado</th>
+                                <th>Creado</th>
+                                <th style="text-align:center;">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var symbol in symbols)
+                            {
+                                <tr>
+                                    <td class="cell-gold-bold">@symbol.SymbolName</td>
+                                    <td class="cell-secondary">@symbol.SymbolCode</td>
+                                    <td>@symbol.Rarity</td>
+                                    <td>@symbol.BaseValue</td>
+                                    <td class="cell-secondary">@symbol.SlotGameConfigName</td>
+                                    <td>
+                                        @if (symbol.IsActive)
+                                        {
+                                            <span class="badge-casino-active">● Activo</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge-casino-inactive">● Inactivo</span>
+                                        }
+                                    </td>
+                                    <td class="cell-muted">@symbol.CreatedAt</td>
+                                    <td class="acciones-cell">
+                                        <button class="btn-casino-edit"
+                                                @onclick='() => Nav.NavigateTo($"/slot-symbol/edit/{symbol.Id}")'>
+                                            ✏️ Editar
+                                        </button>
+                                        <button class="btn-casino-delete"
+                                                @onclick='() => DeleteSymbol(symbol.Id)'>
+                                            🗑️ Eliminar
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        }
+
+     
+        @if (activeTab == "payout")
+        {
+            <div class="casino-toolbar">
+                <h5>Payout Rules</h5>
+                <button class="btn-casino-primary"
+                        @onclick='() => Nav.NavigateTo("/slot-payout/create")'>
+                    <span class="btn-casino-icon">➕</span>
+                    Nueva Regla
+                </button>
+            </div>
+
+            @if (payoutRules.Count == 0)
+            {
+                <div class="casino-empty-state">
+                    <div class="casino-empty-icon">💰</div>
+                    <h5>NO HAY REGLAS DE PAYOUT</h5>
+                    <p>No se han creado reglas todavía.</p>
+                </div>
+            }
+            else
+            {
+                <div class="casino-table-wrapper">
+                    <table class="casino-table">
+                        <thead>
+                            <tr>
+                                <th>Combinación</th>
+                                <th>Multiplicador Payout</th>
+                                <th>Config</th>
+                                <th>Símbolo</th>
+                                <th>Estado</th>
+                                <th>Creado</th>
+                                <th style="text-align:center;">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var rule in payoutRules)
+                            {
+                                <tr>
+                                    <td class="cell-gold-bold">@rule.Combination</td>
+                                    <td>@rule.PayoutMultiplier</td>
+                                    <td class="cell-secondary">@rule.SlotGameConfigName</td>
+                                    <td class="cell-secondary">@rule.SlotSymbolName</td>
+                                    <td>
+                                        @if (rule.IsActive)
+                                        {
+                                            <span class="badge-casino-active">● Activo</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge-casino-inactive">● Inactivo</span>
+                                        }
+                                    </td>
+                                    <td class="cell-muted">@rule.CreatedAt</td>
+                                    <td class="acciones-cell">
+                                        <button class="btn-casino-edit"
+                                                @onclick='() => Nav.NavigateTo($"/slot-payout/edit/{rule.Id}")'>
+                                            ✏️ Editar
+                                        </button>
+                                        <button class="btn-casino-delete"
+                                                @onclick='() => DeletePayout(rule.Id)'>
+                                            🗑️ Eliminar
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        }
+    }
+
+</div>
+
+@code {
+    [Parameter] public Guid GameId { get; set; }
+
+    private string activeTab = "config";
+    private bool isLoading = true;
+    private string? errorMessage;
+
+    private List<SlotGameConfigResponse> configs = new();
+    private List<SlotSymbolResponse> symbols = new();
+    private List<SlotPayoutRuleResponse> payoutRules = new();
+
+    protected override async Task OnInitializedAsync() => await LoadAll();
+
+    private async Task LoadAll()
+    {
+        isLoading = true;
+        errorMessage = null;
+        try
+        {
+            configs = await SlotGameConfigService.GetAllAsync();
+            symbols = await SlotSymbolService.GetAllAsync();
+            payoutRules = await SlotPayoutRuleService.GetAllAsync();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al cargar datos: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private void SetTab(string tab) => activeTab = tab;
+
+    private async Task DeleteConfig(Guid id)
+    {
+        try { await SlotGameConfigService.DeleteAsync(id); await LoadAll(); }
+        catch (Exception ex) { errorMessage = $"Error: {ex.Message}"; }
+    }
+
+    private async Task DeleteSymbol(Guid id)
+    {
+        try { await SlotSymbolService.DeleteAsync(id); await LoadAll(); }
+        catch (Exception ex) { errorMessage = $"Error: {ex.Message}"; }
+    }
+
+    private async Task DeletePayout(Guid id)
+    {
+        try { await SlotPayoutRuleService.DeleteAsync(id); await LoadAll(); }
+        catch (Exception ex) { errorMessage = $"Error: {ex.Message}"; }
+    }
+}

@@ -1,0 +1,1013 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Infraestructure.Models.HigherLowerSession
+  commentId: T:Chaos.Infraestructure.Models.HigherLowerSession
+  id: HigherLowerSession
+  parent: Chaos.Infraestructure.Models
+  children:
+  - Chaos.Infraestructure.Models.HigherLowerSession.Animal
+  - Chaos.Infraestructure.Models.HigherLowerSession.AnimalId
+  - Chaos.Infraestructure.Models.HigherLowerSession.FinishedAt
+  - Chaos.Infraestructure.Models.HigherLowerSession.GameSession
+  - Chaos.Infraestructure.Models.HigherLowerSession.GameSessionId
+  - Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerGameConfig
+  - Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerGameConfigId
+  - Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerRounds
+  - Chaos.Infraestructure.Models.HigherLowerSession.Id
+  - Chaos.Infraestructure.Models.HigherLowerSession.RoundsPlayed
+  - Chaos.Infraestructure.Models.HigherLowerSession.StartedAt
+  - Chaos.Infraestructure.Models.HigherLowerSession.Status
+  - Chaos.Infraestructure.Models.HigherLowerSession.TotalEarned
+  - Chaos.Infraestructure.Models.HigherLowerSession.User
+  - Chaos.Infraestructure.Models.HigherLowerSession.UserId
+  langs:
+  - csharp
+  - vb
+  name: HigherLowerSession
+  nameWithType: HigherLowerSession
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession
+  type: Class
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/HigherLowerSession.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: HigherLowerSession
+    path: ../Chaos.Infraestructure/Models/HigherLowerSession.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public class HigherLowerSession
+    content.vb: Public Class HigherLowerSession
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.Id
+  commentId: P:Chaos.Infraestructure.Models.HigherLowerSession.Id
+  id: Id
+  parent: Chaos.Infraestructure.Models.HigherLowerSession
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: HigherLowerSession.Id
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.Id
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/HigherLowerSession.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: Id
+    path: ../Chaos.Infraestructure/Models/HigherLowerSession.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid Id { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Id As Guid
+  overload: Chaos.Infraestructure.Models.HigherLowerSession.Id*
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.Status
+  commentId: P:Chaos.Infraestructure.Models.HigherLowerSession.Status
+  id: Status
+  parent: Chaos.Infraestructure.Models.HigherLowerSession
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: HigherLowerSession.Status
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.Status
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/HigherLowerSession.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: Status
+    path: ../Chaos.Infraestructure/Models/HigherLowerSession.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string Status { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Status As String
+  overload: Chaos.Infraestructure.Models.HigherLowerSession.Status*
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.TotalEarned
+  commentId: P:Chaos.Infraestructure.Models.HigherLowerSession.TotalEarned
+  id: TotalEarned
+  parent: Chaos.Infraestructure.Models.HigherLowerSession
+  langs:
+  - csharp
+  - vb
+  name: TotalEarned
+  nameWithType: HigherLowerSession.TotalEarned
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.TotalEarned
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/HigherLowerSession.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: TotalEarned
+    path: ../Chaos.Infraestructure/Models/HigherLowerSession.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public decimal TotalEarned { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property TotalEarned As Decimal
+  overload: Chaos.Infraestructure.Models.HigherLowerSession.TotalEarned*
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.RoundsPlayed
+  commentId: P:Chaos.Infraestructure.Models.HigherLowerSession.RoundsPlayed
+  id: RoundsPlayed
+  parent: Chaos.Infraestructure.Models.HigherLowerSession
+  langs:
+  - csharp
+  - vb
+  name: RoundsPlayed
+  nameWithType: HigherLowerSession.RoundsPlayed
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.RoundsPlayed
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/HigherLowerSession.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: RoundsPlayed
+    path: ../Chaos.Infraestructure/Models/HigherLowerSession.cs
+    startLine: 15
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public int RoundsPlayed { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property RoundsPlayed As Integer
+  overload: Chaos.Infraestructure.Models.HigherLowerSession.RoundsPlayed*
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.StartedAt
+  commentId: P:Chaos.Infraestructure.Models.HigherLowerSession.StartedAt
+  id: StartedAt
+  parent: Chaos.Infraestructure.Models.HigherLowerSession
+  langs:
+  - csharp
+  - vb
+  name: StartedAt
+  nameWithType: HigherLowerSession.StartedAt
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.StartedAt
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/HigherLowerSession.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: StartedAt
+    path: ../Chaos.Infraestructure/Models/HigherLowerSession.cs
+    startLine: 17
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string StartedAt { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property StartedAt As String
+  overload: Chaos.Infraestructure.Models.HigherLowerSession.StartedAt*
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.FinishedAt
+  commentId: P:Chaos.Infraestructure.Models.HigherLowerSession.FinishedAt
+  id: FinishedAt
+  parent: Chaos.Infraestructure.Models.HigherLowerSession
+  langs:
+  - csharp
+  - vb
+  name: FinishedAt
+  nameWithType: HigherLowerSession.FinishedAt
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.FinishedAt
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/HigherLowerSession.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: FinishedAt
+    path: ../Chaos.Infraestructure/Models/HigherLowerSession.cs
+    startLine: 19
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string FinishedAt { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FinishedAt As String
+  overload: Chaos.Infraestructure.Models.HigherLowerSession.FinishedAt*
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.UserId
+  commentId: P:Chaos.Infraestructure.Models.HigherLowerSession.UserId
+  id: UserId
+  parent: Chaos.Infraestructure.Models.HigherLowerSession
+  langs:
+  - csharp
+  - vb
+  name: UserId
+  nameWithType: HigherLowerSession.UserId
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.UserId
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/HigherLowerSession.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: UserId
+    path: ../Chaos.Infraestructure/Models/HigherLowerSession.cs
+    startLine: 21
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid UserId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property UserId As Guid
+  overload: Chaos.Infraestructure.Models.HigherLowerSession.UserId*
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.AnimalId
+  commentId: P:Chaos.Infraestructure.Models.HigherLowerSession.AnimalId
+  id: AnimalId
+  parent: Chaos.Infraestructure.Models.HigherLowerSession
+  langs:
+  - csharp
+  - vb
+  name: AnimalId
+  nameWithType: HigherLowerSession.AnimalId
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.AnimalId
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/HigherLowerSession.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: AnimalId
+    path: ../Chaos.Infraestructure/Models/HigherLowerSession.cs
+    startLine: 23
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid AnimalId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property AnimalId As Guid
+  overload: Chaos.Infraestructure.Models.HigherLowerSession.AnimalId*
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.GameSessionId
+  commentId: P:Chaos.Infraestructure.Models.HigherLowerSession.GameSessionId
+  id: GameSessionId
+  parent: Chaos.Infraestructure.Models.HigherLowerSession
+  langs:
+  - csharp
+  - vb
+  name: GameSessionId
+  nameWithType: HigherLowerSession.GameSessionId
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.GameSessionId
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/HigherLowerSession.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: GameSessionId
+    path: ../Chaos.Infraestructure/Models/HigherLowerSession.cs
+    startLine: 25
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid GameSessionId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property GameSessionId As Guid
+  overload: Chaos.Infraestructure.Models.HigherLowerSession.GameSessionId*
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerGameConfigId
+  commentId: P:Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerGameConfigId
+  id: HigherLowerGameConfigId
+  parent: Chaos.Infraestructure.Models.HigherLowerSession
+  langs:
+  - csharp
+  - vb
+  name: HigherLowerGameConfigId
+  nameWithType: HigherLowerSession.HigherLowerGameConfigId
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerGameConfigId
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/HigherLowerSession.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: HigherLowerGameConfigId
+    path: ../Chaos.Infraestructure/Models/HigherLowerSession.cs
+    startLine: 27
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid HigherLowerGameConfigId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property HigherLowerGameConfigId As Guid
+  overload: Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerGameConfigId*
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.Animal
+  commentId: P:Chaos.Infraestructure.Models.HigherLowerSession.Animal
+  id: Animal
+  parent: Chaos.Infraestructure.Models.HigherLowerSession
+  langs:
+  - csharp
+  - vb
+  name: Animal
+  nameWithType: HigherLowerSession.Animal
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.Animal
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/HigherLowerSession.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: Animal
+    path: ../Chaos.Infraestructure/Models/HigherLowerSession.cs
+    startLine: 29
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual Animal Animal { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Infraestructure.Models.Animal
+    content.vb: Public Overridable Property Animal As Animal
+  overload: Chaos.Infraestructure.Models.HigherLowerSession.Animal*
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.GameSession
+  commentId: P:Chaos.Infraestructure.Models.HigherLowerSession.GameSession
+  id: GameSession
+  parent: Chaos.Infraestructure.Models.HigherLowerSession
+  langs:
+  - csharp
+  - vb
+  name: GameSession
+  nameWithType: HigherLowerSession.GameSession
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.GameSession
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/HigherLowerSession.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: GameSession
+    path: ../Chaos.Infraestructure/Models/HigherLowerSession.cs
+    startLine: 31
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual GameSession GameSession { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Infraestructure.Models.GameSession
+    content.vb: Public Overridable Property GameSession As GameSession
+  overload: Chaos.Infraestructure.Models.HigherLowerSession.GameSession*
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerGameConfig
+  commentId: P:Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerGameConfig
+  id: HigherLowerGameConfig
+  parent: Chaos.Infraestructure.Models.HigherLowerSession
+  langs:
+  - csharp
+  - vb
+  name: HigherLowerGameConfig
+  nameWithType: HigherLowerSession.HigherLowerGameConfig
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerGameConfig
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/HigherLowerSession.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: HigherLowerGameConfig
+    path: ../Chaos.Infraestructure/Models/HigherLowerSession.cs
+    startLine: 33
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual HigherLowerGameConfig HigherLowerGameConfig { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Infraestructure.Models.HigherLowerGameConfig
+    content.vb: Public Overridable Property HigherLowerGameConfig As HigherLowerGameConfig
+  overload: Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerGameConfig*
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerRounds
+  commentId: P:Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerRounds
+  id: HigherLowerRounds
+  parent: Chaos.Infraestructure.Models.HigherLowerSession
+  langs:
+  - csharp
+  - vb
+  name: HigherLowerRounds
+  nameWithType: HigherLowerSession.HigherLowerRounds
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerRounds
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/HigherLowerSession.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: HigherLowerRounds
+    path: ../Chaos.Infraestructure/Models/HigherLowerSession.cs
+    startLine: 35
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual ICollection<HigherLowerRound> HigherLowerRounds { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.HigherLowerRound}
+    content.vb: Public Overridable Property HigherLowerRounds As ICollection(Of HigherLowerRound)
+  overload: Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerRounds*
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.User
+  commentId: P:Chaos.Infraestructure.Models.HigherLowerSession.User
+  id: User
+  parent: Chaos.Infraestructure.Models.HigherLowerSession
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: HigherLowerSession.User
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.User
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/HigherLowerSession.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: User
+    path: ../Chaos.Infraestructure/Models/HigherLowerSession.cs
+    startLine: 37
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual User User { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Infraestructure.Models.User
+    content.vb: Public Overridable Property User As User
+  overload: Chaos.Infraestructure.Models.HigherLowerSession.User*
+references:
+- uid: Chaos.Infraestructure.Models
+  commentId: N:Chaos.Infraestructure.Models
+  href: Chaos.html
+  name: Chaos.Infraestructure.Models
+  nameWithType: Chaos.Infraestructure.Models
+  fullName: Chaos.Infraestructure.Models
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Infraestructure
+    name: Infraestructure
+    href: Chaos.Infraestructure.html
+  - name: .
+  - uid: Chaos.Infraestructure.Models
+    name: Models
+    href: Chaos.Infraestructure.Models.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Infraestructure
+    name: Infraestructure
+    href: Chaos.Infraestructure.html
+  - name: .
+  - uid: Chaos.Infraestructure.Models
+    name: Models
+    href: Chaos.Infraestructure.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.Id*
+  commentId: Overload:Chaos.Infraestructure.Models.HigherLowerSession.Id
+  href: Chaos.Infraestructure.Models.HigherLowerSession.html#Chaos_Infraestructure_Models_HigherLowerSession_Id
+  name: Id
+  nameWithType: HigherLowerSession.Id
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.Id
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.Status*
+  commentId: Overload:Chaos.Infraestructure.Models.HigherLowerSession.Status
+  href: Chaos.Infraestructure.Models.HigherLowerSession.html#Chaos_Infraestructure_Models_HigherLowerSession_Status
+  name: Status
+  nameWithType: HigherLowerSession.Status
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.Status
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.TotalEarned*
+  commentId: Overload:Chaos.Infraestructure.Models.HigherLowerSession.TotalEarned
+  href: Chaos.Infraestructure.Models.HigherLowerSession.html#Chaos_Infraestructure_Models_HigherLowerSession_TotalEarned
+  name: TotalEarned
+  nameWithType: HigherLowerSession.TotalEarned
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.TotalEarned
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.RoundsPlayed*
+  commentId: Overload:Chaos.Infraestructure.Models.HigherLowerSession.RoundsPlayed
+  href: Chaos.Infraestructure.Models.HigherLowerSession.html#Chaos_Infraestructure_Models_HigherLowerSession_RoundsPlayed
+  name: RoundsPlayed
+  nameWithType: HigherLowerSession.RoundsPlayed
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.RoundsPlayed
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.StartedAt*
+  commentId: Overload:Chaos.Infraestructure.Models.HigherLowerSession.StartedAt
+  href: Chaos.Infraestructure.Models.HigherLowerSession.html#Chaos_Infraestructure_Models_HigherLowerSession_StartedAt
+  name: StartedAt
+  nameWithType: HigherLowerSession.StartedAt
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.StartedAt
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.FinishedAt*
+  commentId: Overload:Chaos.Infraestructure.Models.HigherLowerSession.FinishedAt
+  href: Chaos.Infraestructure.Models.HigherLowerSession.html#Chaos_Infraestructure_Models_HigherLowerSession_FinishedAt
+  name: FinishedAt
+  nameWithType: HigherLowerSession.FinishedAt
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.FinishedAt
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.UserId*
+  commentId: Overload:Chaos.Infraestructure.Models.HigherLowerSession.UserId
+  href: Chaos.Infraestructure.Models.HigherLowerSession.html#Chaos_Infraestructure_Models_HigherLowerSession_UserId
+  name: UserId
+  nameWithType: HigherLowerSession.UserId
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.UserId
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.AnimalId*
+  commentId: Overload:Chaos.Infraestructure.Models.HigherLowerSession.AnimalId
+  href: Chaos.Infraestructure.Models.HigherLowerSession.html#Chaos_Infraestructure_Models_HigherLowerSession_AnimalId
+  name: AnimalId
+  nameWithType: HigherLowerSession.AnimalId
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.AnimalId
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.GameSessionId*
+  commentId: Overload:Chaos.Infraestructure.Models.HigherLowerSession.GameSessionId
+  href: Chaos.Infraestructure.Models.HigherLowerSession.html#Chaos_Infraestructure_Models_HigherLowerSession_GameSessionId
+  name: GameSessionId
+  nameWithType: HigherLowerSession.GameSessionId
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.GameSessionId
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerGameConfigId*
+  commentId: Overload:Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerGameConfigId
+  href: Chaos.Infraestructure.Models.HigherLowerSession.html#Chaos_Infraestructure_Models_HigherLowerSession_HigherLowerGameConfigId
+  name: HigherLowerGameConfigId
+  nameWithType: HigherLowerSession.HigherLowerGameConfigId
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerGameConfigId
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.Animal*
+  commentId: Overload:Chaos.Infraestructure.Models.HigherLowerSession.Animal
+  href: Chaos.Infraestructure.Models.HigherLowerSession.html#Chaos_Infraestructure_Models_HigherLowerSession_Animal
+  name: Animal
+  nameWithType: HigherLowerSession.Animal
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.Animal
+- uid: Chaos.Infraestructure.Models.Animal
+  commentId: T:Chaos.Infraestructure.Models.Animal
+  parent: Chaos.Infraestructure.Models
+  href: Chaos.Infraestructure.Models.Animal.html
+  name: Animal
+  nameWithType: Animal
+  fullName: Chaos.Infraestructure.Models.Animal
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.GameSession*
+  commentId: Overload:Chaos.Infraestructure.Models.HigherLowerSession.GameSession
+  href: Chaos.Infraestructure.Models.HigherLowerSession.html#Chaos_Infraestructure_Models_HigherLowerSession_GameSession
+  name: GameSession
+  nameWithType: HigherLowerSession.GameSession
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.GameSession
+- uid: Chaos.Infraestructure.Models.GameSession
+  commentId: T:Chaos.Infraestructure.Models.GameSession
+  parent: Chaos.Infraestructure.Models
+  href: Chaos.Infraestructure.Models.GameSession.html
+  name: GameSession
+  nameWithType: GameSession
+  fullName: Chaos.Infraestructure.Models.GameSession
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerGameConfig*
+  commentId: Overload:Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerGameConfig
+  href: Chaos.Infraestructure.Models.HigherLowerSession.html#Chaos_Infraestructure_Models_HigherLowerSession_HigherLowerGameConfig
+  name: HigherLowerGameConfig
+  nameWithType: HigherLowerSession.HigherLowerGameConfig
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerGameConfig
+- uid: Chaos.Infraestructure.Models.HigherLowerGameConfig
+  commentId: T:Chaos.Infraestructure.Models.HigherLowerGameConfig
+  parent: Chaos.Infraestructure.Models
+  href: Chaos.Infraestructure.Models.HigherLowerGameConfig.html
+  name: HigherLowerGameConfig
+  nameWithType: HigherLowerGameConfig
+  fullName: Chaos.Infraestructure.Models.HigherLowerGameConfig
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerRounds*
+  commentId: Overload:Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerRounds
+  href: Chaos.Infraestructure.Models.HigherLowerSession.html#Chaos_Infraestructure_Models_HigherLowerSession_HigherLowerRounds
+  name: HigherLowerRounds
+  nameWithType: HigherLowerSession.HigherLowerRounds
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.HigherLowerRounds
+- uid: System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.HigherLowerRound}
+  commentId: T:System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.HigherLowerRound}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<HigherLowerRound>
+  nameWithType: ICollection<HigherLowerRound>
+  fullName: System.Collections.Generic.ICollection<Chaos.Infraestructure.Models.HigherLowerRound>
+  nameWithType.vb: ICollection(Of HigherLowerRound)
+  fullName.vb: System.Collections.Generic.ICollection(Of Chaos.Infraestructure.Models.HigherLowerRound)
+  name.vb: ICollection(Of HigherLowerRound)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: Chaos.Infraestructure.Models.HigherLowerRound
+    name: HigherLowerRound
+    href: Chaos.Infraestructure.Models.HigherLowerRound.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Chaos.Infraestructure.Models.HigherLowerRound
+    name: HigherLowerRound
+    href: Chaos.Infraestructure.Models.HigherLowerRound.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Chaos.Infraestructure.Models.HigherLowerSession.User*
+  commentId: Overload:Chaos.Infraestructure.Models.HigherLowerSession.User
+  href: Chaos.Infraestructure.Models.HigherLowerSession.html#Chaos_Infraestructure_Models_HigherLowerSession_User
+  name: User
+  nameWithType: HigherLowerSession.User
+  fullName: Chaos.Infraestructure.Models.HigherLowerSession.User
+- uid: Chaos.Infraestructure.Models.User
+  commentId: T:Chaos.Infraestructure.Models.User
+  parent: Chaos.Infraestructure.Models
+  href: Chaos.Infraestructure.Models.User.html
+  name: User
+  nameWithType: User
+  fullName: Chaos.Infraestructure.Models.User

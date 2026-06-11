@@ -1,0 +1,160 @@
+﻿@page "/RussianRoulettePage/create"
+@using Chaos.BlazorCasinoApp.IApiService
+@using Chaos.Shared.RequestEntity
+@using Chaos.Shared.RequestEntity.Config.RussianRoulette
+@inject IRussianRouletteService RussianRouletteService
+@inject NavigationManager Navigation
+
+<PageTitle>Nueva Configuración — Russian Roulette</PageTitle>
+
+<div class="casino-page">
+
+    <div class="casino-form-header">
+        <button class="btn-casino-secondary" @onclick="GoBack">← Volver</button>
+        <h4>➕ Nueva Configuración Russian Roulette</h4>
+    </div>
+
+    @if (errorMessage is not null)
+    {
+        <div class="alert alert-danger">⚠️ @errorMessage</div>
+    }
+
+    <div class="card">
+        <div class="card-body">
+
+            <div class="form-group">
+                <label class="form-label">Nombre Config</label>
+                <input class="form-control"
+                       @bind="request.ConfigName"
+                       placeholder="Ej: Ruleta Rusa Estándar" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Total de Cámaras</label>
+                <input class="form-control" type="number"
+                       @bind="request.TotalChambers"
+                       min="2" max="12" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Número de Balas</label>
+                <input class="form-control" type="number"
+                       @bind="request.BulletCount"
+                       min="1" max="11" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Mínimo de Jugadores</label>
+                <input class="form-control" type="number"
+                       @bind="request.MinPlayers"
+                       min="2" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Máximo de Jugadores</label>
+                <input class="form-control" type="number"
+                       @bind="request.MaxPlayers"
+                       min="2" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Premio Fijo ($)</label>
+                <input class="form-control" type="number" step="0.01"
+                       @bind="request.FixedPrizePool"
+                       min="0" />
+            </div>
+
+            <div class="casino-toggle-row">
+                <label class="form-label">Permitir Bots</label>
+                <button type="button"
+                        class="casino-toggle-btn @(request.AllowBots ? "badge-casino-active" : "badge-casino-inactive")"
+                        @onclick="() => request.AllowBots = !request.AllowBots">
+                    @if (request.AllowBots)
+                    {
+                        <span>● Activo</span>
+                    }
+                    else
+                    {
+                        <span>● Inactivo</span>
+                    }
+                </button>
+            </div>
+
+            <div class="casino-toggle-row">
+                <label class="form-label">Estado</label>
+                <button type="button"
+                        class="casino-toggle-btn @(request.IsActive ? "badge-casino-active" : "badge-casino-inactive")"
+                        @onclick="() => request.IsActive = !request.IsActive">
+                    @if (request.IsActive)
+                    {
+                        <span>● Activo</span>
+                    }
+                    else
+                    {
+                        <span>● Inactivo</span>
+                    }
+                </button>
+            </div>
+
+            <div class="casino-form-actions">
+                <button class="btn-casino-secondary" @onclick="GoBack">
+                    ✖ Cancelar
+                </button>
+                <button class="btn-casino-primary" @onclick="HandleCreate" disabled="@isSaving">
+                    @if (isSaving)
+                    {
+                        <span class="casino-spinner-sm">🎰</span>
+                    }
+                    💾 Guardar
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+@code {
+    private RussianRouletteRequest request = new();
+    private bool isSaving = false;
+    private string? errorMessage;
+
+    private async Task HandleCreate()
+    {
+        if (string.IsNullOrWhiteSpace(request.ConfigName))
+        {
+            errorMessage = "El nombre de la configuración es obligatorio.";
+            return;
+        }
+
+        if (request.BulletCount >= request.TotalChambers)
+        {
+            errorMessage = "El número de balas debe ser menor al total de cámaras.";
+            return;
+        }
+
+        if (request.MinPlayers > request.MaxPlayers)
+        {
+            errorMessage = "El mínimo de jugadores no puede ser mayor al máximo.";
+            return;
+        }
+
+        try
+        {
+            isSaving = true;
+            errorMessage = null;
+            await RussianRouletteService.CreateAsync(request);
+            Navigation.NavigateTo("/RussianRoulettePage");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al crear: {ex.Message}";
+        }
+        finally
+        {
+            isSaving = false;
+        }
+    }
+
+    private void GoBack() => Navigation.NavigateTo("/RussianRoulettePage");
+}

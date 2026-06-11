@@ -1,0 +1,638 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Infraestructure.Models.ShopTransaction
+  commentId: T:Chaos.Infraestructure.Models.ShopTransaction
+  id: ShopTransaction
+  parent: Chaos.Infraestructure.Models
+  children:
+  - Chaos.Infraestructure.Models.ShopTransaction.Amount
+  - Chaos.Infraestructure.Models.ShopTransaction.Animal
+  - Chaos.Infraestructure.Models.ShopTransaction.AnimalId
+  - Chaos.Infraestructure.Models.ShopTransaction.Id
+  - Chaos.Infraestructure.Models.ShopTransaction.TransactionDate
+  - Chaos.Infraestructure.Models.ShopTransaction.TransactionType
+  - Chaos.Infraestructure.Models.ShopTransaction.User
+  - Chaos.Infraestructure.Models.ShopTransaction.UserId
+  langs:
+  - csharp
+  - vb
+  name: ShopTransaction
+  nameWithType: ShopTransaction
+  fullName: Chaos.Infraestructure.Models.ShopTransaction
+  type: Class
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/ShopTransaction.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: ShopTransaction
+    path: ../Chaos.Infraestructure/Models/ShopTransaction.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public class ShopTransaction
+    content.vb: Public Class ShopTransaction
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Chaos.Infraestructure.Models.ShopTransaction.Id
+  commentId: P:Chaos.Infraestructure.Models.ShopTransaction.Id
+  id: Id
+  parent: Chaos.Infraestructure.Models.ShopTransaction
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ShopTransaction.Id
+  fullName: Chaos.Infraestructure.Models.ShopTransaction.Id
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/ShopTransaction.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: Id
+    path: ../Chaos.Infraestructure/Models/ShopTransaction.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid Id { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Id As Guid
+  overload: Chaos.Infraestructure.Models.ShopTransaction.Id*
+- uid: Chaos.Infraestructure.Models.ShopTransaction.TransactionType
+  commentId: P:Chaos.Infraestructure.Models.ShopTransaction.TransactionType
+  id: TransactionType
+  parent: Chaos.Infraestructure.Models.ShopTransaction
+  langs:
+  - csharp
+  - vb
+  name: TransactionType
+  nameWithType: ShopTransaction.TransactionType
+  fullName: Chaos.Infraestructure.Models.ShopTransaction.TransactionType
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/ShopTransaction.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: TransactionType
+    path: ../Chaos.Infraestructure/Models/ShopTransaction.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string TransactionType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TransactionType As String
+  overload: Chaos.Infraestructure.Models.ShopTransaction.TransactionType*
+- uid: Chaos.Infraestructure.Models.ShopTransaction.Amount
+  commentId: P:Chaos.Infraestructure.Models.ShopTransaction.Amount
+  id: Amount
+  parent: Chaos.Infraestructure.Models.ShopTransaction
+  langs:
+  - csharp
+  - vb
+  name: Amount
+  nameWithType: ShopTransaction.Amount
+  fullName: Chaos.Infraestructure.Models.ShopTransaction.Amount
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/ShopTransaction.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: Amount
+    path: ../Chaos.Infraestructure/Models/ShopTransaction.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public decimal Amount { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property Amount As Decimal
+  overload: Chaos.Infraestructure.Models.ShopTransaction.Amount*
+- uid: Chaos.Infraestructure.Models.ShopTransaction.TransactionDate
+  commentId: P:Chaos.Infraestructure.Models.ShopTransaction.TransactionDate
+  id: TransactionDate
+  parent: Chaos.Infraestructure.Models.ShopTransaction
+  langs:
+  - csharp
+  - vb
+  name: TransactionDate
+  nameWithType: ShopTransaction.TransactionDate
+  fullName: Chaos.Infraestructure.Models.ShopTransaction.TransactionDate
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/ShopTransaction.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: TransactionDate
+    path: ../Chaos.Infraestructure/Models/ShopTransaction.cs
+    startLine: 15
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string TransactionDate { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TransactionDate As String
+  overload: Chaos.Infraestructure.Models.ShopTransaction.TransactionDate*
+- uid: Chaos.Infraestructure.Models.ShopTransaction.UserId
+  commentId: P:Chaos.Infraestructure.Models.ShopTransaction.UserId
+  id: UserId
+  parent: Chaos.Infraestructure.Models.ShopTransaction
+  langs:
+  - csharp
+  - vb
+  name: UserId
+  nameWithType: ShopTransaction.UserId
+  fullName: Chaos.Infraestructure.Models.ShopTransaction.UserId
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/ShopTransaction.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: UserId
+    path: ../Chaos.Infraestructure/Models/ShopTransaction.cs
+    startLine: 17
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid UserId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property UserId As Guid
+  overload: Chaos.Infraestructure.Models.ShopTransaction.UserId*
+- uid: Chaos.Infraestructure.Models.ShopTransaction.AnimalId
+  commentId: P:Chaos.Infraestructure.Models.ShopTransaction.AnimalId
+  id: AnimalId
+  parent: Chaos.Infraestructure.Models.ShopTransaction
+  langs:
+  - csharp
+  - vb
+  name: AnimalId
+  nameWithType: ShopTransaction.AnimalId
+  fullName: Chaos.Infraestructure.Models.ShopTransaction.AnimalId
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/ShopTransaction.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: AnimalId
+    path: ../Chaos.Infraestructure/Models/ShopTransaction.cs
+    startLine: 19
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid AnimalId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property AnimalId As Guid
+  overload: Chaos.Infraestructure.Models.ShopTransaction.AnimalId*
+- uid: Chaos.Infraestructure.Models.ShopTransaction.Animal
+  commentId: P:Chaos.Infraestructure.Models.ShopTransaction.Animal
+  id: Animal
+  parent: Chaos.Infraestructure.Models.ShopTransaction
+  langs:
+  - csharp
+  - vb
+  name: Animal
+  nameWithType: ShopTransaction.Animal
+  fullName: Chaos.Infraestructure.Models.ShopTransaction.Animal
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/ShopTransaction.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: Animal
+    path: ../Chaos.Infraestructure/Models/ShopTransaction.cs
+    startLine: 21
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual Animal Animal { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Infraestructure.Models.Animal
+    content.vb: Public Overridable Property Animal As Animal
+  overload: Chaos.Infraestructure.Models.ShopTransaction.Animal*
+- uid: Chaos.Infraestructure.Models.ShopTransaction.User
+  commentId: P:Chaos.Infraestructure.Models.ShopTransaction.User
+  id: User
+  parent: Chaos.Infraestructure.Models.ShopTransaction
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: ShopTransaction.User
+  fullName: Chaos.Infraestructure.Models.ShopTransaction.User
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/ShopTransaction.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: User
+    path: ../Chaos.Infraestructure/Models/ShopTransaction.cs
+    startLine: 23
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual User User { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Infraestructure.Models.User
+    content.vb: Public Overridable Property User As User
+  overload: Chaos.Infraestructure.Models.ShopTransaction.User*
+references:
+- uid: Chaos.Infraestructure.Models
+  commentId: N:Chaos.Infraestructure.Models
+  href: Chaos.html
+  name: Chaos.Infraestructure.Models
+  nameWithType: Chaos.Infraestructure.Models
+  fullName: Chaos.Infraestructure.Models
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Infraestructure
+    name: Infraestructure
+    href: Chaos.Infraestructure.html
+  - name: .
+  - uid: Chaos.Infraestructure.Models
+    name: Models
+    href: Chaos.Infraestructure.Models.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Infraestructure
+    name: Infraestructure
+    href: Chaos.Infraestructure.html
+  - name: .
+  - uid: Chaos.Infraestructure.Models
+    name: Models
+    href: Chaos.Infraestructure.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chaos.Infraestructure.Models.ShopTransaction.Id*
+  commentId: Overload:Chaos.Infraestructure.Models.ShopTransaction.Id
+  href: Chaos.Infraestructure.Models.ShopTransaction.html#Chaos_Infraestructure_Models_ShopTransaction_Id
+  name: Id
+  nameWithType: ShopTransaction.Id
+  fullName: Chaos.Infraestructure.Models.ShopTransaction.Id
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Chaos.Infraestructure.Models.ShopTransaction.TransactionType*
+  commentId: Overload:Chaos.Infraestructure.Models.ShopTransaction.TransactionType
+  href: Chaos.Infraestructure.Models.ShopTransaction.html#Chaos_Infraestructure_Models_ShopTransaction_TransactionType
+  name: TransactionType
+  nameWithType: ShopTransaction.TransactionType
+  fullName: Chaos.Infraestructure.Models.ShopTransaction.TransactionType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Chaos.Infraestructure.Models.ShopTransaction.Amount*
+  commentId: Overload:Chaos.Infraestructure.Models.ShopTransaction.Amount
+  href: Chaos.Infraestructure.Models.ShopTransaction.html#Chaos_Infraestructure_Models_ShopTransaction_Amount
+  name: Amount
+  nameWithType: ShopTransaction.Amount
+  fullName: Chaos.Infraestructure.Models.ShopTransaction.Amount
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.decimal
+  name: decimal
+  nameWithType: decimal
+  fullName: decimal
+  nameWithType.vb: Decimal
+  fullName.vb: Decimal
+  name.vb: Decimal
+- uid: Chaos.Infraestructure.Models.ShopTransaction.TransactionDate*
+  commentId: Overload:Chaos.Infraestructure.Models.ShopTransaction.TransactionDate
+  href: Chaos.Infraestructure.Models.ShopTransaction.html#Chaos_Infraestructure_Models_ShopTransaction_TransactionDate
+  name: TransactionDate
+  nameWithType: ShopTransaction.TransactionDate
+  fullName: Chaos.Infraestructure.Models.ShopTransaction.TransactionDate
+- uid: Chaos.Infraestructure.Models.ShopTransaction.UserId*
+  commentId: Overload:Chaos.Infraestructure.Models.ShopTransaction.UserId
+  href: Chaos.Infraestructure.Models.ShopTransaction.html#Chaos_Infraestructure_Models_ShopTransaction_UserId
+  name: UserId
+  nameWithType: ShopTransaction.UserId
+  fullName: Chaos.Infraestructure.Models.ShopTransaction.UserId
+- uid: Chaos.Infraestructure.Models.ShopTransaction.AnimalId*
+  commentId: Overload:Chaos.Infraestructure.Models.ShopTransaction.AnimalId
+  href: Chaos.Infraestructure.Models.ShopTransaction.html#Chaos_Infraestructure_Models_ShopTransaction_AnimalId
+  name: AnimalId
+  nameWithType: ShopTransaction.AnimalId
+  fullName: Chaos.Infraestructure.Models.ShopTransaction.AnimalId
+- uid: Chaos.Infraestructure.Models.ShopTransaction.Animal*
+  commentId: Overload:Chaos.Infraestructure.Models.ShopTransaction.Animal
+  href: Chaos.Infraestructure.Models.ShopTransaction.html#Chaos_Infraestructure_Models_ShopTransaction_Animal
+  name: Animal
+  nameWithType: ShopTransaction.Animal
+  fullName: Chaos.Infraestructure.Models.ShopTransaction.Animal
+- uid: Chaos.Infraestructure.Models.Animal
+  commentId: T:Chaos.Infraestructure.Models.Animal
+  parent: Chaos.Infraestructure.Models
+  href: Chaos.Infraestructure.Models.Animal.html
+  name: Animal
+  nameWithType: Animal
+  fullName: Chaos.Infraestructure.Models.Animal
+- uid: Chaos.Infraestructure.Models.ShopTransaction.User*
+  commentId: Overload:Chaos.Infraestructure.Models.ShopTransaction.User
+  href: Chaos.Infraestructure.Models.ShopTransaction.html#Chaos_Infraestructure_Models_ShopTransaction_User
+  name: User
+  nameWithType: ShopTransaction.User
+  fullName: Chaos.Infraestructure.Models.ShopTransaction.User
+- uid: Chaos.Infraestructure.Models.User
+  commentId: T:Chaos.Infraestructure.Models.User
+  parent: Chaos.Infraestructure.Models
+  href: Chaos.Infraestructure.Models.User.html
+  name: User
+  nameWithType: User
+  fullName: Chaos.Infraestructure.Models.User

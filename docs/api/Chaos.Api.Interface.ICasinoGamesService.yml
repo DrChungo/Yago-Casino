@@ -1,0 +1,1029 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Interface.ICasinoGamesService
+  commentId: T:Chaos.Api.Interface.ICasinoGamesService
+  id: ICasinoGamesService
+  parent: Chaos.Api.Interface
+  children:
+  - Chaos.Api.Interface.ICasinoGamesService.BlackJackGame(System.Guid,System.Guid)
+  - Chaos.Api.Interface.ICasinoGamesService.BlackJackGetGame(System.Guid)
+  - Chaos.Api.Interface.ICasinoGamesService.BlackJackHit(System.Guid)
+  - Chaos.Api.Interface.ICasinoGamesService.BlackJackStand(System.Guid)
+  - Chaos.Api.Interface.ICasinoGamesService.CalculateWinPossibility(System.Int32)
+  - Chaos.Api.Interface.ICasinoGamesService.CashOutHigherLower(System.Guid)
+  - Chaos.Api.Interface.ICasinoGamesService.CashTransaction(Chaos.Api.ResponseEntity.WalletResponse,System.Int32)
+  - Chaos.Api.Interface.ICasinoGamesService.CoinGame(System.Guid,System.Guid)
+  - Chaos.Api.Interface.ICasinoGamesService.DetermineWinner(Chaos.Api.Models.BlackJackGame)
+  - Chaos.Api.Interface.ICasinoGamesService.ExistAnimal(System.Guid)
+  - Chaos.Api.Interface.ICasinoGamesService.GetHigherLowerGame(System.Guid)
+  - Chaos.Api.Interface.ICasinoGamesService.MapToBlackJackResponse(Chaos.Api.Models.BlackJackGame)
+  - Chaos.Api.Interface.ICasinoGamesService.MapToHigherLowerResponse(Chaos.Api.Models.HigherLowerGame)
+  - Chaos.Api.Interface.ICasinoGamesService.PlayEuropeanRoullete(Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette)
+  - Chaos.Api.Interface.ICasinoGamesService.PlayHigherLower(Chaos.Api.RequestEntity.HigherLowerPlayRequest)
+  - Chaos.Api.Interface.ICasinoGamesService.PlayRussianRoullete(System.Collections.Generic.List{Chaos.Infraestructure.Models.User})
+  - Chaos.Api.Interface.ICasinoGamesService.PlayTragaPerrillas(Chaos.Api.RequestEntity.CoinGameRequest)
+  - Chaos.Api.Interface.ICasinoGamesService.StartHigherLowerGame(System.Guid,System.Guid)
+  langs:
+  - csharp
+  - vb
+  name: ICasinoGamesService
+  nameWithType: ICasinoGamesService
+  fullName: Chaos.Api.Interface.ICasinoGamesService
+  type: Interface
+  source:
+    id: ICasinoGamesService
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: public interface ICasinoGamesService
+    content.vb: Public Interface ICasinoGamesService
+  derivedClasses:
+  - Chaos.Api.Service.CasinoGameService
+- uid: Chaos.Api.Interface.ICasinoGamesService.CashTransaction(Chaos.Api.ResponseEntity.WalletResponse,System.Int32)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.CashTransaction(Chaos.Api.ResponseEntity.WalletResponse,System.Int32)
+  id: CashTransaction(Chaos.Api.ResponseEntity.WalletResponse,System.Int32)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: CashTransaction(WalletResponse, int)
+  nameWithType: ICasinoGamesService.CashTransaction(WalletResponse, int)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.CashTransaction(Chaos.Api.ResponseEntity.WalletResponse, int)
+  type: Method
+  source:
+    id: CashTransaction
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 12
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: void CashTransaction(WalletResponse wallet, int amount)
+    parameters:
+    - id: wallet
+      type: Chaos.Api.ResponseEntity.WalletResponse
+    - id: amount
+      type: System.Int32
+    content.vb: Sub CashTransaction(wallet As WalletResponse, amount As Integer)
+  overload: Chaos.Api.Interface.ICasinoGamesService.CashTransaction*
+  nameWithType.vb: ICasinoGamesService.CashTransaction(WalletResponse, Integer)
+  fullName.vb: Chaos.Api.Interface.ICasinoGamesService.CashTransaction(Chaos.Api.ResponseEntity.WalletResponse, Integer)
+  name.vb: CashTransaction(WalletResponse, Integer)
+- uid: Chaos.Api.Interface.ICasinoGamesService.ExistAnimal(System.Guid)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.ExistAnimal(System.Guid)
+  id: ExistAnimal(System.Guid)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: ExistAnimal(Guid)
+  nameWithType: ICasinoGamesService.ExistAnimal(Guid)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.ExistAnimal(System.Guid)
+  type: Method
+  source:
+    id: ExistAnimal
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: bool ExistAnimal(Guid id)
+    parameters:
+    - id: id
+      type: System.Guid
+    return:
+      type: System.Boolean
+    content.vb: Function ExistAnimal(id As Guid) As Boolean
+  overload: Chaos.Api.Interface.ICasinoGamesService.ExistAnimal*
+- uid: Chaos.Api.Interface.ICasinoGamesService.PlayTragaPerrillas(Chaos.Api.RequestEntity.CoinGameRequest)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.PlayTragaPerrillas(Chaos.Api.RequestEntity.CoinGameRequest)
+  id: PlayTragaPerrillas(Chaos.Api.RequestEntity.CoinGameRequest)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: PlayTragaPerrillas(CoinGameRequest)
+  nameWithType: ICasinoGamesService.PlayTragaPerrillas(CoinGameRequest)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.PlayTragaPerrillas(Chaos.Api.RequestEntity.CoinGameRequest)
+  type: Method
+  source:
+    id: PlayTragaPerrillas
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 17
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: Tragaperras[] PlayTragaPerrillas(CoinGameRequest animal)
+    parameters:
+    - id: animal
+      type: Chaos.Api.RequestEntity.CoinGameRequest
+    return:
+      type: Chaos.Api.Models.Tragaperras[]
+    content.vb: Function PlayTragaPerrillas(animal As CoinGameRequest) As Tragaperras()
+  overload: Chaos.Api.Interface.ICasinoGamesService.PlayTragaPerrillas*
+- uid: Chaos.Api.Interface.ICasinoGamesService.CoinGame(System.Guid,System.Guid)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.CoinGame(System.Guid,System.Guid)
+  id: CoinGame(System.Guid,System.Guid)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: CoinGame(Guid, Guid)
+  nameWithType: ICasinoGamesService.CoinGame(Guid, Guid)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.CoinGame(System.Guid, System.Guid)
+  type: Method
+  source:
+    id: CoinGame
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 21
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: CoinGame CoinGame(Guid Id, Guid playerId)
+    parameters:
+    - id: Id
+      type: System.Guid
+    - id: playerId
+      type: System.Guid
+    return:
+      type: Chaos.Api.Models.CoinGame
+    content.vb: Function CoinGame(Id As Guid, playerId As Guid) As CoinGame
+  overload: Chaos.Api.Interface.ICasinoGamesService.CoinGame*
+- uid: Chaos.Api.Interface.ICasinoGamesService.CalculateWinPossibility(System.Int32)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.CalculateWinPossibility(System.Int32)
+  id: CalculateWinPossibility(System.Int32)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: CalculateWinPossibility(int)
+  nameWithType: ICasinoGamesService.CalculateWinPossibility(int)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.CalculateWinPossibility(int)
+  type: Method
+  source:
+    id: CalculateWinPossibility
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 22
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: int CalculateWinPossibility(int animalValue)
+    parameters:
+    - id: animalValue
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Function CalculateWinPossibility(animalValue As Integer) As Integer
+  overload: Chaos.Api.Interface.ICasinoGamesService.CalculateWinPossibility*
+  nameWithType.vb: ICasinoGamesService.CalculateWinPossibility(Integer)
+  fullName.vb: Chaos.Api.Interface.ICasinoGamesService.CalculateWinPossibility(Integer)
+  name.vb: CalculateWinPossibility(Integer)
+- uid: Chaos.Api.Interface.ICasinoGamesService.PlayRussianRoullete(System.Collections.Generic.List{Chaos.Infraestructure.Models.User})
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.PlayRussianRoullete(System.Collections.Generic.List{Chaos.Infraestructure.Models.User})
+  id: PlayRussianRoullete(System.Collections.Generic.List{Chaos.Infraestructure.Models.User})
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: PlayRussianRoullete(List<User>)
+  nameWithType: ICasinoGamesService.PlayRussianRoullete(List<User>)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.PlayRussianRoullete(System.Collections.Generic.List<Chaos.Infraestructure.Models.User>)
+  type: Method
+  source:
+    id: PlayRussianRoullete
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 26
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: List<RoundEliminated> PlayRussianRoullete(List<User> russianRoulletePlayers)
+    parameters:
+    - id: russianRoulletePlayers
+      type: System.Collections.Generic.List{Chaos.Infraestructure.Models.User}
+    return:
+      type: System.Collections.Generic.List{Chaos.Api.Models.RoundEliminated}
+    content.vb: Function PlayRussianRoullete(russianRoulletePlayers As List(Of User)) As List(Of RoundEliminated)
+  overload: Chaos.Api.Interface.ICasinoGamesService.PlayRussianRoullete*
+  nameWithType.vb: ICasinoGamesService.PlayRussianRoullete(List(Of User))
+  fullName.vb: Chaos.Api.Interface.ICasinoGamesService.PlayRussianRoullete(System.Collections.Generic.List(Of Chaos.Infraestructure.Models.User))
+  name.vb: PlayRussianRoullete(List(Of User))
+- uid: Chaos.Api.Interface.ICasinoGamesService.PlayEuropeanRoullete(Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.PlayEuropeanRoullete(Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette)
+  id: PlayEuropeanRoullete(Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: PlayEuropeanRoullete(SelectionUserEuropeanRoulette)
+  nameWithType: ICasinoGamesService.PlayEuropeanRoullete(SelectionUserEuropeanRoulette)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.PlayEuropeanRoullete(Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette)
+  type: Method
+  source:
+    id: PlayEuropeanRoullete
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 27
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: CashBack PlayEuropeanRoullete(SelectionUserEuropeanRoulette Bet)
+    parameters:
+    - id: Bet
+      type: Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette
+    return:
+      type: Chaos.Api.ResponseEntity.CashBack
+    content.vb: Function PlayEuropeanRoullete(Bet As SelectionUserEuropeanRoulette) As CashBack
+  overload: Chaos.Api.Interface.ICasinoGamesService.PlayEuropeanRoullete*
+- uid: Chaos.Api.Interface.ICasinoGamesService.MapToBlackJackResponse(Chaos.Api.Models.BlackJackGame)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.MapToBlackJackResponse(Chaos.Api.Models.BlackJackGame)
+  id: MapToBlackJackResponse(Chaos.Api.Models.BlackJackGame)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: MapToBlackJackResponse(BlackJackGame)
+  nameWithType: ICasinoGamesService.MapToBlackJackResponse(BlackJackGame)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.MapToBlackJackResponse(Chaos.Api.Models.BlackJackGame)
+  type: Method
+  source:
+    id: MapToBlackJackResponse
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 31
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: BlackJackResponse MapToBlackJackResponse(BlackJackGame game)
+    parameters:
+    - id: game
+      type: Chaos.Api.Models.BlackJackGame
+    return:
+      type: Chaos.Api.ResponseEntity.BlackJackResponse
+    content.vb: Function MapToBlackJackResponse(game As BlackJackGame) As BlackJackResponse
+  overload: Chaos.Api.Interface.ICasinoGamesService.MapToBlackJackResponse*
+- uid: Chaos.Api.Interface.ICasinoGamesService.DetermineWinner(Chaos.Api.Models.BlackJackGame)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.DetermineWinner(Chaos.Api.Models.BlackJackGame)
+  id: DetermineWinner(Chaos.Api.Models.BlackJackGame)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: DetermineWinner(BlackJackGame)
+  nameWithType: ICasinoGamesService.DetermineWinner(BlackJackGame)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.DetermineWinner(Chaos.Api.Models.BlackJackGame)
+  type: Method
+  source:
+    id: DetermineWinner
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 32
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: void DetermineWinner(BlackJackGame game)
+    parameters:
+    - id: game
+      type: Chaos.Api.Models.BlackJackGame
+    content.vb: Sub DetermineWinner(game As BlackJackGame)
+  overload: Chaos.Api.Interface.ICasinoGamesService.DetermineWinner*
+- uid: Chaos.Api.Interface.ICasinoGamesService.BlackJackGame(System.Guid,System.Guid)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.BlackJackGame(System.Guid,System.Guid)
+  id: BlackJackGame(System.Guid,System.Guid)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: BlackJackGame(Guid, Guid)
+  nameWithType: ICasinoGamesService.BlackJackGame(Guid, Guid)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.BlackJackGame(System.Guid, System.Guid)
+  type: Method
+  source:
+    id: BlackJackGame
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 33
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: BlackJackGame BlackJackGame(Guid idAnimal, Guid idUser)
+    parameters:
+    - id: idAnimal
+      type: System.Guid
+    - id: idUser
+      type: System.Guid
+    return:
+      type: Chaos.Api.Models.BlackJackGame
+    content.vb: Function BlackJackGame(idAnimal As Guid, idUser As Guid) As BlackJackGame
+  overload: Chaos.Api.Interface.ICasinoGamesService.BlackJackGame*
+- uid: Chaos.Api.Interface.ICasinoGamesService.BlackJackHit(System.Guid)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.BlackJackHit(System.Guid)
+  id: BlackJackHit(System.Guid)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: BlackJackHit(Guid)
+  nameWithType: ICasinoGamesService.BlackJackHit(Guid)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.BlackJackHit(System.Guid)
+  type: Method
+  source:
+    id: BlackJackHit
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 34
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: BlackJackGame BlackJackHit(Guid gameId)
+    parameters:
+    - id: gameId
+      type: System.Guid
+    return:
+      type: Chaos.Api.Models.BlackJackGame
+    content.vb: Function BlackJackHit(gameId As Guid) As BlackJackGame
+  overload: Chaos.Api.Interface.ICasinoGamesService.BlackJackHit*
+- uid: Chaos.Api.Interface.ICasinoGamesService.BlackJackStand(System.Guid)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.BlackJackStand(System.Guid)
+  id: BlackJackStand(System.Guid)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: BlackJackStand(Guid)
+  nameWithType: ICasinoGamesService.BlackJackStand(Guid)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.BlackJackStand(System.Guid)
+  type: Method
+  source:
+    id: BlackJackStand
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 35
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: BlackJackGame BlackJackStand(Guid gameId)
+    parameters:
+    - id: gameId
+      type: System.Guid
+    return:
+      type: Chaos.Api.Models.BlackJackGame
+    content.vb: Function BlackJackStand(gameId As Guid) As BlackJackGame
+  overload: Chaos.Api.Interface.ICasinoGamesService.BlackJackStand*
+- uid: Chaos.Api.Interface.ICasinoGamesService.BlackJackGetGame(System.Guid)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.BlackJackGetGame(System.Guid)
+  id: BlackJackGetGame(System.Guid)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: BlackJackGetGame(Guid)
+  nameWithType: ICasinoGamesService.BlackJackGetGame(Guid)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.BlackJackGetGame(System.Guid)
+  type: Method
+  source:
+    id: BlackJackGetGame
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 36
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: BlackJackGame BlackJackGetGame(Guid gameId)
+    parameters:
+    - id: gameId
+      type: System.Guid
+    return:
+      type: Chaos.Api.Models.BlackJackGame
+    content.vb: Function BlackJackGetGame(gameId As Guid) As BlackJackGame
+  overload: Chaos.Api.Interface.ICasinoGamesService.BlackJackGetGame*
+- uid: Chaos.Api.Interface.ICasinoGamesService.StartHigherLowerGame(System.Guid,System.Guid)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.StartHigherLowerGame(System.Guid,System.Guid)
+  id: StartHigherLowerGame(System.Guid,System.Guid)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: StartHigherLowerGame(Guid, Guid)
+  nameWithType: ICasinoGamesService.StartHigherLowerGame(Guid, Guid)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.StartHigherLowerGame(System.Guid, System.Guid)
+  type: Method
+  source:
+    id: StartHigherLowerGame
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 40
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: HigherLowerGame StartHigherLowerGame(Guid AnimalId, Guid UserId)
+    parameters:
+    - id: AnimalId
+      type: System.Guid
+    - id: UserId
+      type: System.Guid
+    return:
+      type: Chaos.Api.Models.HigherLowerGame
+    content.vb: Function StartHigherLowerGame(AnimalId As Guid, UserId As Guid) As HigherLowerGame
+  overload: Chaos.Api.Interface.ICasinoGamesService.StartHigherLowerGame*
+- uid: Chaos.Api.Interface.ICasinoGamesService.PlayHigherLower(Chaos.Api.RequestEntity.HigherLowerPlayRequest)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.PlayHigherLower(Chaos.Api.RequestEntity.HigherLowerPlayRequest)
+  id: PlayHigherLower(Chaos.Api.RequestEntity.HigherLowerPlayRequest)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: PlayHigherLower(HigherLowerPlayRequest)
+  nameWithType: ICasinoGamesService.PlayHigherLower(HigherLowerPlayRequest)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.PlayHigherLower(Chaos.Api.RequestEntity.HigherLowerPlayRequest)
+  type: Method
+  source:
+    id: PlayHigherLower
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 41
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: HigherLowerGame PlayHigherLower(HigherLowerPlayRequest request)
+    parameters:
+    - id: request
+      type: Chaos.Api.RequestEntity.HigherLowerPlayRequest
+    return:
+      type: Chaos.Api.Models.HigherLowerGame
+    content.vb: Function PlayHigherLower(request As HigherLowerPlayRequest) As HigherLowerGame
+  overload: Chaos.Api.Interface.ICasinoGamesService.PlayHigherLower*
+- uid: Chaos.Api.Interface.ICasinoGamesService.GetHigherLowerGame(System.Guid)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.GetHigherLowerGame(System.Guid)
+  id: GetHigherLowerGame(System.Guid)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: GetHigherLowerGame(Guid)
+  nameWithType: ICasinoGamesService.GetHigherLowerGame(Guid)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.GetHigherLowerGame(System.Guid)
+  type: Method
+  source:
+    id: GetHigherLowerGame
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 42
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: HigherLowerGame GetHigherLowerGame(Guid gameId)
+    parameters:
+    - id: gameId
+      type: System.Guid
+    return:
+      type: Chaos.Api.Models.HigherLowerGame
+    content.vb: Function GetHigherLowerGame(gameId As Guid) As HigherLowerGame
+  overload: Chaos.Api.Interface.ICasinoGamesService.GetHigherLowerGame*
+- uid: Chaos.Api.Interface.ICasinoGamesService.MapToHigherLowerResponse(Chaos.Api.Models.HigherLowerGame)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.MapToHigherLowerResponse(Chaos.Api.Models.HigherLowerGame)
+  id: MapToHigherLowerResponse(Chaos.Api.Models.HigherLowerGame)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: MapToHigherLowerResponse(HigherLowerGame)
+  nameWithType: ICasinoGamesService.MapToHigherLowerResponse(HigherLowerGame)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.MapToHigherLowerResponse(Chaos.Api.Models.HigherLowerGame)
+  type: Method
+  source:
+    id: MapToHigherLowerResponse
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 43
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: HigherLowerResponse MapToHigherLowerResponse(HigherLowerGame game)
+    parameters:
+    - id: game
+      type: Chaos.Api.Models.HigherLowerGame
+    return:
+      type: Chaos.Api.ResponseEntity.HigherLowerResponse
+    content.vb: Function MapToHigherLowerResponse(game As HigherLowerGame) As HigherLowerResponse
+  overload: Chaos.Api.Interface.ICasinoGamesService.MapToHigherLowerResponse*
+- uid: Chaos.Api.Interface.ICasinoGamesService.CashOutHigherLower(System.Guid)
+  commentId: M:Chaos.Api.Interface.ICasinoGamesService.CashOutHigherLower(System.Guid)
+  id: CashOutHigherLower(System.Guid)
+  parent: Chaos.Api.Interface.ICasinoGamesService
+  langs:
+  - csharp
+  - vb
+  name: CashOutHigherLower(Guid)
+  nameWithType: ICasinoGamesService.CashOutHigherLower(Guid)
+  fullName: Chaos.Api.Interface.ICasinoGamesService.CashOutHigherLower(System.Guid)
+  type: Method
+  source:
+    id: CashOutHigherLower
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ICasinoGamesService.cs
+    startLine: 44
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: HigherLowerGame CashOutHigherLower(Guid gameId)
+    parameters:
+    - id: gameId
+      type: System.Guid
+    return:
+      type: Chaos.Api.Models.HigherLowerGame
+    content.vb: Function CashOutHigherLower(gameId As Guid) As HigherLowerGame
+  overload: Chaos.Api.Interface.ICasinoGamesService.CashOutHigherLower*
+references:
+- uid: Chaos.Api.Interface
+  commentId: N:Chaos.Api.Interface
+  href: Chaos.html
+  name: Chaos.Api.Interface
+  nameWithType: Chaos.Api.Interface
+  fullName: Chaos.Api.Interface
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Interface
+    name: Interface
+    href: Chaos.Api.Interface.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Interface
+    name: Interface
+    href: Chaos.Api.Interface.html
+- uid: Chaos.Api.Interface.ICasinoGamesService.CashTransaction*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.CashTransaction
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_CashTransaction_Chaos_Api_ResponseEntity_WalletResponse_System_Int32_
+  name: CashTransaction
+  nameWithType: ICasinoGamesService.CashTransaction
+  fullName: Chaos.Api.Interface.ICasinoGamesService.CashTransaction
+- uid: Chaos.Api.ResponseEntity.WalletResponse
+  commentId: T:Chaos.Api.ResponseEntity.WalletResponse
+  parent: Chaos.Api.ResponseEntity
+  href: Chaos.Api.ResponseEntity.WalletResponse.html
+  name: WalletResponse
+  nameWithType: WalletResponse
+  fullName: Chaos.Api.ResponseEntity.WalletResponse
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Chaos.Api.ResponseEntity
+  commentId: N:Chaos.Api.ResponseEntity
+  href: Chaos.html
+  name: Chaos.Api.ResponseEntity
+  nameWithType: Chaos.Api.ResponseEntity
+  fullName: Chaos.Api.ResponseEntity
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.ResponseEntity
+    name: ResponseEntity
+    href: Chaos.Api.ResponseEntity.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.ResponseEntity
+    name: ResponseEntity
+    href: Chaos.Api.ResponseEntity.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chaos.Api.Interface.ICasinoGamesService.ExistAnimal*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.ExistAnimal
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_ExistAnimal_System_Guid_
+  name: ExistAnimal
+  nameWithType: ICasinoGamesService.ExistAnimal
+  fullName: Chaos.Api.Interface.ICasinoGamesService.ExistAnimal
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Chaos.Api.Interface.ICasinoGamesService.PlayTragaPerrillas*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.PlayTragaPerrillas
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_PlayTragaPerrillas_Chaos_Api_RequestEntity_CoinGameRequest_
+  name: PlayTragaPerrillas
+  nameWithType: ICasinoGamesService.PlayTragaPerrillas
+  fullName: Chaos.Api.Interface.ICasinoGamesService.PlayTragaPerrillas
+- uid: Chaos.Api.RequestEntity.CoinGameRequest
+  commentId: T:Chaos.Api.RequestEntity.CoinGameRequest
+  parent: Chaos.Api.RequestEntity
+  href: Chaos.Api.RequestEntity.CoinGameRequest.html
+  name: CoinGameRequest
+  nameWithType: CoinGameRequest
+  fullName: Chaos.Api.RequestEntity.CoinGameRequest
+- uid: Chaos.Api.Models.Tragaperras[]
+  isExternal: true
+  href: Chaos.Api.Models.Tragaperras.html
+  name: Tragaperras[]
+  nameWithType: Tragaperras[]
+  fullName: Chaos.Api.Models.Tragaperras[]
+  nameWithType.vb: Tragaperras()
+  fullName.vb: Chaos.Api.Models.Tragaperras()
+  name.vb: Tragaperras()
+  spec.csharp:
+  - uid: Chaos.Api.Models.Tragaperras
+    name: Tragaperras
+    href: Chaos.Api.Models.Tragaperras.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Chaos.Api.Models.Tragaperras
+    name: Tragaperras
+    href: Chaos.Api.Models.Tragaperras.html
+  - name: (
+  - name: )
+- uid: Chaos.Api.RequestEntity
+  commentId: N:Chaos.Api.RequestEntity
+  href: Chaos.html
+  name: Chaos.Api.RequestEntity
+  nameWithType: Chaos.Api.RequestEntity
+  fullName: Chaos.Api.RequestEntity
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.RequestEntity
+    name: RequestEntity
+    href: Chaos.Api.RequestEntity.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.RequestEntity
+    name: RequestEntity
+    href: Chaos.Api.RequestEntity.html
+- uid: Chaos.Api.Interface.ICasinoGamesService.CoinGame*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.CoinGame
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_CoinGame_System_Guid_System_Guid_
+  name: CoinGame
+  nameWithType: ICasinoGamesService.CoinGame
+  fullName: Chaos.Api.Interface.ICasinoGamesService.CoinGame
+- uid: Chaos.Api.Models.CoinGame
+  commentId: T:Chaos.Api.Models.CoinGame
+  parent: Chaos.Api.Models
+  href: Chaos.Api.Models.CoinGame.html
+  name: CoinGame
+  nameWithType: CoinGame
+  fullName: Chaos.Api.Models.CoinGame
+- uid: Chaos.Api.Models
+  commentId: N:Chaos.Api.Models
+  href: Chaos.html
+  name: Chaos.Api.Models
+  nameWithType: Chaos.Api.Models
+  fullName: Chaos.Api.Models
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Models
+    name: Models
+    href: Chaos.Api.Models.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Models
+    name: Models
+    href: Chaos.Api.Models.html
+- uid: Chaos.Api.Interface.ICasinoGamesService.CalculateWinPossibility*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.CalculateWinPossibility
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_CalculateWinPossibility_System_Int32_
+  name: CalculateWinPossibility
+  nameWithType: ICasinoGamesService.CalculateWinPossibility
+  fullName: Chaos.Api.Interface.ICasinoGamesService.CalculateWinPossibility
+- uid: Chaos.Api.Interface.ICasinoGamesService.PlayRussianRoullete*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.PlayRussianRoullete
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_PlayRussianRoullete_System_Collections_Generic_List_Chaos_Infraestructure_Models_User__
+  name: PlayRussianRoullete
+  nameWithType: ICasinoGamesService.PlayRussianRoullete
+  fullName: Chaos.Api.Interface.ICasinoGamesService.PlayRussianRoullete
+- uid: System.Collections.Generic.List{Chaos.Infraestructure.Models.User}
+  commentId: T:System.Collections.Generic.List{Chaos.Infraestructure.Models.User}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<User>
+  nameWithType: List<User>
+  fullName: System.Collections.Generic.List<Chaos.Infraestructure.Models.User>
+  nameWithType.vb: List(Of User)
+  fullName.vb: System.Collections.Generic.List(Of Chaos.Infraestructure.Models.User)
+  name.vb: List(Of User)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Chaos.Infraestructure.Models.User
+    name: User
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Chaos.Infraestructure.Models.User
+    name: User
+  - name: )
+- uid: System.Collections.Generic.List{Chaos.Api.Models.RoundEliminated}
+  commentId: T:System.Collections.Generic.List{Chaos.Api.Models.RoundEliminated}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<RoundEliminated>
+  nameWithType: List<RoundEliminated>
+  fullName: System.Collections.Generic.List<Chaos.Api.Models.RoundEliminated>
+  nameWithType.vb: List(Of RoundEliminated)
+  fullName.vb: System.Collections.Generic.List(Of Chaos.Api.Models.RoundEliminated)
+  name.vb: List(Of RoundEliminated)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Chaos.Api.Models.RoundEliminated
+    name: RoundEliminated
+    href: Chaos.Api.Models.RoundEliminated.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Chaos.Api.Models.RoundEliminated
+    name: RoundEliminated
+    href: Chaos.Api.Models.RoundEliminated.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Chaos.Api.Interface.ICasinoGamesService.PlayEuropeanRoullete*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.PlayEuropeanRoullete
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_PlayEuropeanRoullete_Chaos_Api_RequestEntity_SelectionUserEuropeanRoulette_
+  name: PlayEuropeanRoullete
+  nameWithType: ICasinoGamesService.PlayEuropeanRoullete
+  fullName: Chaos.Api.Interface.ICasinoGamesService.PlayEuropeanRoullete
+- uid: Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette
+  commentId: T:Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette
+  parent: Chaos.Api.RequestEntity
+  href: Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette.html
+  name: SelectionUserEuropeanRoulette
+  nameWithType: SelectionUserEuropeanRoulette
+  fullName: Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette
+- uid: Chaos.Api.ResponseEntity.CashBack
+  commentId: T:Chaos.Api.ResponseEntity.CashBack
+  parent: Chaos.Api.ResponseEntity
+  href: Chaos.Api.ResponseEntity.CashBack.html
+  name: CashBack
+  nameWithType: CashBack
+  fullName: Chaos.Api.ResponseEntity.CashBack
+- uid: Chaos.Api.Interface.ICasinoGamesService.MapToBlackJackResponse*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.MapToBlackJackResponse
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_MapToBlackJackResponse_Chaos_Api_Models_BlackJackGame_
+  name: MapToBlackJackResponse
+  nameWithType: ICasinoGamesService.MapToBlackJackResponse
+  fullName: Chaos.Api.Interface.ICasinoGamesService.MapToBlackJackResponse
+- uid: Chaos.Api.Models.BlackJackGame
+  commentId: T:Chaos.Api.Models.BlackJackGame
+  parent: Chaos.Api.Models
+  href: Chaos.Api.Models.BlackJackGame.html
+  name: BlackJackGame
+  nameWithType: BlackJackGame
+  fullName: Chaos.Api.Models.BlackJackGame
+- uid: Chaos.Api.ResponseEntity.BlackJackResponse
+  commentId: T:Chaos.Api.ResponseEntity.BlackJackResponse
+  parent: Chaos.Api.ResponseEntity
+  href: Chaos.Api.ResponseEntity.BlackJackResponse.html
+  name: BlackJackResponse
+  nameWithType: BlackJackResponse
+  fullName: Chaos.Api.ResponseEntity.BlackJackResponse
+- uid: Chaos.Api.Interface.ICasinoGamesService.DetermineWinner*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.DetermineWinner
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_DetermineWinner_Chaos_Api_Models_BlackJackGame_
+  name: DetermineWinner
+  nameWithType: ICasinoGamesService.DetermineWinner
+  fullName: Chaos.Api.Interface.ICasinoGamesService.DetermineWinner
+- uid: Chaos.Api.Interface.ICasinoGamesService.BlackJackGame*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.BlackJackGame
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_BlackJackGame_System_Guid_System_Guid_
+  name: BlackJackGame
+  nameWithType: ICasinoGamesService.BlackJackGame
+  fullName: Chaos.Api.Interface.ICasinoGamesService.BlackJackGame
+- uid: Chaos.Api.Interface.ICasinoGamesService.BlackJackHit*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.BlackJackHit
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_BlackJackHit_System_Guid_
+  name: BlackJackHit
+  nameWithType: ICasinoGamesService.BlackJackHit
+  fullName: Chaos.Api.Interface.ICasinoGamesService.BlackJackHit
+- uid: Chaos.Api.Interface.ICasinoGamesService.BlackJackStand*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.BlackJackStand
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_BlackJackStand_System_Guid_
+  name: BlackJackStand
+  nameWithType: ICasinoGamesService.BlackJackStand
+  fullName: Chaos.Api.Interface.ICasinoGamesService.BlackJackStand
+- uid: Chaos.Api.Interface.ICasinoGamesService.BlackJackGetGame*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.BlackJackGetGame
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_BlackJackGetGame_System_Guid_
+  name: BlackJackGetGame
+  nameWithType: ICasinoGamesService.BlackJackGetGame
+  fullName: Chaos.Api.Interface.ICasinoGamesService.BlackJackGetGame
+- uid: Chaos.Api.Interface.ICasinoGamesService.StartHigherLowerGame*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.StartHigherLowerGame
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_StartHigherLowerGame_System_Guid_System_Guid_
+  name: StartHigherLowerGame
+  nameWithType: ICasinoGamesService.StartHigherLowerGame
+  fullName: Chaos.Api.Interface.ICasinoGamesService.StartHigherLowerGame
+- uid: Chaos.Api.Models.HigherLowerGame
+  commentId: T:Chaos.Api.Models.HigherLowerGame
+  parent: Chaos.Api.Models
+  href: Chaos.Api.Models.HigherLowerGame.html
+  name: HigherLowerGame
+  nameWithType: HigherLowerGame
+  fullName: Chaos.Api.Models.HigherLowerGame
+- uid: Chaos.Api.Interface.ICasinoGamesService.PlayHigherLower*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.PlayHigherLower
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_PlayHigherLower_Chaos_Api_RequestEntity_HigherLowerPlayRequest_
+  name: PlayHigherLower
+  nameWithType: ICasinoGamesService.PlayHigherLower
+  fullName: Chaos.Api.Interface.ICasinoGamesService.PlayHigherLower
+- uid: Chaos.Api.RequestEntity.HigherLowerPlayRequest
+  commentId: T:Chaos.Api.RequestEntity.HigherLowerPlayRequest
+  parent: Chaos.Api.RequestEntity
+  href: Chaos.Api.RequestEntity.HigherLowerPlayRequest.html
+  name: HigherLowerPlayRequest
+  nameWithType: HigherLowerPlayRequest
+  fullName: Chaos.Api.RequestEntity.HigherLowerPlayRequest
+- uid: Chaos.Api.Interface.ICasinoGamesService.GetHigherLowerGame*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.GetHigherLowerGame
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_GetHigherLowerGame_System_Guid_
+  name: GetHigherLowerGame
+  nameWithType: ICasinoGamesService.GetHigherLowerGame
+  fullName: Chaos.Api.Interface.ICasinoGamesService.GetHigherLowerGame
+- uid: Chaos.Api.Interface.ICasinoGamesService.MapToHigherLowerResponse*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.MapToHigherLowerResponse
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_MapToHigherLowerResponse_Chaos_Api_Models_HigherLowerGame_
+  name: MapToHigherLowerResponse
+  nameWithType: ICasinoGamesService.MapToHigherLowerResponse
+  fullName: Chaos.Api.Interface.ICasinoGamesService.MapToHigherLowerResponse
+- uid: Chaos.Api.ResponseEntity.HigherLowerResponse
+  commentId: T:Chaos.Api.ResponseEntity.HigherLowerResponse
+  parent: Chaos.Api.ResponseEntity
+  href: Chaos.Api.ResponseEntity.HigherLowerResponse.html
+  name: HigherLowerResponse
+  nameWithType: HigherLowerResponse
+  fullName: Chaos.Api.ResponseEntity.HigherLowerResponse
+- uid: Chaos.Api.Interface.ICasinoGamesService.CashOutHigherLower*
+  commentId: Overload:Chaos.Api.Interface.ICasinoGamesService.CashOutHigherLower
+  href: Chaos.Api.Interface.ICasinoGamesService.html#Chaos_Api_Interface_ICasinoGamesService_CashOutHigherLower_System_Guid_
+  name: CashOutHigherLower
+  nameWithType: ICasinoGamesService.CashOutHigherLower
+  fullName: Chaos.Api.Interface.ICasinoGamesService.CashOutHigherLower

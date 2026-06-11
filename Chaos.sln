@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36717.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chaos.Api", "Chaos\Chaos.Api.csproj", "{1B5989B0-CF67-42DD-B9AD-738360971856}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chaos.Infraestructure", "Chaos.Infraestructure\Chaos.Infraestructure.csproj", "{67DFCDEF-0D79-4603-95DD-723995AB3635}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "chaosfrontend", "ChaosFrontend\chaosfrontend.esproj", "{9A9A8BFC-644B-D182-900E-29CC1FEAB812}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chaos.Shared", "Chaos.Shared\Chaos.Shared.csproj", "{2904A4A1-D943-4682-B817-697C6D7B38F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chaos.BlazorCasinoApp", "BlazorCasinoApp\BlazorCasinoApp\Chaos.BlazorCasinoApp.csproj", "{4339FA24-006B-118F-EACF-5C6E18EAAF04}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CasinoDB", "CasinoDB\CasinoDB.sqlproj", "{56A74914-0AF7-4384-8DCC-A0D52F9FD042}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B5989B0-CF67-42DD-B9AD-738360971856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B5989B0-CF67-42DD-B9AD-738360971856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B5989B0-CF67-42DD-B9AD-738360971856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B5989B0-CF67-42DD-B9AD-738360971856}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67DFCDEF-0D79-4603-95DD-723995AB3635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67DFCDEF-0D79-4603-95DD-723995AB3635}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67DFCDEF-0D79-4603-95DD-723995AB3635}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67DFCDEF-0D79-4603-95DD-723995AB3635}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9A8BFC-644B-D182-900E-29CC1FEAB812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9A8BFC-644B-D182-900E-29CC1FEAB812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9A8BFC-644B-D182-900E-29CC1FEAB812}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9A9A8BFC-644B-D182-900E-29CC1FEAB812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9A8BFC-644B-D182-900E-29CC1FEAB812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9A8BFC-644B-D182-900E-29CC1FEAB812}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2904A4A1-D943-4682-B817-697C6D7B38F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2904A4A1-D943-4682-B817-697C6D7B38F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2904A4A1-D943-4682-B817-697C6D7B38F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2904A4A1-D943-4682-B817-697C6D7B38F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4339FA24-006B-118F-EACF-5C6E18EAAF04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4339FA24-006B-118F-EACF-5C6E18EAAF04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4339FA24-006B-118F-EACF-5C6E18EAAF04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4339FA24-006B-118F-EACF-5C6E18EAAF04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A74914-0AF7-4384-8DCC-A0D52F9FD042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A74914-0AF7-4384-8DCC-A0D52F9FD042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A74914-0AF7-4384-8DCC-A0D52F9FD042}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{56A74914-0AF7-4384-8DCC-A0D52F9FD042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A74914-0AF7-4384-8DCC-A0D52F9FD042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A74914-0AF7-4384-8DCC-A0D52F9FD042}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D31A2A4D-5142-4E59-88B0-1475D1D2C1AC}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1760 @@
+{
+  "source_base_path": "C:/Users/z00599ks/CsharpProjects/ChaosAPI/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Controllers.AnimalController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Controllers.AnimalController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Controllers.AnimalController",
+      "Summary": "<p sourcefile=\"api/Chaos.Api.Controllers.AnimalController.yml\" sourcestartlinenumber=\"1\">Controller to manage all animal-related operations (CRUD and necessary queries).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Controllers.AuthController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Controllers.AuthController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Controllers.AuthController",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Controllers.CasinoController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Controllers.CasinoController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Controllers.CasinoController",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Controllers.HealthController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Controllers.HealthController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Controllers.HealthController",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Controllers.UserController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Controllers.UserController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Controllers.UserController",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Controllers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Controllers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.AnimalEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.AnimalEnum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.AnimalEnum",
+      "Summary": "<p sourcefile=\"api/Chaos.Api.Enums.AnimalEnum.yml\" sourcestartlinenumber=\"1\">Enum representing the type of an animal.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.AnimalStatusEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.AnimalStatusEnum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.AnimalStatusEnum",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.BlackJackGameResultEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.BlackJackGameResultEnum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.BlackJackGameResultEnum",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.BlackJackGameStatusEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.BlackJackGameStatusEnum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.BlackJackGameStatusEnum",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.CardRank.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.CardRank.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.CardRank",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.CardSuit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.CardSuit.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.CardSuit",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.CoinSideEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.CoinSideEnum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.CoinSideEnum",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers",
+      "Summary": "<p sourcefile=\"api/Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.yml\" sourcestartlinenumber=\"1\">Black Numbers of the european Roulette.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.FirstDozen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.FirstDozen.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.EnumsEuropeanRoulette.FirstDozen",
+      "Summary": "<p sourcefile=\"api/Chaos.Api.Enums.EnumsEuropeanRoulette.FirstDozen.yml\" sourcestartlinenumber=\"1\">The first twelve numbers of european roulette.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.FirstHalf.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.FirstHalf.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.EnumsEuropeanRoulette.FirstHalf",
+      "Summary": "<p sourcefile=\"api/Chaos.Api.Enums.EnumsEuropeanRoulette.FirstHalf.yml\" sourcestartlinenumber=\"1\">The First half of the numbers.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.FirstRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.FirstRow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.EnumsEuropeanRoulette.FirstRow",
+      "Summary": "<p sourcefile=\"api/Chaos.Api.Enums.EnumsEuropeanRoulette.FirstRow.yml\" sourcestartlinenumber=\"1\">Specifies the available first row positions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.RedNumbers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.RedNumbers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.EnumsEuropeanRoulette.RedNumbers",
+      "Summary": "<p sourcefile=\"api/Chaos.Api.Enums.EnumsEuropeanRoulette.RedNumbers.yml\" sourcestartlinenumber=\"1\">The Red Numbers in the European Roulette.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen",
+      "Summary": "<p sourcefile=\"api/Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.yml\" sourcestartlinenumber=\"1\">As the name says is the second one Dozen in the European Roulette</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf",
+      "Summary": "<p sourcefile=\"api/Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.yml\" sourcestartlinenumber=\"1\">The last part of the numbers from the 19 to the 36.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.SecondRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.SecondRow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.EnumsEuropeanRoulette.SecondRow",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdDozen.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdDozen.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdDozen",
+      "Summary": "<p sourcefile=\"api/Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdDozen.yml\" sourcestartlinenumber=\"1\">It's the third dozen of the numbers</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow",
+      "Summary": "<p sourcefile=\"api/Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.yml\" sourcestartlinenumber=\"1\">Third row of the table</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.EnumsEuropeanRoulette.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.EnumsEuropeanRoulette",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.GameTypeEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.GameTypeEnum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.GameTypeEnum",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.HealthEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.HealthEnum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.HealthEnum",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.HigherOrLowerChoiceEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.HigherOrLowerChoiceEnum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.HigherOrLowerChoiceEnum",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.ShopTransactionTypeEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.ShopTransactionTypeEnum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.ShopTransactionTypeEnum",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.SlotSymbolEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.SlotSymbolEnum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums.SlotSymbolEnum",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Enums.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Enums",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Interface.IAnimalService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Interface.IAnimalService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Interface.IAnimalService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Interface.ICasinoGamesService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Interface.ICasinoGamesService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Interface.ICasinoGamesService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Interface.IDeckService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Interface.IDeckService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Interface.IDeckService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Interface.ITokenBlackListService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Interface.ITokenBlackListService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Interface.ITokenBlackListService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Interface.IUserService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Interface.IUserService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Interface.IUserService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Interface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Interface.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Interface",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Middleware.TokenBlackListMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Middleware.TokenBlackListMiddleware.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Middleware.TokenBlackListMiddleware",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Middleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Middleware.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Middleware",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Migrations.InitialCreate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Migrations.InitialCreate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Migrations.InitialCreate",
+      "Summary": "<p sourcefile=\"api/Chaos.Api.Migrations.InitialCreate.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Migrations.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Migrations",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.Animal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.Animal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models.Animal",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.AnimalRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.AnimalRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models.AnimalRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.AnimalShop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.AnimalShop.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models.AnimalShop",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.BlackJackGame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.BlackJackGame.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models.BlackJackGame",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.BlackJackHand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.BlackJackHand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models.BlackJackHand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.Card.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.Card.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models.Card",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.Casino.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.Casino.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models.Casino",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.CoinGame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.CoinGame.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models.CoinGame",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.Deck.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.Deck.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models.Deck",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.EuropeanRoulette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.EuropeanRoulette.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models.EuropeanRoulette",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.HigherLowerGame.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.HigherLowerGame.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models.HigherLowerGame",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.RoundEliminated.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.RoundEliminated.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models.RoundEliminated",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.StatusResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.StatusResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models.StatusResponse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.Tragaperras.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.Tragaperras.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models.Tragaperras",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.UserOld.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.UserOld.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models.UserOld",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.Wallet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.Wallet.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models.Wallet",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Models.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Models",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Provider.CasinoProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Provider.CasinoProvider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Provider.CasinoProvider",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Provider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Provider.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Provider",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.RequestEntity.BlackJackRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.RequestEntity.BlackJackRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.RequestEntity.BlackJackRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.RequestEntity.CoinGameRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.RequestEntity.CoinGameRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.RequestEntity.CoinGameRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.RequestEntity.HigherLowerPlayRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.RequestEntity.HigherLowerPlayRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.RequestEntity.HigherLowerPlayRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.RequestEntity.HigherLowerRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.RequestEntity.HigherLowerRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.RequestEntity.HigherLowerRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.RequestEntity.UserRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.RequestEntity.UserRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.RequestEntity.UserRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.RequestEntity.WalletRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.RequestEntity.WalletRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.RequestEntity.WalletRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.RequestEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.RequestEntity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.RequestEntity",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.ResponseEntity.BlackJackResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.ResponseEntity.BlackJackResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.ResponseEntity.BlackJackResponse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.ResponseEntity.CashBack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.ResponseEntity.CashBack.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.ResponseEntity.CashBack",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.ResponseEntity.CoinGameResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.ResponseEntity.CoinGameResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.ResponseEntity.CoinGameResponse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.ResponseEntity.HigherLowerResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.ResponseEntity.HigherLowerResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.ResponseEntity.HigherLowerResponse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.ResponseEntity.UserResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.ResponseEntity.UserResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.ResponseEntity.UserResponse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.ResponseEntity.WalletResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.ResponseEntity.WalletResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.ResponseEntity.WalletResponse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.ResponseEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.ResponseEntity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.ResponseEntity",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Service.AnimalService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Service.AnimalService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Service.AnimalService",
+      "Summary": "<p sourcefile=\"api/Chaos.Api.Service.AnimalService.yml\" sourcestartlinenumber=\"1\">Service responsible for managing animal operations,\nincluding creation, retrieval, deletion, and value calculation.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Service.CasinoGameService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Service.CasinoGameService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Service.CasinoGameService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Service.DeckService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Service.DeckService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Service.DeckService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Service.TokenBlackListService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Service.TokenBlackListService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Service.TokenBlackListService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Service.UserService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Service.UserService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Service.UserService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Service.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Service.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Service",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Utils.AnimalNameHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Utils.AnimalNameHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Utils.AnimalNameHelper",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Utils.DrawMoney.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Utils.DrawMoney.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Utils.DrawMoney",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Utils.GetImageAnimals.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Utils.GetImageAnimals.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Utils.GetImageAnimals",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Api.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Api.Utils.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Api.Utils",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Data.CasinoDbInitializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Data.CasinoDbInitializer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Data.CasinoDbInitializer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Data.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Data",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Extensions.ApplicationBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Extensions.ApplicationBuilderExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Extensions.ApplicationBuilderExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Extensions.ServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Extensions.ServiceCollectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Extensions.ServiceCollectionExtensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Extensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Extensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Migrations.InitialMigration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Migrations.InitialMigration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Migrations.InitialMigration",
+      "Summary": "<p sourcefile=\"api/Chaos.Infraestructure.Migrations.InitialMigration.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Migrations.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Migrations",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.Animal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.Animal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.Animal",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.AnimalShop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.AnimalShop.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.AnimalShop",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.AnimalValueConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.AnimalValueConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.AnimalValueConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.BlackjackAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.BlackjackAction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.BlackjackAction",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.BlackjackCard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.BlackjackCard.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.BlackjackCard",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.BlackjackGameConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.BlackjackGameConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.BlackjackGameConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.BlackjackHand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.BlackjackHand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.BlackjackHand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.BlackjackSession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.BlackjackSession.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.BlackjackSession",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.Casino.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.Casino.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.Casino",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.CasinoDBContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.CasinoDBContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.CasinoDBContext",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.CoinFlipGameConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.CoinFlipGameConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.CoinFlipGameConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.CoinFlipRarityConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.CoinFlipRarityConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.CoinFlipRarityConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.CoinFlipSession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.CoinFlipSession.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.CoinFlipSession",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.Game.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.Game.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.Game",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.GameSession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.GameSession.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.GameSession",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.HigherLowerGameConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.HigherLowerGameConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.HigherLowerGameConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.HigherLowerRound.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.HigherLowerRound.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.HigherLowerRound",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.HigherLowerSession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.HigherLowerSession.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.HigherLowerSession",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.RouletteBetType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.RouletteBetType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.RouletteBetType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.RouletteGameConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.RouletteGameConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.RouletteGameConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.RussianRouletteGameConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.RussianRouletteGameConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.RussianRouletteGameConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.RussianRouletteLobby.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.RussianRouletteLobby.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.RussianRouletteLobby",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.RussianRoulettePlayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.RussianRoulettePlayer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.RussianRoulettePlayer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.RussianRouletteRound.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.RussianRouletteRound.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.RussianRouletteRound",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.ShopAnimalListing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.ShopAnimalListing.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.ShopAnimalListing",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.ShopTransaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.ShopTransaction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.ShopTransaction",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.SlotGameConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.SlotGameConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.SlotGameConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.SlotPayoutRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.SlotPayoutRule.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.SlotPayoutRule",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.SlotSymbol.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.SlotSymbol.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.SlotSymbol",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.User.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models.User",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Chaos.Infraestructure.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Chaos.Infraestructure.Models.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Chaos.Infraestructure.Models",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.ico"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.svg"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

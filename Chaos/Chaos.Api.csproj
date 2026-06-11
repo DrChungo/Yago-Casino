@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="**\*.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Remove="Migrations\**" />
+		<Compile Remove="Models\Config\**" />
+		<Compile Remove="Models\HistoryBD\**" />
+		<Compile Remove="Models\Response\**" />
+		<Content Remove="Migrations\**" />
+		<Content Remove="Models\Config\**" />
+		<Content Remove="Models\HistoryBD\**" />
+		<Content Remove="Models\Response\**" />
+		<EmbeddedResource Remove="Migrations\**" />
+		<EmbeddedResource Remove="Models\Config\**" />
+		<EmbeddedResource Remove="Models\HistoryBD\**" />
+		<EmbeddedResource Remove="Models\Response\**" />
+		<None Remove="Migrations\**" />
+		<None Remove="Models\Config\**" />
+		<None Remove="Models\HistoryBD\**" />
+		<None Remove="Models\Response\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Remove="Models\Response\**" />
+		<Content Remove="Models\Response\**" />
+		<EmbeddedResource Remove="Models\Response\**" />
+		<None Remove="Models\Response\**" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Remove="Models\PlayerInLobbyResponse.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="efpt.config.json.user" />
+		<None Include="ResponseEntity\PlayerInLobbyResponse.cs" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="16.1.1" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.1.0" />
+    <PackageReference Include="Bogus" Version="35.6.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.15">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.15">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Scalar.AspNetCore" Version="2.14.14" />
+  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.15" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.6" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Chaos.Infraestructure\Chaos.Infraestructure.csproj" />
+	  <ProjectReference Include="..\Chaos.Shared\Chaos.Shared.csproj" />
+	</ItemGroup>
+  <!-- Project references of Blazor BackOffice-->
+	
+	<PropertyGroup>
+		<FrontendPath>$([System.IO.Path]::GetFullPath('$(SolutionDir)chaosfrontend'))</FrontendPath>
+	</PropertyGroup>
+
+	<Target Name="LaunchFrontend" AfterTargets="Build" Condition="'$(Configuration)' == 'Debug'">
+		<Exec Command="powershell -Command &quot;Start-Process powershell -ArgumentList '-NoExit', '-Command', 'cd $(FrontendPath); npm run dev'&quot;" WorkingDirectory="$(SolutionDir)" ContinueOnError="true" />
+	</Target>
+
+	<!-- XML documentation enabled -->
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+	</PropertyGroup>
+
+</Project>

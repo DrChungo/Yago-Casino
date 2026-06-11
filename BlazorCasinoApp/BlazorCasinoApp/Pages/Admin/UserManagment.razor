@@ -1,0 +1,290 @@
+﻿@page "/users"
+@using Chaos.BlazorCasinoApp.Service
+@using Chaos.Shared.Dto
+@using Chaos.Shared.ResponseEntity
+@using Microsoft.AspNetCore.Authorization
+@inject UserManagementService UserService
+@inject NavigationManager Navigation
+@attribute [Authorize]
+
+<PageTitle>Gestión de Usuarios</PageTitle>
+
+<div class="casino-page">
+
+    <h1>👥 Gestión de Usuarios</h1>
+
+    @if (isLoading)
+    {
+        <div class="casino-loading">
+            <div class="casino-spinner" role="status">🛞</div>
+            <p class="text-gold">Cargando usuarios...</p>
+        </div>
+    }
+    else if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="alert alert-danger">⚠️ @errorMessage</div>
+    }
+    else
+    {
+        <!-- Toolbar -->
+        <div class="casino-toolbar">
+            <h5>Usuarios <span class="badge-casino">@users.Count</span></h5>
+
+            <!-- Filtros -->
+            <div class="casino-filters">
+                <input class="casino-input"
+                       placeholder="🔍 Buscar por nombre o email..."
+                       @bind="searchTerm"
+                       @bind:event="oninput" />
+
+                <select class="casino-select" @bind="filterStatus">
+                    <option value="">Todos los estados</option>
+                    <option value="active">✅ Activos</option>
+                    <option value="inactive">❌ Inactivos</option>
+                </select>
+
+                <select class="casino-select" @bind="filterRole">
+                    <option value="">Todos los roles</option>
+                    <option value="admin">🔑 Admins</option>
+                    <option value="user">👤 Usuarios</option>
+                </select>
+            </div>
+        </div>
+
+        @if (!FilteredUsers.Any())
+        {
+            <div class="alert alert-warning">😕 No se encontraron usuarios con esos filtros.</div>
+        }
+        else
+        {
+            <div class="casino-table-wrapper">
+                <table class="casino-table">
+                    <thead>
+                        <tr>
+                            <th>👤 Nombre</th>
+                            <th>📧 Email</th>
+                            <th>🔑 Rol</th>
+                            <th>Estado</th>
+                            <th>⚙️ Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in FilteredUsers)
+                        {
+                            <tr>
+                                <td>@user.UserName</td>
+                                <td>@user.Email</td>
+
+                                <!-- Rol -->
+                                <td>
+                                    @if (user.IsAdmin)
+                                    {
+                                        <span class="badge-casino badge-gold">🔑 Admin</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge-casino badge-muted">👤 Usuario</span>
+                                    }
+                                </td>
+
+                                <!-- Estado -->
+                                <td>
+                                    @if (user.IsActive)
+                                    {
+                                        <span class="badge-casino badge-success">✅ Activo</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge-casino badge-danger">❌ Inactivo</span>
+                                    }
+                                </td>
+
+                                <!-- Acciones -->
+                                <td class="acciones-cell">
+                                    @if (user.IsAdmin)
+                                    {
+                                        <button class="btn-casino-edit"
+                                                @onclick="() => RevokeAdmin(user)"
+                                                disabled="@(loadingUserId == user.Id)">
+                                            @if (loadingUserId == user.Id)
+                                            {
+                                                <span>⏳</span>
+                                            }
+                                            else
+                                            {
+                                                <span>⬇️ Quitar Admin</span>
+                                            }
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <button class="btn-casino-edit"
+                                                @onclick="() => MakeAdmin(user)"
+                                                disabled="@(loadingUserId == user.Id)">
+                                            @if (loadingUserId == user.Id)
+                                            {
+                                                <span>⏳</span>
+                                            }
+                                            else
+                                            {
+                                                <span>⬆️ Hacer Admin</span>
+                                            }
+                                        </button>
+                                    }
+
+                                    @if (user.IsActive)
+                                    {
+                                        <button class="btn-casino-delete"
+                                                @onclick="() => DeactivateUser(user)"
+                                                disabled="@(loadingUserId == user.Id)">
+                                            🚫 Desactivar
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <button class="btn-casino-primary"
+                                                @onclick="() => ActivateUser(user)"
+                                                disabled="@(loadingUserId == user.Id)">
+                                            ✅ Activar
+                                        </button>
+                                    }
+
+                                    <button class="btn-casino-primary"
+                                            @onclick="() => GoToSessions(user.Id)">
+                                        👤 Info
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    }
+
+    <!-- Toast de feedback -->
+    @if (!string.IsNullOrEmpty(toastMessage))
+    {
+        <div class="casino-toast @toastCssClass">
+            <span>@toastMessage</span>
+            <button @onclick="() => toastMessage = string.Empty">✕</button>
+        </div>
+    }
+
+</div>
+
+@code {
+    private List<UserConfigDto> users = new();
+    private bool isLoading = true;
+    private string errorMessage = string.Empty;
+    private Guid? loadingUserId = null;
+
+    private string searchTerm = string.Empty;
+    private string filterStatus = string.Empty;
+    private string filterRole = string.Empty;
+
+    private string toastMessage = string.Empty;
+    private string toastCssClass = "toast-success";
+
+    protected override async Task OnInitializedAsync() => await LoadUsers();
+
+    private async Task LoadUsers()
+    {
+        isLoading = true;
+        errorMessage = string.Empty;
+        try
+        {
+            users = await UserService.GetAllUsersAsync();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al cargar usuarios: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private IEnumerable<UserConfigDto> FilteredUsers => users
+        .Where(u =>
+            (string.IsNullOrEmpty(searchTerm) ||
+             u.UserName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+             u.Email.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
+            &&
+            (filterStatus == "" ||
+             (filterStatus == "active" && u.IsActive) ||
+             (filterStatus == "inactive" && !u.IsActive))
+            &&
+            (filterRole == "" ||
+             (filterRole == "admin" && u.IsAdmin) ||
+             (filterRole == "user" && !u.IsAdmin))
+        );
+
+    private async Task MakeAdmin(UserConfigDto user)
+    {
+        loadingUserId = user.Id;
+        try
+        {
+            await UserService.MakeAdminAsync(user.Id);
+            user.IsAdmin = true;
+            ShowToast($"✅ {user.UserName} ahora es Admin.", "toast-success");
+        }
+        catch { ShowToast("❌ Error al promover usuario.", "toast-danger"); }
+        finally { loadingUserId = null; }
+    }
+
+    private async Task RevokeAdmin(UserConfigDto user)
+    {
+        loadingUserId = user.Id;
+        try
+        {
+            await UserService.RevokeAdminAsync(user.Id);
+            user.IsAdmin = false;
+            ShowToast($"⚠️ {user.UserName} ya no es Admin.", "toast-warning");
+        }
+        catch { ShowToast("❌ Error al revocar admin.", "toast-danger"); }
+        finally { loadingUserId = null; }
+    }
+
+    private async Task DeactivateUser(UserConfigDto user)
+    {
+        loadingUserId = user.Id;
+        try
+        {
+            await UserService.DeactivateUserAsync(user.Id);
+            user.IsActive = false;
+            ShowToast($"🚫 {user.UserName} desactivado.", "toast-danger");
+        }
+        catch { ShowToast("❌ Error al desactivar.", "toast-danger"); }
+        finally { loadingUserId = null; }
+    }
+
+    private async Task ActivateUser(UserConfigDto user)
+    {
+        loadingUserId = user.Id;
+        try
+        {
+            await UserService.ActivateUserAsync(user.Id);
+            user.IsActive = true;
+            ShowToast($"✅ {user.UserName} activado.", "toast-success");
+        }
+        catch { ShowToast("❌ Error al activar.", "toast-danger"); }
+        finally { loadingUserId = null; }
+    }
+
+    private void GoToSessions(Guid userId) =>
+        Navigation.NavigateTo($"/users/{userId}/info");
+
+    private void ShowToast(string message, string css)
+    {
+        toastMessage = message;
+        toastCssClass = css;
+        StateHasChanged();
+        _ = Task.Delay(3500).ContinueWith(_ =>
+        {
+            toastMessage = string.Empty;
+            InvokeAsync(StateHasChanged);
+        });
+    }
+}

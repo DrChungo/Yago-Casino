@@ -1,0 +1,108 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums.GameTypeEnum
+  commentId: T:Chaos.Api.Enums.GameTypeEnum
+  id: GameTypeEnum
+  parent: Chaos.Api.Enums
+  children:
+  - Chaos.Api.Enums.GameTypeEnum.CoinFlip
+  - Chaos.Api.Enums.GameTypeEnum.Slots
+  langs:
+  - csharp
+  - vb
+  name: GameTypeEnum
+  nameWithType: GameTypeEnum
+  fullName: Chaos.Api.Enums.GameTypeEnum
+  type: Enum
+  source:
+    id: GameTypeEnum
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\GameTypeEnum.cs
+    startLine: 2
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: public enum GameTypeEnum
+    content.vb: Public Enum GameTypeEnum
+- uid: Chaos.Api.Enums.GameTypeEnum.Slots
+  commentId: F:Chaos.Api.Enums.GameTypeEnum.Slots
+  id: Slots
+  parent: Chaos.Api.Enums.GameTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: Slots
+  nameWithType: GameTypeEnum.Slots
+  fullName: Chaos.Api.Enums.GameTypeEnum.Slots
+  type: Field
+  source:
+    id: Slots
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\GameTypeEnum.cs
+    startLine: 4
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: Slots = 0
+    return:
+      type: Chaos.Api.Enums.GameTypeEnum
+- uid: Chaos.Api.Enums.GameTypeEnum.CoinFlip
+  commentId: F:Chaos.Api.Enums.GameTypeEnum.CoinFlip
+  id: CoinFlip
+  parent: Chaos.Api.Enums.GameTypeEnum
+  langs:
+  - csharp
+  - vb
+  name: CoinFlip
+  nameWithType: GameTypeEnum.CoinFlip
+  fullName: Chaos.Api.Enums.GameTypeEnum.CoinFlip
+  type: Field
+  source:
+    id: CoinFlip
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\GameTypeEnum.cs
+    startLine: 5
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: CoinFlip = 1
+    return:
+      type: Chaos.Api.Enums.GameTypeEnum
+references:
+- uid: Chaos.Api.Enums
+  commentId: N:Chaos.Api.Enums
+  href: Chaos.html
+  name: Chaos.Api.Enums
+  nameWithType: Chaos.Api.Enums
+  fullName: Chaos.Api.Enums
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+- uid: Chaos.Api.Enums.GameTypeEnum
+  commentId: T:Chaos.Api.Enums.GameTypeEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.GameTypeEnum.html
+  name: GameTypeEnum
+  nameWithType: GameTypeEnum
+  fullName: Chaos.Api.Enums.GameTypeEnum

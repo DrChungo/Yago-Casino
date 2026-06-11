@@ -1,0 +1,375 @@
+﻿/* ═══════════════════════════════════════
+   PAGE
+═══════════════════════════════════════ */
+.ranking-page {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0f0f0f;
+}
+
+/* ═══════════════════════════════════════
+   CANVAS — ratio fijo, sin conflicto
+═══════════════════════════════════════ */
+.ranking-canvas {
+    position: relative;
+    aspect-ratio: 1570 / 1002;
+    width: 100vw;
+    max-height: 100vh;
+}
+
+/* ═══════════════════════════════════════
+   FONDO — llena el canvas exacto
+═══════════════════════════════════════ */
+.ranking-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: 0;
+}
+
+/* ═══════════════════════════════════════
+   SLOTS — % del canvas, no del viewport
+═══════════════════════════════════════ */
+.animal-slot {
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+/* 🥇 1° — centro */
+.slot-1 {
+    left: 54%;
+    bottom: 38%;
+    width: 10%; /* ← hitbox, mantenla razonable */
+    height: 10%;
+    transform: translateX(-50%);
+}
+
+
+/* 🥈 2° — izquierda */
+.slot-2 {
+    left: 34%;
+    bottom: 32.82%;
+    width: 10%;
+    height: 10%;
+    transform: translateX(-50%);
+}
+
+/* 🥉 3° — derecha */
+.slot-3 {
+    left: 79.02%;
+    bottom: 25.93%;
+    width: 10%;
+    height: 10%;
+    transform: translateX(-50%);
+}
+/* ═══════════════════════════════════════
+   TAMAÑO VISUAL POR SLOT
+   — scale en el wrapper, no en el svg
+═══════════════════════════════════════ */
+.slot-1 .animal-wrapper {
+    transform: scale(4);
+    transform-origin: center bottom;
+}
+
+.slot-2 .animal-wrapper {
+    transform: scale(3);
+    transform-origin: center bottom;
+}
+
+.slot-3 .animal-wrapper {
+    transform: scale(3);
+    transform-origin: center bottom;
+}
+
+/* ═══════════════════════════════════════
+   FLOAT ANIMATION — combinar con scale
+═══════════════════════════════════════ */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* ═══════════════════════════════════════
+   COLUMN
+═══════════════════════════════════════ */
+.podium-column {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* ═══════════════════════════════════════
+   WRAPPER
+═══════════════════════════════════════ */
+.animal-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* ═══════════════════════════════════════
+   SVG / IMG
+═══════════════════════════════════════ */
+.animal-svg {
+    position: relative;
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center center;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+/* ═══════════════════════════════════════
+   FLOAT ANIMATION
+═══════════════════════════════════════ */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animal-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.slot-1 .animal-float {
+    animation-delay: 0s;
+}
+
+.slot-2 .animal-float {
+    animation-delay: 0.8s;
+}
+
+.slot-3 .animal-float {
+    animation-delay: 1.6s;
+}
+
+/* ═══════════════════════════════════════
+   TOOLTIP BASE
+   — ancho y fuente en vw para que escale
+     proporcionalmente con el canvas
+═══════════════════════════════════════ */
+.animal-tooltip {
+    position: fixed;
+    background: #1a0a2eee;
+    border: 1px solid #FFD70044;
+    border-radius: clamp(3px, 0.4vw, 8px);
+    /* ✅ Ancho proporcional al viewport, mínimo muy pequeño */
+    width: clamp(70px, 9vw, 175px);
+    padding: clamp(3px, 0.45vw, 10px) clamp(4px, 0.55vw, 12px);
+    z-index: 9999;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 16px #00000088;
+    pointer-events: none;
+    box-sizing: border-box;
+    visibility: visible;
+    transition: opacity 0.15s ease;
+}
+
+    /* ── Flechas ── */
+    .animal-tooltip::after {
+        display: none;
+    }
+
+.tooltip-above::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: clamp(3px, 0.35vw, 5px) solid transparent;
+    border-top-color: #1a0a2eee;
+}
+
+.tooltip-below::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: clamp(3px, 0.35vw, 5px) solid transparent;
+    border-bottom-color: #1a0a2eee;
+}
+
+/* ── ROWS ── */
+.tooltip-row {
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(2px, 0.4vw, 10px);
+    margin-bottom: clamp(1px, 0.15vw, 4px);
+    /* ✅ Fuente muy pequeña en mobile, crece con vw */
+    font-size: clamp(0.3rem, 0.58vw, 0.72rem);
+}
+
+.tooltip-label {
+    color: #bbb;
+}
+
+.tooltip-value {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* ── DIVISOR ── */
+.tooltip-divider {
+    border: none;
+    border-top: 1px solid #ffffff22;
+    margin: clamp(2px, 0.3vw, 7px) 0;
+}
+
+/* ── USER SECTION ── */
+.tooltip-user-section {
+    text-align: center;
+    padding-top: clamp(1px, 0.15vw, 4px);
+}
+
+.place-badge {
+    font-size: clamp(0.4rem, 0.75vw, 1rem);
+    margin: 0 0 1px;
+}
+
+.animal-name {
+    font-size: clamp(0.35rem, 0.62vw, 0.78rem);
+    font-weight: 700;
+    color: #fff;
+    margin: 1px 0;
+}
+
+.animal-type {
+    font-size: clamp(0.28rem, 0.45vw, 0.6rem);
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin: 0 0 2px;
+}
+
+.animal-value1 {
+    font-size: clamp(0.3rem, 0.58vw, 0.75rem);
+    color: #FFD700;
+    font-weight: 700;
+    margin: 0 0 1px;
+}
+
+.owner-name {
+    font-size: clamp(0.28rem, 0.45vw, 0.6rem);
+    color: #ddd;
+    margin: 0;
+}
+
+/* ── HEALTH COLORS ── */
+.tooltip-health {
+    font-weight: 700;
+}
+
+.health-yaguete {
+    color: #ff4d4d;
+}
+
+.health-excelent {
+    color: #4dff91;
+}
+
+.health-good {
+    color: #7ec8ff;
+}
+
+.health-regular {
+    color: #ffd04d;
+}
+
+/* ═══════════════════════════════════════
+   PODIO / LOADING / ERROR
+═══════════════════════════════════════ */
+.podium-block,
+.podium-number {
+    display: none;
+}
+
+.ranking-state {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    background: #0f0f0f;
+}
+
+.ranking-spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid #ffffff22;
+    border-top-color: #FFD700;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.ranking-error {
+    color: #ff6b6b;
+}
+
+/* ═══════════════════════════════════════
+   TÍTULO — centrado, 100% responsive
+═══════════════════════════════════════ */
+.ranking-title {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    white-space: nowrap;
+    /* Texto */
+    color: #FFD700;
+    font-size: clamp(0.6rem, 2.2vw, 1.6rem);
+    font-weight: 800;
+    letter-spacing: clamp(1px, 0.3vw, 4px);
+    text-transform: uppercase;
+    text-shadow: 0 0 16px #FFD70099, 0 0 32px #FFD70044, 0 2px 4px #000;
+    /* Fondo */
+    background: linear-gradient(135deg, #1a0a2eee, #2a0a4eee);
+    border: 1px solid #FFD70044;
+    border-radius: clamp(4px, 0.5vw, 10px);
+    padding: clamp(3px, 0.4vw, 8px) clamp(8px, 1.2vw, 24px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 16px #00000066;
+}

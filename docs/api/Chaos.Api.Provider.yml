@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Provider
+  commentId: N:Chaos.Api.Provider
+  id: Chaos.Api.Provider
+  children:
+  - Chaos.Api.Provider.CasinoProvider
+  langs:
+  - csharp
+  - vb
+  name: Chaos.Api.Provider
+  nameWithType: Chaos.Api.Provider
+  fullName: Chaos.Api.Provider
+  type: Namespace
+  assemblies:
+  - Chaos.Api
+references:
+- uid: Chaos.Api.Provider.CasinoProvider
+  commentId: T:Chaos.Api.Provider.CasinoProvider
+  parent: Chaos.Api.Provider
+  href: Chaos.Api.Provider.CasinoProvider.html
+  name: CasinoProvider
+  nameWithType: CasinoProvider
+  fullName: Chaos.Api.Provider.CasinoProvider
+- uid: Chaos.Api.Provider
+  commentId: N:Chaos.Api.Provider
+  href: Chaos.html
+  name: Chaos.Api.Provider
+  nameWithType: Chaos.Api.Provider
+  fullName: Chaos.Api.Provider
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Provider
+    name: Provider
+    href: Chaos.Api.Provider.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Provider
+    name: Provider
+    href: Chaos.Api.Provider.html

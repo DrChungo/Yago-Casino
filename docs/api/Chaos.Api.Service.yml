@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Service
+  commentId: N:Chaos.Api.Service
+  id: Chaos.Api.Service
+  children:
+  - Chaos.Api.Service.AnimalService
+  - Chaos.Api.Service.CasinoGameService
+  - Chaos.Api.Service.DeckService
+  - Chaos.Api.Service.TokenBlackListService
+  - Chaos.Api.Service.UserService
+  langs:
+  - csharp
+  - vb
+  name: Chaos.Api.Service
+  nameWithType: Chaos.Api.Service
+  fullName: Chaos.Api.Service
+  type: Namespace
+  assemblies:
+  - Chaos.Api
+references:
+- uid: Chaos.Api.Service.AnimalService
+  commentId: T:Chaos.Api.Service.AnimalService
+  href: Chaos.Api.Service.AnimalService.html
+  name: AnimalService
+  nameWithType: AnimalService
+  fullName: Chaos.Api.Service.AnimalService
+- uid: Chaos.Api.Service.CasinoGameService
+  commentId: T:Chaos.Api.Service.CasinoGameService
+  href: Chaos.Api.Service.CasinoGameService.html
+  name: CasinoGameService
+  nameWithType: CasinoGameService
+  fullName: Chaos.Api.Service.CasinoGameService
+- uid: Chaos.Api.Service.DeckService
+  commentId: T:Chaos.Api.Service.DeckService
+  href: Chaos.Api.Service.DeckService.html
+  name: DeckService
+  nameWithType: DeckService
+  fullName: Chaos.Api.Service.DeckService
+- uid: Chaos.Api.Service.TokenBlackListService
+  commentId: T:Chaos.Api.Service.TokenBlackListService
+  href: Chaos.Api.Service.TokenBlackListService.html
+  name: TokenBlackListService
+  nameWithType: TokenBlackListService
+  fullName: Chaos.Api.Service.TokenBlackListService
+- uid: Chaos.Api.Service.UserService
+  commentId: T:Chaos.Api.Service.UserService
+  href: Chaos.Api.Service.UserService.html
+  name: UserService
+  nameWithType: UserService
+  fullName: Chaos.Api.Service.UserService

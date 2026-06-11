@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Migrations
+  commentId: N:Chaos.Api.Migrations
+  id: Chaos.Api.Migrations
+  children:
+  - Chaos.Api.Migrations.InitialCreate
+  langs:
+  - csharp
+  - vb
+  name: Chaos.Api.Migrations
+  nameWithType: Chaos.Api.Migrations
+  fullName: Chaos.Api.Migrations
+  type: Namespace
+  assemblies:
+  - Chaos.Api
+references:
+- uid: Chaos.Api.Migrations.InitialCreate
+  commentId: T:Chaos.Api.Migrations.InitialCreate
+  href: Chaos.Api.Migrations.InitialCreate.html
+  name: InitialCreate
+  nameWithType: InitialCreate
+  fullName: Chaos.Api.Migrations.InitialCreate

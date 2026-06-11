@@ -1,0 +1,101 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.RequestEntity
+  commentId: N:Chaos.Api.RequestEntity
+  id: Chaos.Api.RequestEntity
+  children:
+  - Chaos.Api.RequestEntity.BlackJackRequest
+  - Chaos.Api.RequestEntity.CoinGameRequest
+  - Chaos.Api.RequestEntity.HigherLowerPlayRequest
+  - Chaos.Api.RequestEntity.HigherLowerRequest
+  - Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette
+  - Chaos.Api.RequestEntity.UserRequest
+  - Chaos.Api.RequestEntity.WalletRequest
+  langs:
+  - csharp
+  - vb
+  name: Chaos.Api.RequestEntity
+  nameWithType: Chaos.Api.RequestEntity
+  fullName: Chaos.Api.RequestEntity
+  type: Namespace
+  assemblies:
+  - Chaos.Api
+references:
+- uid: Chaos.Api.RequestEntity.BlackJackRequest
+  commentId: T:Chaos.Api.RequestEntity.BlackJackRequest
+  parent: Chaos.Api.RequestEntity
+  href: Chaos.Api.RequestEntity.BlackJackRequest.html
+  name: BlackJackRequest
+  nameWithType: BlackJackRequest
+  fullName: Chaos.Api.RequestEntity.BlackJackRequest
+- uid: Chaos.Api.RequestEntity.CoinGameRequest
+  commentId: T:Chaos.Api.RequestEntity.CoinGameRequest
+  parent: Chaos.Api.RequestEntity
+  href: Chaos.Api.RequestEntity.CoinGameRequest.html
+  name: CoinGameRequest
+  nameWithType: CoinGameRequest
+  fullName: Chaos.Api.RequestEntity.CoinGameRequest
+- uid: Chaos.Api.RequestEntity.HigherLowerPlayRequest
+  commentId: T:Chaos.Api.RequestEntity.HigherLowerPlayRequest
+  parent: Chaos.Api.RequestEntity
+  href: Chaos.Api.RequestEntity.HigherLowerPlayRequest.html
+  name: HigherLowerPlayRequest
+  nameWithType: HigherLowerPlayRequest
+  fullName: Chaos.Api.RequestEntity.HigherLowerPlayRequest
+- uid: Chaos.Api.RequestEntity.HigherLowerRequest
+  commentId: T:Chaos.Api.RequestEntity.HigherLowerRequest
+  parent: Chaos.Api.RequestEntity
+  href: Chaos.Api.RequestEntity.HigherLowerRequest.html
+  name: HigherLowerRequest
+  nameWithType: HigherLowerRequest
+  fullName: Chaos.Api.RequestEntity.HigherLowerRequest
+- uid: Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette
+  commentId: T:Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette
+  parent: Chaos.Api.RequestEntity
+  href: Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette.html
+  name: SelectionUserEuropeanRoulette
+  nameWithType: SelectionUserEuropeanRoulette
+  fullName: Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette
+- uid: Chaos.Api.RequestEntity.UserRequest
+  commentId: T:Chaos.Api.RequestEntity.UserRequest
+  parent: Chaos.Api.RequestEntity
+  href: Chaos.Api.RequestEntity.UserRequest.html
+  name: UserRequest
+  nameWithType: UserRequest
+  fullName: Chaos.Api.RequestEntity.UserRequest
+- uid: Chaos.Api.RequestEntity.WalletRequest
+  commentId: T:Chaos.Api.RequestEntity.WalletRequest
+  href: Chaos.Api.RequestEntity.WalletRequest.html
+  name: WalletRequest
+  nameWithType: WalletRequest
+  fullName: Chaos.Api.RequestEntity.WalletRequest
+- uid: Chaos.Api.RequestEntity
+  commentId: N:Chaos.Api.RequestEntity
+  href: Chaos.html
+  name: Chaos.Api.RequestEntity
+  nameWithType: Chaos.Api.RequestEntity
+  fullName: Chaos.Api.RequestEntity
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.RequestEntity
+    name: RequestEntity
+    href: Chaos.Api.RequestEntity.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.RequestEntity
+    name: RequestEntity
+    href: Chaos.Api.RequestEntity.html

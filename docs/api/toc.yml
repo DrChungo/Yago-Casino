@@ -1,0 +1,385 @@
+### YamlMime:TableOfContent
+items:
+- uid: Chaos.Api.Controllers
+  name: Chaos.Api.Controllers
+  type: Namespace
+  items:
+  - uid: Chaos.Api.Controllers.AnimalController
+    name: AnimalController
+    type: Class
+  - uid: Chaos.Api.Controllers.AuthController
+    name: AuthController
+    type: Class
+  - uid: Chaos.Api.Controllers.CasinoController
+    name: CasinoController
+    type: Class
+  - uid: Chaos.Api.Controllers.HealthController
+    name: HealthController
+    type: Class
+  - uid: Chaos.Api.Controllers.UserController
+    name: UserController
+    type: Class
+- uid: Chaos.Api.Enums
+  name: Chaos.Api.Enums
+  type: Namespace
+  items:
+  - uid: Chaos.Api.Enums.AnimalEnum
+    name: AnimalEnum
+    type: Enum
+  - uid: Chaos.Api.Enums.AnimalStatusEnum
+    name: AnimalStatusEnum
+    type: Enum
+  - uid: Chaos.Api.Enums.BlackJackGameResultEnum
+    name: BlackJackGameResultEnum
+    type: Enum
+  - uid: Chaos.Api.Enums.BlackJackGameStatusEnum
+    name: BlackJackGameStatusEnum
+    type: Enum
+  - uid: Chaos.Api.Enums.CardRank
+    name: CardRank
+    type: Enum
+  - uid: Chaos.Api.Enums.CardSuit
+    name: CardSuit
+    type: Enum
+  - uid: Chaos.Api.Enums.CoinSideEnum
+    name: CoinSideEnum
+    type: Enum
+  - uid: Chaos.Api.Enums.GameTypeEnum
+    name: GameTypeEnum
+    type: Enum
+  - uid: Chaos.Api.Enums.HealthEnum
+    name: HealthEnum
+    type: Enum
+  - uid: Chaos.Api.Enums.HigherOrLowerChoiceEnum
+    name: HigherOrLowerChoiceEnum
+    type: Enum
+  - uid: Chaos.Api.Enums.ShopTransactionTypeEnum
+    name: ShopTransactionTypeEnum
+    type: Enum
+  - uid: Chaos.Api.Enums.SlotSymbolEnum
+    name: SlotSymbolEnum
+    type: Enum
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+  name: Chaos.Api.Enums.EnumsEuropeanRoulette
+  type: Namespace
+  items:
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+    name: BlackNumbers
+    type: Enum
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstDozen
+    name: FirstDozen
+    type: Enum
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstHalf
+    name: FirstHalf
+    type: Enum
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstRow
+    name: FirstRow
+    type: Enum
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette.RedNumbers
+    name: RedNumbers
+    type: Enum
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+    name: SecondDozen
+    type: Enum
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+    name: SecondHalf
+    type: Enum
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondRow
+    name: SecondRow
+    type: Enum
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdDozen
+    name: ThirdDozen
+    type: Enum
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+    name: ThirdRow
+    type: Enum
+- uid: Chaos.Api.Interface
+  name: Chaos.Api.Interface
+  type: Namespace
+  items:
+  - uid: Chaos.Api.Interface.IAnimalService
+    name: IAnimalService
+    type: Interface
+  - uid: Chaos.Api.Interface.ICasinoGamesService
+    name: ICasinoGamesService
+    type: Interface
+  - uid: Chaos.Api.Interface.IDeckService
+    name: IDeckService
+    type: Interface
+  - uid: Chaos.Api.Interface.ITokenBlackListService
+    name: ITokenBlackListService
+    type: Interface
+  - uid: Chaos.Api.Interface.IUserService
+    name: IUserService
+    type: Interface
+- uid: Chaos.Api.Middleware
+  name: Chaos.Api.Middleware
+  type: Namespace
+  items:
+  - uid: Chaos.Api.Middleware.TokenBlackListMiddleware
+    name: TokenBlackListMiddleware
+    type: Class
+- uid: Chaos.Api.Migrations
+  name: Chaos.Api.Migrations
+  type: Namespace
+  items:
+  - uid: Chaos.Api.Migrations.InitialCreate
+    name: InitialCreate
+    type: Class
+- uid: Chaos.Api.Models
+  name: Chaos.Api.Models
+  type: Namespace
+  items:
+  - uid: Chaos.Api.Models.Animal
+    name: Animal
+    type: Class
+  - uid: Chaos.Api.Models.AnimalRequest
+    name: AnimalRequest
+    type: Class
+  - uid: Chaos.Api.Models.AnimalShop
+    name: AnimalShop
+    type: Class
+  - uid: Chaos.Api.Models.BlackJackGame
+    name: BlackJackGame
+    type: Class
+  - uid: Chaos.Api.Models.BlackJackHand
+    name: BlackJackHand
+    type: Class
+  - uid: Chaos.Api.Models.Card
+    name: Card
+    type: Class
+  - uid: Chaos.Api.Models.Casino
+    name: Casino
+    type: Class
+  - uid: Chaos.Api.Models.CoinGame
+    name: CoinGame
+    type: Class
+  - uid: Chaos.Api.Models.Deck
+    name: Deck
+    type: Class
+  - uid: Chaos.Api.Models.EuropeanRoulette
+    name: EuropeanRoulette
+    type: Class
+  - uid: Chaos.Api.Models.HigherLowerGame
+    name: HigherLowerGame
+    type: Class
+  - uid: Chaos.Api.Models.RoundEliminated
+    name: RoundEliminated
+    type: Class
+  - uid: Chaos.Api.Models.StatusResponse
+    name: StatusResponse
+    type: Class
+  - uid: Chaos.Api.Models.Tragaperras
+    name: Tragaperras
+    type: Class
+  - uid: Chaos.Api.Models.UserOld
+    name: UserOld
+    type: Class
+  - uid: Chaos.Api.Models.Wallet
+    name: Wallet
+    type: Class
+- uid: Chaos.Api.Provider
+  name: Chaos.Api.Provider
+  type: Namespace
+  items:
+  - uid: Chaos.Api.Provider.CasinoProvider
+    name: CasinoProvider
+    type: Class
+- uid: Chaos.Api.RequestEntity
+  name: Chaos.Api.RequestEntity
+  type: Namespace
+  items:
+  - uid: Chaos.Api.RequestEntity.BlackJackRequest
+    name: BlackJackRequest
+    type: Class
+  - uid: Chaos.Api.RequestEntity.CoinGameRequest
+    name: CoinGameRequest
+    type: Class
+  - uid: Chaos.Api.RequestEntity.HigherLowerPlayRequest
+    name: HigherLowerPlayRequest
+    type: Class
+  - uid: Chaos.Api.RequestEntity.HigherLowerRequest
+    name: HigherLowerRequest
+    type: Class
+  - uid: Chaos.Api.RequestEntity.SelectionUserEuropeanRoulette
+    name: SelectionUserEuropeanRoulette
+    type: Class
+  - uid: Chaos.Api.RequestEntity.UserRequest
+    name: UserRequest
+    type: Class
+  - uid: Chaos.Api.RequestEntity.WalletRequest
+    name: WalletRequest
+    type: Class
+- uid: Chaos.Api.ResponseEntity
+  name: Chaos.Api.ResponseEntity
+  type: Namespace
+  items:
+  - uid: Chaos.Api.ResponseEntity.BlackJackResponse
+    name: BlackJackResponse
+    type: Class
+  - uid: Chaos.Api.ResponseEntity.CashBack
+    name: CashBack
+    type: Class
+  - uid: Chaos.Api.ResponseEntity.CoinGameResponse
+    name: CoinGameResponse
+    type: Class
+  - uid: Chaos.Api.ResponseEntity.HigherLowerResponse
+    name: HigherLowerResponse
+    type: Class
+  - uid: Chaos.Api.ResponseEntity.UserResponse
+    name: UserResponse
+    type: Class
+  - uid: Chaos.Api.ResponseEntity.WalletResponse
+    name: WalletResponse
+    type: Class
+- uid: Chaos.Api.Service
+  name: Chaos.Api.Service
+  type: Namespace
+  items:
+  - uid: Chaos.Api.Service.AnimalService
+    name: AnimalService
+    type: Class
+  - uid: Chaos.Api.Service.CasinoGameService
+    name: CasinoGameService
+    type: Class
+  - uid: Chaos.Api.Service.DeckService
+    name: DeckService
+    type: Class
+  - uid: Chaos.Api.Service.TokenBlackListService
+    name: TokenBlackListService
+    type: Class
+  - uid: Chaos.Api.Service.UserService
+    name: UserService
+    type: Class
+- uid: Chaos.Api.Utils
+  name: Chaos.Api.Utils
+  type: Namespace
+  items:
+  - uid: Chaos.Api.Utils.AnimalNameHelper
+    name: AnimalNameHelper
+    type: Class
+  - uid: Chaos.Api.Utils.DrawMoney
+    name: DrawMoney
+    type: Class
+  - uid: Chaos.Api.Utils.GetImageAnimals
+    name: GetImageAnimals
+    type: Class
+- uid: Chaos.Infraestructure.Data
+  name: Chaos.Infraestructure.Data
+  type: Namespace
+  items:
+  - uid: Chaos.Infraestructure.Data.CasinoDbInitializer
+    name: CasinoDbInitializer
+    type: Class
+- uid: Chaos.Infraestructure.Extensions
+  name: Chaos.Infraestructure.Extensions
+  type: Namespace
+  items:
+  - uid: Chaos.Infraestructure.Extensions.ApplicationBuilderExtensions
+    name: ApplicationBuilderExtensions
+    type: Class
+  - uid: Chaos.Infraestructure.Extensions.ServiceCollectionExtensions
+    name: ServiceCollectionExtensions
+    type: Class
+- uid: Chaos.Infraestructure.Migrations
+  name: Chaos.Infraestructure.Migrations
+  type: Namespace
+  items:
+  - uid: Chaos.Infraestructure.Migrations.InitialMigration
+    name: InitialMigration
+    type: Class
+- uid: Chaos.Infraestructure.Models
+  name: Chaos.Infraestructure.Models
+  type: Namespace
+  items:
+  - uid: Chaos.Infraestructure.Models.Animal
+    name: Animal
+    type: Class
+  - uid: Chaos.Infraestructure.Models.AnimalShop
+    name: AnimalShop
+    type: Class
+  - uid: Chaos.Infraestructure.Models.AnimalValueConfig
+    name: AnimalValueConfig
+    type: Class
+  - uid: Chaos.Infraestructure.Models.BlackjackAction
+    name: BlackjackAction
+    type: Class
+  - uid: Chaos.Infraestructure.Models.BlackjackCard
+    name: BlackjackCard
+    type: Class
+  - uid: Chaos.Infraestructure.Models.BlackjackGameConfig
+    name: BlackjackGameConfig
+    type: Class
+  - uid: Chaos.Infraestructure.Models.BlackjackHand
+    name: BlackjackHand
+    type: Class
+  - uid: Chaos.Infraestructure.Models.BlackjackSession
+    name: BlackjackSession
+    type: Class
+  - uid: Chaos.Infraestructure.Models.Casino
+    name: Casino
+    type: Class
+  - uid: Chaos.Infraestructure.Models.CasinoDBContext
+    name: CasinoDBContext
+    type: Class
+  - uid: Chaos.Infraestructure.Models.CoinFlipGameConfig
+    name: CoinFlipGameConfig
+    type: Class
+  - uid: Chaos.Infraestructure.Models.CoinFlipRarityConfig
+    name: CoinFlipRarityConfig
+    type: Class
+  - uid: Chaos.Infraestructure.Models.CoinFlipSession
+    name: CoinFlipSession
+    type: Class
+  - uid: Chaos.Infraestructure.Models.Game
+    name: Game
+    type: Class
+  - uid: Chaos.Infraestructure.Models.GameSession
+    name: GameSession
+    type: Class
+  - uid: Chaos.Infraestructure.Models.HigherLowerGameConfig
+    name: HigherLowerGameConfig
+    type: Class
+  - uid: Chaos.Infraestructure.Models.HigherLowerRound
+    name: HigherLowerRound
+    type: Class
+  - uid: Chaos.Infraestructure.Models.HigherLowerSession
+    name: HigherLowerSession
+    type: Class
+  - uid: Chaos.Infraestructure.Models.RouletteBetType
+    name: RouletteBetType
+    type: Class
+  - uid: Chaos.Infraestructure.Models.RouletteGameConfig
+    name: RouletteGameConfig
+    type: Class
+  - uid: Chaos.Infraestructure.Models.RussianRouletteGameConfig
+    name: RussianRouletteGameConfig
+    type: Class
+  - uid: Chaos.Infraestructure.Models.RussianRouletteLobby
+    name: RussianRouletteLobby
+    type: Class
+  - uid: Chaos.Infraestructure.Models.RussianRoulettePlayer
+    name: RussianRoulettePlayer
+    type: Class
+  - uid: Chaos.Infraestructure.Models.RussianRouletteRound
+    name: RussianRouletteRound
+    type: Class
+  - uid: Chaos.Infraestructure.Models.ShopAnimalListing
+    name: ShopAnimalListing
+    type: Class
+  - uid: Chaos.Infraestructure.Models.ShopTransaction
+    name: ShopTransaction
+    type: Class
+  - uid: Chaos.Infraestructure.Models.SlotGameConfig
+    name: SlotGameConfig
+    type: Class
+  - uid: Chaos.Infraestructure.Models.SlotPayoutRule
+    name: SlotPayoutRule
+    type: Class
+  - uid: Chaos.Infraestructure.Models.SlotSymbol
+    name: SlotSymbol
+    type: Class
+  - uid: Chaos.Infraestructure.Models.User
+    name: User
+    type: Class
+memberLayout: SamePage

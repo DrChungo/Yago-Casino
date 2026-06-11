@@ -1,0 +1,730 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Models.EuropeanRoulette
+  commentId: T:Chaos.Api.Models.EuropeanRoulette
+  id: EuropeanRoulette
+  parent: Chaos.Api.Models
+  children:
+  - Chaos.Api.Models.EuropeanRoulette.BlackNumbers
+  - Chaos.Api.Models.EuropeanRoulette.FirstDozen
+  - Chaos.Api.Models.EuropeanRoulette.FirstHalf
+  - Chaos.Api.Models.EuropeanRoulette.FirstRow
+  - Chaos.Api.Models.EuropeanRoulette.RedNumbers
+  - Chaos.Api.Models.EuropeanRoulette.SecondDozen
+  - Chaos.Api.Models.EuropeanRoulette.SecondHalf
+  - Chaos.Api.Models.EuropeanRoulette.SecondRow
+  - Chaos.Api.Models.EuropeanRoulette.ThirdDozen
+  - Chaos.Api.Models.EuropeanRoulette.ThirdRow
+  langs:
+  - csharp
+  - vb
+  name: EuropeanRoulette
+  nameWithType: EuropeanRoulette
+  fullName: Chaos.Api.Models.EuropeanRoulette
+  type: Class
+  source:
+    id: EuropeanRoulette
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\EuropeanRoulette.cs
+    startLine: 4
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public class EuropeanRoulette
+    content.vb: Public Class EuropeanRoulette
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Chaos.Api.Models.EuropeanRoulette.RedNumbers
+  commentId: P:Chaos.Api.Models.EuropeanRoulette.RedNumbers
+  id: RedNumbers
+  parent: Chaos.Api.Models.EuropeanRoulette
+  langs:
+  - csharp
+  - vb
+  name: RedNumbers
+  nameWithType: EuropeanRoulette.RedNumbers
+  fullName: Chaos.Api.Models.EuropeanRoulette.RedNumbers
+  type: Property
+  source:
+    id: RedNumbers
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\EuropeanRoulette.cs
+    startLine: 6
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public RedNumbers RedNumbers { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.RedNumbers
+    content.vb: Public Property RedNumbers As RedNumbers
+  overload: Chaos.Api.Models.EuropeanRoulette.RedNumbers*
+- uid: Chaos.Api.Models.EuropeanRoulette.BlackNumbers
+  commentId: P:Chaos.Api.Models.EuropeanRoulette.BlackNumbers
+  id: BlackNumbers
+  parent: Chaos.Api.Models.EuropeanRoulette
+  langs:
+  - csharp
+  - vb
+  name: BlackNumbers
+  nameWithType: EuropeanRoulette.BlackNumbers
+  fullName: Chaos.Api.Models.EuropeanRoulette.BlackNumbers
+  type: Property
+  source:
+    id: BlackNumbers
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\EuropeanRoulette.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public BlackNumbers BlackNumbers { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+    content.vb: Public Property BlackNumbers As BlackNumbers
+  overload: Chaos.Api.Models.EuropeanRoulette.BlackNumbers*
+- uid: Chaos.Api.Models.EuropeanRoulette.FirstDozen
+  commentId: P:Chaos.Api.Models.EuropeanRoulette.FirstDozen
+  id: FirstDozen
+  parent: Chaos.Api.Models.EuropeanRoulette
+  langs:
+  - csharp
+  - vb
+  name: FirstDozen
+  nameWithType: EuropeanRoulette.FirstDozen
+  fullName: Chaos.Api.Models.EuropeanRoulette.FirstDozen
+  type: Property
+  source:
+    id: FirstDozen
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\EuropeanRoulette.cs
+    startLine: 8
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public FirstDozen FirstDozen { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstDozen
+    content.vb: Public Property FirstDozen As FirstDozen
+  overload: Chaos.Api.Models.EuropeanRoulette.FirstDozen*
+- uid: Chaos.Api.Models.EuropeanRoulette.SecondDozen
+  commentId: P:Chaos.Api.Models.EuropeanRoulette.SecondDozen
+  id: SecondDozen
+  parent: Chaos.Api.Models.EuropeanRoulette
+  langs:
+  - csharp
+  - vb
+  name: SecondDozen
+  nameWithType: EuropeanRoulette.SecondDozen
+  fullName: Chaos.Api.Models.EuropeanRoulette.SecondDozen
+  type: Property
+  source:
+    id: SecondDozen
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\EuropeanRoulette.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public SecondDozen SecondDozen { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+    content.vb: Public Property SecondDozen As SecondDozen
+  overload: Chaos.Api.Models.EuropeanRoulette.SecondDozen*
+- uid: Chaos.Api.Models.EuropeanRoulette.ThirdDozen
+  commentId: P:Chaos.Api.Models.EuropeanRoulette.ThirdDozen
+  id: ThirdDozen
+  parent: Chaos.Api.Models.EuropeanRoulette
+  langs:
+  - csharp
+  - vb
+  name: ThirdDozen
+  nameWithType: EuropeanRoulette.ThirdDozen
+  fullName: Chaos.Api.Models.EuropeanRoulette.ThirdDozen
+  type: Property
+  source:
+    id: ThirdDozen
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\EuropeanRoulette.cs
+    startLine: 10
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public ThirdDozen ThirdDozen { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdDozen
+    content.vb: Public Property ThirdDozen As ThirdDozen
+  overload: Chaos.Api.Models.EuropeanRoulette.ThirdDozen*
+- uid: Chaos.Api.Models.EuropeanRoulette.FirstHalf
+  commentId: P:Chaos.Api.Models.EuropeanRoulette.FirstHalf
+  id: FirstHalf
+  parent: Chaos.Api.Models.EuropeanRoulette
+  langs:
+  - csharp
+  - vb
+  name: FirstHalf
+  nameWithType: EuropeanRoulette.FirstHalf
+  fullName: Chaos.Api.Models.EuropeanRoulette.FirstHalf
+  type: Property
+  source:
+    id: FirstHalf
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\EuropeanRoulette.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public FirstHalf FirstHalf { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstHalf
+    content.vb: Public Property FirstHalf As FirstHalf
+  overload: Chaos.Api.Models.EuropeanRoulette.FirstHalf*
+- uid: Chaos.Api.Models.EuropeanRoulette.SecondHalf
+  commentId: P:Chaos.Api.Models.EuropeanRoulette.SecondHalf
+  id: SecondHalf
+  parent: Chaos.Api.Models.EuropeanRoulette
+  langs:
+  - csharp
+  - vb
+  name: SecondHalf
+  nameWithType: EuropeanRoulette.SecondHalf
+  fullName: Chaos.Api.Models.EuropeanRoulette.SecondHalf
+  type: Property
+  source:
+    id: SecondHalf
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\EuropeanRoulette.cs
+    startLine: 12
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public SecondHalf SecondHalf { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+    content.vb: Public Property SecondHalf As SecondHalf
+  overload: Chaos.Api.Models.EuropeanRoulette.SecondHalf*
+- uid: Chaos.Api.Models.EuropeanRoulette.FirstRow
+  commentId: P:Chaos.Api.Models.EuropeanRoulette.FirstRow
+  id: FirstRow
+  parent: Chaos.Api.Models.EuropeanRoulette
+  langs:
+  - csharp
+  - vb
+  name: FirstRow
+  nameWithType: EuropeanRoulette.FirstRow
+  fullName: Chaos.Api.Models.EuropeanRoulette.FirstRow
+  type: Property
+  source:
+    id: FirstRow
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\EuropeanRoulette.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public FirstRow FirstRow { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstRow
+    content.vb: Public Property FirstRow As FirstRow
+  overload: Chaos.Api.Models.EuropeanRoulette.FirstRow*
+- uid: Chaos.Api.Models.EuropeanRoulette.SecondRow
+  commentId: P:Chaos.Api.Models.EuropeanRoulette.SecondRow
+  id: SecondRow
+  parent: Chaos.Api.Models.EuropeanRoulette
+  langs:
+  - csharp
+  - vb
+  name: SecondRow
+  nameWithType: EuropeanRoulette.SecondRow
+  fullName: Chaos.Api.Models.EuropeanRoulette.SecondRow
+  type: Property
+  source:
+    id: SecondRow
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\EuropeanRoulette.cs
+    startLine: 14
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public SecondRow SecondRow { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondRow
+    content.vb: Public Property SecondRow As SecondRow
+  overload: Chaos.Api.Models.EuropeanRoulette.SecondRow*
+- uid: Chaos.Api.Models.EuropeanRoulette.ThirdRow
+  commentId: P:Chaos.Api.Models.EuropeanRoulette.ThirdRow
+  id: ThirdRow
+  parent: Chaos.Api.Models.EuropeanRoulette
+  langs:
+  - csharp
+  - vb
+  name: ThirdRow
+  nameWithType: EuropeanRoulette.ThirdRow
+  fullName: Chaos.Api.Models.EuropeanRoulette.ThirdRow
+  type: Property
+  source:
+    id: ThirdRow
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Models\EuropeanRoulette.cs
+    startLine: 15
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Models
+  syntax:
+    content: public ThirdRow ThirdRow { get; set; }
+    parameters: []
+    return:
+      type: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+    content.vb: Public Property ThirdRow As ThirdRow
+  overload: Chaos.Api.Models.EuropeanRoulette.ThirdRow*
+references:
+- uid: Chaos.Api.Models
+  commentId: N:Chaos.Api.Models
+  href: Chaos.html
+  name: Chaos.Api.Models
+  nameWithType: Chaos.Api.Models
+  fullName: Chaos.Api.Models
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Models
+    name: Models
+    href: Chaos.Api.Models.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Models
+    name: Models
+    href: Chaos.Api.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chaos.Api.Models.EuropeanRoulette.RedNumbers*
+  commentId: Overload:Chaos.Api.Models.EuropeanRoulette.RedNumbers
+  href: Chaos.Api.Models.EuropeanRoulette.html#Chaos_Api_Models_EuropeanRoulette_RedNumbers
+  name: RedNumbers
+  nameWithType: EuropeanRoulette.RedNumbers
+  fullName: Chaos.Api.Models.EuropeanRoulette.RedNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.RedNumbers
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.RedNumbers
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.RedNumbers.html
+  name: RedNumbers
+  nameWithType: RedNumbers
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.RedNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+  commentId: N:Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.html
+  name: Chaos.Api.Enums.EnumsEuropeanRoulette
+  nameWithType: Chaos.Api.Enums.EnumsEuropeanRoulette
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  - name: .
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+    name: EnumsEuropeanRoulette
+    href: Chaos.Api.Enums.EnumsEuropeanRoulette.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  - name: .
+  - uid: Chaos.Api.Enums.EnumsEuropeanRoulette
+    name: EnumsEuropeanRoulette
+    href: Chaos.Api.Enums.EnumsEuropeanRoulette.html
+- uid: Chaos.Api.Models.EuropeanRoulette.BlackNumbers*
+  commentId: Overload:Chaos.Api.Models.EuropeanRoulette.BlackNumbers
+  href: Chaos.Api.Models.EuropeanRoulette.html#Chaos_Api_Models_EuropeanRoulette_BlackNumbers
+  name: BlackNumbers
+  nameWithType: EuropeanRoulette.BlackNumbers
+  fullName: Chaos.Api.Models.EuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers.html
+  name: BlackNumbers
+  nameWithType: BlackNumbers
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.BlackNumbers
+- uid: Chaos.Api.Models.EuropeanRoulette.FirstDozen*
+  commentId: Overload:Chaos.Api.Models.EuropeanRoulette.FirstDozen
+  href: Chaos.Api.Models.EuropeanRoulette.html#Chaos_Api_Models_EuropeanRoulette_FirstDozen
+  name: FirstDozen
+  nameWithType: EuropeanRoulette.FirstDozen
+  fullName: Chaos.Api.Models.EuropeanRoulette.FirstDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstDozen
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.FirstDozen
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstDozen.html
+  name: FirstDozen
+  nameWithType: FirstDozen
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstDozen
+- uid: Chaos.Api.Models.EuropeanRoulette.SecondDozen*
+  commentId: Overload:Chaos.Api.Models.EuropeanRoulette.SecondDozen
+  href: Chaos.Api.Models.EuropeanRoulette.html#Chaos_Api_Models_EuropeanRoulette_SecondDozen
+  name: SecondDozen
+  nameWithType: EuropeanRoulette.SecondDozen
+  fullName: Chaos.Api.Models.EuropeanRoulette.SecondDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen.html
+  name: SecondDozen
+  nameWithType: SecondDozen
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondDozen
+- uid: Chaos.Api.Models.EuropeanRoulette.ThirdDozen*
+  commentId: Overload:Chaos.Api.Models.EuropeanRoulette.ThirdDozen
+  href: Chaos.Api.Models.EuropeanRoulette.html#Chaos_Api_Models_EuropeanRoulette_ThirdDozen
+  name: ThirdDozen
+  nameWithType: EuropeanRoulette.ThirdDozen
+  fullName: Chaos.Api.Models.EuropeanRoulette.ThirdDozen
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdDozen
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdDozen
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdDozen.html
+  name: ThirdDozen
+  nameWithType: ThirdDozen
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdDozen
+- uid: Chaos.Api.Models.EuropeanRoulette.FirstHalf*
+  commentId: Overload:Chaos.Api.Models.EuropeanRoulette.FirstHalf
+  href: Chaos.Api.Models.EuropeanRoulette.html#Chaos_Api_Models_EuropeanRoulette_FirstHalf
+  name: FirstHalf
+  nameWithType: EuropeanRoulette.FirstHalf
+  fullName: Chaos.Api.Models.EuropeanRoulette.FirstHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstHalf
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.FirstHalf
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstHalf.html
+  name: FirstHalf
+  nameWithType: FirstHalf
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstHalf
+- uid: Chaos.Api.Models.EuropeanRoulette.SecondHalf*
+  commentId: Overload:Chaos.Api.Models.EuropeanRoulette.SecondHalf
+  href: Chaos.Api.Models.EuropeanRoulette.html#Chaos_Api_Models_EuropeanRoulette_SecondHalf
+  name: SecondHalf
+  nameWithType: EuropeanRoulette.SecondHalf
+  fullName: Chaos.Api.Models.EuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf.html
+  name: SecondHalf
+  nameWithType: SecondHalf
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondHalf
+- uid: Chaos.Api.Models.EuropeanRoulette.FirstRow*
+  commentId: Overload:Chaos.Api.Models.EuropeanRoulette.FirstRow
+  href: Chaos.Api.Models.EuropeanRoulette.html#Chaos_Api_Models_EuropeanRoulette_FirstRow
+  name: FirstRow
+  nameWithType: EuropeanRoulette.FirstRow
+  fullName: Chaos.Api.Models.EuropeanRoulette.FirstRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstRow
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.FirstRow
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstRow.html
+  name: FirstRow
+  nameWithType: FirstRow
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.FirstRow
+- uid: Chaos.Api.Models.EuropeanRoulette.SecondRow*
+  commentId: Overload:Chaos.Api.Models.EuropeanRoulette.SecondRow
+  href: Chaos.Api.Models.EuropeanRoulette.html#Chaos_Api_Models_EuropeanRoulette_SecondRow
+  name: SecondRow
+  nameWithType: EuropeanRoulette.SecondRow
+  fullName: Chaos.Api.Models.EuropeanRoulette.SecondRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondRow
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.SecondRow
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondRow.html
+  name: SecondRow
+  nameWithType: SecondRow
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.SecondRow
+- uid: Chaos.Api.Models.EuropeanRoulette.ThirdRow*
+  commentId: Overload:Chaos.Api.Models.EuropeanRoulette.ThirdRow
+  href: Chaos.Api.Models.EuropeanRoulette.html#Chaos_Api_Models_EuropeanRoulette_ThirdRow
+  name: ThirdRow
+  nameWithType: EuropeanRoulette.ThirdRow
+  fullName: Chaos.Api.Models.EuropeanRoulette.ThirdRow
+- uid: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  commentId: T:Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow
+  parent: Chaos.Api.Enums.EnumsEuropeanRoulette
+  href: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow.html
+  name: ThirdRow
+  nameWithType: ThirdRow
+  fullName: Chaos.Api.Enums.EnumsEuropeanRoulette.ThirdRow

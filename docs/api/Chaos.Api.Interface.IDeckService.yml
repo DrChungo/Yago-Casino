@@ -1,0 +1,262 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Interface.IDeckService
+  commentId: T:Chaos.Api.Interface.IDeckService
+  id: IDeckService
+  parent: Chaos.Api.Interface
+  children:
+  - Chaos.Api.Interface.IDeckService.CatchCard
+  - Chaos.Api.Interface.IDeckService.InitializeDeck
+  - Chaos.Api.Interface.IDeckService.RemainingCards
+  - Chaos.Api.Interface.IDeckService.Reset
+  - Chaos.Api.Interface.IDeckService.Shuffle
+  langs:
+  - csharp
+  - vb
+  name: IDeckService
+  nameWithType: IDeckService
+  fullName: Chaos.Api.Interface.IDeckService
+  type: Interface
+  source:
+    id: IDeckService
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\IDeckService.cs
+    startLine: 6
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: public interface IDeckService
+    content.vb: Public Interface IDeckService
+  derivedClasses:
+  - Chaos.Api.Service.DeckService
+- uid: Chaos.Api.Interface.IDeckService.InitializeDeck
+  commentId: M:Chaos.Api.Interface.IDeckService.InitializeDeck
+  id: InitializeDeck
+  parent: Chaos.Api.Interface.IDeckService
+  langs:
+  - csharp
+  - vb
+  name: InitializeDeck()
+  nameWithType: IDeckService.InitializeDeck()
+  fullName: Chaos.Api.Interface.IDeckService.InitializeDeck()
+  type: Method
+  source:
+    id: InitializeDeck
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\IDeckService.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: void InitializeDeck()
+    content.vb: Sub InitializeDeck()
+  overload: Chaos.Api.Interface.IDeckService.InitializeDeck*
+- uid: Chaos.Api.Interface.IDeckService.Shuffle
+  commentId: M:Chaos.Api.Interface.IDeckService.Shuffle
+  id: Shuffle
+  parent: Chaos.Api.Interface.IDeckService
+  langs:
+  - csharp
+  - vb
+  name: Shuffle()
+  nameWithType: IDeckService.Shuffle()
+  fullName: Chaos.Api.Interface.IDeckService.Shuffle()
+  type: Method
+  source:
+    id: Shuffle
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\IDeckService.cs
+    startLine: 10
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: void Shuffle()
+    content.vb: Sub Shuffle()
+  overload: Chaos.Api.Interface.IDeckService.Shuffle*
+- uid: Chaos.Api.Interface.IDeckService.CatchCard
+  commentId: M:Chaos.Api.Interface.IDeckService.CatchCard
+  id: CatchCard
+  parent: Chaos.Api.Interface.IDeckService
+  langs:
+  - csharp
+  - vb
+  name: CatchCard()
+  nameWithType: IDeckService.CatchCard()
+  fullName: Chaos.Api.Interface.IDeckService.CatchCard()
+  type: Method
+  source:
+    id: CatchCard
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\IDeckService.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: Card CatchCard()
+    return:
+      type: Chaos.Api.Models.Card
+    content.vb: Function CatchCard() As Card
+  overload: Chaos.Api.Interface.IDeckService.CatchCard*
+- uid: Chaos.Api.Interface.IDeckService.Reset
+  commentId: M:Chaos.Api.Interface.IDeckService.Reset
+  id: Reset
+  parent: Chaos.Api.Interface.IDeckService
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: IDeckService.Reset()
+  fullName: Chaos.Api.Interface.IDeckService.Reset()
+  type: Method
+  source:
+    id: Reset
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\IDeckService.cs
+    startLine: 12
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: void Reset()
+    content.vb: Sub Reset()
+  overload: Chaos.Api.Interface.IDeckService.Reset*
+- uid: Chaos.Api.Interface.IDeckService.RemainingCards
+  commentId: P:Chaos.Api.Interface.IDeckService.RemainingCards
+  id: RemainingCards
+  parent: Chaos.Api.Interface.IDeckService
+  langs:
+  - csharp
+  - vb
+  name: RemainingCards
+  nameWithType: IDeckService.RemainingCards
+  fullName: Chaos.Api.Interface.IDeckService.RemainingCards
+  type: Property
+  source:
+    id: RemainingCards
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\IDeckService.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: int RemainingCards { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property RemainingCards As Integer
+  overload: Chaos.Api.Interface.IDeckService.RemainingCards*
+references:
+- uid: Chaos.Api.Interface
+  commentId: N:Chaos.Api.Interface
+  href: Chaos.html
+  name: Chaos.Api.Interface
+  nameWithType: Chaos.Api.Interface
+  fullName: Chaos.Api.Interface
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Interface
+    name: Interface
+    href: Chaos.Api.Interface.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Interface
+    name: Interface
+    href: Chaos.Api.Interface.html
+- uid: Chaos.Api.Interface.IDeckService.InitializeDeck*
+  commentId: Overload:Chaos.Api.Interface.IDeckService.InitializeDeck
+  href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_InitializeDeck
+  name: InitializeDeck
+  nameWithType: IDeckService.InitializeDeck
+  fullName: Chaos.Api.Interface.IDeckService.InitializeDeck
+- uid: Chaos.Api.Interface.IDeckService.Shuffle*
+  commentId: Overload:Chaos.Api.Interface.IDeckService.Shuffle
+  href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_Shuffle
+  name: Shuffle
+  nameWithType: IDeckService.Shuffle
+  fullName: Chaos.Api.Interface.IDeckService.Shuffle
+- uid: Chaos.Api.Interface.IDeckService.CatchCard*
+  commentId: Overload:Chaos.Api.Interface.IDeckService.CatchCard
+  href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_CatchCard
+  name: CatchCard
+  nameWithType: IDeckService.CatchCard
+  fullName: Chaos.Api.Interface.IDeckService.CatchCard
+- uid: Chaos.Api.Models.Card
+  commentId: T:Chaos.Api.Models.Card
+  parent: Chaos.Api.Models
+  href: Chaos.Api.Models.Card.html
+  name: Card
+  nameWithType: Card
+  fullName: Chaos.Api.Models.Card
+- uid: Chaos.Api.Models
+  commentId: N:Chaos.Api.Models
+  href: Chaos.html
+  name: Chaos.Api.Models
+  nameWithType: Chaos.Api.Models
+  fullName: Chaos.Api.Models
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Models
+    name: Models
+    href: Chaos.Api.Models.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Models
+    name: Models
+    href: Chaos.Api.Models.html
+- uid: Chaos.Api.Interface.IDeckService.Reset*
+  commentId: Overload:Chaos.Api.Interface.IDeckService.Reset
+  href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_Reset
+  name: Reset
+  nameWithType: IDeckService.Reset
+  fullName: Chaos.Api.Interface.IDeckService.Reset
+- uid: Chaos.Api.Interface.IDeckService.RemainingCards*
+  commentId: Overload:Chaos.Api.Interface.IDeckService.RemainingCards
+  href: Chaos.Api.Interface.IDeckService.html#Chaos_Api_Interface_IDeckService_RemainingCards
+  name: RemainingCards
+  nameWithType: IDeckService.RemainingCards
+  fullName: Chaos.Api.Interface.IDeckService.RemainingCards
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

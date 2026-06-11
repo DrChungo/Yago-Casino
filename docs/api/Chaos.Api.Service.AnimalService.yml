@@ -1,0 +1,1858 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Service.AnimalService
+  commentId: T:Chaos.Api.Service.AnimalService
+  id: AnimalService
+  parent: Chaos.Api.Service
+  children:
+  - Chaos.Api.Service.AnimalService.#ctor(Chaos.Api.Interface.IUserService,Chaos.Api.Provider.CasinoProvider)
+  - Chaos.Api.Service.AnimalService.BuyAnimal(System.Guid,System.Guid,System.String)
+  - Chaos.Api.Service.AnimalService.CalculateAnimalRandomStats(AnimalResponse)
+  - Chaos.Api.Service.AnimalService.CalculateAverageBySimulation(Chaos.Api.Enums.AnimalEnum,System.Int32)
+  - Chaos.Api.Service.AnimalService.CalculatePrice
+  - Chaos.Api.Service.AnimalService.CalculateValue(AnimalResponse)
+  - Chaos.Api.Service.AnimalService.CreateAnimal(Chaos.Api.Models.AnimalRequest,System.String)
+  - Chaos.Api.Service.AnimalService.CreateIniticalAnimals(System.Guid)
+  - Chaos.Api.Service.AnimalService.CreateRandomAnimal(System.Guid)
+  - Chaos.Api.Service.AnimalService.GetAnimalById(System.Guid)
+  - Chaos.Api.Service.AnimalService.GetAnimals
+  - Chaos.Api.Service.AnimalService.GetAvgValues
+  - Chaos.Api.Service.AnimalService.RemoveAnimal(System.Guid)
+  - Chaos.Api.Service.AnimalService.SellAnimal(System.Guid,System.Guid)
+  - Chaos.Api.Service.AnimalService.UpdateAnimalShop
+  - Chaos.Api.Service.AnimalService._random
+  langs:
+  - csharp
+  - vb
+  name: AnimalService
+  nameWithType: AnimalService
+  fullName: Chaos.Api.Service.AnimalService
+  type: Class
+  source:
+    id: AnimalService
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 17
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  summary: >-
+    Service responsible for managing animal operations,
+
+    including creation, retrieval, deletion, and value calculation.
+  example: []
+  syntax:
+    content: 'public class AnimalService : IAnimalService'
+    content.vb: Public Class AnimalService Implements IAnimalService
+  inheritance:
+  - System.Object
+  implements:
+  - Chaos.Api.Interface.IAnimalService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Chaos.Api.Service.AnimalService.#ctor(Chaos.Api.Interface.IUserService,Chaos.Api.Provider.CasinoProvider)
+  commentId: M:Chaos.Api.Service.AnimalService.#ctor(Chaos.Api.Interface.IUserService,Chaos.Api.Provider.CasinoProvider)
+  id: '#ctor(Chaos.Api.Interface.IUserService,Chaos.Api.Provider.CasinoProvider)'
+  parent: Chaos.Api.Service.AnimalService
+  langs:
+  - csharp
+  - vb
+  name: AnimalService(IUserService, CasinoProvider)
+  nameWithType: AnimalService.AnimalService(IUserService, CasinoProvider)
+  fullName: Chaos.Api.Service.AnimalService.AnimalService(Chaos.Api.Interface.IUserService, Chaos.Api.Provider.CasinoProvider)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 17
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  summary: >-
+    Service responsible for managing animal operations,
+
+    including creation, retrieval, deletion, and value calculation.
+  example: []
+  syntax:
+    content: public AnimalService(IUserService userService, CasinoProvider casinoProvider)
+    parameters:
+    - id: userService
+      type: Chaos.Api.Interface.IUserService
+    - id: casinoProvider
+      type: Chaos.Api.Provider.CasinoProvider
+    content.vb: Public Sub New(userService As IUserService, casinoProvider As CasinoProvider)
+  overload: Chaos.Api.Service.AnimalService.#ctor*
+  nameWithType.vb: AnimalService.New(IUserService, CasinoProvider)
+  fullName.vb: Chaos.Api.Service.AnimalService.New(Chaos.Api.Interface.IUserService, Chaos.Api.Provider.CasinoProvider)
+  name.vb: New(IUserService, CasinoProvider)
+- uid: Chaos.Api.Service.AnimalService._random
+  commentId: F:Chaos.Api.Service.AnimalService._random
+  id: _random
+  parent: Chaos.Api.Service.AnimalService
+  langs:
+  - csharp
+  - vb
+  name: _random
+  nameWithType: AnimalService._random
+  fullName: Chaos.Api.Service.AnimalService._random
+  type: Field
+  source:
+    id: _random
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 30
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  summary: Random number generator used for creating random animal data.
+  example: []
+  syntax:
+    content: public static readonly Random _random
+    return:
+      type: System.Random
+    content.vb: Public Shared ReadOnly _random As Random
+- uid: Chaos.Api.Service.AnimalService.CreateAnimal(Chaos.Api.Models.AnimalRequest,System.String)
+  commentId: M:Chaos.Api.Service.AnimalService.CreateAnimal(Chaos.Api.Models.AnimalRequest,System.String)
+  id: CreateAnimal(Chaos.Api.Models.AnimalRequest,System.String)
+  parent: Chaos.Api.Service.AnimalService
+  langs:
+  - csharp
+  - vb
+  name: CreateAnimal(AnimalRequest, string)
+  nameWithType: AnimalService.CreateAnimal(AnimalRequest, string)
+  fullName: Chaos.Api.Service.AnimalService.CreateAnimal(Chaos.Api.Models.AnimalRequest, string)
+  type: Method
+  source:
+    id: CreateAnimal
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 38
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  summary: Creates (buys) a new animal with random stats based on the given request(typeAnimal) and name.
+  example: []
+  syntax:
+    content: public Task<AnimalResponse> CreateAnimal(AnimalRequest request, string name)
+    parameters:
+    - id: request
+      type: Chaos.Api.Models.AnimalRequest
+      description: The request containing the animal type.
+    - id: name
+      type: System.String
+      description: The name of the animal. This parameter is required.
+    return:
+      type: System.Threading.Tasks.Task{AnimalResponse}
+      description: The created animal.
+    content.vb: Public Function CreateAnimal(request As AnimalRequest, name As String) As Task(Of AnimalResponse)
+  overload: Chaos.Api.Service.AnimalService.CreateAnimal*
+  implements:
+  - Chaos.Api.Interface.IAnimalService.CreateAnimal(Chaos.Api.Models.AnimalRequest,System.String)
+  nameWithType.vb: AnimalService.CreateAnimal(AnimalRequest, String)
+  fullName.vb: Chaos.Api.Service.AnimalService.CreateAnimal(Chaos.Api.Models.AnimalRequest, String)
+  name.vb: CreateAnimal(AnimalRequest, String)
+- uid: Chaos.Api.Service.AnimalService.BuyAnimal(System.Guid,System.Guid,System.String)
+  commentId: M:Chaos.Api.Service.AnimalService.BuyAnimal(System.Guid,System.Guid,System.String)
+  id: BuyAnimal(System.Guid,System.Guid,System.String)
+  parent: Chaos.Api.Service.AnimalService
+  langs:
+  - csharp
+  - vb
+  name: BuyAnimal(Guid, Guid, string?)
+  nameWithType: AnimalService.BuyAnimal(Guid, Guid, string?)
+  fullName: Chaos.Api.Service.AnimalService.BuyAnimal(System.Guid, System.Guid, string?)
+  type: Method
+  source:
+    id: BuyAnimal
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 59
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  example: []
+  syntax:
+    content: public bool BuyAnimal(Guid animalId, Guid userId, string? Name)
+    parameters:
+    - id: animalId
+      type: System.Guid
+    - id: userId
+      type: System.Guid
+    - id: Name
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function BuyAnimal(animalId As Guid, userId As Guid, Name As String) As Boolean
+  overload: Chaos.Api.Service.AnimalService.BuyAnimal*
+  implements:
+  - Chaos.Api.Interface.IAnimalService.BuyAnimal(System.Guid,System.Guid,System.String)
+  nameWithType.vb: AnimalService.BuyAnimal(Guid, Guid, String)
+  fullName.vb: Chaos.Api.Service.AnimalService.BuyAnimal(System.Guid, System.Guid, String)
+  name.vb: BuyAnimal(Guid, Guid, String)
+- uid: Chaos.Api.Service.AnimalService.SellAnimal(System.Guid,System.Guid)
+  commentId: M:Chaos.Api.Service.AnimalService.SellAnimal(System.Guid,System.Guid)
+  id: SellAnimal(System.Guid,System.Guid)
+  parent: Chaos.Api.Service.AnimalService
+  langs:
+  - csharp
+  - vb
+  name: SellAnimal(Guid, Guid)
+  nameWithType: AnimalService.SellAnimal(Guid, Guid)
+  fullName: Chaos.Api.Service.AnimalService.SellAnimal(System.Guid, System.Guid)
+  type: Method
+  source:
+    id: SellAnimal
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 109
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  example: []
+  syntax:
+    content: public Task<int> SellAnimal(Guid id, Guid userId)
+    parameters:
+    - id: id
+      type: System.Guid
+    - id: userId
+      type: System.Guid
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+    content.vb: Public Function SellAnimal(id As Guid, userId As Guid) As Task(Of Integer)
+  overload: Chaos.Api.Service.AnimalService.SellAnimal*
+  implements:
+  - Chaos.Api.Interface.IAnimalService.SellAnimal(System.Guid,System.Guid)
+- uid: Chaos.Api.Service.AnimalService.CreateIniticalAnimals(System.Guid)
+  commentId: M:Chaos.Api.Service.AnimalService.CreateIniticalAnimals(System.Guid)
+  id: CreateIniticalAnimals(System.Guid)
+  parent: Chaos.Api.Service.AnimalService
+  langs:
+  - csharp
+  - vb
+  name: CreateIniticalAnimals(Guid)
+  nameWithType: AnimalService.CreateIniticalAnimals(Guid)
+  fullName: Chaos.Api.Service.AnimalService.CreateIniticalAnimals(System.Guid)
+  type: Method
+  source:
+    id: CreateIniticalAnimals
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 129
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  summary: >-
+    Creates the initial set of animals (five animals).
+
+    This operation should only be executed once.
+  example: []
+  syntax:
+    content: public Task<List<AnimalResponse>> CreateIniticalAnimals(Guid Id)
+    parameters:
+    - id: Id
+      type: System.Guid
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{AnimalResponse}}
+      description: A list of initial animals.
+    content.vb: Public Function CreateIniticalAnimals(Id As Guid) As Task(Of List(Of AnimalResponse))
+  overload: Chaos.Api.Service.AnimalService.CreateIniticalAnimals*
+  implements:
+  - Chaos.Api.Interface.IAnimalService.CreateIniticalAnimals(System.Guid)
+- uid: Chaos.Api.Service.AnimalService.GetAnimals
+  commentId: M:Chaos.Api.Service.AnimalService.GetAnimals
+  id: GetAnimals
+  parent: Chaos.Api.Service.AnimalService
+  langs:
+  - csharp
+  - vb
+  name: GetAnimals()
+  nameWithType: AnimalService.GetAnimals()
+  fullName: Chaos.Api.Service.AnimalService.GetAnimals()
+  type: Method
+  source:
+    id: GetAnimals
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 144
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  summary: Retrieves all animals.
+  example: []
+  syntax:
+    content: public Task<List<AnimalResponse>> GetAnimals()
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{AnimalResponse}}
+      description: A list of animals.
+    content.vb: Public Function GetAnimals() As Task(Of List(Of AnimalResponse))
+  overload: Chaos.Api.Service.AnimalService.GetAnimals*
+  implements:
+  - Chaos.Api.Interface.IAnimalService.GetAnimals
+- uid: Chaos.Api.Service.AnimalService.GetAnimalById(System.Guid)
+  commentId: M:Chaos.Api.Service.AnimalService.GetAnimalById(System.Guid)
+  id: GetAnimalById(System.Guid)
+  parent: Chaos.Api.Service.AnimalService
+  langs:
+  - csharp
+  - vb
+  name: GetAnimalById(Guid)
+  nameWithType: AnimalService.GetAnimalById(Guid)
+  fullName: Chaos.Api.Service.AnimalService.GetAnimalById(System.Guid)
+  type: Method
+  source:
+    id: GetAnimalById
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 154
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  summary: Retrieves a single animal by its ID.
+  example: []
+  syntax:
+    content: public AnimalResponse GetAnimalById(Guid Id)
+    parameters:
+    - id: Id
+      type: System.Guid
+      description: The unique identifier of the animal.
+    return:
+      type: AnimalResponse
+      description: The animal if found; otherwise, null.
+    content.vb: Public Function GetAnimalById(Id As Guid) As AnimalResponse
+  overload: Chaos.Api.Service.AnimalService.GetAnimalById*
+  implements:
+  - Chaos.Api.Interface.IAnimalService.GetAnimalById(System.Guid)
+- uid: Chaos.Api.Service.AnimalService.CreateRandomAnimal(System.Guid)
+  commentId: M:Chaos.Api.Service.AnimalService.CreateRandomAnimal(System.Guid)
+  id: CreateRandomAnimal(System.Guid)
+  parent: Chaos.Api.Service.AnimalService
+  langs:
+  - csharp
+  - vb
+  name: CreateRandomAnimal(Guid)
+  nameWithType: AnimalService.CreateRandomAnimal(Guid)
+  fullName: Chaos.Api.Service.AnimalService.CreateRandomAnimal(System.Guid)
+  type: Method
+  source:
+    id: CreateRandomAnimal
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 171
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  summary: Creates a random animal with generated stats and name.
+  example: []
+  syntax:
+    content: public AnimalResponse CreateRandomAnimal(Guid UserId)
+    parameters:
+    - id: UserId
+      type: System.Guid
+    return:
+      type: AnimalResponse
+      description: A new randomly generated animal.
+    content.vb: Public Function CreateRandomAnimal(UserId As Guid) As AnimalResponse
+  overload: Chaos.Api.Service.AnimalService.CreateRandomAnimal*
+  implements:
+  - Chaos.Api.Interface.IAnimalService.CreateRandomAnimal(System.Guid)
+- uid: Chaos.Api.Service.AnimalService.RemoveAnimal(System.Guid)
+  commentId: M:Chaos.Api.Service.AnimalService.RemoveAnimal(System.Guid)
+  id: RemoveAnimal(System.Guid)
+  parent: Chaos.Api.Service.AnimalService
+  langs:
+  - csharp
+  - vb
+  name: RemoveAnimal(Guid)
+  nameWithType: AnimalService.RemoveAnimal(Guid)
+  fullName: Chaos.Api.Service.AnimalService.RemoveAnimal(System.Guid)
+  type: Method
+  source:
+    id: RemoveAnimal
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 196
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  summary: Removes all animals that match the specified ID.
+  example: []
+  syntax:
+    content: public void RemoveAnimal(Guid Id)
+    parameters:
+    - id: Id
+      type: System.Guid
+      description: The unique identifier of the animal to remove.
+    content.vb: Public Sub RemoveAnimal(Id As Guid)
+  overload: Chaos.Api.Service.AnimalService.RemoveAnimal*
+  implements:
+  - Chaos.Api.Interface.IAnimalService.RemoveAnimal(System.Guid)
+- uid: Chaos.Api.Service.AnimalService.CalculateValue(AnimalResponse)
+  commentId: M:Chaos.Api.Service.AnimalService.CalculateValue(AnimalResponse)
+  id: CalculateValue(AnimalResponse)
+  parent: Chaos.Api.Service.AnimalService
+  langs:
+  - csharp
+  - vb
+  name: CalculateValue(AnimalResponse)
+  nameWithType: AnimalService.CalculateValue(AnimalResponse)
+  fullName: Chaos.Api.Service.AnimalService.CalculateValue(AnimalResponse)
+  type: Method
+  source:
+    id: CalculateValue
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 208
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  summary: Calculates the value of an animal based on its stats and health condition.
+  example: []
+  syntax:
+    content: public double CalculateValue(AnimalResponse animal)
+    parameters:
+    - id: animal
+      type: AnimalResponse
+      description: The animal whose value will be calculated.
+    return:
+      type: System.Double
+      description: The calculated value.
+    content.vb: Public Function CalculateValue(animal As AnimalResponse) As Double
+  overload: Chaos.Api.Service.AnimalService.CalculateValue*
+  implements:
+  - Chaos.Api.Interface.IAnimalService.CalculateValue(AnimalResponse)
+- uid: Chaos.Api.Service.AnimalService.CalculateAnimalRandomStats(AnimalResponse)
+  commentId: M:Chaos.Api.Service.AnimalService.CalculateAnimalRandomStats(AnimalResponse)
+  id: CalculateAnimalRandomStats(AnimalResponse)
+  parent: Chaos.Api.Service.AnimalService
+  langs:
+  - csharp
+  - vb
+  name: CalculateAnimalRandomStats(AnimalResponse)
+  nameWithType: AnimalService.CalculateAnimalRandomStats(AnimalResponse)
+  fullName: Chaos.Api.Service.AnimalService.CalculateAnimalRandomStats(AnimalResponse)
+  type: Method
+  source:
+    id: CalculateAnimalRandomStats
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 230
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  summary: >-
+    Calculates and assigns random stats (age, weight, height)
+
+    based on the animal type.
+  example: []
+  syntax:
+    content: public AnimalResponse CalculateAnimalRandomStats(AnimalResponse animal)
+    parameters:
+    - id: animal
+      type: AnimalResponse
+      description: The animal to update.
+    return:
+      type: AnimalResponse
+      description: The animal with updated stats.
+    content.vb: Public Function CalculateAnimalRandomStats(animal As AnimalResponse) As AnimalResponse
+  overload: Chaos.Api.Service.AnimalService.CalculateAnimalRandomStats*
+  implements:
+  - Chaos.Api.Interface.IAnimalService.CalculateAnimalRandomStats(AnimalResponse)
+- uid: Chaos.Api.Service.AnimalService.UpdateAnimalShop
+  commentId: M:Chaos.Api.Service.AnimalService.UpdateAnimalShop
+  id: UpdateAnimalShop
+  parent: Chaos.Api.Service.AnimalService
+  langs:
+  - csharp
+  - vb
+  name: UpdateAnimalShop()
+  nameWithType: AnimalService.UpdateAnimalShop()
+  fullName: Chaos.Api.Service.AnimalService.UpdateAnimalShop()
+  type: Method
+  source:
+    id: UpdateAnimalShop
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 290
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  example: []
+  syntax:
+    content: public void UpdateAnimalShop()
+    content.vb: Public Sub UpdateAnimalShop()
+  overload: Chaos.Api.Service.AnimalService.UpdateAnimalShop*
+  implements:
+  - Chaos.Api.Interface.IAnimalService.UpdateAnimalShop
+- uid: Chaos.Api.Service.AnimalService.CalculateAverageBySimulation(Chaos.Api.Enums.AnimalEnum,System.Int32)
+  commentId: M:Chaos.Api.Service.AnimalService.CalculateAverageBySimulation(Chaos.Api.Enums.AnimalEnum,System.Int32)
+  id: CalculateAverageBySimulation(Chaos.Api.Enums.AnimalEnum,System.Int32)
+  parent: Chaos.Api.Service.AnimalService
+  langs:
+  - csharp
+  - vb
+  name: CalculateAverageBySimulation(AnimalEnum, int)
+  nameWithType: AnimalService.CalculateAverageBySimulation(AnimalEnum, int)
+  fullName: Chaos.Api.Service.AnimalService.CalculateAverageBySimulation(Chaos.Api.Enums.AnimalEnum, int)
+  type: Method
+  source:
+    id: CalculateAverageBySimulation
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 308
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  example: []
+  syntax:
+    content: public double CalculateAverageBySimulation(AnimalEnum type, int iterations = 10000)
+    parameters:
+    - id: type
+      type: Chaos.Api.Enums.AnimalEnum
+    - id: iterations
+      type: System.Int32
+    return:
+      type: System.Double
+    content.vb: Public Function CalculateAverageBySimulation(type As AnimalEnum, iterations As Integer = 10000) As Double
+  overload: Chaos.Api.Service.AnimalService.CalculateAverageBySimulation*
+  implements:
+  - Chaos.Api.Interface.IAnimalService.CalculateAverageBySimulation(Chaos.Api.Enums.AnimalEnum,System.Int32)
+  nameWithType.vb: AnimalService.CalculateAverageBySimulation(AnimalEnum, Integer)
+  fullName.vb: Chaos.Api.Service.AnimalService.CalculateAverageBySimulation(Chaos.Api.Enums.AnimalEnum, Integer)
+  name.vb: CalculateAverageBySimulation(AnimalEnum, Integer)
+- uid: Chaos.Api.Service.AnimalService.CalculatePrice
+  commentId: M:Chaos.Api.Service.AnimalService.CalculatePrice
+  id: CalculatePrice
+  parent: Chaos.Api.Service.AnimalService
+  langs:
+  - csharp
+  - vb
+  name: CalculatePrice()
+  nameWithType: AnimalService.CalculatePrice()
+  fullName: Chaos.Api.Service.AnimalService.CalculatePrice()
+  type: Method
+  source:
+    id: CalculatePrice
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 328
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  example: []
+  syntax:
+    content: public void CalculatePrice()
+    content.vb: Public Sub CalculatePrice()
+  overload: Chaos.Api.Service.AnimalService.CalculatePrice*
+  implements:
+  - Chaos.Api.Interface.IAnimalService.CalculatePrice
+- uid: Chaos.Api.Service.AnimalService.GetAvgValues
+  commentId: M:Chaos.Api.Service.AnimalService.GetAvgValues
+  id: GetAvgValues
+  parent: Chaos.Api.Service.AnimalService
+  langs:
+  - csharp
+  - vb
+  name: GetAvgValues()
+  nameWithType: AnimalService.GetAvgValues()
+  fullName: Chaos.Api.Service.AnimalService.GetAvgValues()
+  type: Method
+  source:
+    id: GetAvgValues
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Service\AnimalService.cs
+    startLine: 336
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Service
+  example: []
+  syntax:
+    content: public Dictionary<AnimalEnum, double> GetAvgValues()
+    return:
+      type: System.Collections.Generic.Dictionary{Chaos.Api.Enums.AnimalEnum,System.Double}
+    content.vb: Public Function GetAvgValues() As Dictionary(Of AnimalEnum, Double)
+  overload: Chaos.Api.Service.AnimalService.GetAvgValues*
+  implements:
+  - Chaos.Api.Interface.IAnimalService.GetAvgValues
+references:
+- uid: Chaos.Api.Service
+  commentId: N:Chaos.Api.Service
+  href: Chaos.html
+  name: Chaos.Api.Service
+  nameWithType: Chaos.Api.Service
+  fullName: Chaos.Api.Service
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Service
+    name: Service
+    href: Chaos.Api.Service.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Service
+    name: Service
+    href: Chaos.Api.Service.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Chaos.Api.Interface.IAnimalService
+  commentId: T:Chaos.Api.Interface.IAnimalService
+  parent: Chaos.Api.Interface
+  href: Chaos.Api.Interface.IAnimalService.html
+  name: IAnimalService
+  nameWithType: IAnimalService
+  fullName: Chaos.Api.Interface.IAnimalService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chaos.Api.Interface
+  commentId: N:Chaos.Api.Interface
+  href: Chaos.html
+  name: Chaos.Api.Interface
+  nameWithType: Chaos.Api.Interface
+  fullName: Chaos.Api.Interface
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Interface
+    name: Interface
+    href: Chaos.Api.Interface.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Interface
+    name: Interface
+    href: Chaos.Api.Interface.html
+- uid: Chaos.Api.Service.AnimalService.#ctor*
+  commentId: Overload:Chaos.Api.Service.AnimalService.#ctor
+  href: Chaos.Api.Service.AnimalService.html#Chaos_Api_Service_AnimalService__ctor_Chaos_Api_Interface_IUserService_Chaos_Api_Provider_CasinoProvider_
+  name: AnimalService
+  nameWithType: AnimalService.AnimalService
+  fullName: Chaos.Api.Service.AnimalService.AnimalService
+  nameWithType.vb: AnimalService.New
+  fullName.vb: Chaos.Api.Service.AnimalService.New
+  name.vb: New
+- uid: Chaos.Api.Interface.IUserService
+  commentId: T:Chaos.Api.Interface.IUserService
+  parent: Chaos.Api.Interface
+  href: Chaos.Api.Interface.IUserService.html
+  name: IUserService
+  nameWithType: IUserService
+  fullName: Chaos.Api.Interface.IUserService
+- uid: Chaos.Api.Provider.CasinoProvider
+  commentId: T:Chaos.Api.Provider.CasinoProvider
+  parent: Chaos.Api.Provider
+  href: Chaos.Api.Provider.CasinoProvider.html
+  name: CasinoProvider
+  nameWithType: CasinoProvider
+  fullName: Chaos.Api.Provider.CasinoProvider
+- uid: Chaos.Api.Provider
+  commentId: N:Chaos.Api.Provider
+  href: Chaos.html
+  name: Chaos.Api.Provider
+  nameWithType: Chaos.Api.Provider
+  fullName: Chaos.Api.Provider
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Provider
+    name: Provider
+    href: Chaos.Api.Provider.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Provider
+    name: Provider
+    href: Chaos.Api.Provider.html
+- uid: System.Random
+  commentId: T:System.Random
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.random
+  name: Random
+  nameWithType: Random
+  fullName: System.Random
+- uid: Chaos.Api.Service.AnimalService.CreateAnimal*
+  commentId: Overload:Chaos.Api.Service.AnimalService.CreateAnimal
+  href: Chaos.Api.Service.AnimalService.html#Chaos_Api_Service_AnimalService_CreateAnimal_Chaos_Api_Models_AnimalRequest_System_String_
+  name: CreateAnimal
+  nameWithType: AnimalService.CreateAnimal
+  fullName: Chaos.Api.Service.AnimalService.CreateAnimal
+- uid: Chaos.Api.Interface.IAnimalService.CreateAnimal(Chaos.Api.Models.AnimalRequest,System.String)
+  commentId: M:Chaos.Api.Interface.IAnimalService.CreateAnimal(Chaos.Api.Models.AnimalRequest,System.String)
+  parent: Chaos.Api.Interface.IAnimalService
+  isExternal: true
+  href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CreateAnimal_Chaos_Api_Models_AnimalRequest_System_String_
+  name: CreateAnimal(AnimalRequest, string)
+  nameWithType: IAnimalService.CreateAnimal(AnimalRequest, string)
+  fullName: Chaos.Api.Interface.IAnimalService.CreateAnimal(Chaos.Api.Models.AnimalRequest, string)
+  nameWithType.vb: IAnimalService.CreateAnimal(AnimalRequest, String)
+  fullName.vb: Chaos.Api.Interface.IAnimalService.CreateAnimal(Chaos.Api.Models.AnimalRequest, String)
+  name.vb: CreateAnimal(AnimalRequest, String)
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IAnimalService.CreateAnimal(Chaos.Api.Models.AnimalRequest,System.String)
+    name: CreateAnimal
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CreateAnimal_Chaos_Api_Models_AnimalRequest_System_String_
+  - name: (
+  - uid: Chaos.Api.Models.AnimalRequest
+    name: AnimalRequest
+    href: Chaos.Api.Models.AnimalRequest.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IAnimalService.CreateAnimal(Chaos.Api.Models.AnimalRequest,System.String)
+    name: CreateAnimal
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CreateAnimal_Chaos_Api_Models_AnimalRequest_System_String_
+  - name: (
+  - uid: Chaos.Api.Models.AnimalRequest
+    name: AnimalRequest
+    href: Chaos.Api.Models.AnimalRequest.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Chaos.Api.Models.AnimalRequest
+  commentId: T:Chaos.Api.Models.AnimalRequest
+  parent: Chaos.Api.Models
+  href: Chaos.Api.Models.AnimalRequest.html
+  name: AnimalRequest
+  nameWithType: AnimalRequest
+  fullName: Chaos.Api.Models.AnimalRequest
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{AnimalResponse}
+  commentId: T:System.Threading.Tasks.Task{AnimalResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<AnimalResponse>
+  nameWithType: Task<AnimalResponse>
+  fullName: System.Threading.Tasks.Task<AnimalResponse>
+  nameWithType.vb: Task(Of AnimalResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of AnimalResponse)
+  name.vb: Task(Of AnimalResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: AnimalResponse
+    name: AnimalResponse
+    href: AnimalResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AnimalResponse
+    name: AnimalResponse
+    href: AnimalResponse.html
+  - name: )
+- uid: Chaos.Api.Models
+  commentId: N:Chaos.Api.Models
+  href: Chaos.html
+  name: Chaos.Api.Models
+  nameWithType: Chaos.Api.Models
+  fullName: Chaos.Api.Models
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Models
+    name: Models
+    href: Chaos.Api.Models.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Models
+    name: Models
+    href: Chaos.Api.Models.html
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Chaos.Api.Service.AnimalService.BuyAnimal*
+  commentId: Overload:Chaos.Api.Service.AnimalService.BuyAnimal
+  href: Chaos.Api.Service.AnimalService.html#Chaos_Api_Service_AnimalService_BuyAnimal_System_Guid_System_Guid_System_String_
+  name: BuyAnimal
+  nameWithType: AnimalService.BuyAnimal
+  fullName: Chaos.Api.Service.AnimalService.BuyAnimal
+- uid: Chaos.Api.Interface.IAnimalService.BuyAnimal(System.Guid,System.Guid,System.String)
+  commentId: M:Chaos.Api.Interface.IAnimalService.BuyAnimal(System.Guid,System.Guid,System.String)
+  parent: Chaos.Api.Interface.IAnimalService
+  isExternal: true
+  href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_BuyAnimal_System_Guid_System_Guid_System_String_
+  name: BuyAnimal(Guid, Guid, string)
+  nameWithType: IAnimalService.BuyAnimal(Guid, Guid, string)
+  fullName: Chaos.Api.Interface.IAnimalService.BuyAnimal(System.Guid, System.Guid, string)
+  nameWithType.vb: IAnimalService.BuyAnimal(Guid, Guid, String)
+  fullName.vb: Chaos.Api.Interface.IAnimalService.BuyAnimal(System.Guid, System.Guid, String)
+  name.vb: BuyAnimal(Guid, Guid, String)
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IAnimalService.BuyAnimal(System.Guid,System.Guid,System.String)
+    name: BuyAnimal
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_BuyAnimal_System_Guid_System_Guid_System_String_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IAnimalService.BuyAnimal(System.Guid,System.Guid,System.String)
+    name: BuyAnimal
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_BuyAnimal_System_Guid_System_Guid_System_String_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Chaos.Api.Service.AnimalService.SellAnimal*
+  commentId: Overload:Chaos.Api.Service.AnimalService.SellAnimal
+  href: Chaos.Api.Service.AnimalService.html#Chaos_Api_Service_AnimalService_SellAnimal_System_Guid_System_Guid_
+  name: SellAnimal
+  nameWithType: AnimalService.SellAnimal
+  fullName: Chaos.Api.Service.AnimalService.SellAnimal
+- uid: Chaos.Api.Interface.IAnimalService.SellAnimal(System.Guid,System.Guid)
+  commentId: M:Chaos.Api.Interface.IAnimalService.SellAnimal(System.Guid,System.Guid)
+  parent: Chaos.Api.Interface.IAnimalService
+  isExternal: true
+  href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_SellAnimal_System_Guid_System_Guid_
+  name: SellAnimal(Guid, Guid)
+  nameWithType: IAnimalService.SellAnimal(Guid, Guid)
+  fullName: Chaos.Api.Interface.IAnimalService.SellAnimal(System.Guid, System.Guid)
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IAnimalService.SellAnimal(System.Guid,System.Guid)
+    name: SellAnimal
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_SellAnimal_System_Guid_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IAnimalService.SellAnimal(System.Guid,System.Guid)
+    name: SellAnimal
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_SellAnimal_System_Guid_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: ','
+  - name: " "
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: T:System.Threading.Tasks.Task{System.Int32}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<int>
+  nameWithType: Task<int>
+  fullName: System.Threading.Tasks.Task<int>
+  nameWithType.vb: Task(Of Integer)
+  fullName.vb: System.Threading.Tasks.Task(Of Integer)
+  name.vb: Task(Of Integer)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Chaos.Api.Service.AnimalService.CreateIniticalAnimals*
+  commentId: Overload:Chaos.Api.Service.AnimalService.CreateIniticalAnimals
+  href: Chaos.Api.Service.AnimalService.html#Chaos_Api_Service_AnimalService_CreateIniticalAnimals_System_Guid_
+  name: CreateIniticalAnimals
+  nameWithType: AnimalService.CreateIniticalAnimals
+  fullName: Chaos.Api.Service.AnimalService.CreateIniticalAnimals
+- uid: Chaos.Api.Interface.IAnimalService.CreateIniticalAnimals(System.Guid)
+  commentId: M:Chaos.Api.Interface.IAnimalService.CreateIniticalAnimals(System.Guid)
+  parent: Chaos.Api.Interface.IAnimalService
+  isExternal: true
+  href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CreateIniticalAnimals_System_Guid_
+  name: CreateIniticalAnimals(Guid)
+  nameWithType: IAnimalService.CreateIniticalAnimals(Guid)
+  fullName: Chaos.Api.Interface.IAnimalService.CreateIniticalAnimals(System.Guid)
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IAnimalService.CreateIniticalAnimals(System.Guid)
+    name: CreateIniticalAnimals
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CreateIniticalAnimals_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IAnimalService.CreateIniticalAnimals(System.Guid)
+    name: CreateIniticalAnimals
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CreateIniticalAnimals_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{AnimalResponse}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{AnimalResponse}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<AnimalResponse>>
+  nameWithType: Task<List<AnimalResponse>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<AnimalResponse>>
+  nameWithType.vb: Task(Of List(Of AnimalResponse))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of AnimalResponse))
+  name.vb: Task(Of List(Of AnimalResponse))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: AnimalResponse
+    name: AnimalResponse
+    href: AnimalResponse.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AnimalResponse
+    name: AnimalResponse
+    href: AnimalResponse.html
+  - name: )
+  - name: )
+- uid: Chaos.Api.Service.AnimalService.GetAnimals*
+  commentId: Overload:Chaos.Api.Service.AnimalService.GetAnimals
+  href: Chaos.Api.Service.AnimalService.html#Chaos_Api_Service_AnimalService_GetAnimals
+  name: GetAnimals
+  nameWithType: AnimalService.GetAnimals
+  fullName: Chaos.Api.Service.AnimalService.GetAnimals
+- uid: Chaos.Api.Interface.IAnimalService.GetAnimals
+  commentId: M:Chaos.Api.Interface.IAnimalService.GetAnimals
+  parent: Chaos.Api.Interface.IAnimalService
+  href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_GetAnimals
+  name: GetAnimals()
+  nameWithType: IAnimalService.GetAnimals()
+  fullName: Chaos.Api.Interface.IAnimalService.GetAnimals()
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IAnimalService.GetAnimals
+    name: GetAnimals
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_GetAnimals
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IAnimalService.GetAnimals
+    name: GetAnimals
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_GetAnimals
+  - name: (
+  - name: )
+- uid: Chaos.Api.Service.AnimalService.GetAnimalById*
+  commentId: Overload:Chaos.Api.Service.AnimalService.GetAnimalById
+  href: Chaos.Api.Service.AnimalService.html#Chaos_Api_Service_AnimalService_GetAnimalById_System_Guid_
+  name: GetAnimalById
+  nameWithType: AnimalService.GetAnimalById
+  fullName: Chaos.Api.Service.AnimalService.GetAnimalById
+- uid: Chaos.Api.Interface.IAnimalService.GetAnimalById(System.Guid)
+  commentId: M:Chaos.Api.Interface.IAnimalService.GetAnimalById(System.Guid)
+  parent: Chaos.Api.Interface.IAnimalService
+  isExternal: true
+  href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_GetAnimalById_System_Guid_
+  name: GetAnimalById(Guid)
+  nameWithType: IAnimalService.GetAnimalById(Guid)
+  fullName: Chaos.Api.Interface.IAnimalService.GetAnimalById(System.Guid)
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IAnimalService.GetAnimalById(System.Guid)
+    name: GetAnimalById
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_GetAnimalById_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IAnimalService.GetAnimalById(System.Guid)
+    name: GetAnimalById
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_GetAnimalById_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: AnimalResponse
+  commentId: T:AnimalResponse
+  href: AnimalResponse.html
+  name: AnimalResponse
+  nameWithType: AnimalResponse
+  fullName: AnimalResponse
+- uid: Chaos.Api.Service.AnimalService.CreateRandomAnimal*
+  commentId: Overload:Chaos.Api.Service.AnimalService.CreateRandomAnimal
+  href: Chaos.Api.Service.AnimalService.html#Chaos_Api_Service_AnimalService_CreateRandomAnimal_System_Guid_
+  name: CreateRandomAnimal
+  nameWithType: AnimalService.CreateRandomAnimal
+  fullName: Chaos.Api.Service.AnimalService.CreateRandomAnimal
+- uid: Chaos.Api.Interface.IAnimalService.CreateRandomAnimal(System.Guid)
+  commentId: M:Chaos.Api.Interface.IAnimalService.CreateRandomAnimal(System.Guid)
+  parent: Chaos.Api.Interface.IAnimalService
+  isExternal: true
+  href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CreateRandomAnimal_System_Guid_
+  name: CreateRandomAnimal(Guid)
+  nameWithType: IAnimalService.CreateRandomAnimal(Guid)
+  fullName: Chaos.Api.Interface.IAnimalService.CreateRandomAnimal(System.Guid)
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IAnimalService.CreateRandomAnimal(System.Guid)
+    name: CreateRandomAnimal
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CreateRandomAnimal_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IAnimalService.CreateRandomAnimal(System.Guid)
+    name: CreateRandomAnimal
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CreateRandomAnimal_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: Chaos.Api.Service.AnimalService.RemoveAnimal*
+  commentId: Overload:Chaos.Api.Service.AnimalService.RemoveAnimal
+  href: Chaos.Api.Service.AnimalService.html#Chaos_Api_Service_AnimalService_RemoveAnimal_System_Guid_
+  name: RemoveAnimal
+  nameWithType: AnimalService.RemoveAnimal
+  fullName: Chaos.Api.Service.AnimalService.RemoveAnimal
+- uid: Chaos.Api.Interface.IAnimalService.RemoveAnimal(System.Guid)
+  commentId: M:Chaos.Api.Interface.IAnimalService.RemoveAnimal(System.Guid)
+  parent: Chaos.Api.Interface.IAnimalService
+  isExternal: true
+  href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_RemoveAnimal_System_Guid_
+  name: RemoveAnimal(Guid)
+  nameWithType: IAnimalService.RemoveAnimal(Guid)
+  fullName: Chaos.Api.Interface.IAnimalService.RemoveAnimal(System.Guid)
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IAnimalService.RemoveAnimal(System.Guid)
+    name: RemoveAnimal
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_RemoveAnimal_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IAnimalService.RemoveAnimal(System.Guid)
+    name: RemoveAnimal
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_RemoveAnimal_System_Guid_
+  - name: (
+  - uid: System.Guid
+    name: Guid
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.guid
+  - name: )
+- uid: Chaos.Api.Service.AnimalService.CalculateValue*
+  commentId: Overload:Chaos.Api.Service.AnimalService.CalculateValue
+  href: Chaos.Api.Service.AnimalService.html#Chaos_Api_Service_AnimalService_CalculateValue_AnimalResponse_
+  name: CalculateValue
+  nameWithType: AnimalService.CalculateValue
+  fullName: Chaos.Api.Service.AnimalService.CalculateValue
+- uid: Chaos.Api.Interface.IAnimalService.CalculateValue(AnimalResponse)
+  commentId: M:Chaos.Api.Interface.IAnimalService.CalculateValue(AnimalResponse)
+  parent: Chaos.Api.Interface.IAnimalService
+  href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CalculateValue_AnimalResponse_
+  name: CalculateValue(AnimalResponse)
+  nameWithType: IAnimalService.CalculateValue(AnimalResponse)
+  fullName: Chaos.Api.Interface.IAnimalService.CalculateValue(AnimalResponse)
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IAnimalService.CalculateValue(AnimalResponse)
+    name: CalculateValue
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CalculateValue_AnimalResponse_
+  - name: (
+  - uid: AnimalResponse
+    name: AnimalResponse
+    href: AnimalResponse.html
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IAnimalService.CalculateValue(AnimalResponse)
+    name: CalculateValue
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CalculateValue_AnimalResponse_
+  - name: (
+  - uid: AnimalResponse
+    name: AnimalResponse
+    href: AnimalResponse.html
+  - name: )
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Chaos.Api.Service.AnimalService.CalculateAnimalRandomStats*
+  commentId: Overload:Chaos.Api.Service.AnimalService.CalculateAnimalRandomStats
+  href: Chaos.Api.Service.AnimalService.html#Chaos_Api_Service_AnimalService_CalculateAnimalRandomStats_AnimalResponse_
+  name: CalculateAnimalRandomStats
+  nameWithType: AnimalService.CalculateAnimalRandomStats
+  fullName: Chaos.Api.Service.AnimalService.CalculateAnimalRandomStats
+- uid: Chaos.Api.Interface.IAnimalService.CalculateAnimalRandomStats(AnimalResponse)
+  commentId: M:Chaos.Api.Interface.IAnimalService.CalculateAnimalRandomStats(AnimalResponse)
+  parent: Chaos.Api.Interface.IAnimalService
+  href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CalculateAnimalRandomStats_AnimalResponse_
+  name: CalculateAnimalRandomStats(AnimalResponse)
+  nameWithType: IAnimalService.CalculateAnimalRandomStats(AnimalResponse)
+  fullName: Chaos.Api.Interface.IAnimalService.CalculateAnimalRandomStats(AnimalResponse)
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IAnimalService.CalculateAnimalRandomStats(AnimalResponse)
+    name: CalculateAnimalRandomStats
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CalculateAnimalRandomStats_AnimalResponse_
+  - name: (
+  - uid: AnimalResponse
+    name: AnimalResponse
+    href: AnimalResponse.html
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IAnimalService.CalculateAnimalRandomStats(AnimalResponse)
+    name: CalculateAnimalRandomStats
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CalculateAnimalRandomStats_AnimalResponse_
+  - name: (
+  - uid: AnimalResponse
+    name: AnimalResponse
+    href: AnimalResponse.html
+  - name: )
+- uid: Chaos.Api.Service.AnimalService.UpdateAnimalShop*
+  commentId: Overload:Chaos.Api.Service.AnimalService.UpdateAnimalShop
+  href: Chaos.Api.Service.AnimalService.html#Chaos_Api_Service_AnimalService_UpdateAnimalShop
+  name: UpdateAnimalShop
+  nameWithType: AnimalService.UpdateAnimalShop
+  fullName: Chaos.Api.Service.AnimalService.UpdateAnimalShop
+- uid: Chaos.Api.Interface.IAnimalService.UpdateAnimalShop
+  commentId: M:Chaos.Api.Interface.IAnimalService.UpdateAnimalShop
+  parent: Chaos.Api.Interface.IAnimalService
+  href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_UpdateAnimalShop
+  name: UpdateAnimalShop()
+  nameWithType: IAnimalService.UpdateAnimalShop()
+  fullName: Chaos.Api.Interface.IAnimalService.UpdateAnimalShop()
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IAnimalService.UpdateAnimalShop
+    name: UpdateAnimalShop
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_UpdateAnimalShop
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IAnimalService.UpdateAnimalShop
+    name: UpdateAnimalShop
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_UpdateAnimalShop
+  - name: (
+  - name: )
+- uid: Chaos.Api.Service.AnimalService.CalculateAverageBySimulation*
+  commentId: Overload:Chaos.Api.Service.AnimalService.CalculateAverageBySimulation
+  href: Chaos.Api.Service.AnimalService.html#Chaos_Api_Service_AnimalService_CalculateAverageBySimulation_Chaos_Api_Enums_AnimalEnum_System_Int32_
+  name: CalculateAverageBySimulation
+  nameWithType: AnimalService.CalculateAverageBySimulation
+  fullName: Chaos.Api.Service.AnimalService.CalculateAverageBySimulation
+- uid: Chaos.Api.Interface.IAnimalService.CalculateAverageBySimulation(Chaos.Api.Enums.AnimalEnum,System.Int32)
+  commentId: M:Chaos.Api.Interface.IAnimalService.CalculateAverageBySimulation(Chaos.Api.Enums.AnimalEnum,System.Int32)
+  parent: Chaos.Api.Interface.IAnimalService
+  isExternal: true
+  href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CalculateAverageBySimulation_Chaos_Api_Enums_AnimalEnum_System_Int32_
+  name: CalculateAverageBySimulation(AnimalEnum, int)
+  nameWithType: IAnimalService.CalculateAverageBySimulation(AnimalEnum, int)
+  fullName: Chaos.Api.Interface.IAnimalService.CalculateAverageBySimulation(Chaos.Api.Enums.AnimalEnum, int)
+  nameWithType.vb: IAnimalService.CalculateAverageBySimulation(AnimalEnum, Integer)
+  fullName.vb: Chaos.Api.Interface.IAnimalService.CalculateAverageBySimulation(Chaos.Api.Enums.AnimalEnum, Integer)
+  name.vb: CalculateAverageBySimulation(AnimalEnum, Integer)
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IAnimalService.CalculateAverageBySimulation(Chaos.Api.Enums.AnimalEnum,System.Int32)
+    name: CalculateAverageBySimulation
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CalculateAverageBySimulation_Chaos_Api_Enums_AnimalEnum_System_Int32_
+  - name: (
+  - uid: Chaos.Api.Enums.AnimalEnum
+    name: AnimalEnum
+    href: Chaos.Api.Enums.AnimalEnum.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IAnimalService.CalculateAverageBySimulation(Chaos.Api.Enums.AnimalEnum,System.Int32)
+    name: CalculateAverageBySimulation
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CalculateAverageBySimulation_Chaos_Api_Enums_AnimalEnum_System_Int32_
+  - name: (
+  - uid: Chaos.Api.Enums.AnimalEnum
+    name: AnimalEnum
+    href: Chaos.Api.Enums.AnimalEnum.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Chaos.Api.Enums.AnimalEnum
+  commentId: T:Chaos.Api.Enums.AnimalEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.AnimalEnum.html
+  name: AnimalEnum
+  nameWithType: AnimalEnum
+  fullName: Chaos.Api.Enums.AnimalEnum
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Chaos.Api.Enums
+  commentId: N:Chaos.Api.Enums
+  href: Chaos.html
+  name: Chaos.Api.Enums
+  nameWithType: Chaos.Api.Enums
+  fullName: Chaos.Api.Enums
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+- uid: Chaos.Api.Service.AnimalService.CalculatePrice*
+  commentId: Overload:Chaos.Api.Service.AnimalService.CalculatePrice
+  href: Chaos.Api.Service.AnimalService.html#Chaos_Api_Service_AnimalService_CalculatePrice
+  name: CalculatePrice
+  nameWithType: AnimalService.CalculatePrice
+  fullName: Chaos.Api.Service.AnimalService.CalculatePrice
+- uid: Chaos.Api.Interface.IAnimalService.CalculatePrice
+  commentId: M:Chaos.Api.Interface.IAnimalService.CalculatePrice
+  parent: Chaos.Api.Interface.IAnimalService
+  href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CalculatePrice
+  name: CalculatePrice()
+  nameWithType: IAnimalService.CalculatePrice()
+  fullName: Chaos.Api.Interface.IAnimalService.CalculatePrice()
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IAnimalService.CalculatePrice
+    name: CalculatePrice
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CalculatePrice
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IAnimalService.CalculatePrice
+    name: CalculatePrice
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_CalculatePrice
+  - name: (
+  - name: )
+- uid: Chaos.Api.Service.AnimalService.GetAvgValues*
+  commentId: Overload:Chaos.Api.Service.AnimalService.GetAvgValues
+  href: Chaos.Api.Service.AnimalService.html#Chaos_Api_Service_AnimalService_GetAvgValues
+  name: GetAvgValues
+  nameWithType: AnimalService.GetAvgValues
+  fullName: Chaos.Api.Service.AnimalService.GetAvgValues
+- uid: Chaos.Api.Interface.IAnimalService.GetAvgValues
+  commentId: M:Chaos.Api.Interface.IAnimalService.GetAvgValues
+  parent: Chaos.Api.Interface.IAnimalService
+  href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_GetAvgValues
+  name: GetAvgValues()
+  nameWithType: IAnimalService.GetAvgValues()
+  fullName: Chaos.Api.Interface.IAnimalService.GetAvgValues()
+  spec.csharp:
+  - uid: Chaos.Api.Interface.IAnimalService.GetAvgValues
+    name: GetAvgValues
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_GetAvgValues
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Chaos.Api.Interface.IAnimalService.GetAvgValues
+    name: GetAvgValues
+    href: Chaos.Api.Interface.IAnimalService.html#Chaos_Api_Interface_IAnimalService_GetAvgValues
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.Dictionary{Chaos.Api.Enums.AnimalEnum,System.Double}
+  commentId: T:System.Collections.Generic.Dictionary{Chaos.Api.Enums.AnimalEnum,System.Double}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<AnimalEnum, double>
+  nameWithType: Dictionary<AnimalEnum, double>
+  fullName: System.Collections.Generic.Dictionary<Chaos.Api.Enums.AnimalEnum, double>
+  nameWithType.vb: Dictionary(Of AnimalEnum, Double)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Chaos.Api.Enums.AnimalEnum, Double)
+  name.vb: Dictionary(Of AnimalEnum, Double)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: Chaos.Api.Enums.AnimalEnum
+    name: AnimalEnum
+    href: Chaos.Api.Enums.AnimalEnum.html
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Chaos.Api.Enums.AnimalEnum
+    name: AnimalEnum
+    href: Chaos.Api.Enums.AnimalEnum.html
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

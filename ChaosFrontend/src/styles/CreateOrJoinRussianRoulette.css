@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:wght@400;600&display=swap');
+
+/* ─── Variables ─────────────────────────────────────────── */
+:root {
+    --gold-primary:  #d4af37;
+    --gold-light:    #f5e17a;
+    --gold-dark:     #a07d1c;
+    --gold-shine:    #fff5a0;
+    --black-deep:    #0a0a0a;
+    --black-card:    #111111;
+    --border-gold:   #c9a84c;
+}
+
+/* ─── Reset global de links ─────────────────────────────── */
+a {
+    text-decoration: none;
+}
+
+/* ─── Layout Principal ──────────────────────────────────── */
+#menu {
+    font-family: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+    height: 100vh;
+    background-image: url(../assets/gamesImages/casino_russia.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Overlay oscuro sobre el fondo */
+#menu::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+    z-index: 0;
+}
+
+/* Franja decorativa inferior */
+#menu::after {
+    content: '◆   ♠   ◆   ♦   ◆   ♣   ◆   ♥   ◆';
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gold-dark);
+    font-size: 0.85rem;
+    letter-spacing: 0.8rem;
+    opacity: 0.35;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+/* ─── Título ────────────────────────────────────────────── */
+.menu-title {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.menu-title h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    padding: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    margin: 0 0 0.8rem 0;
+
+    /* Gradiente dorado */
+    background: linear-gradient(
+        180deg,
+        var(--gold-shine)   0%,
+        var(--gold-primary) 45%,
+        var(--gold-dark)    100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 18px rgba(212, 175, 55, 0.5));
+}
+
+.title-divider {
+    width: 260px;
+    height: 1px;
+    margin: 0 auto;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold-primary),
+        transparent
+    );
+}
+
+/* ─── Contenedor de Cartas ──────────────────────────────── */
+.cards-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+/* ─── Flip Card ─────────────────────────────────────────── */
+.flip-card {
+    width: 220px;
+    height: 320px;
+    perspective: 1200px;
+    cursor: pointer;
+    /* IMPORTANTE: sin background aquí */
+    background: transparent;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* Esto es lo que hace el giro */
+    transform-style: preserve-3d;
+    transition: transform 0.9s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border-radius: 16px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* ─── Regla clave: ambas caras ocultan su reverso ───────── */
+.front-card,
+.back-card {
+    position: absolute;
+    inset: 0;                    /* ocupa todo el flip-card-inner */
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    backface-visibility: hidden; /* cada cara se oculta cuando mira para atrás */
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ─── FRENTE: imagen de dorso de carta ──────────────────── */
+.front-card {
+    /* Aquí va tu imagen de dorso de baraja */
+    background-image: url(/dorso/dorso_card.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid var(--border-gold);
+    box-shadow:
+        0 0 0 1px rgba(212, 175, 55, 0.15),
+        0 8px 32px rgba(0, 0, 0, 0.6),
+        inset 0 0 20px rgba(0, 0, 0, 0.3);
+    /* NO tiene transform — mira al frente por defecto */
+}
+
+/* Brillo sutil sobre la imagen */
+.card-shine {
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 245, 160, 0.12) 0%,
+        transparent 50%,
+        rgba(255, 245, 160, 0.04) 100%
+    );
+    pointer-events: none;
+}
+
+/* ─── REVERSO: negro con dorado ─────────────────────────── */
+.back-card {
+    /* Empieza girada 180° para que al hacer flip quede de frente */
+    transform: rotateY(180deg);
+
+    background: radial-gradient(
+        ellipse at 40% 35%,
+        #1c1c1c 0%,
+        #0d0d0d 60%,
+        #050505 100%
+    );
+    border: 2px solid var(--gold-primary);
+    box-shadow:
+        0 0 0 1px rgba(212, 175, 55, 0.1),
+        inset 0 0 50px rgba(212, 175, 55, 0.06),
+        0 8px 32px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(212, 175, 55, 0.15);
+    overflow: hidden;
+    gap: 1rem;
+    position: relative;
+}
+
+/* Esquinas decorativas */
+.corner {
+    position: absolute;
+    color: var(--gold-dark);
+    font-size: 0.65rem;
+    opacity: 0.7;
+    line-height: 1;
+}
+
+.corner.top-left {
+    top: 0.7rem;
+    left: 0.9rem;
+}
+
+.corner.bottom-right {
+    bottom: 0.7rem;
+    right: 0.9rem;
+    transform: rotate(180deg);
+}
+
+/* Glow central */
+.back-glow {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(212, 175, 55, 0.1) 0%,
+        transparent 70%
+    );
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Palo de carta decorativo */
+.suit-icon {
+    font-size: 2.2rem;
+    color: var(--gold-primary);
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+    transition: transform 0.35s ease, color 0.35s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.flip-card:hover .suit-icon {
+    transform: scale(1.15);
+    color: var(--gold-shine);
+}
+
+/* ─── Link dentro del reverso ───────────────────────────── */
+.back-card a {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--gold-primary);
+    position: relative;
+    z-index: 1;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: color 0.35s ease, text-shadow 0.35s ease;
+}
+
+/* Línea dorada debajo del texto */
+.back-card a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 1px;
+    background: var(--gold-primary);
+    transition: width 0.35s ease;
+}
+
+.back-card a:hover {
+    color: var(--gold-shine);
+    text-shadow:
+        0 0 10px rgba(245, 225, 122, 0.9),
+        0 0 25px rgba(212, 175, 55, 0.5);
+}
+
+.back-card a:hover::after {
+    width: 80%;
+}
+
+/* ─── Lift suave al hacer hover en la carta ─────────────── */
+.flip-card {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.flip-card:hover {
+    transform: translateY(-8px);
+    filter: drop-shadow(0 16px 32px rgba(212, 175, 55, 0.4));
+}
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .menu-title h1 {
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .cards-container {
+        height: 75vh;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    #menu {
+        gap: 2rem;
+    }
+}

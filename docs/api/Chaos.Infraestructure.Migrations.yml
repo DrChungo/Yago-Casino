@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Infraestructure.Migrations
+  commentId: N:Chaos.Infraestructure.Migrations
+  id: Chaos.Infraestructure.Migrations
+  children:
+  - Chaos.Infraestructure.Migrations.InitialMigration
+  langs:
+  - csharp
+  - vb
+  name: Chaos.Infraestructure.Migrations
+  nameWithType: Chaos.Infraestructure.Migrations
+  fullName: Chaos.Infraestructure.Migrations
+  type: Namespace
+  assemblies:
+  - Chaos.Infraestructure
+references:
+- uid: Chaos.Infraestructure.Migrations.InitialMigration
+  commentId: T:Chaos.Infraestructure.Migrations.InitialMigration
+  href: Chaos.Infraestructure.Migrations.InitialMigration.html
+  name: InitialMigration
+  nameWithType: InitialMigration
+  fullName: Chaos.Infraestructure.Migrations.InitialMigration

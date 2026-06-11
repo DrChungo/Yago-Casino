@@ -1,0 +1,93 @@
+﻿@page "/register"
+@using Chaos.BlazorCasinoApp.Service
+@using Chaos.Shared.RequestEntity
+@inject AuthBackOfficeService AuthService
+@inject NavigationManager Navigation
+
+<div class="auth-container">
+    <div class="auth-card">
+        <h2 class="auth-title">📋 Registro de Usuario</h2>
+        <p class="auth-subtitle">Crea una cuenta (requiere promoción a admin)</p>
+
+        <EditForm Model="@_request" OnValidSubmit="HandleRegister">
+            <DataAnnotationsValidator />
+
+            <div class="form-group">
+                <label>Nombre</label>
+                <InputText class="form-control" @bind-Value="_request.Name"
+                           placeholder="Juan García" />
+            </div>
+
+            <div class="form-group mt-3">
+                <label>Email</label>
+                <InputText class="form-control" @bind-Value="_request.Email"
+                           placeholder="usuario@casino.com" />
+            </div>
+
+            <div class="form-group mt-3">
+                <label>Contraseña</label>
+                <InputText type="password" class="form-control"
+                           @bind-Value="_request.Password"
+                           placeholder="••••••••" />
+            </div>
+
+            @if (!string.IsNullOrEmpty(_message))
+            {
+                <div class="alert @(_isSuccess ? "alert-success" : "alert-danger") mt-3">
+                    @(_isSuccess ? "✅" : "⚠️") @_message
+                </div>
+            }
+
+            <button type="submit" class="btn btn-success w-100 mt-4" disabled="@_isLoading">
+                @if (_isLoading)
+                {
+                    <span class="spinner-border spinner-border-sm me-2"></span>
+                    <span>Registrando...</span>
+                }
+                else
+                {
+                    <span>Registrarse</span>
+                }
+            </button>
+        </EditForm>
+
+        <div class="mt-3 text-center">
+            <a href="/login">¿Ya tienes cuenta? Iniciar sesión</a>
+        </div>
+    </div>
+</div>
+
+@code {
+    private readonly RegisterBackOfficeRequest _request = new();
+    private string? _message;
+    private bool _isSuccess;
+    private bool _isLoading;
+
+    private async Task HandleRegister()
+    {
+        _isLoading = true;
+        _message = null;
+
+        try
+        {
+            var result = await AuthService.RegisterAsync(_request);
+            _message = result?.Message ?? "Respuesta inesperada.";
+            _isSuccess = _message == "Usuario registrado correctamente.";
+
+            if (_isSuccess)
+            {
+                await Task.Delay(1500);
+                Navigation.NavigateTo("/login");
+            }
+        }
+        catch (Exception ex)
+        {
+            _message = $"Error de conexión: {ex.Message}";
+            _isSuccess = false;
+        }
+        finally
+        {
+            _isLoading = false;
+        }
+    }
+}

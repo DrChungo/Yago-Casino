@@ -1,0 +1,142 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums
+  commentId: N:Chaos.Api.Enums
+  id: Chaos.Api.Enums
+  children:
+  - Chaos.Api.Enums.AnimalEnum
+  - Chaos.Api.Enums.AnimalStatusEnum
+  - Chaos.Api.Enums.BlackJackGameResultEnum
+  - Chaos.Api.Enums.BlackJackGameStatusEnum
+  - Chaos.Api.Enums.CardRank
+  - Chaos.Api.Enums.CardSuit
+  - Chaos.Api.Enums.CoinSideEnum
+  - Chaos.Api.Enums.GameTypeEnum
+  - Chaos.Api.Enums.HealthEnum
+  - Chaos.Api.Enums.HigherOrLowerChoiceEnum
+  - Chaos.Api.Enums.ShopTransactionTypeEnum
+  - Chaos.Api.Enums.SlotSymbolEnum
+  langs:
+  - csharp
+  - vb
+  name: Chaos.Api.Enums
+  nameWithType: Chaos.Api.Enums
+  fullName: Chaos.Api.Enums
+  type: Namespace
+  assemblies:
+  - Chaos.Api
+references:
+- uid: Chaos.Api.Enums.AnimalEnum
+  commentId: T:Chaos.Api.Enums.AnimalEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.AnimalEnum.html
+  name: AnimalEnum
+  nameWithType: AnimalEnum
+  fullName: Chaos.Api.Enums.AnimalEnum
+- uid: Chaos.Api.Enums.AnimalStatusEnum
+  commentId: T:Chaos.Api.Enums.AnimalStatusEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.AnimalStatusEnum.html
+  name: AnimalStatusEnum
+  nameWithType: AnimalStatusEnum
+  fullName: Chaos.Api.Enums.AnimalStatusEnum
+- uid: Chaos.Api.Enums.BlackJackGameResultEnum
+  commentId: T:Chaos.Api.Enums.BlackJackGameResultEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.BlackJackGameResultEnum.html
+  name: BlackJackGameResultEnum
+  nameWithType: BlackJackGameResultEnum
+  fullName: Chaos.Api.Enums.BlackJackGameResultEnum
+- uid: Chaos.Api.Enums.BlackJackGameStatusEnum
+  commentId: T:Chaos.Api.Enums.BlackJackGameStatusEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.BlackJackGameStatusEnum.html
+  name: BlackJackGameStatusEnum
+  nameWithType: BlackJackGameStatusEnum
+  fullName: Chaos.Api.Enums.BlackJackGameStatusEnum
+- uid: Chaos.Api.Enums.CardSuit
+  commentId: T:Chaos.Api.Enums.CardSuit
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.CardSuit.html
+  name: CardSuit
+  nameWithType: CardSuit
+  fullName: Chaos.Api.Enums.CardSuit
+- uid: Chaos.Api.Enums.CardRank
+  commentId: T:Chaos.Api.Enums.CardRank
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.CardRank.html
+  name: CardRank
+  nameWithType: CardRank
+  fullName: Chaos.Api.Enums.CardRank
+- uid: Chaos.Api.Enums.CoinSideEnum
+  commentId: T:Chaos.Api.Enums.CoinSideEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.CoinSideEnum.html
+  name: CoinSideEnum
+  nameWithType: CoinSideEnum
+  fullName: Chaos.Api.Enums.CoinSideEnum
+- uid: Chaos.Api.Enums.GameTypeEnum
+  commentId: T:Chaos.Api.Enums.GameTypeEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.GameTypeEnum.html
+  name: GameTypeEnum
+  nameWithType: GameTypeEnum
+  fullName: Chaos.Api.Enums.GameTypeEnum
+- uid: Chaos.Api.Enums.HealthEnum
+  commentId: T:Chaos.Api.Enums.HealthEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.HealthEnum.html
+  name: HealthEnum
+  nameWithType: HealthEnum
+  fullName: Chaos.Api.Enums.HealthEnum
+- uid: Chaos.Api.Enums.HigherOrLowerChoiceEnum
+  commentId: T:Chaos.Api.Enums.HigherOrLowerChoiceEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.HigherOrLowerChoiceEnum.html
+  name: HigherOrLowerChoiceEnum
+  nameWithType: HigherOrLowerChoiceEnum
+  fullName: Chaos.Api.Enums.HigherOrLowerChoiceEnum
+- uid: Chaos.Api.Enums.ShopTransactionTypeEnum
+  commentId: T:Chaos.Api.Enums.ShopTransactionTypeEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.ShopTransactionTypeEnum.html
+  name: ShopTransactionTypeEnum
+  nameWithType: ShopTransactionTypeEnum
+  fullName: Chaos.Api.Enums.ShopTransactionTypeEnum
+- uid: Chaos.Api.Enums.SlotSymbolEnum
+  commentId: T:Chaos.Api.Enums.SlotSymbolEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.SlotSymbolEnum.html
+  name: SlotSymbolEnum
+  nameWithType: SlotSymbolEnum
+  fullName: Chaos.Api.Enums.SlotSymbolEnum
+- uid: Chaos.Api.Enums
+  commentId: N:Chaos.Api.Enums
+  href: Chaos.html
+  name: Chaos.Api.Enums
+  nameWithType: Chaos.Api.Enums
+  fullName: Chaos.Api.Enums
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html

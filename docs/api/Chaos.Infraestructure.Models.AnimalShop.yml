@@ -1,0 +1,603 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Infraestructure.Models.AnimalShop
+  commentId: T:Chaos.Infraestructure.Models.AnimalShop
+  id: AnimalShop
+  parent: Chaos.Infraestructure.Models
+  children:
+  - Chaos.Infraestructure.Models.AnimalShop.CreatedAt
+  - Chaos.Infraestructure.Models.AnimalShop.Description
+  - Chaos.Infraestructure.Models.AnimalShop.Id
+  - Chaos.Infraestructure.Models.AnimalShop.ShopAnimalListings
+  - Chaos.Infraestructure.Models.AnimalShop.ShopName
+  langs:
+  - csharp
+  - vb
+  name: AnimalShop
+  nameWithType: AnimalShop
+  fullName: Chaos.Infraestructure.Models.AnimalShop
+  type: Class
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalShop.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: AnimalShop
+    path: ../Chaos.Infraestructure/Models/AnimalShop.cs
+    startLine: 7
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public class AnimalShop
+    content.vb: Public Class AnimalShop
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Chaos.Infraestructure.Models.AnimalShop.Id
+  commentId: P:Chaos.Infraestructure.Models.AnimalShop.Id
+  id: Id
+  parent: Chaos.Infraestructure.Models.AnimalShop
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: AnimalShop.Id
+  fullName: Chaos.Infraestructure.Models.AnimalShop.Id
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalShop.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: Id
+    path: ../Chaos.Infraestructure/Models/AnimalShop.cs
+    startLine: 9
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public Guid Id { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Id As Guid
+  overload: Chaos.Infraestructure.Models.AnimalShop.Id*
+- uid: Chaos.Infraestructure.Models.AnimalShop.ShopName
+  commentId: P:Chaos.Infraestructure.Models.AnimalShop.ShopName
+  id: ShopName
+  parent: Chaos.Infraestructure.Models.AnimalShop
+  langs:
+  - csharp
+  - vb
+  name: ShopName
+  nameWithType: AnimalShop.ShopName
+  fullName: Chaos.Infraestructure.Models.AnimalShop.ShopName
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalShop.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: ShopName
+    path: ../Chaos.Infraestructure/Models/AnimalShop.cs
+    startLine: 11
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string ShopName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ShopName As String
+  overload: Chaos.Infraestructure.Models.AnimalShop.ShopName*
+- uid: Chaos.Infraestructure.Models.AnimalShop.Description
+  commentId: P:Chaos.Infraestructure.Models.AnimalShop.Description
+  id: Description
+  parent: Chaos.Infraestructure.Models.AnimalShop
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: AnimalShop.Description
+  fullName: Chaos.Infraestructure.Models.AnimalShop.Description
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalShop.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: Description
+    path: ../Chaos.Infraestructure/Models/AnimalShop.cs
+    startLine: 13
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Chaos.Infraestructure.Models.AnimalShop.Description*
+- uid: Chaos.Infraestructure.Models.AnimalShop.CreatedAt
+  commentId: P:Chaos.Infraestructure.Models.AnimalShop.CreatedAt
+  id: CreatedAt
+  parent: Chaos.Infraestructure.Models.AnimalShop
+  langs:
+  - csharp
+  - vb
+  name: CreatedAt
+  nameWithType: AnimalShop.CreatedAt
+  fullName: Chaos.Infraestructure.Models.AnimalShop.CreatedAt
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalShop.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: CreatedAt
+    path: ../Chaos.Infraestructure/Models/AnimalShop.cs
+    startLine: 15
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public string CreatedAt { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CreatedAt As String
+  overload: Chaos.Infraestructure.Models.AnimalShop.CreatedAt*
+- uid: Chaos.Infraestructure.Models.AnimalShop.ShopAnimalListings
+  commentId: P:Chaos.Infraestructure.Models.AnimalShop.ShopAnimalListings
+  id: ShopAnimalListings
+  parent: Chaos.Infraestructure.Models.AnimalShop
+  langs:
+  - csharp
+  - vb
+  name: ShopAnimalListings
+  nameWithType: AnimalShop.ShopAnimalListings
+  fullName: Chaos.Infraestructure.Models.AnimalShop.ShopAnimalListings
+  type: Property
+  source:
+    remote:
+      path: Chaos.Infraestructure/Models/AnimalShop.cs
+      branch: 2026/A_Pere
+      repo: https://github.siemens.cloud/antonio-bestard/Chaos-Api.git
+    id: ShopAnimalListings
+    path: ../Chaos.Infraestructure/Models/AnimalShop.cs
+    startLine: 17
+  assemblies:
+  - Chaos.Infraestructure
+  namespace: Chaos.Infraestructure.Models
+  syntax:
+    content: public virtual ICollection<ShopAnimalListing> ShopAnimalListings { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.ShopAnimalListing}
+    content.vb: Public Overridable Property ShopAnimalListings As ICollection(Of ShopAnimalListing)
+  overload: Chaos.Infraestructure.Models.AnimalShop.ShopAnimalListings*
+references:
+- uid: Chaos.Infraestructure.Models
+  commentId: N:Chaos.Infraestructure.Models
+  href: Chaos.html
+  name: Chaos.Infraestructure.Models
+  nameWithType: Chaos.Infraestructure.Models
+  fullName: Chaos.Infraestructure.Models
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Infraestructure
+    name: Infraestructure
+    href: Chaos.Infraestructure.html
+  - name: .
+  - uid: Chaos.Infraestructure.Models
+    name: Models
+    href: Chaos.Infraestructure.Models.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Infraestructure
+    name: Infraestructure
+    href: Chaos.Infraestructure.html
+  - name: .
+  - uid: Chaos.Infraestructure.Models
+    name: Models
+    href: Chaos.Infraestructure.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chaos.Infraestructure.Models.AnimalShop.Id*
+  commentId: Overload:Chaos.Infraestructure.Models.AnimalShop.Id
+  href: Chaos.Infraestructure.Models.AnimalShop.html#Chaos_Infraestructure_Models_AnimalShop_Id
+  name: Id
+  nameWithType: AnimalShop.Id
+  fullName: Chaos.Infraestructure.Models.AnimalShop.Id
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Chaos.Infraestructure.Models.AnimalShop.ShopName*
+  commentId: Overload:Chaos.Infraestructure.Models.AnimalShop.ShopName
+  href: Chaos.Infraestructure.Models.AnimalShop.html#Chaos_Infraestructure_Models_AnimalShop_ShopName
+  name: ShopName
+  nameWithType: AnimalShop.ShopName
+  fullName: Chaos.Infraestructure.Models.AnimalShop.ShopName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Chaos.Infraestructure.Models.AnimalShop.Description*
+  commentId: Overload:Chaos.Infraestructure.Models.AnimalShop.Description
+  href: Chaos.Infraestructure.Models.AnimalShop.html#Chaos_Infraestructure_Models_AnimalShop_Description
+  name: Description
+  nameWithType: AnimalShop.Description
+  fullName: Chaos.Infraestructure.Models.AnimalShop.Description
+- uid: Chaos.Infraestructure.Models.AnimalShop.CreatedAt*
+  commentId: Overload:Chaos.Infraestructure.Models.AnimalShop.CreatedAt
+  href: Chaos.Infraestructure.Models.AnimalShop.html#Chaos_Infraestructure_Models_AnimalShop_CreatedAt
+  name: CreatedAt
+  nameWithType: AnimalShop.CreatedAt
+  fullName: Chaos.Infraestructure.Models.AnimalShop.CreatedAt
+- uid: Chaos.Infraestructure.Models.AnimalShop.ShopAnimalListings*
+  commentId: Overload:Chaos.Infraestructure.Models.AnimalShop.ShopAnimalListings
+  href: Chaos.Infraestructure.Models.AnimalShop.html#Chaos_Infraestructure_Models_AnimalShop_ShopAnimalListings
+  name: ShopAnimalListings
+  nameWithType: AnimalShop.ShopAnimalListings
+  fullName: Chaos.Infraestructure.Models.AnimalShop.ShopAnimalListings
+- uid: System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.ShopAnimalListing}
+  commentId: T:System.Collections.Generic.ICollection{Chaos.Infraestructure.Models.ShopAnimalListing}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<ShopAnimalListing>
+  nameWithType: ICollection<ShopAnimalListing>
+  fullName: System.Collections.Generic.ICollection<Chaos.Infraestructure.Models.ShopAnimalListing>
+  nameWithType.vb: ICollection(Of ShopAnimalListing)
+  fullName.vb: System.Collections.Generic.ICollection(Of Chaos.Infraestructure.Models.ShopAnimalListing)
+  name.vb: ICollection(Of ShopAnimalListing)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: Chaos.Infraestructure.Models.ShopAnimalListing
+    name: ShopAnimalListing
+    href: Chaos.Infraestructure.Models.ShopAnimalListing.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Chaos.Infraestructure.Models.ShopAnimalListing
+    name: ShopAnimalListing
+    href: Chaos.Infraestructure.Models.ShopAnimalListing.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

@@ -1,0 +1,108 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Enums.AnimalStatusEnum
+  commentId: T:Chaos.Api.Enums.AnimalStatusEnum
+  id: AnimalStatusEnum
+  parent: Chaos.Api.Enums
+  children:
+  - Chaos.Api.Enums.AnimalStatusEnum.IN_SHOP
+  - Chaos.Api.Enums.AnimalStatusEnum.OWNED_BY_USER
+  langs:
+  - csharp
+  - vb
+  name: AnimalStatusEnum
+  nameWithType: AnimalStatusEnum
+  fullName: Chaos.Api.Enums.AnimalStatusEnum
+  type: Enum
+  source:
+    id: AnimalStatusEnum
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\AnimalStatusEnum.cs
+    startLine: 2
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: public enum AnimalStatusEnum
+    content.vb: Public Enum AnimalStatusEnum
+- uid: Chaos.Api.Enums.AnimalStatusEnum.IN_SHOP
+  commentId: F:Chaos.Api.Enums.AnimalStatusEnum.IN_SHOP
+  id: IN_SHOP
+  parent: Chaos.Api.Enums.AnimalStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: IN_SHOP
+  nameWithType: AnimalStatusEnum.IN_SHOP
+  fullName: Chaos.Api.Enums.AnimalStatusEnum.IN_SHOP
+  type: Field
+  source:
+    id: IN_SHOP
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\AnimalStatusEnum.cs
+    startLine: 4
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: IN_SHOP = 0
+    return:
+      type: Chaos.Api.Enums.AnimalStatusEnum
+- uid: Chaos.Api.Enums.AnimalStatusEnum.OWNED_BY_USER
+  commentId: F:Chaos.Api.Enums.AnimalStatusEnum.OWNED_BY_USER
+  id: OWNED_BY_USER
+  parent: Chaos.Api.Enums.AnimalStatusEnum
+  langs:
+  - csharp
+  - vb
+  name: OWNED_BY_USER
+  nameWithType: AnimalStatusEnum.OWNED_BY_USER
+  fullName: Chaos.Api.Enums.AnimalStatusEnum.OWNED_BY_USER
+  type: Field
+  source:
+    id: OWNED_BY_USER
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Enums\AnimalStatusEnum.cs
+    startLine: 5
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Enums
+  syntax:
+    content: OWNED_BY_USER = 1
+    return:
+      type: Chaos.Api.Enums.AnimalStatusEnum
+references:
+- uid: Chaos.Api.Enums
+  commentId: N:Chaos.Api.Enums
+  href: Chaos.html
+  name: Chaos.Api.Enums
+  nameWithType: Chaos.Api.Enums
+  fullName: Chaos.Api.Enums
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Enums
+    name: Enums
+    href: Chaos.Api.Enums.html
+- uid: Chaos.Api.Enums.AnimalStatusEnum
+  commentId: T:Chaos.Api.Enums.AnimalStatusEnum
+  parent: Chaos.Api.Enums
+  href: Chaos.Api.Enums.AnimalStatusEnum.html
+  name: AnimalStatusEnum
+  nameWithType: AnimalStatusEnum
+  fullName: Chaos.Api.Enums.AnimalStatusEnum

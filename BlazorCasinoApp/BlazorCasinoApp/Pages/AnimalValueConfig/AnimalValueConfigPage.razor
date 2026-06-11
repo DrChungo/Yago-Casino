@@ -1,0 +1,413 @@
+﻿@page "/AnimalValueConfigPage"
+
+@using Chaos.BlazorCasinoApp.IApiService
+@using Chaos.Shared.ResponseEntity
+@using Chaos.Shared.RequestEntity.AnimalValue;
+
+@inject IAnimalValueConfigService AnimalValueConfigService
+@inject NavigationManager Nav
+
+<PageTitle>Backoffice — Animal Value Config</PageTitle>
+
+<div class="casino-page">
+
+    <h1>🐾 Animal Value — Configuración</h1>
+
+    @if (isLoading)
+    {
+        <div class="casino-loading">
+            <div class="casino-spinner" role="status">🛞</div>
+            <p class="text-gold">Cargando datos...</p>
+        </div>
+    }
+    else if (errorMessage is not null)
+    {
+        <div class="alert alert-danger">@errorMessage</div>
+    }
+    else
+    {
+        <div class="casino-toolbar">
+            <h5>Configuraciones</h5>
+
+            @* ── 🔍 Buscador ── *@
+            <div class="casino-search-wrapper">
+                <span class="casino-search-icon">🔍</span>
+                <input class="casino-search-input"
+                       type="text"
+                       placeholder="Buscar por tipo de animal..."
+                       value="@searchTerm"
+                       @oninput="OnSearchChanged" />
+                @if (!string.IsNullOrWhiteSpace(searchTerm))
+                {
+                    <button class="casino-search-clear" @onclick="ClearSearch">✕</button>
+                }
+            </div>
+
+            @* ── Items por página ── *@
+            <div class="casino-page-size-wrapper">
+                <label class="casino-page-size-label">Por página:</label>
+                <select class="casino-page-size-select" @onchange="OnPageSizeChanged">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                </select>
+            </div>
+
+            <button class="btn-casino-primary"
+                    @onclick='() => Nav.NavigateTo("/AnimalValueConfigPage/create")'>
+                <span class="btn-casino-icon">➕</span>
+                <span>Nueva Configuración</span>
+            </button>
+        </div>
+
+        @if (FilteredConfigs.Count == 0)
+        {
+            <div class="alert alert-warning">
+                @if (configs.Count == 0)
+                {
+                    <span>📭 No hay configuraciones creadas todavía.</span>
+                }
+                else
+                {
+                    <span>🔎 No se encontraron resultados para "<strong>@searchTerm</strong>".</span>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="casino-table-wrapper">
+                <table class="casino-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo Animal</th>
+                            <th>Edad (Min/Max)</th>
+                            <th>Peso (Min/Max)</th>
+                            <th>Altura (Min/Max)</th>
+                            <th>Salud (Min/Max)</th>
+                            <th>Habitat</th>
+                            <th>Imagen Normal / Mecha</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i < PagedConfigs.Count; i++)
+                        {
+                            var config = PagedConfigs[i];
+                            <tr class="@(i % 2 == 0 ? "casino-row-even" : "casino-row-odd")">
+                                <td>@config.AnimalType</td>
+                                <td>@config.MinAge — @config.MaxAge</td>
+                                <td>@config.MinWeight — @config.MaxWeight</td>
+                                <td>@config.MinHeight — @config.MaxHeight</td>
+                                <td>@config.MinHealth — @config.MaxHealth</td>
+                                <td>@config.Habitat</td>
+
+                                <td>
+                                    <button class="btn-svg-preview"
+                                            @onclick='() => OpenPreview(config.Id, "normal")'>
+                                        🌍 Ver
+                                    </button>
+                                    <button class="btn-svg-preview"
+                                            @onclick='() => OpenPreview(config.Id, "mecha")'>
+                                        🤖 Ver
+                                    </button>
+                                </td>
+
+                                <td>
+                                    @if (config.IsActive)
+                                    {
+                                        <span class="badge-casino-active">● Activo</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge-casino-inactive">● Inactivo</span>
+                                    }
+                                </td>
+                                <td class="acciones-cell">
+                                    <button class="btn-casino-edit"
+                                            @onclick='() => Nav.NavigateTo($"/AnimalValueConfigPage/edit/{config.Id}")'>
+                                        ✏️ Editar
+                                    </button>
+                                    <button class="btn-casino-delete"
+                                            @onclick='() => DeleteConfig(config.Id)'>
+                                        🗑️ Eliminar
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            @* ── Footer: contador + paginación ── *@
+            <div class="casino-pagination-footer">
+
+                @* Contador *@
+                <p class="casino-results-count">
+                    Mostrando
+                    <strong>@(((currentPage - 1) * pageSize) + 1)</strong>
+                    –
+                    <strong>@(Math.Min(currentPage * pageSize, FilteredConfigs.Count))</strong>
+                    de
+                    <strong>@FilteredConfigs.Count</strong>
+                    configuraciones
+                </p>
+
+                @* Controles de paginación *@
+                <div class="casino-pagination">
+
+                    @* Primera página *@
+                    <button class="casino-page-btn"
+                            disabled="@(currentPage == 1)"
+                            @onclick='() => GoToPage(1)'
+                            title="Primera página">
+                        ««
+                    </button>
+
+                    @* Anterior *@
+                    <button class="casino-page-btn"
+                            disabled="@(currentPage == 1)"
+                            @onclick='() => GoToPage(currentPage - 1)'
+                            title="Página anterior">
+                        ‹
+                    </button>
+
+                    @* Números de página *@
+                    @foreach (var pageNum in GetPageNumbers())
+                    {
+                        @if (pageNum == -1)
+                        {
+                            @* Separador "..." *@
+                            <span class="casino-page-ellipsis">…</span>
+                        }
+                        else
+                        {
+                            <button class="casino-page-btn @(pageNum == currentPage ? "casino-page-btn--active" : "")"
+                                    @onclick='() => GoToPage(pageNum)'>
+                                @pageNum
+                            </button>
+                        }
+                    }
+
+                    @* Siguiente *@
+                    <button class="casino-page-btn"
+                            disabled="@(currentPage == TotalPages)"
+                            @onclick='() => GoToPage(currentPage + 1)'
+                            title="Página siguiente">
+                        ›
+                    </button>
+
+                    @* Última página *@
+                    <button class="casino-page-btn"
+                            disabled="@(currentPage == TotalPages)"
+                            @onclick='() => GoToPage(TotalPages)'
+                            title="Última página">
+                        »»
+                    </button>
+
+                </div>
+            </div>
+        }
+    }
+
+    @* ══ MODAL SVG PREVIEW ══ *@
+    @if (isLoadingSvg || previewSvg is not null)
+    {
+        <div class="svg-modal-backdrop" @onclick="ClosePreview">
+            <div class="svg-modal-box" @onclick:stopPropagation="true">
+                <div class="svg-modal-header">
+                    <span class="svg-modal-title">@previewLabel</span>
+                    <button class="svg-modal-close" @onclick="ClosePreview">✕</button>
+                </div>
+                <div class="svg-modal-body">
+                    @if (isLoadingSvg)
+                    {
+                        <div class="casino-loading">
+                            <div class="casino-spinner">🛞</div>
+                            <p>Cargando imagen...</p>
+                        </div>
+                    }
+                    else
+                    {
+                        @((MarkupString)previewSvg!)
+                    }
+                </div>
+            </div>
+        </div>
+    }
+
+
+
+</div>
+
+@code {
+    private bool isLoading = true;
+    private bool isLoadingSvg = false;
+    private string? errorMessage;
+
+    // ── Datos ──
+    private List<AnimalValueResponse> configs = new();
+
+    // ── Buscador ──
+    private string searchTerm = string.Empty;
+
+    // ── Paginación ──
+    private int currentPage = 1;
+    private int pageSize = 15;
+
+    // ── Lista filtrada + ordenada ──
+    private List<AnimalValueResponse> FilteredConfigs =>
+        configs
+            .Where(c => string.IsNullOrWhiteSpace(searchTerm) ||
+                        c.AnimalType.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
+            .OrderBy(c => c.AnimalType, StringComparer.OrdinalIgnoreCase)
+            .ToList();
+
+    // ── Lista de la página actual ──
+    private List<AnimalValueResponse> PagedConfigs =>
+        FilteredConfigs
+            .Skip((currentPage - 1) * pageSize)
+            .Take(pageSize)
+            .ToList();
+
+    // ── Total de páginas ──
+    private int TotalPages =>
+        (int)Math.Ceiling(FilteredConfigs.Count / (double)pageSize);
+
+    // ── Modal SVG ──
+    private string? previewSvg;
+    private string previewLabel = string.Empty;
+
+    // ──────────────────────────────────────────
+    protected override async Task OnInitializedAsync() => await LoadAll();
+
+    private async Task LoadAll()
+    {
+        isLoading = true;
+        errorMessage = null;
+        try
+        {
+            configs = await AnimalValueConfigService.GetAllAsync();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al cargar datos: {ex.Message}";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    // ── Buscador: vuelve a página 1 al buscar ──
+    private void OnSearchChanged(ChangeEventArgs e)
+    {
+        searchTerm = e.Value?.ToString() ?? string.Empty;
+        currentPage = 1;
+    }
+
+    private void ClearSearch()
+    {
+        searchTerm = string.Empty;
+        currentPage = 1;
+    }
+
+    // ── Cambiar items por página ──
+    private void OnPageSizeChanged(ChangeEventArgs e)
+    {
+        pageSize = int.Parse(e.Value?.ToString() ?? "10");
+        currentPage = 1;
+    }
+
+    // ── Ir a una página específica ──
+    private void GoToPage(int page)
+    {
+        if (page < 1 || page > TotalPages) return;
+        currentPage = page;
+    }
+
+    // ── Genera los números de página con "..." ──
+    private List<int> GetPageNumbers()
+    {
+        var pages = new List<int>();
+        int total = TotalPages;
+
+        if (total <= 20)
+        {
+            // Pocas páginas: mostrar todas
+            for (int i = 1; i <= total; i++)
+                pages.Add(i);
+        }
+        else
+        {
+            // Siempre mostrar primera
+            pages.Add(1);
+
+            if (currentPage > 3)
+                pages.Add(-1); // "..."
+
+            // Páginas alrededor de la actual
+            int start = Math.Max(2, currentPage - 1);
+            int end = Math.Min(total - 1, currentPage + 1);
+
+            for (int i = start; i <= end; i++)
+                pages.Add(i);
+
+            if (currentPage < total - 2)
+                pages.Add(-1); // "..."
+
+            // Siempre mostrar última
+            pages.Add(total);
+        }
+
+        return pages;
+    }
+
+    // ── SVG Preview ──
+    private async Task OpenPreview(Guid id, string tipo)
+    {
+        isLoadingSvg = true;
+        previewSvg = null;
+        previewLabel = tipo == "normal" ? "Normal 🌍" : "Mecha 🤖";
+        StateHasChanged();
+
+        try
+        {
+            var detail = await AnimalValueConfigService.GetByIdAsync(id);
+            previewSvg = tipo == "normal"
+                ? detail?.ImageUrlNormal
+                : detail?.ImageUrlMecha;
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al cargar imagen: {ex.Message}";
+        }
+        finally
+        {
+            isLoadingSvg = false;
+        }
+    }
+
+    private void ClosePreview()
+    {
+        previewSvg = null;
+        previewLabel = string.Empty;
+    }
+
+    private async Task DeleteConfig(Guid id)
+    {
+        try
+        {
+            await AnimalValueConfigService.DeleteAsync(id);
+            await LoadAll();
+            // Ajusta página si quedó vacía tras eliminar
+            if (currentPage > TotalPages && TotalPages > 0)
+                currentPage = TotalPages;
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error al eliminar: {ex.Message}";
+        }
+    }
+}

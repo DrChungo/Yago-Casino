@@ -1,0 +1,581 @@
+/* ═══════════════════════════════════════════════
+   BAR LANDING PAGE — CASINO ROYALE THEME
+   ═══════════════════════════════════════════════ */
+
+.bar-landing-container {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    isolation: isolate;
+    overflow-y: auto;
+}
+
+/* ─── BAR TITLE BILLBOARD ─── */
+.bar-title-section {
+    text-align: center;
+    padding: 20px 40px 10px 40px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.8);
+}
+
+.bar-neon-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    line-height: 1;
+    background: linear-gradient(90deg, #bf953f 0%, #fcf6ba 25%, #bf953f 50%, #fcf6ba 75%, #bf953f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 5px rgba(212, 175, 55, 0.3), 2px 2px 5px rgba(212, 175, 55, 0.3), 2px 2px 5px rgba(212, 175, 55, 0.3);
+    padding: 10px;
+    letter-spacing: 6px;
+}
+
+.bar-subtitle {
+    font-size: 0.95rem;
+    color: #e6c687;
+    margin: 0;
+    letter-spacing: 3px;
+    line-height: 1.6;
+    text-shadow: 2px 2px 5px rgba(212, 175, 55, 0.3), 2px 2px 5px rgba(212, 175, 55, 0.3), 2px 2px 5px rgba(212, 175, 55, 0.3);
+}
+
+/* ─── BOTTLES GRID ─── */
+.bar-bottles-grid {
+    margin: auto auto 200px auto;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 100px;
+
+}
+
+/* ─── INDIVIDUAL BOTTLE CARD ─── */
+.bar-bottle-card {
+    position: relative;
+    width: 240px;
+    background: rgba(14, 11, 22, 0.75);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(191, 149, 63, 0.5);
+    border-radius: 16px;
+    padding: 24px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.8),
+        inset 0 0 15px rgba(191, 149, 63, 0.08);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Golden shimmer sweep */
+.bar-bottle-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(252, 246, 186, 0.12),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: left 0.6s ease;
+}
+
+.bar-bottle-card:hover::before {
+    left: 200%;
+}
+
+.bar-bottle-card:hover {
+    border-color: #fcf6ba;
+    transform: translateY(-8px) scale(1.03);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.9),
+        0 0 25px rgba(212, 175, 55, 0.35),
+        0 0 8px rgba(255, 255, 255, 0.15),
+        inset 0 0 20px rgba(191, 149, 63, 0.15);
+}
+
+.bar-bottle-card:active {
+    transform: translateY(-2px) scale(0.98);
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.9),
+        0 0 10px rgba(212, 175, 55, 0.3);
+    transition: all 0.1s ease;
+}
+
+/* ─── BOTTLE IMAGE ─── */
+.bar-bottle-image-wrapper {
+    width: 125%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
+    animation: bottleFloat 4s ease-in-out infinite;
+}
+
+.bar-bottle-image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+}
+
+.bar-bottle-card:hover .bar-bottle-image-wrapper img {
+    transform: scale(1.08) rotate(-2deg);
+}
+
+@keyframes bottleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+/* Stagger the float animation for each card */
+.bar-bottle-card:nth-child(1) .bar-bottle-image-wrapper { animation-delay: 0s; }
+.bar-bottle-card:nth-child(2) .bar-bottle-image-wrapper { animation-delay: 0.5s; }
+.bar-bottle-card:nth-child(3) .bar-bottle-image-wrapper { animation-delay: 1s; }
+.bar-bottle-card:nth-child(4) .bar-bottle-image-wrapper { animation-delay: 1.5s; }
+
+/* ─── BOTTLE NAME ─── */
+.bar-bottle-name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fcf6ba;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ─── EFFECT DESCRIPTION ─── */
+.bar-bottle-effect {
+    font-size: 0.78rem;
+    color: #b0a8ba;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    min-height: 36px;
+}
+
+/* ─── BUY BUTTON ─── */
+.bar-bottle-buy-btn {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 5px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #725400;
+    text-shadow: 1px 1px 10px rgba(252, 246, 186, 0.5), 2px 2px 4px rgba(0,0,0,0.8);
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 12px 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient( 135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100% );
+    background-size: 200% auto;
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.bar-bottle-buy-btn span {
+    color: #b38728;
+}
+
+    .bar-bottle-buy-btn:hover {
+        color: rgb(225, 176, 17, 0,30);
+        background-position: right center;
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(255, 215, 0, 0.6), 0 0 35px rgba(212, 175, 55, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.6);
+        transform: translateY(-1px);
+    }
+
+.bar-bottle-buy-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.5);
+}
+
+/* ─── BACK BUTTON (BOTTOM BAR) ─── */
+.bar-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0 24px 0;
+    background: linear-gradient(
+        to top,
+        rgba(8, 6, 13, 0.98) 60%,
+        rgba(8, 6, 13, 0.0) 100%
+    );
+    z-index: 100;
+}
+
+.bar-back-btn {
+    position: relative;
+    overflow: hidden;
+    padding: 16px 50px;
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #fcf6ba;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    background:
+        linear-gradient(135deg, #1f0305, #42080e, #6e0f19, #42080e) padding-box,
+        linear-gradient(to right, #bf953f, #fcf6ba, #b38728) border-box;
+    background-size: 300% 300%, 100% 100%;
+    animation: nobleFluidRed 8s ease infinite;
+    cursor: pointer;
+    box-shadow:
+        1px 10px 30px rgba(0, 0, 0, 0.7),
+        1px 1px 20px rgba(191, 149, 63, 0.2);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    text-shadow:
+        2px 2px 20px rgba(212, 175, 55, 0.3);
+}
+
+.bar-back-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(252, 246, 186, 0.4),
+        transparent
+    );
+    transform: skewX(-25deg);
+    animation: goldShine 4s infinite ease-in-out;
+}
+
+.bar-back-btn:hover {
+    color: #ffffff;
+    background:
+        linear-gradient(135deg, #540c15, #aa1c29, #d42232, #540c15);
+    background-size: 200% 200%;
+    animation: nobleFluidRed 2s ease infinite;
+    border-image: linear-gradient(to right, #fcf6ba, #ffffff, #fcf6ba) 1;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.8),
+        0 0 35px rgba(212, 175, 55, 0.6),
+        0 0 10px rgba(255, 255, 255, 0.3);
+    transform: translateY(-4px) scale(1.04);
+}
+
+.bar-back-btn:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.9),
+        0 0 15px rgba(212, 175, 55, 0.4);
+    transition: all 0.1s ease;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1550px) {
+    .bar-bottles-grid {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .bar-bottles-grid {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+}
+
+.bar-feedback-banner {
+    margin: 0 auto 1.5rem;
+    max-width: 700px;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+    .bar-feedback-banner.success {
+        background-color: rgba(16, 185, 129, 0.65);
+        text-shadow: 2px 2px 5px #000;
+        border: 1px solid #10b981;
+        color: #97ff5f;
+    }
+
+    .bar-feedback-banner.error {
+        background-color: rgba(239, 68, 68, 0.65);
+        text-shadow: 2px 2px 5px #000;
+        border: 1px solid #ef4444;
+        color: #f87a85;
+    }
+
+/* ═══════════════════════════════════════════════════
+   ACTIVE BAR BUFFS PANEL — inline in BarLanding
+═══════════════════════════════════════════════════ */
+
+.bar-buffs-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto 28px auto;
+    padding: 14px 20px;
+    width: fit-content;
+    max-width: 90vw;
+    background: rgba(15, 10, 5, 0.85);
+    border: 1px solid rgba(191, 149, 63, 0.35);
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(191, 149, 63, 0.15);
+    animation: barBuffsFadeIn 0.4s ease;
+}
+
+@keyframes barBuffsFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Header ── */
+.bar-buffs-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bar-buffs-header-icon {
+    font-size: 0.9rem;
+}
+
+.bar-buffs-header-label {
+    font-size: 0.62rem;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    color: #fcf6ba;
+    text-shadow: 0 0 8px rgba(252, 246, 186, 0.5);
+}
+
+/* ── Chips row ── */
+.bar-buffs-list {
+    display: flex;
+    flex-wrap: wrap; /* wraps on mobile gracefully */
+    justify-content: center;
+    gap: 8px;
+}
+
+/* ── Individual chip ── */
+.bar-buffs-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--chip-color, #ffffff44);
+    box-shadow: 0 0 8px color-mix(in srgb, var(--chip-color, #fff) 30%, transparent);
+    transition: transform 0.2s ease;
+    white-space: nowrap;
+}
+
+    .bar-buffs-chip:hover {
+        transform: translateY(-2px);
+    }
+
+.bar-buffs-chip-icon {
+    font-size: 0.9rem;
+}
+
+.bar-buffs-chip-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--chip-color, #ffffff);
+}
+
+.bar-buffs-chip-rounds {
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.55);
+    letter-spacing: 0.5px;
+}
+
+/* ═══════════════════════════════════════════════════
+   PURCHASE FEEDBACK TOAST — fixed overlay, top center
+═══════════════════════════════════════════════════ */
+
+.bar-toast {
+    position: fixed;
+    top: 80px; /* clears the LobbyHeader */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    padding: 12px 24px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    white-space: nowrap;
+    max-width: 90vw;
+    white-space: normal;
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    animation: barToastIn 0.35s ease, barToastOut 0.4s ease 4.6s forwards;
+    /* ↑ slides in immediately, starts fading at 4.6s so it's gone by 5s */
+}
+
+.bar-toast--success {
+    background: rgba(10, 30, 15, 0.92);
+    border: 1px solid rgba(64, 192, 128, 0.5);
+    color: #80ffb0;
+    box-shadow: 0 0 20px rgba(64, 192, 128, 0.25), 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.bar-toast--error {
+    background: rgba(30, 10, 10, 0.92);
+    border: 1px solid rgba(255, 80, 80, 0.5);
+    color: #ff9090;
+    box-shadow: 0 0 20px rgba(255, 80, 80, 0.25), 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* ── Fixed Wallet Container ─────────────────────────────────── */
+.bar-wallet-fixed {
+    position: fixed;
+    top: 60px;
+    right: 40px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    animation: linear 7.27s infinite blink;
+}
+
+    /* Reuse the same .wallet-card style from LobbyPage but scoped */
+    .bar-wallet-fixed .wallet-card {
+        background: radial-gradient(circle at center, #1b0c10 0%, #0e0507 100%);
+        border: 1px solid #f0c040;
+        border-radius: 12px;
+        padding: 14px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 4px 20px rgba(240, 192, 64, 0.25);
+    }
+
+    .bar-wallet-fixed .wallet-chip-icon {
+        font-size: 1.6rem;
+    }
+
+    .bar-wallet-fixed .wallet-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+        color: #a0a0b0;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .bar-wallet-fixed .wallet-amount {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #f0c040;
+        letter-spacing: 0.05em;
+    }
+
+        .bar-wallet-fixed .wallet-amount.loading {
+            color: #a0a0b0;
+            animation: pulse 1.2s ease-in-out infinite;
+        }
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes barToastIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes barToastOut {
+    from {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-12px);
+    }
+}
+
+@media (max-width: 480px) {
+    .bar-bottom-bar {
+        margin-left: 15px;
+        width: 90%;
+    }
+    .bar-wallet-fixed {
+        right: 0;
+        top: 90px;
+        margin: 0px 15px 0px 15px;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}

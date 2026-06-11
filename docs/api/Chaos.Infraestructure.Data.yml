@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Infraestructure.Data
+  commentId: N:Chaos.Infraestructure.Data
+  id: Chaos.Infraestructure.Data
+  children:
+  - Chaos.Infraestructure.Data.CasinoDbInitializer
+  langs:
+  - csharp
+  - vb
+  name: Chaos.Infraestructure.Data
+  nameWithType: Chaos.Infraestructure.Data
+  fullName: Chaos.Infraestructure.Data
+  type: Namespace
+  assemblies:
+  - Chaos.Infraestructure
+references:
+- uid: Chaos.Infraestructure.Data.CasinoDbInitializer
+  commentId: T:Chaos.Infraestructure.Data.CasinoDbInitializer
+  href: Chaos.Infraestructure.Data.CasinoDbInitializer.html
+  name: CasinoDbInitializer
+  nameWithType: CasinoDbInitializer
+  fullName: Chaos.Infraestructure.Data.CasinoDbInitializer

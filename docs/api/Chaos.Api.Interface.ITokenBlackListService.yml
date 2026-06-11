@@ -1,0 +1,158 @@
+### YamlMime:ManagedReference
+items:
+- uid: Chaos.Api.Interface.ITokenBlackListService
+  commentId: T:Chaos.Api.Interface.ITokenBlackListService
+  id: ITokenBlackListService
+  parent: Chaos.Api.Interface
+  children:
+  - Chaos.Api.Interface.ITokenBlackListService.IsTokenRevoked(System.String)
+  - Chaos.Api.Interface.ITokenBlackListService.RevokeToken(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ITokenBlackListService
+  nameWithType: ITokenBlackListService
+  fullName: Chaos.Api.Interface.ITokenBlackListService
+  type: Interface
+  source:
+    id: ITokenBlackListService
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ITokenBlackListService.cs
+    startLine: 3
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: public interface ITokenBlackListService
+    content.vb: Public Interface ITokenBlackListService
+  derivedClasses:
+  - Chaos.Api.Service.TokenBlackListService
+- uid: Chaos.Api.Interface.ITokenBlackListService.RevokeToken(System.String)
+  commentId: M:Chaos.Api.Interface.ITokenBlackListService.RevokeToken(System.String)
+  id: RevokeToken(System.String)
+  parent: Chaos.Api.Interface.ITokenBlackListService
+  langs:
+  - csharp
+  - vb
+  name: RevokeToken(string)
+  nameWithType: ITokenBlackListService.RevokeToken(string)
+  fullName: Chaos.Api.Interface.ITokenBlackListService.RevokeToken(string)
+  type: Method
+  source:
+    id: RevokeToken
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ITokenBlackListService.cs
+    startLine: 5
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: void RevokeToken(string token)
+    parameters:
+    - id: token
+      type: System.String
+    content.vb: Sub RevokeToken(token As String)
+  overload: Chaos.Api.Interface.ITokenBlackListService.RevokeToken*
+  nameWithType.vb: ITokenBlackListService.RevokeToken(String)
+  fullName.vb: Chaos.Api.Interface.ITokenBlackListService.RevokeToken(String)
+  name.vb: RevokeToken(String)
+- uid: Chaos.Api.Interface.ITokenBlackListService.IsTokenRevoked(System.String)
+  commentId: M:Chaos.Api.Interface.ITokenBlackListService.IsTokenRevoked(System.String)
+  id: IsTokenRevoked(System.String)
+  parent: Chaos.Api.Interface.ITokenBlackListService
+  langs:
+  - csharp
+  - vb
+  name: IsTokenRevoked(string)
+  nameWithType: ITokenBlackListService.IsTokenRevoked(string)
+  fullName: Chaos.Api.Interface.ITokenBlackListService.IsTokenRevoked(string)
+  type: Method
+  source:
+    id: IsTokenRevoked
+    path: C:\Users\z00599ks\CsharpProjects\ChaosAPI\Chaos\Interface\ITokenBlackListService.cs
+    startLine: 6
+  assemblies:
+  - Chaos.Api
+  namespace: Chaos.Api.Interface
+  syntax:
+    content: bool IsTokenRevoked(string token)
+    parameters:
+    - id: token
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Function IsTokenRevoked(token As String) As Boolean
+  overload: Chaos.Api.Interface.ITokenBlackListService.IsTokenRevoked*
+  nameWithType.vb: ITokenBlackListService.IsTokenRevoked(String)
+  fullName.vb: Chaos.Api.Interface.ITokenBlackListService.IsTokenRevoked(String)
+  name.vb: IsTokenRevoked(String)
+references:
+- uid: Chaos.Api.Interface
+  commentId: N:Chaos.Api.Interface
+  href: Chaos.html
+  name: Chaos.Api.Interface
+  nameWithType: Chaos.Api.Interface
+  fullName: Chaos.Api.Interface
+  spec.csharp:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Interface
+    name: Interface
+    href: Chaos.Api.Interface.html
+  spec.vb:
+  - uid: Chaos
+    name: Chaos
+    href: Chaos.html
+  - name: .
+  - uid: Chaos.Api
+    name: Api
+    href: Chaos.Api.html
+  - name: .
+  - uid: Chaos.Api.Interface
+    name: Interface
+    href: Chaos.Api.Interface.html
+- uid: Chaos.Api.Interface.ITokenBlackListService.RevokeToken*
+  commentId: Overload:Chaos.Api.Interface.ITokenBlackListService.RevokeToken
+  href: Chaos.Api.Interface.ITokenBlackListService.html#Chaos_Api_Interface_ITokenBlackListService_RevokeToken_System_String_
+  name: RevokeToken
+  nameWithType: ITokenBlackListService.RevokeToken
+  fullName: Chaos.Api.Interface.ITokenBlackListService.RevokeToken
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Chaos.Api.Interface.ITokenBlackListService.IsTokenRevoked*
+  commentId: Overload:Chaos.Api.Interface.ITokenBlackListService.IsTokenRevoked
+  href: Chaos.Api.Interface.ITokenBlackListService.html#Chaos_Api_Interface_ITokenBlackListService_IsTokenRevoked_System_String_
+  name: IsTokenRevoked
+  nameWithType: ITokenBlackListService.IsTokenRevoked
+  fullName: Chaos.Api.Interface.ITokenBlackListService.IsTokenRevoked
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
