@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Chaos.Infraestructure.Migrations
 {
     [DbContext(typeof(CasinoDBContext))]
-    [Migration("20260527102440_AddNew")]
-    partial class AddNew
+    [Migration("20260611141325_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,6 +25,33 @@ namespace Chaos.Infraestructure.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
+
+            modelBuilder.Entity("Chaos.Infraestructure.Models.ActiveDrinkEffect", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CreatedAt")
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
+
+                    b.Property<string>("EffectType")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
+
+                    b.Property<int>("RoundsRemaining")
+                        .HasColumnType("integer");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ActiveDrinkEffects", "Casino");
+                });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.Animal", b =>
                 {
@@ -550,7 +577,7 @@ namespace Chaos.Infraestructure.Migrations
                     b.Property<Guid>("Id")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("AnimalId")
+                    b.Property<Guid?>("AnimalId")
                         .HasColumnType("uuid");
 
                     b.Property<Guid>("GameId")
@@ -1283,6 +1310,18 @@ namespace Chaos.Infraestructure.Migrations
                     b.ToTable("Users", "Casino");
                 });
 
+            modelBuilder.Entity("Chaos.Infraestructure.Models.ActiveDrinkEffect", b =>
+                {
+                    b.HasOne("Chaos.Infraestructure.Models.User", "User")
+                        .WithMany("ActiveDrinkEffects")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_ActiveDrinkEffects_Users");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Chaos.Infraestructure.Models.Animal", b =>
                 {
                     b.HasOne("Chaos.Infraestructure.Models.AnimalValueConfig", "AnimalValueConfig")
@@ -1454,7 +1493,6 @@ namespace Chaos.Infraestructure.Migrations
                     b.HasOne("Chaos.Infraestructure.Models.Animal", "Animal")
                         .WithMany("GameSessions")
                         .HasForeignKey("AnimalId")
-                        .IsRequired()
                         .HasConstraintName("FK_GameSessions_Animals");
 
                     b.HasOne("Chaos.Infraestructure.Models.Game", "Game")
@@ -1886,6 +1924,8 @@ namespace Chaos.Infraestructure.Migrations
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.User", b =>
                 {
+                    b.Navigation("ActiveDrinkEffects");
+
                     b.Navigation("AnimalValueConfigs");
 
                     b.Navigation("Animals");

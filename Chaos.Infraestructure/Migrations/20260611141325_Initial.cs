@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Chaos.Infraestructure.Migrations
 {
     /// <inheritdoc />
-    public partial class AddNew : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -241,6 +241,29 @@ namespace Chaos.Infraestructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "ActiveDrinkEffects",
+                schema: "Casino",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    UserId = table.Column<Guid>(type: "uuid", nullable: false),
+                    EffectType = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
+                    RoundsRemaining = table.Column<int>(type: "integer", nullable: false),
+                    CreatedAt = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ActiveDrinkEffects", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ActiveDrinkEffects_Users",
+                        column: x => x.UserId,
+                        principalSchema: "Casino",
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AnimalValueConfig",
                 schema: "Casino",
                 columns: table => new
@@ -402,7 +425,7 @@ namespace Chaos.Infraestructure.Migrations
                     Multiplier = table.Column<decimal>(type: "numeric(8,2)", nullable: false, defaultValue: 1.00m),
                     PlayedAt = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: true),
                     UserId = table.Column<Guid>(type: "uuid", nullable: false),
-                    AnimalId = table.Column<Guid>(type: "uuid", nullable: false),
+                    AnimalId = table.Column<Guid>(type: "uuid", nullable: true),
                     GameId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
@@ -897,6 +920,12 @@ namespace Chaos.Infraestructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_ActiveDrinkEffects_UserId",
+                schema: "Casino",
+                table: "ActiveDrinkEffects",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Animals_AnimalValueConfigId",
                 schema: "Casino",
                 table: "Animals",
@@ -1209,6 +1238,10 @@ namespace Chaos.Infraestructure.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "ActiveDrinkEffects",
+                schema: "Casino");
+
             migrationBuilder.DropTable(
                 name: "BlackjackActions",
                 schema: "Casino");

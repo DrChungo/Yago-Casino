@@ -17,6 +17,7 @@ namespace Chaos.Infraestructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .HasDefaultSchema("Casino")
                 .HasAnnotation("ProductVersion", "9.0.15")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
@@ -46,7 +47,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("ActiveDrinkEffects");
+                    b.ToTable("ActiveDrinkEffects", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.Animal", b =>
@@ -105,7 +106,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("OwnerId");
 
-                    b.ToTable("Animals");
+                    b.ToTable("Animals", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.AnimalShop", b =>
@@ -128,7 +129,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AnimalShop", (string)null);
+                    b.ToTable("AnimalShop", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.AnimalValueConfig", b =>
@@ -191,7 +192,7 @@ namespace Chaos.Infraestructure.Migrations
                     b.HasIndex(new[] { "AnimalType" }, "IX_AnimalValueConfig_AnimalType")
                         .IsUnique();
 
-                    b.ToTable("AnimalValueConfig", (string)null);
+                    b.ToTable("AnimalValueConfig", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.BlackjackAction", b =>
@@ -223,7 +224,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("HandId");
 
-                    b.ToTable("BlackjackActions");
+                    b.ToTable("BlackjackActions", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.BlackjackCard", b =>
@@ -265,7 +266,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("HandId");
 
-                    b.ToTable("BlackjackCards");
+                    b.ToTable("BlackjackCards", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.BlackjackGameConfig", b =>
@@ -324,7 +325,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("GameId");
 
-                    b.ToTable("BlackjackGameConfig", (string)null);
+                    b.ToTable("BlackjackGameConfig", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.BlackjackHand", b =>
@@ -358,7 +359,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("BlackjackSessionId");
 
-                    b.ToTable("BlackjackHands");
+                    b.ToTable("BlackjackHands", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.BlackjackSession", b =>
@@ -424,7 +425,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("BlackjackSessions");
+                    b.ToTable("BlackjackSessions", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.Casino", b =>
@@ -447,7 +448,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Casino", (string)null);
+                    b.ToTable("Casino", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.CoinFlipGameConfig", b =>
@@ -476,7 +477,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("GameId");
 
-                    b.ToTable("CoinFlipGameConfig", (string)null);
+                    b.ToTable("CoinFlipGameConfig", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.CoinFlipSession", b =>
@@ -532,7 +533,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("CoinFlipSessions");
+                    b.ToTable("CoinFlipSessions", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.Game", b =>
@@ -565,7 +566,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Games");
+                    b.ToTable("Games", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.GameSession", b =>
@@ -607,7 +608,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("GameSessions");
+                    b.ToTable("GameSessions", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.HigherLowerGameConfig", b =>
@@ -646,7 +647,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("GameId");
 
-                    b.ToTable("HigherLowerGameConfig", (string)null);
+                    b.ToTable("HigherLowerGameConfig", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.HigherLowerRound", b =>
@@ -688,7 +689,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("HigherLowerSessionId");
 
-                    b.ToTable("HigherLowerRounds");
+                    b.ToTable("HigherLowerRounds", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.HigherLowerSession", b =>
@@ -739,7 +740,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("HigherLowerSessions");
+                    b.ToTable("HigherLowerSessions", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.RouletteBetType", b =>
@@ -775,7 +776,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("RouletteGameConfigId");
 
-                    b.ToTable("RouletteBetTypes");
+                    b.ToTable("RouletteBetTypes", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.RouletteGameConfig", b =>
@@ -824,7 +825,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("GameId");
 
-                    b.ToTable("RouletteGameConfig", (string)null);
+                    b.ToTable("RouletteGameConfig", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.RouletteSession", b =>
@@ -847,7 +848,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("RouletteGameConfigId");
 
-                    b.ToTable("RouletteSession", (string)null);
+                    b.ToTable("RouletteSession", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.RussianRouletteGameConfig", b =>
@@ -906,7 +907,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("GameId");
 
-                    b.ToTable("RussianRouletteGameConfig", (string)null);
+                    b.ToTable("RussianRouletteGameConfig", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.RussianRouletteLobby", b =>
@@ -961,7 +962,7 @@ namespace Chaos.Infraestructure.Migrations
                     b.HasIndex(new[] { "LobbyCode" }, "IX_RussianRouletteLobbies_LobbyCode")
                         .IsUnique();
 
-                    b.ToTable("RussianRouletteLobbies");
+                    b.ToTable("RussianRouletteLobbies", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.RussianRoulettePlayer", b =>
@@ -1007,7 +1008,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("RussianRoulettePlayers");
+                    b.ToTable("RussianRoulettePlayers", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.RussianRouletteRound", b =>
@@ -1037,7 +1038,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("PlayerId");
 
-                    b.ToTable("RussianRouletteRounds");
+                    b.ToTable("RussianRouletteRounds", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.ShopAnimalListing", b =>
@@ -1071,7 +1072,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("AnimalShopId");
 
-                    b.ToTable("ShopAnimalListings");
+                    b.ToTable("ShopAnimalListings", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.ShopTransaction", b =>
@@ -1103,7 +1104,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("ShopTransactions");
+                    b.ToTable("ShopTransactions", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.SlotGameConfig", b =>
@@ -1152,7 +1153,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("GameId");
 
-                    b.ToTable("SlotGameConfig", (string)null);
+                    b.ToTable("SlotGameConfig", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.SlotPayoutRule", b =>
@@ -1189,7 +1190,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("SlotSymbolId");
 
-                    b.ToTable("SlotPayoutRules");
+                    b.ToTable("SlotPayoutRules", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.SlotSession", b =>
@@ -1216,7 +1217,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("SlotGameConfigId");
 
-                    b.ToTable("SlotSessions");
+                    b.ToTable("SlotSessions", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.SlotSymbol", b =>
@@ -1260,7 +1261,7 @@ namespace Chaos.Infraestructure.Migrations
 
                     b.HasIndex("SlotGameConfigId");
 
-                    b.ToTable("SlotSymbols");
+                    b.ToTable("SlotSymbols", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.User", b =>
@@ -1303,7 +1304,7 @@ namespace Chaos.Infraestructure.Migrations
                     b.HasIndex(new[] { "Email" }, "IX_Users_Email")
                         .IsUnique();
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", "Casino");
                 });
 
             modelBuilder.Entity("Chaos.Infraestructure.Models.ActiveDrinkEffect", b =>
