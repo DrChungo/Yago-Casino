@@ -1,4 +1,4 @@
-﻿using Chaos.Api.Interface;
+using Chaos.Api.Interface;
 using Chaos.Api.Interface.Config;
 using Chaos.Api.Middleware;
 using Chaos.Api.Models;
@@ -216,19 +216,16 @@ app.MapScalarApiReference(options =>
     options.OpenApiRoutePattern = "/swagger/v1/swagger.json";
 });
 
-if (app.Environment.IsDevelopment())
+app.UseSwaggerUI(c =>
 {
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Chaos API v1");
-        c.RoutePrefix = "swagger";
-    });
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Chaos API v1");
+    c.RoutePrefix = "swagger";
+});
 
-    app.MapScalarApiReference(options =>
-    {
-        options.OpenApiRoutePattern = "/swagger/v1/swagger.json";
-    });
-}
+app.MapScalarApiReference(options =>
+{
+    options.OpenApiRoutePattern = "/swagger/v1/swagger.json";
+});
 
 app.MapGet("/", () => Results.Redirect("/swagger"));
 
