@@ -119,7 +119,6 @@ export default function JunglePage() {
                     const habitat = config?.habitat;
 
                     const esMecha = ani.rarity === true || ani.Rarity === true;
-                    let imgSeleccionada = "";
 
                     const config2 = getAnimalConfig(tipoAnimal);
 
