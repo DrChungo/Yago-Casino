@@ -1,4 +1,4 @@
-﻿/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useRef, useState } from 'react';
 import '../../styles/Farm.Modules.css';
 import '../../styles/LoadingPages.css';
@@ -11,6 +11,7 @@ import BackButton from '../Components/BackButton';
 import { getAnimalConfig } from '../../AnimalMovement/AnimalCollisions';
 import BiomeSelector from '../Components/BiomeSelector';
 import MusicButton from '../Components/MusicButton';
+import { getAnimalImageUrl } from '../../services/animalImageService';
 
 interface AnimalData {
     id: string;
@@ -138,19 +139,8 @@ export default function FarmPage() {
                     const altoHitbox = config2?.altoHitbox ?? 20;
                     const escala = config2?.escala ?? 3;
 
-                    const limpiarSvg = (svg: string) =>
-                        svg.replace(/<\?xml.*?\?>/, '').replace(/<!--.*?-->/g, '').trim();
-
                     const svgBd = esMecha ? config?.imageUrlMecha : config?.imageUrlNormal;
-
-                    if (svgBd && svgBd.trim() !== "") {
-                        try {
-                            const svgBase64 = btoa(unescape(encodeURIComponent(limpiarSvg(svgBd))));
-                            imgSeleccionada = `data:image/svg+xml;base64,${svgBase64}`;
-                        } catch (e) {
-                            console.error("Error SVG:", e);
-                        }
-                    }
+                    const imgSeleccionada = getAnimalImageUrl(svgBd);
 
                     const esCielo = habitat === 'Sky';
                     const zona = esCielo ? zonasSpawn.cielo : zonasSpawn.suelo;

@@ -1,4 +1,4 @@
-﻿using Chaos.Api.Interface.Config;
+using Chaos.Api.Interface.Config;
 using Chaos.Api.RequestEntity.Config.AnimalValue;
 
 using Chaos.Api.ResponseEntity.Config.AnimalValue;
@@ -33,7 +33,8 @@ namespace Chaos.Api.Service.Config
                     MaxHeight = x.MaxHeight,
                     MinHealth = x.MinHealth,
                     MaxHealth = x.MaxHealth,
-                 
+                    ImageUrlNormal = x.ImageUrlNormal,
+                    ImageUrlMecha = x.ImageUrlMecha,
                     Habitat = x.Habitat,
                     IsActive = x.IsActive,
                     UpdatedBy = x.UpdatedBy

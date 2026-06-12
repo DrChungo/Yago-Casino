@@ -12,6 +12,7 @@ import BackButton from '../Components/BackButton';
 import { getAnimalConfig } from '../../AnimalMovement/AnimalCollisions';
 import BiomeSelector from '../Components/BiomeSelector';
 import MusicButton from '../Components/MusicButton';
+import { getAnimalImageUrl } from '../../services/animalImageService';
 
 interface AnimalData {
     id: string;
@@ -115,21 +116,8 @@ export default function OceanPage() {
                     const altoHitbox = config2?.altoHitbox ?? 20;
                     const escala = config2?.escala ?? 3;
 
-                    const limpiarSvg = (svg: string) =>
-                        svg.replace(/<\?xml.*?\?>/, '').replace(/<!--.*?-->/g, '').trim();
-
                     const svgBd = esMecha ? config?.imageUrlMecha : config?.imageUrlNormal;
-                    let imgSeleccionada = "";
-
-                    if (svgBd && svgBd.trim() !== "") {
-                        try {
-                            const svgLimpio = limpiarSvg(svgBd);
-                            const svgBase64 = btoa(unescape(encodeURIComponent(svgLimpio)));
-                            imgSeleccionada = `data:image/svg+xml;base64,${svgBase64}`;
-                        } catch (e) {
-                            console.error("Error SVG:", e);
-                        }
-                    }
+                    const imgSeleccionada = getAnimalImageUrl(svgBd);
 
                     // ✅ Spawn dentro de los límites de OceanCollisions
                     const spawnX = limite.minX + Math.random() * (limite.maxX - limite.minX - anchoHitbox);
