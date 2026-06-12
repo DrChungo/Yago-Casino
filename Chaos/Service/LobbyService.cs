@@ -1,4 +1,4 @@
-﻿using Chaos.Api.Interface;
+using Chaos.Api.Interface;
 using Chaos.Api.Models;
 using Chaos.Api.RequestEntity;
 using Chaos.Api.ResponseEntity;
@@ -72,7 +72,8 @@ namespace Chaos.Api.Service
                 NameOfPlayers = updatedPlayers.Select(p => p.User?.Name ?? "Unknown").ToList(),
                 Players = updatedPlayers.Select(p => p.Id).ToList(),
                 LobbyCode = lobby.LobbyCode,
-                StartedAt = lobby.StartedAt
+                StartedAt = lobby.StartedAt ?? string.Empty,
+                Status = lobby.Status ?? string.Empty
             };
         }
 
@@ -121,7 +122,9 @@ namespace Chaos.Api.Service
                     NameOfMaster = currentUser?.Name ?? "Unknown",
                     LobbyCode = lobby.LobbyCode,
                     NameOfPlayers = playerNames,
-                    Players = playersInLobby.Select(p => p.Id).ToList()
+                    Players = playersInLobby.Select(p => p.Id).ToList(),
+                    StartedAt = lobby.StartedAt ?? string.Empty,
+                    Status = lobby.Status ?? string.Empty
                 };
             }
 
@@ -171,8 +174,9 @@ namespace Chaos.Api.Service
                 NameOfMaster = currentUser?.Name ?? "Unknown",
                 Players = new List<Guid> { masterPlayer.Id },
                 LobbyCode = lobbyDataBase.LobbyCode,
-                NameOfPlayers = new List<string> { currentUser?.Name ?? "Unknown" }
-                
+                NameOfPlayers = new List<string> { currentUser?.Name ?? "Unknown" },
+                StartedAt = lobbyDataBase.StartedAt ?? string.Empty,
+                Status = lobbyDataBase.Status ?? string.Empty
             };
         }
 
@@ -211,7 +215,9 @@ namespace Chaos.Api.Service
                 Players = playersInLobby.Select(player => player.Id).ToList(),
                 //En Waiting solo hay humanos → solo necesitas User?.Name
                 NameOfPlayers = playersInLobby.Where(p => !p.IsBot).Select(p => p.User?.Name ?? "Unknown").ToList(),
-                LobbyCode = lobby.LobbyCode
+                LobbyCode = lobby.LobbyCode,
+                StartedAt = lobby.StartedAt ?? string.Empty,
+                Status = lobby.Status ?? string.Empty
             };
         }
 
@@ -249,7 +255,8 @@ namespace Chaos.Api.Service
                 NameOfPlayers = playersInLobby.Select(p => p.User.Name).ToList(),
                 LobbyCode = lobby.LobbyCode,
                 NameOfMaster = master?.User?.Name ?? "Unknown",      
-                StartedAt = lobby.StartedAt
+                StartedAt = lobby.StartedAt ?? string.Empty,
+                Status = lobby.Status ?? string.Empty
             };
         }
 
@@ -333,7 +340,8 @@ namespace Chaos.Api.Service
                 MasterOfLobby = master.UserId ?? Guid.Empty,
                 Players = remainingPlayers.Select(p => p.Id).ToList(),
                 LobbyCode = lobby.LobbyCode,
-                StartedAt = lobby.StartedAt
+                StartedAt = lobby.StartedAt ?? string.Empty,
+                Status = lobby.Status ?? string.Empty
             };
         }
 
@@ -372,7 +380,8 @@ namespace Chaos.Api.Service
                     Players = players,
                     NameOfPlayers = nameOfPlayers,
                     LobbyCode = lobby.LobbyCode,
-                    StartedAt = lobby.StartedAt
+                    StartedAt = lobby.StartedAt ?? string.Empty,
+                    Status = lobby.Status ?? string.Empty
                 };
                 getLobbies.Add(addLobby);
             }

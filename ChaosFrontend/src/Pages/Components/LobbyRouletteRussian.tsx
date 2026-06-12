@@ -149,6 +149,11 @@ export default function LobbyRouletteRussian() {
                 const data = await response.json();
                 setLobby(data);
 
+                if (data.status === "InProgress" || data.status === "Playing") {
+                    navigate(`/russian-roulette/game/${lobby.idLobby}`);
+                    return;
+                }
+
                 const isPlayerInLobby = data.nameOfPlayers?.includes(currentUserName);
                 if (!isPlayerInLobby) {
                     navigate('/lobby');
