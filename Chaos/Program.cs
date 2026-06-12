@@ -201,6 +201,7 @@ using (var scope = app.Services.CreateScope())
 // Pipeline de middlewares
 // ─────────────────────────────────────────
 
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 
 app.UseCors();

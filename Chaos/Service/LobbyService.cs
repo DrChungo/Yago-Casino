@@ -67,6 +67,7 @@ namespace Chaos.Api.Service
 
             return new Lobby()
             {
+                IdLobby = lobby.Id,
                 MasterOfLobby = master?.UserId ?? userId,
                 NameOfMaster = master?.User?.Name ?? "Unknown",
                 NameOfPlayers = updatedPlayers.Select(p => p.User?.Name ?? "Unknown").ToList(),

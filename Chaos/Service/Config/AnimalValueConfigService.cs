@@ -1,4 +1,4 @@
-﻿using Chaos.Api.Interface.Config;
+using Chaos.Api.Interface.Config;
 using Chaos.Api.RequestEntity.Config.AnimalValue;
 
 using Chaos.Api.ResponseEntity.Config.AnimalValue;
@@ -33,7 +33,8 @@ namespace Chaos.Api.Service.Config
                     MaxHeight = x.MaxHeight,
                     MinHealth = x.MinHealth,
                     MaxHealth = x.MaxHealth,
-                 
+                    ImageUrlNormal = x.ImageUrlNormal,
+                    ImageUrlMecha = x.ImageUrlMecha,
                     Habitat = x.Habitat,
                     IsActive = x.IsActive,
                     UpdatedBy = x.UpdatedBy
@@ -98,8 +99,10 @@ namespace Chaos.Api.Service.Config
                 MaxHeight = request.MaxHeight,
                 MinHealth = request.MinHealth,
                 MaxHealth = request.MaxHealth,
-                ImageUrlMecha = request.ImageUrlMecha,
-                ImageUrlNormal = request.ImageUrlNormal,
+                ImageUrlMecha = (!string.IsNullOrEmpty(request.ImageUrlMecha) && !request.ImageUrlMecha.Trim().StartsWith("<"))
+                    ? request.ImageUrlMecha : null,
+                ImageUrlNormal = (!string.IsNullOrEmpty(request.ImageUrlNormal) && !request.ImageUrlNormal.Trim().StartsWith("<"))
+                    ? request.ImageUrlNormal : null,
                 Habitat = request.Habitat,
                 IsActive = request.IsActive,
                 UpdatedBy = request.UpdatedBy
@@ -130,8 +133,12 @@ namespace Chaos.Api.Service.Config
             entity.MinHealth = request.MinHealth;
             entity.MaxHealth = request.MaxHealth;
             entity.IsActive = request.IsActive;
-            entity.ImageUrlMecha = request.ImageUrlMecha;
-            entity.ImageUrlNormal = request.ImageUrlNormal;
+            // Only update image URLs if the new value is a valid URL path (not inline SVG)
+            if (!string.IsNullOrEmpty(request.ImageUrlMecha) && !request.ImageUrlMecha.Trim().StartsWith("<"))
+                entity.ImageUrlMecha = request.ImageUrlMecha;
+
+            if (!string.IsNullOrEmpty(request.ImageUrlNormal) && !request.ImageUrlNormal.Trim().StartsWith("<"))
+                entity.ImageUrlNormal = request.ImageUrlNormal;
             entity.Habitat = request.Habitat;
             entity.UpdatedBy = request.UpdatedBy;
 

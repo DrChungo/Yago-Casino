@@ -1,4 +1,4 @@
-﻿import {
+import {
     getTopAnimals,
     getUserById,
     getAnimalImages,
@@ -11,19 +11,7 @@ import '../styles/Ranking.css';
 import BackButton from './Components/BackButton';
 import LoadingHamster from '../Pages/Components/LoadingHamster';
 import { useEffect, useState } from 'react';
-
-function svgToBlobUrl(rawSvg: string): string {
-    try {
-        const clean = rawSvg
-            .replace(/<\?xml.*?\?>/, '')
-            .replace(/<!--.*?-->/gs, '')
-            .trim();
-        const b64 = btoa(unescape(encodeURIComponent(clean)));
-        return `data:image/svg+xml;base64,${b64}`;
-    } catch {
-        return '';
-    }
-}
+import { getAnimalImageUrl } from '../services/animalImageService';
 
 interface EnrichedAnimal {
     animal: AnimalRanking;
@@ -63,7 +51,7 @@ export default function RankingPage() {
                     const rawSvg = animal.rarity
                         ? config?.imageUrlMecha
                         : config?.imageUrlNormal;
-                    const svgImg = rawSvg ? svgToBlobUrl(rawSvg) : '';
+                    const svgImg = rawSvg ? getAnimalImageUrl(rawSvg) : '';
 
                     return {
                         animal,
