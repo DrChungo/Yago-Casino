@@ -19,7 +19,7 @@ export default function LobbyRouletteRussian() {
     const Api_URL = import.meta.env.VITE_BASE_URL;
     const [copied, setCopied] = useState(false);
     const navigate = useNavigate();
-    const location = useLocation(); // ← leer el state de navegación
+    const location = useLocation(); 
     const token = localStorage.getItem('token_casino');
     const [loading, setLoading] = useState(true);
 
@@ -138,18 +138,24 @@ export default function LobbyRouletteRussian() {
 
     // ── Polling cada 3 segundos ───────────────────────────────
     useEffect(() => {
+        console.log(lobby +"texto de prueba para ver que el lobby es el mismo")
         if (!lobby?.idLobby) return;
 
         const interval = setInterval(async () => {
-            const response = await fetch(`${Api_URL}/api/Lobby/select?idLobby=${lobby.idLobby}`, {
-                headers: { 'authorization': `Bearer ${token}` }
+            const response = await fetch(`${Api_URL}/api/Lobby/select/${lobby.idLobby}`, {
+                headers: { 
+                    
+                    'authorization': `Bearer ${token}` }
             });
 
             if (response.ok) {
                 const data = await response.json();
-                setLobby(data);
 
-                if (data.status === "InProgress" || data.status === "Playing") {
+                setLobby(data);
+                console.log("data del servidor"+ data.id)
+                console.log("Lobby"+lobby.idLobby)
+
+                if (data.status === "InProgress") {
                     navigate(`/russian-roulette/game/${lobby.idLobby}`);
                     return;
                 }

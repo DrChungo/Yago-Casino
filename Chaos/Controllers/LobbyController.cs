@@ -19,7 +19,7 @@ namespace Chaos.Api.Controllers
             _lobbyService = lobbyService;
         }
 
-        [HttpGet("select")]
+        [HttpGet("select/{idLobby}")]
         public ActionResult SelectLobby(Guid idLobby)
         {
             Lobby lobby = _lobbyService.GetLobbyById(idLobby);
