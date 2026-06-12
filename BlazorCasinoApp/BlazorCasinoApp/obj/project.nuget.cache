@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "55f4lUXZA0U=",
+  "dgSpecHash": "bxr0vk+XREY=",
   "success": true,
   "projectFilePath": "C:\\Users\\z005996y\\Documents\\Git\\Chaos-Api-practices_2026\\BlazorCasinoApp\\BlazorCasinoApp\\Chaos.BlazorCasinoApp.csproj",
   "expectedPackageFiles": [
@@ -39,15 +39,12 @@
     "C:\\Users\\z005996y\\.nuget\\packages\\microsoft.jsinterop\\9.0.14\\microsoft.jsinterop.9.0.14.nupkg.sha512",
     "C:\\Users\\z005996y\\.nuget\\packages\\microsoft.jsinterop.webassembly\\9.0.14\\microsoft.jsinterop.webassembly.9.0.14.nupkg.sha512",
     "C:\\Users\\z005996y\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
-    "C:\\Users\\z005996y\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.16\\microsoft.net.illink.tasks.9.0.16.nupkg.sha512",
-    "C:\\Users\\z005996y\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\10.0.8\\microsoft.net.sdk.webassembly.pack.10.0.8.nupkg.sha512",
+    "C:\\Users\\z005996y\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.14\\microsoft.net.illink.tasks.9.0.14.nupkg.sha512",
+    "C:\\Users\\z005996y\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\9.0.14\\microsoft.net.sdk.webassembly.pack.9.0.14.nupkg.sha512",
     "C:\\Users\\z005996y\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\z005996y\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.0.1\\system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
     "C:\\Users\\z005996y\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
-    "C:\\Users\\z005996y\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.16\\microsoft.netcore.app.ref.9.0.16.nupkg.sha512",
-    "C:\\Users\\z005996y\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\9.0.16\\microsoft.netcore.app.runtime.mono.browser-wasm.9.0.16.nupkg.sha512",
-    "C:\\Users\\z005996y\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.16\\microsoft.windowsdesktop.app.ref.9.0.16.nupkg.sha512",
-    "C:\\Users\\z005996y\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.16\\microsoft.aspnetcore.app.ref.9.0.16.nupkg.sha512"
+    "C:\\Users\\z005996y\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\9.0.14\\microsoft.netcore.app.runtime.mono.browser-wasm.9.0.14.nupkg.sha512"
   ],
   "logs": []
 }
