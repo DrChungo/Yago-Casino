@@ -1,4 +1,4 @@
-﻿using Chaos.Api.Utils;
+using Chaos.Api.Utils;
 using Microsoft.AspNetCore.Components.Forms;
 using System.CodeDom.Compiler;
 
@@ -13,7 +13,7 @@ namespace Chaos.Api.ResponseEntity
         public List<string> NameOfPlayers { get; set; } = new();
         public string LobbyCode { get; set; } = string.Empty;
 
-        public string StartedAt = DateTime.Now.ToString();
-       
+        public string StartedAt { get; set; } = string.Empty;
+        public string Status { get; set; } = string.Empty;
     }
 }
