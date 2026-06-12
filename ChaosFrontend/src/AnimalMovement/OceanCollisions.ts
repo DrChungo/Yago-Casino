@@ -5,7 +5,7 @@ export const limite = {
     maxY: 1000
 }
 
-// Esta función es la que usaremos luego para evitar que el animal salga
+// Esta funciÃ³n es la que usaremos luego para evitar que el animal salga
 export const clamp = (valor: number, min: number, max: number): number => {
     return Math.max(min, Math.min(valor, max));
 };

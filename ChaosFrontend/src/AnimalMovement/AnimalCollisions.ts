@@ -1,4 +1,4 @@
-﻿export interface AnimalConfig {
+export interface AnimalConfig {
     tipo: string;
     habitat: string;       // 'Jurassic' | 'Jurassic / Sky' | 'Ocean' | etc
     anchoHitbox: number;

@@ -1,4 +1,4 @@
-﻿export const limite = {
+export const limite = {
 
     minX: 200,
     maxX: 998,

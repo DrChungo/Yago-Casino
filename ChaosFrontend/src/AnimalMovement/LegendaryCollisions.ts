@@ -24,7 +24,7 @@ export const obstaculos =
         { id: 'casita', x: 80, y: 337, ancho: 90, alto: 158 },
     ];
 
-// Esta función es la que usaremos luego para evitar que el animal salga
+// Esta funciÃ³n es la que usaremos luego para evitar que el animal salga
 export const clamp = (valor: number, min: number, max: number): number => {
     return Math.max(min, Math.min(valor, max));
 };
