@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Chaos.Infraestructure.Models;
 using Microsoft.EntityFrameworkCore;
@@ -594,6 +595,149 @@ public static class CasinoDbInitializer
             });
             context.SaveChanges();
             }
+
+            // ── 24. SVG TO URL MIGRATION ──────────────────────────────────────────
+            MigrateSvgsToUrls(context);
+        }
+
+        private static void MigrateSvgsToUrls(CasinoDBContext context)
+        {
+            var dbConfigs = context.AnimalValueConfigs.ToList();
+            var baseDir = AppContext.BaseDirectory;
+            var webRootPath = FindWebRootPath(baseDir);
+            bool anyUpdated = false;
+
+            foreach (var config in dbConfigs)
+            {
+                bool configUpdated = false;
+
+                // Migrate normal image if it's empty, null, or contains inline SVG (starts with <)
+                if (string.IsNullOrEmpty(config.ImageUrlNormal) || config.ImageUrlNormal.Trim().StartsWith("<"))
+                {
+                    var found = FindNormalImage(config.AnimalType, webRootPath);
+                    if (found != null)
+                    {
+                        config.ImageUrlNormal = found;
+                        configUpdated = true;
+                    }
+                }
+
+                // Migrate mecha image if it's empty, null, or contains inline SVG (starts with <)
+                if (string.IsNullOrEmpty(config.ImageUrlMecha) || config.ImageUrlMecha.Trim().StartsWith("<"))
+                {
+                    var found = FindMechaImage(config.AnimalType, webRootPath);
+                    if (found != null)
+                    {
+                        config.ImageUrlMecha = found;
+                        configUpdated = true;
+                    }
+                }
+
+                if (configUpdated)
+                {
+                    anyUpdated = true;
+                }
+            }
+
+            if (anyUpdated)
+            {
+                context.SaveChanges();
+            }
+        }
+
+        private static string FindWebRootPath(string startDir)
+        {
+            var dir = new DirectoryInfo(startDir);
+            while (dir != null)
+            {
+                var wwwroot = Path.Combine(dir.FullName, "Chaos", "wwwroot");
+                if (Directory.Exists(wwwroot))
+                {
+                    return wwwroot;
+                }
+
+                wwwroot = Path.Combine(dir.FullName, "wwwroot");
+                if (Directory.Exists(wwwroot))
+                {
+                    return wwwroot;
+                }
+                dir = dir.Parent;
+            }
+            return null;
+        }
+
+        private static string FindNormalImage(string animalType, string webRootPath)
+        {
+            if (string.IsNullOrEmpty(webRootPath)) return null;
+            var dir = Path.Combine(webRootPath, "images", "animals");
+            if (!Directory.Exists(dir)) return null;
+
+            var files = Directory.GetFiles(dir, "*.svg");
+            var target = animalType.ToLower().Replace(" ", "");
+
+            // 1. Try exact match case insensitive
+            foreach (var file in files)
+            {
+                var name = Path.GetFileNameWithoutExtension(file).ToLower();
+                if (name == target)
+                {
+                    return $"/images/animals/{Path.GetFileName(file)}";
+                }
+            }
+
+            // 2. Try normalized name matching (excluding mecha)
+            foreach (var file in files)
+            {
+                var name = Path.GetFileNameWithoutExtension(file).ToLower();
+                if (name.Replace("mecha", "") == target && !name.Contains("mecha"))
+                {
+                    return $"/images/animals/{Path.GetFileName(file)}";
+                }
+            }
+
+            // 3. Fallback: starts/ends or contains
+            foreach (var file in files)
+            {
+                var name = Path.GetFileNameWithoutExtension(file).ToLower();
+                if (name.Contains(target) && !name.Contains("mecha"))
+                {
+                    return $"/images/animals/{Path.GetFileName(file)}";
+                }
+            }
+
+            return null;
+        }
+
+        private static string FindMechaImage(string animalType, string webRootPath)
+        {
+            if (string.IsNullOrEmpty(webRootPath)) return null;
+            var dir = Path.Combine(webRootPath, "images", "animals");
+            if (!Directory.Exists(dir)) return null;
+
+            var files = Directory.GetFiles(dir, "*.svg");
+            var target = animalType.ToLower().Replace(" ", "");
+
+            // 1. Try exact "mecha" + target or target + "mecha"
+            foreach (var file in files)
+            {
+                var name = Path.GetFileNameWithoutExtension(file).ToLower();
+                if (name == $"mecha{target}" || name == $"{target}mecha")
+                {
+                    return $"/images/animals/{Path.GetFileName(file)}";
+                }
+            }
+
+            // 2. Contains both target and mecha
+            foreach (var file in files)
+            {
+                var name = Path.GetFileNameWithoutExtension(file).ToLower();
+                if (name.Contains(target) && name.Contains("mecha"))
+                {
+                    return $"/images/animals/{Path.GetFileName(file)}";
+                }
+            }
+
+            return null;
         }
     }
 }

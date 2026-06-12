@@ -1,4 +1,4 @@
-﻿@page "/AnimalValueConfigPage"
+@page "/AnimalValueConfigPage"
 
 @using Chaos.BlazorCasinoApp.IApiService
 @using Chaos.Shared.ResponseEntity
@@ -6,6 +6,7 @@
 
 @inject IAnimalValueConfigService AnimalValueConfigService
 @inject NavigationManager Nav
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
 
 <PageTitle>Backoffice — Animal Value Config</PageTitle>
 
@@ -228,9 +229,15 @@
                             <p>Cargando imagen...</p>
                         </div>
                     }
-                    else
+                    else if (previewSvg != null && (previewSvg.StartsWith("<") || previewSvg.StartsWith("<?xml")))
                     {
-                        @((MarkupString)previewSvg!)
+                        @((MarkupString)previewSvg)
+                    }
+                    else if (!string.IsNullOrEmpty(previewSvg))
+                    {
+                        <div style="display:flex; justify-content:center; align-items:center; width:100%; height:400px; background:rgba(0,0,0,0.2); border-radius:8px; padding:10px; box-sizing:border-box;">
+                            <img src="@GetAbsoluteUrl(previewSvg)" style="max-width:100%; max-height:100%; object-fit:contain;" />
+                        </div>
                     }
                 </div>
             </div>
@@ -409,5 +416,27 @@
         {
             errorMessage = $"Error al eliminar: {ex.Message}";
         }
+    }
+
+    private string GetAbsoluteUrl(string relativeUrl)
+    {
+        if (string.IsNullOrEmpty(relativeUrl)) return relativeUrl;
+        if (relativeUrl.StartsWith("http", StringComparison.OrdinalIgnoreCase)) return relativeUrl;
+
+        var baseUrl = Configuration["Api:UrlBase"];
+        if (!string.IsNullOrEmpty(baseUrl))
+        {
+            if (baseUrl.EndsWith("/api/", StringComparison.OrdinalIgnoreCase))
+            {
+                baseUrl = baseUrl.Substring(0, baseUrl.Length - 5);
+            }
+            else if (baseUrl.EndsWith("/api", StringComparison.OrdinalIgnoreCase))
+            {
+                baseUrl = baseUrl.Substring(0, baseUrl.Length - 4);
+            }
+
+            return $"{baseUrl.TrimEnd('/')}/{relativeUrl.TrimStart('/')}";
+        }
+        return relativeUrl;
     }
 }

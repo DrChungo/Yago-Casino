@@ -1,7 +1,8 @@
-﻿// src/pages/AnimalEditor.tsx
+// src/pages/AnimalEditor.tsx
 import { useState, useEffect } from 'react';
 import { animalConfigs } from '../AnimalMovement/AnimalCollisions';
 import type { AnimalConfig } from '../AnimalMovement/AnimalCollisions';
+import { getAnimalImageUrl } from '../services/animalImageService';
 
 const PAGE_SIZE = 3;
 
@@ -21,20 +22,12 @@ export default function AnimalEditor() {
             });
             const data = await habi.json();
 
-            const limpiarSvg = (svg: string) =>
-                svg.replace(/<\?xml.*?\?>/, '').replace(/<!--.*?-->/g, '').trim();
-
             const mapa = new Map<string, string>();
             data.forEach((h: any) => {
                 const tipo = (h.animalType || h.typeAnimal || '').toLowerCase();
                 const svgRaw = h.imageUrlNormal;
                 if (svgRaw) {
-                    try {
-                        const base64 = btoa(unescape(encodeURIComponent(limpiarSvg(svgRaw))));
-                        mapa.set(tipo, `data:image/svg+xml;base64,${base64}`);
-                    } catch (e) {
-                        console.error("SVG error:", tipo, e);
-                    }
+                    mapa.set(tipo, getAnimalImageUrl(svgRaw));
                 }
             });
             setImagenes(mapa);
