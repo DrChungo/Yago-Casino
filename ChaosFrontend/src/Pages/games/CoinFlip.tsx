@@ -113,7 +113,7 @@ const CoinFlip = () => {
       }
 
       const [response] = await Promise.all([
-        fetch('https://localhost:7101/api/Animal/GetAnimalByOwnerId', {
+        fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/Animal/GetAnimalByOwnerId`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -210,7 +210,7 @@ const CoinFlip = () => {
         headOrTail: selectedSide
       };
 
-      const response = await fetch('https://localhost:7101/api/CasinoGames/CoinGame', {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/CasinoGames/CoinGame`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

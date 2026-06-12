@@ -20,7 +20,7 @@ import '../styles/BarLanding.css';
 // ─────────────────────────────────────────────
 // Constants
 // ─────────────────────────────────────────────
-const BASE_URL = 'https://localhost:7101';
+const BASE_URL = import.meta.env.VITE_BASE_URL || 'https://localhost:7101';
 
 const ADMIN_CREDENTIALS = {
     email: 'string',

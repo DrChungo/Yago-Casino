@@ -264,7 +264,7 @@ const AnimalRoulette = ({ onFinished, userBalance }: Props) => {
             const token = localStorage.getItem('token_casino');
             if (!token) { setError('No estás autenticado.'); return null; }
             const res = await fetch(
-                `https://localhost:7101/api/Animal/AnimalRoullete?Dificultad=${difficulty}`,
+                `${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/Animal/AnimalRoullete?Dificultad=${difficulty}`,
                 {
                     method: 'POST',
                     headers: {

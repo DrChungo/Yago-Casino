@@ -88,7 +88,7 @@ const LobbyPage: React.FC = () => {
         setCargandoDatos(true);
         try {
             // Wallet
-            const resUsers = await fetch('https://localhost:7101/api/User/AllUsers', {
+            const resUsers = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/User/AllUsers`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             if (resUsers.ok) {
@@ -98,7 +98,7 @@ const LobbyPage: React.FC = () => {
             }
 
             // Animals
-            const resAnimals = await fetch('https://localhost:7101/api/Animal/All', {
+            const resAnimals = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/Animal/All`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             if (resAnimals.ok) {

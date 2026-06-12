@@ -16,7 +16,7 @@ export default function AnimalEditor() {
 
     useEffect(() => {
         const cargarImagenes = async () => {
-            const habi = await fetch('https://localhost:7101/api/AnimalValueConfig/images', {
+            const habi = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/AnimalValueConfig/images`, {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
             const data = await habi.json();

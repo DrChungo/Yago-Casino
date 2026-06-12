@@ -1,4 +1,4 @@
-﻿const BASE = 'https://localhost:7101/api';
+const BASE = `${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api`;
 
 function getHeaders(): HeadersInit {
     const token = localStorage.getItem('token_casino');

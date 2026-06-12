@@ -132,7 +132,7 @@ function BlackJack() {
       }
 
       const [response] = await Promise.all([
-      fetch('https://localhost:7101/api/Animal/GetAnimalByOwnerId', {
+      fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/Animal/GetAnimalByOwnerId`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -215,7 +215,7 @@ const formatCardValue = (value: number, cardIndex: number, owner: 'player' | 'de
 
       const request: BlackJackRequest = { animalId: selectedAnimal.id };
 
-      const response = await fetch('https://localhost:7101/api/CasinoGames/blackjack/start', {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/CasinoGames/blackjack/start`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -268,7 +268,7 @@ const formatCardValue = (value: number, cardIndex: number, owner: 'player' | 'de
       const token = localStorage.getItem('token_casino');
 
       const response = await fetch(
-        `https://localhost:7101/api/CasinoGames/blackjack/${gameData.gameId}/hit`,
+        `${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/CasinoGames/blackjack/${gameData.gameId}/hit`,
         {
           method: 'POST',
           headers: {
@@ -337,7 +337,7 @@ const formatCardValue = (value: number, cardIndex: number, owner: 'player' | 'de
       const token = localStorage.getItem('token_casino');
 
       const response = await fetch(
-        `https://localhost:7101/api/CasinoGames/blackjack/${gameData.gameId}/stand`,
+        `${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/CasinoGames/blackjack/${gameData.gameId}/stand`,
         {
           method: 'POST',
           headers: {

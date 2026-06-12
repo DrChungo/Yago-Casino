@@ -19,7 +19,7 @@ const RegisterPage: React.FC = () => {
         setCargando(true);
 
         try {
-            const urlApi = 'https://localhost:7101/api/auth/SignIn';
+            const urlApi = `${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/auth/SignIn`;
 
             const respuesta = await fetch(urlApi, {
                 method: 'POST',

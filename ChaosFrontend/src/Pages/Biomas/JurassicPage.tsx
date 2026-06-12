@@ -65,14 +65,14 @@ export default function JurassicPage() {
         const iniciarJuego = async () => {
             setCargando(true);
             try {
-                const response = await fetch('https://localhost:7101/api/Animal/GetAnimalByOwnerId', {
+                const response = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/Animal/GetAnimalByOwnerId`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
                         'Content-Type': 'application/json'
                     },
                 });
-                const habi = await fetch('https://localhost:7101/api/AnimalValueConfig/images', {
+                const habi = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/AnimalValueConfig/images`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,

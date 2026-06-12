@@ -160,7 +160,7 @@ function AnimalShop() {
                 return;
             }
 
-            const response = await fetch('https://localhost:7101/api/Animal/GetShopAnimals', {
+            const response = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/Animal/GetShopAnimals`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -168,7 +168,7 @@ function AnimalShop() {
                 }
             });
 
-            const values = await fetch('https://localhost:7101/api/Animal/GetValues', {
+            const values = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/Animal/GetValues`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -220,7 +220,7 @@ function AnimalShop() {
         const token = localStorage.getItem('token_casino');
         if (!token) return;
 
-        const response = await fetch('https://localhost:7101/api/User/GetMyUser', {
+        const response = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/User/GetMyUser`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -247,7 +247,7 @@ function AnimalShop() {
             }
 
             const myanimalsResponse = await fetch(
-                'https://localhost:7101/api/Animal/GetAnimalByOwnerId',
+                `${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/Animal/GetAnimalByOwnerId`,
                 {
                     method: 'GET',
                     headers: {
@@ -332,7 +332,7 @@ function AnimalShop() {
                 return;
             }
 
-            const response = await fetch('https://localhost:7101/api/Animal/Sell', {
+            const response = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/Animal/Sell`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -372,7 +372,7 @@ function AnimalShop() {
                 name: customName
             };
 
-            const response = await fetch('https://localhost:7101/api/Animal/BuyAnimal', {
+            const response = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/Animal/BuyAnimal`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,

@@ -214,7 +214,7 @@ const HigherOrLower = () => {
       }
 
       const [response] = await Promise.all([
-        fetch('https://localhost:7101/api/Animal/GetAnimalByOwnerId', {
+        fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/Animal/GetAnimalByOwnerId`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -288,7 +288,7 @@ const HigherOrLower = () => {
         animalId: selectedAnimal.id
       };
 
-      const response = await fetch('https://localhost:7101/api/CasinoGames/higherlower/start', {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/CasinoGames/higherlower/start`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -342,7 +342,7 @@ const HigherOrLower = () => {
 
       await new Promise(resolve => setTimeout(resolve, 1500));
 
-      const response = await fetch('https://localhost:7101/api/CasinoGames/higherlower/play', {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/CasinoGames/higherlower/play`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -387,7 +387,7 @@ const HigherOrLower = () => {
 
       const token = localStorage.getItem('token_casino');
 
-      const response = await fetch(`https://localhost:7101/api/CasinoGames/higherlower/${gameState.gameId}/cashout`, {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/CasinoGames/higherlower/${gameState.gameId}/cashout`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

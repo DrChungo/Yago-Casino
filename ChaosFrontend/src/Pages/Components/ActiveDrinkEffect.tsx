@@ -1,10 +1,10 @@
-﻿// src/components/ActiveDrinkEffects.tsx
+// src/components/ActiveDrinkEffects.tsx
 
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import '../../styles/ActiveDrinkEffect.css';
 
-const BASE_URL = 'https://localhost:7101';
+const BASE_URL = import.meta.env.VITE_BASE_URL || 'https://localhost:7101';
 
 const POLL_INTERVAL_MS = 5000; // ← re-fetch every 5 seconds
 
