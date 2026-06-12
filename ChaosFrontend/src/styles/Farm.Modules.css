@@ -1,5 +1,4 @@
-﻿/* Resetea cualquier margen por defecto que pueda tener el navegador */
-:global(body), body {
+body {
     margin: 0;
     padding: 0;
     overflow: hidden;

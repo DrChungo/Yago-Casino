@@ -10,16 +10,16 @@
 //   error={error} // Mensaje de error a mostrar si no hay animales disponibles
 // />
 
-import flySvg from '../assets/AnimalsSprites/SVG/fly.svg';
-import hamsterSvg from '../assets/AnimalsSprites/SVG/hamster.svg';
-import catSvg from '../assets/AnimalsSprites/SVG/cat.svg';
-import dogSvg from '../assets/AnimalsSprites/SVG/dog.svg';
-import sheepSvg from '../assets/AnimalsSprites/SVG/sheep.svg';
-import cowSvg from '../assets/AnimalsSprites/SVG/cow.svg';
-import horseSvg from '../assets/AnimalsSprites/SVG/horse.svg';
-import crocodileSvg from '../assets/AnimalsSprites/SVG/crocodile.svg';
-import sharkSvg from '../assets/AnimalsSprites/SVG/shark.svg';
-import whaleSvg from '../assets/AnimalsSprites/SVG/whale.svg';
+import flySvg from '../assets/AnimalsSprites/SVG/Fly.svg';
+import hamsterSvg from '../assets/AnimalsSprites/SVG/Hamster.svg';
+import catSvg from '../assets/AnimalsSprites/SVG/Cat.svg';
+import dogSvg from '../assets/AnimalsSprites/SVG/Dog.svg';
+import sheepSvg from '../assets/AnimalsSprites/SVG/Sheep.svg';
+import cowSvg from '../assets/AnimalsSprites/SVG/Cow.svg';
+import horseSvg from '../assets/AnimalsSprites/SVG/Horse.svg';
+import crocodileSvg from '../assets/AnimalsSprites/SVG/Crocodile.svg';
+import sharkSvg from '../assets/AnimalsSprites/SVG/Shark.svg';
+import whaleSvg from '../assets/AnimalsSprites/SVG/Whale.svg';
 import mechaFlySvg from '../assets/AnimalsSprites/SVG/MechaFly.svg';
 import mechaHamsterSvg from '../assets/AnimalsSprites/SVG/MechaHamster.svg';
 import mechaCatSvg from '../assets/AnimalsSprites/SVG/MechaCat.svg';

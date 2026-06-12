@@ -1,11 +1,11 @@
-﻿/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-useless-assignment */
 import { useEffect, useRef, useState } from 'react';
 import '../../styles/Farm.Modules.css';
 import '../../styles/LoadingPages.css';
 import imagenFondo from '../../assets/BiomasBG/casino_ocean.png';
 import { chequearColisionRectangulos, limite } from '../../AnimalMovement/OceanCollisions';
-import OceanMusic from '../../assets/Audios/Ocean_soundtrack.m4a';
+import OceanMusic from '../../assets/Audios/ocean_soundtrack.m4a';
 import { useNavigate } from "react-router-dom";
 import LoadingHamster from '../Components/LoadingHamster';
 import BackButton from '../Components/BackButton';

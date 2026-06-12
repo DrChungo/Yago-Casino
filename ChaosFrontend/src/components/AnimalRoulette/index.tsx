@@ -1,8 +1,8 @@
-﻿/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useRef, useCallback, useEffect } from 'react';
 import SpinWheel from './SpinWheel';
 import DifficultySelector from './DifficultySelector';
-import './animalRoulette.css';
+import './AnimalRoulette.css';
 
 // ─── Interfaces ───────────────────────────────────────────────────────────────
 interface AnimalResponse {

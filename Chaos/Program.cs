@@ -200,19 +200,6 @@ using (var scope = app.Services.CreateScope())
 // ─────────────────────────────────────────
 // Pipeline de middlewares
 // ─────────────────────────────────────────
-app.Use(async (context, next) =>
-{
-    try
-    {
-        await next();
-    }
-    catch (Exception ex)
-    {
-        context.Response.StatusCode = 500;
-        context.Response.ContentType = "text/plain";
-        await context.Response.WriteAsync($"[Error Diagnostico] Message: {ex.Message}\n\nStack Trace:\n{ex.StackTrace}\n\nInner Exception: {ex.InnerException?.Message}");
-    }
-});
 
 app.UseHttpsRedirection();
 
