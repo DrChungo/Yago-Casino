@@ -173,6 +173,7 @@ const LobbyPage: React.FC = () => {
      onNavigateToShop={() => navigate('/shop')}
      onNavigateToBar={() => navigate('/bar')}
      onNavigateToMusicRoom={() => navigate('/music-room')}
+     onNavigateToRanking={() => navigate('/ranking')}
 />
             {/* Three-column dashboard */}
             <div className="lobby-dashboard-layout">

@@ -9,6 +9,7 @@ import JurasicMusic from '../../assets/Audios/jurassic_soundtrack.m4a';
 import { useNavigate } from "react-router-dom";
 import LoadingHamster from '../Components/LoadingHamster';
 import BackButton from '../Components/BackButton';
+import EditorButton from '../Components/EditorButton';
 import { getAnimalConfig } from '../../AnimalMovement/AnimalCollisions';
 import BiomeSelector from '../Components/BiomeSelector';
 import MusicButton from '../Components/MusicButton';
@@ -301,6 +302,7 @@ export default function JurassicPage() {
             />
 
             <BackButton biome="Jurassic" />
+            <EditorButton />
             <MusicButton
                 playing={musicaSonando}
                 onToggle={toggleMusica}

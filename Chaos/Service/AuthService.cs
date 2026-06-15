@@ -1,4 +1,4 @@
-﻿using Chaos.Api.Interface;
+using Chaos.Api.Interface;
 using Chaos.Api.RequestEntity;
 using Chaos.Api.ResponseEntity;
 using Chaos.Api.Utils;
@@ -43,12 +43,20 @@ namespace Chaos.Api.Service
 
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var claims = new[]
+            var claimsList = new System.Collections.Generic.List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Name, user.Name),
                 new Claim(ClaimTypes.Email, user.Email)
             };
+
+            if (user.IsAdmin)
+            {
+                claimsList.Add(new Claim("role", "Admin"));
+                claimsList.Add(new Claim(ClaimTypes.Role, "Admin"));
+            }
+
+            var claims = claimsList.ToArray();
 
             var token = new JwtSecurityToken(
                 issuer: _configuration["Jwt:Issuer"],

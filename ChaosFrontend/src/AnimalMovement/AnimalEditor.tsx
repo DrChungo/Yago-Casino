@@ -1,19 +1,37 @@
-// src/pages/AnimalEditor.tsx
 import { useState, useEffect } from 'react';
 import { animalConfigs } from '../AnimalMovement/AnimalCollisions';
 import type { AnimalConfig } from '../AnimalMovement/AnimalCollisions';
 import { getAnimalImageUrl } from '../services/animalImageService';
+import { useNavigate } from 'react-router-dom';
 
 const PAGE_SIZE = 3;
 
 export default function AnimalEditor() {
+    const navigate = useNavigate();
     const token = localStorage.getItem('token_casino');
-    const [configs, setConfigs] = useState<AnimalConfig[]>(animalConfigs);
+    const [configs, setConfigs] = useState<AnimalConfig[]>([]);
     const [imagenes, setImagenes] = useState<Map<string, string>>(new Map());
     const [pagina, setPagina] = useState(0);
 
     const totalPaginas = Math.ceil(configs.length / PAGE_SIZE);
     const animalesPagina = configs.slice(pagina * PAGE_SIZE, pagina * PAGE_SIZE + PAGE_SIZE);
+
+    useEffect(() => {
+        const cargarConfigs = async () => {
+            try {
+                const res = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/dev/animalconfigs`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                if (res.ok) {
+                    const data = await res.json();
+                    setConfigs(data);
+                }
+            } catch (error) {
+                console.error("Error loading animal configs:", error);
+            }
+        };
+        cargarConfigs();
+    }, [token]);
 
     useEffect(() => {
         const cargarImagenes = async () => {
@@ -50,6 +68,27 @@ export default function AnimalEditor() {
         alert('✅ Config copiada! Pegala en AnimalCollisions.ts');
     };
 
+    const guardarConfigs = async () => {
+        try {
+            const res = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/dev/animalconfigs`, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(configs)
+            });
+            if (res.ok) {
+                alert('💾 ¡Configuraciones guardadas correctamente en animalConfigs.json!');
+            } else {
+                alert('❌ Error al guardar las configuraciones');
+            }
+        } catch (error) {
+            console.error("Error saving configs:", error);
+            alert('❌ Error de red al guardar');
+        }
+    };
+
     return (
         <div style={{
             backgroundColor: '#1a1a2e',
@@ -64,17 +103,39 @@ export default function AnimalEditor() {
 
             {/* ── HEADER ── */}
             <div style={{ textAlign: 'center', marginBottom: '12px', flexShrink: 0 }}>
-                <h1 style={{ margin: '0 0 8px' }}>🦕 Editor de Hitboxes</h1>
-                <button
-                    onClick={copiarConfig}
-                    style={{
-                        padding: '10px 24px', backgroundColor: '#27ae60',
-                        color: 'white', border: 'none', borderRadius: '8px',
-                        cursor: 'pointer', fontSize: '15px'
-                    }}
-                >
-                    📋 Copiar config completa
-                </button>
+                <h1 style={{ margin: '0 0 8px', color: 'white', marginBottom: '30px' }}>🦕 Editor de Hitboxes</h1>
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '12px' }}>
+                    <button
+                        onClick={() => navigate('/farm')}
+                        style={{
+                            padding: '10px 24px', backgroundColor: '#e74c3c',
+                            color: 'white', border: 'none', borderRadius: '8px',
+                            cursor: 'pointer', fontSize: '15px', fontWeight: 'bold'
+                        }}
+                    >
+                        🌾 Volver al Hábitat
+                    </button>
+                    <button
+                        onClick={guardarConfigs}
+                        style={{
+                            padding: '10px 24px', backgroundColor: '#e67e22',
+                            color: 'white', border: 'none', borderRadius: '8px',
+                            cursor: 'pointer', fontSize: '15px', fontWeight: 'bold'
+                        }}
+                    >
+                        💾 Guardar Cambios
+                    </button>
+                    <button
+                        onClick={copiarConfig}
+                        style={{
+                            padding: '10px 24px', backgroundColor: '#27ae60',
+                            color: 'white', border: 'none', borderRadius: '8px',
+                            cursor: 'pointer', fontSize: '15px', fontWeight: 'bold'
+                        }}
+                    >
+                        📋 Copiar config completa
+                    </button>
+                </div>
             </div>
 
             {/* ── NAVEGACION ── */}
