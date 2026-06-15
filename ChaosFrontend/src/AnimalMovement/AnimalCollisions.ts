@@ -8,7 +8,13 @@ export interface AnimalConfig {
     escala: number;
 }
 
-export const animalConfigs: AnimalConfig[] = animalConfigsJson as AnimalConfig[];
+// Se inicializa con el JSON estático de fallback
+export let animalConfigs: AnimalConfig[] = animalConfigsJson as AnimalConfig[];
+
+// Permite actualizar las configuraciones dinámicamente en tiempo de ejecución (ej. cargando de la API)
+export function setRuntimeAnimalConfigs(configs: AnimalConfig[]) {
+    animalConfigs = configs;
+}
 
 // Helper para buscar config por tipo
 export function getAnimalConfig(tipo: string): AnimalConfig | undefined {

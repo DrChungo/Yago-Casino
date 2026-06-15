@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { animalConfigs } from '../AnimalMovement/AnimalCollisions';
+import { animalConfigs, setRuntimeAnimalConfigs } from '../AnimalMovement/AnimalCollisions';
 import type { AnimalConfig } from '../AnimalMovement/AnimalCollisions';
 import { getAnimalImageUrl } from '../services/animalImageService';
 import { useNavigate } from 'react-router-dom';
@@ -78,7 +78,8 @@ export default function AnimalEditor() {
                 },
                 body: JSON.stringify(configs)
             });
-            if (res.ok) {
+             if (res.ok) {
+                setRuntimeAnimalConfigs(configs);
                 alert('💾 ¡Configuraciones guardadas correctamente en animalConfigs.json!');
             } else {
                 alert('❌ Error al guardar las configuraciones');
