@@ -36,10 +36,15 @@ export function getAnimalImageUrl(svgBd: string | null | undefined): string {
             return trimmed;
         }
 
-        // If it starts with images/ or /images/, return a relative path so Vite proxy handles it.
-        // This avoids mixed content issues and untrusted certificate blocks in development.
+        // If it starts with images/ or /images/, return a relative path only in local development
+        // to benefit from Vite's local dev proxy. In production (Vercel), return the absolute backend URL.
         if (trimmed.startsWith("images/") || trimmed.startsWith("/images/")) {
-            return `/${trimmed.replace(/^\//, '')}`;
+            if (import.meta.env.DEV) {
+                return `/${trimmed.replace(/^\//, '')}`;
+            } else {
+                const baseUrl = import.meta.env.VITE_BASE_URL || 'https://localhost:7101';
+                return `${baseUrl.replace(/\/$/, '')}/${trimmed.replace(/^\//, '')}`;
+            }
         }
 
         const baseUrl = import.meta.env.VITE_BASE_URL || 'https://localhost:7101';
