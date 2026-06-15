@@ -418,6 +418,23 @@ const AnimalRoulette = ({ onFinished, userBalance }: Props) => {
                                     : `🎰 ¡Girar Ruleta! — ${DIFFICULTY_PRICE[difficulty].label}: $${DIFFICULTY_PRICE[difficulty].price.toLocaleString('es-ES')}`
                                 }
                             </button>
+
+                            {/* User wallet balance display under the spin button */}
+                            <div className="roulette-balance-display" style={{
+                                marginTop: '12px',
+                                fontSize: '18px',
+                                fontWeight: 'bold',
+                                color: '#ffd700',
+                                backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                                padding: '8px 20px',
+                                borderRadius: '20px',
+                                border: '1px solid rgba(255, 215, 0, 0.3)',
+                                display: 'inline-block',
+                                textAlign: 'center',
+                                backdropFilter: 'blur(4px)'
+                            }}>
+                                🪙 Tu Saldo: ${userBalance.toLocaleString('es-ES')}
+                            </div>
                         </>
                     )}
 

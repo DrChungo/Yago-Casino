@@ -10,6 +10,7 @@
 //   error={error} // Mensaje de error a mostrar si no hay animales disponibles
 // />
 
+import { useState, useEffect } from 'react';
 import flySvg from '../assets/AnimalsSprites/SVG/Fly.svg';
 import hamsterSvg from '../assets/AnimalsSprites/SVG/Hamster.svg';
 import catSvg from '../assets/AnimalsSprites/SVG/Cat.svg';
@@ -46,7 +47,7 @@ import mechaPhoenix from '../assets/AnimalsSprites/SVG/PhoenixMecha.svg';
 import pterodactylus from '../assets/AnimalsSprites/SVG/Pterodactylus.svg';
 import mechaPterodactylus from '../assets/AnimalsSprites/SVG/MechaPterodactylus.svg';
 
-
+import { getAnimalImageUrl } from '../services/animalImageService';
 
 import './AnimalToBetInGame.css';
 
@@ -104,6 +105,32 @@ const AnimalToBetInGame = ({
     isForSale,
     correct,
 }: AnimalToBetInGameProps) => {
+
+  const [animalConfigs, setAnimalConfigs] = useState<Map<string, any>>(new Map());
+
+  useEffect(() => {
+    const fetchConfigs = async () => {
+      const token = localStorage.getItem('token_casino');
+      if (!token) return;
+      try {
+        const res = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/AnimalValueConfig/images`, {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        if (res.ok) {
+          const data = await res.json();
+          const configMap = new Map<string, any>();
+          (data || []).forEach((h: any) => {
+            const tipo = h.animalType || h.typeAnimal;
+            if (tipo) configMap.set(tipo.toLowerCase(), h);
+          });
+          setAnimalConfigs(configMap);
+        }
+      } catch (e) {
+        console.error("Error loading animal configs in AnimalToBetInGame:", e);
+      }
+    };
+    fetchConfigs();
+  }, []);
   
   const getRarityColor = (rarity: boolean): string => {
     return rarity ? '#EF4444' : '#9CA3AF';
@@ -113,45 +140,57 @@ const AnimalToBetInGame = ({
     return rarity ? 'MK' : 'Normal';
   };
 
-    const getAnimalImage = (animalType: AnimalType, isMecha: boolean): string => {
-        const normalImages: Record<AnimalType, string> = {
-            [AnimalType.FLY]: flySvg,
-            [AnimalType.HAMSTER]: hamsterSvg,
-            [AnimalType.CAT]: catSvg,
-            [AnimalType.DOG]: dogSvg,
-            [AnimalType.SHEEP]: sheepSvg,
-            [AnimalType.COW]: cowSvg,
-            [AnimalType.HORSE]: horseSvg,
-            [AnimalType.CROCODILE]: crocodileSvg,
-            [AnimalType.SHARK]: sharkSvg,
-            [AnimalType.WHALE]: whaleSvg,
-            [AnimalType.LOVEBIRD]: lovebirdSvg,
-            [AnimalType.TURTLEMARINE]: turtleSvg,
-            [AnimalType.T_REX]: tRex,
-            [AnimalType.PHOENIX]: phoenix,
-            [AnimalType.PTERODACTYLUS]: pterodactylus,
-            
+    const getAnimalImage = (animal: Animal): string => {
+        const isMecha = animal.rarity === true;
+        const typeKey = (animal.typeAnimal || '').toLowerCase();
+
+        // 1. Try resolving using backend database configurations first
+        const config = animalConfigs.get(typeKey);
+        if (config) {
+            const svgBd = isMecha ? config.imageUrlMecha : config.imageUrlNormal;
+            const resolved = getAnimalImageUrl(svgBd);
+            if (resolved) return resolved;
+        }
+
+        // 2. Fallback to hardcoded imported SVGs
+        const normalImages: Record<string, string> = {
+            [AnimalType.FLY.toLowerCase()]: flySvg,
+            [AnimalType.HAMSTER.toLowerCase()]: hamsterSvg,
+            [AnimalType.CAT.toLowerCase()]: catSvg,
+            [AnimalType.DOG.toLowerCase()]: dogSvg,
+            [AnimalType.SHEEP.toLowerCase()]: sheepSvg,
+            [AnimalType.COW.toLowerCase()]: cowSvg,
+            [AnimalType.HORSE.toLowerCase()]: horseSvg,
+            [AnimalType.CROCODILE.toLowerCase()]: crocodileSvg,
+            [AnimalType.SHARK.toLowerCase()]: sharkSvg,
+            [AnimalType.WHALE.toLowerCase()]: whaleSvg,
+            [AnimalType.LOVEBIRD.toLowerCase()]: lovebirdSvg,
+            [AnimalType.TURTLEMARINE.toLowerCase()]: turtleSvg,
+            [AnimalType.T_REX.toLowerCase()]: tRex,
+            [AnimalType.PHOENIX.toLowerCase()]: phoenix,
+            [AnimalType.PTERODACTYLUS.toLowerCase()]: pterodactylus,
         };
 
-        const mechaImages: Record<AnimalType, string> = {
-            [AnimalType.FLY]: mechaFlySvg,
-            [AnimalType.HAMSTER]: mechaHamsterSvg,
-            [AnimalType.CAT]: mechaCatSvg,
-            [AnimalType.DOG]: mechaDogSvg,
-            [AnimalType.SHEEP]: mechaSheepSvg,
-            [AnimalType.COW]: mechaCowSvg,  
-            [AnimalType.HORSE]: mechaHorseSvg,
-            [AnimalType.CROCODILE]: mechaCrocodileSvg,
-            [AnimalType.SHARK]: mechaSharkSvg,
-            [AnimalType.WHALE]: mechaWhaleSvg,
-            [AnimalType.LOVEBIRD]: mechaLovebirdSvg,
-            [AnimalType.TURTLEMARINE]: mechaTurtleSvg,
-            [AnimalType.T_REX]: mechaTRex,
-            [AnimalType.PHOENIX]: mechaPhoenix,
-            [AnimalType.PTERODACTYLUS]: mechaPterodactylus
+        const mechaImages: Record<string, string> = {
+            [AnimalType.FLY.toLowerCase()]: mechaFlySvg,
+            [AnimalType.HAMSTER.toLowerCase()]: mechaHamsterSvg,
+            [AnimalType.CAT.toLowerCase()]: mechaCatSvg,
+            [AnimalType.DOG.toLowerCase()]: mechaDogSvg,
+            [AnimalType.SHEEP.toLowerCase()]: mechaSheepSvg,
+            [AnimalType.COW.toLowerCase()]: mechaCowSvg,  
+            [AnimalType.HORSE.toLowerCase()]: mechaHorseSvg,
+            [AnimalType.CROCODILE.toLowerCase()]: mechaCrocodileSvg,
+            [AnimalType.SHARK.toLowerCase()]: mechaSharkSvg,
+            [AnimalType.WHALE.toLowerCase()]: mechaWhaleSvg,
+            [AnimalType.LOVEBIRD.toLowerCase()]: mechaLovebirdSvg,
+            [AnimalType.TURTLEMARINE.toLowerCase()]: mechaTurtleSvg,
+            [AnimalType.T_REX.toLowerCase()]: mechaTRex,
+            [AnimalType.PHOENIX.toLowerCase()]: mechaPhoenix,
+            [AnimalType.PTERODACTYLUS.toLowerCase()]: mechaPterodactylus
         };
     
-        return isMecha ? mechaImages[animalType] : normalImages[animalType];
+        const resolvedMap = isMecha ? mechaImages : normalImages;
+        return resolvedMap[typeKey] || resolvedMap[typeKey.replace(/\s+/g, '')] || '';
     };
 
   return (
@@ -187,7 +226,7 @@ const AnimalToBetInGame = ({
           >
             <div className="animal-placeholder">
               <img 
-                src={getAnimalImage(animal.typeAnimal, animal.rarity)} 
+                src={getAnimalImage(animal)} 
                 alt={animal.name}
                 className="animal-svg"
               />

@@ -1,4 +1,4 @@
-﻿using Chaos.BlazorCasinoApp.IApiService;
+using Chaos.BlazorCasinoApp.IApiService;
 using Chaos.Shared.RequestEntity.AnimalValue;
 using Chaos.Shared.ResponseEntity;
 using System.Net.Http.Json;
@@ -57,6 +57,13 @@ namespace Chaos.BlazorCasinoApp.Service
         {
             var response = await _http.DeleteAsync($"{_url}/{id}");
             return response.IsSuccessStatusCode;
+        }
+
+        // GET SVG FILES
+        public async Task<List<string>> GetSvgFilesAsync()
+        {
+            var result = await _http.GetFromJsonAsync<List<string>>($"{_url}/svg-files");
+            return result ?? new List<string>();
         }
     }
 }

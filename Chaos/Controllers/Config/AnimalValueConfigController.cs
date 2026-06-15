@@ -1,4 +1,4 @@
-﻿using Chaos.Api.Interface.Config;
+using Chaos.Api.Interface.Config;
 using Chaos.Api.RequestEntity.Config.AnimalValue;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,11 +10,30 @@ namespace Chaos.Api.Controllers
         public class AnimalValueConfigController : ControllerBase
         {
             private readonly IAnimalValueConfigService _service;
+            private readonly IWebHostEnvironment _env;
 
-            public AnimalValueConfigController(IAnimalValueConfigService service)
+            public AnimalValueConfigController(IAnimalValueConfigService service, IWebHostEnvironment env)
             {
                 _service = service;
+                _env = env;
             }
+
+        // GET SVG FILES — returns available SVG file paths from wwwroot/images/animals/
+        [HttpGet("svg-files")]
+        public IActionResult GetSvgFiles()
+        {
+            var animalsPath = Path.Combine(_env.WebRootPath, "images", "animals");
+
+            if (!Directory.Exists(animalsPath))
+                return Ok(new List<string>());
+
+            var files = Directory.GetFiles(animalsPath, "*.svg")
+                .Select(f => "/images/animals/" + Path.GetFileName(f))
+                .OrderBy(f => f)
+                .ToList();
+
+            return Ok(files);
+        }
 
         // GET ALL
         [HttpGet]

@@ -10,7 +10,16 @@ export function getAnimalImageUrl(svgBd: string | null | undefined): string {
         return "";
     }
 
-    const trimmed = svgBd.trim();
+    // Replace any backslashes with forward slashes for URL compatibility
+    let trimmed = svgBd.trim().replace(/\\/g, '/');
+
+    // Handle cases where the path mistakenly includes the 'wwwroot' directory
+    if (trimmed.startsWith('wwwroot/')) {
+        trimmed = trimmed.substring(8);
+    } else if (trimmed.startsWith('/wwwroot/')) {
+        trimmed = trimmed.substring(9);
+    }
+
     const isRawSvg = trimmed.startsWith("<") || trimmed.startsWith("<?xml");
 
     if (isRawSvg) {
@@ -25,6 +34,12 @@ export function getAnimalImageUrl(svgBd: string | null | undefined): string {
     } else {
         if (trimmed.startsWith("http://") || trimmed.startsWith("https://") || trimmed.startsWith("data:")) {
             return trimmed;
+        }
+
+        // If it starts with images/ or /images/, return a relative path so Vite proxy handles it.
+        // This avoids mixed content issues and untrusted certificate blocks in development.
+        if (trimmed.startsWith("images/") || trimmed.startsWith("/images/")) {
+            return `/${trimmed.replace(/^\//, '')}`;
         }
 
         const baseUrl = import.meta.env.VITE_BASE_URL || 'https://localhost:7101';
