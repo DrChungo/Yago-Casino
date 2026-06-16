@@ -10,7 +10,16 @@ export function getAnimalImageUrl(svgBd: string | null | undefined): string {
         return "";
     }
 
-    const trimmed = svgBd.trim();
+    // Replace any backslashes with forward slashes for URL compatibility
+    let trimmed = svgBd.trim().replace(/\\/g, '/');
+
+    // Handle cases where the path mistakenly includes the 'wwwroot' directory
+    if (trimmed.startsWith('wwwroot/')) {
+        trimmed = trimmed.substring(8);
+    } else if (trimmed.startsWith('/wwwroot/')) {
+        trimmed = trimmed.substring(9);
+    }
+
     const isRawSvg = trimmed.startsWith("<") || trimmed.startsWith("<?xml");
 
     if (isRawSvg) {
@@ -25,6 +34,17 @@ export function getAnimalImageUrl(svgBd: string | null | undefined): string {
     } else {
         if (trimmed.startsWith("http://") || trimmed.startsWith("https://") || trimmed.startsWith("data:")) {
             return trimmed;
+        }
+
+        // If it starts with images/ or /images/, return a relative path only in local development
+        // to benefit from Vite's local dev proxy. In production (Vercel), return the absolute backend URL.
+        if (trimmed.startsWith("images/") || trimmed.startsWith("/images/")) {
+            if (import.meta.env.DEV) {
+                return `/${trimmed.replace(/^\//, '')}`;
+            } else {
+                const baseUrl = import.meta.env.VITE_BASE_URL || 'https://localhost:7101';
+                return `${baseUrl.replace(/\/$/, '')}/${trimmed.replace(/^\//, '')}`;
+            }
         }
 
         const baseUrl = import.meta.env.VITE_BASE_URL || 'https://localhost:7101';

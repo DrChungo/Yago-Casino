@@ -1,4 +1,4 @@
-﻿/* eslint-disable react-hooks/immutability */
+/* eslint-disable react-hooks/immutability */
 import { useEffect, useRef, useState } from 'react';
 import imagenFondo from '../assets/casino_shop.png';
 import { useNavigate } from 'react-router-dom';
@@ -73,8 +73,8 @@ function AnimalShop() {
     const createReverb = (ctx: AudioContext): ConvolverNode => {
         const convolver = ctx.createConvolver();
         const sampleRate = ctx.sampleRate;
-        const duration = 3;        
-        const decay = 3.0;    
+        const duration = 3;
+        const decay = 3.0;
         const length = sampleRate * duration;
         const impulse = ctx.createBuffer(2, length, sampleRate);
 
@@ -139,13 +139,13 @@ function AnimalShop() {
             audioRef.current.volume = 0.2;
             audioRef.current.play();
 
-            audioRef2.current.volume = 1.0; 
+            audioRef2.current.volume = 1.0;
             audioRef2.current.play();
         }
 
         setMusicaSonando(!musicaSonando);
     };
-   
+
 
 
     const fetchShopAnimals = async () => {
@@ -231,7 +231,7 @@ function AnimalShop() {
         if (!response.ok) return;
 
         const data = await response.json();
-        setUserBalance(data.data.wallet); // 👈 Directo de tu respuesta real
+        setUserBalance(data.data.wallet);
     };
 
     const fetchUserAnimals = async () => {
@@ -285,7 +285,7 @@ function AnimalShop() {
             const errorMessage = err instanceof Error ? err.message : 'Error al cargar los animales';
             setError(errorMessage);
             console.error('Error fetching animals:', err);
-        } 
+        }
     };
     useEffect(() => {
         const loadData = async () => {
@@ -293,7 +293,7 @@ function AnimalShop() {
             await Promise.all([
                 fetchUserAnimals(),
                 fetchShopAnimals(),
-                fetchUserBalance() // 👈
+                fetchUserBalance()
             ]);
 
             if (!token) {
@@ -303,22 +303,22 @@ function AnimalShop() {
             }
 
             try {
-               
+
 
                 await Promise.all([
                     fetchUserAnimals(),
                     fetchShopAnimals()
                 ]);
-                
+
 
             } catch (err) {
                 console.error(err);
             } finally {
                 setIsLoadingAnimals(false);
             }
-             return () => {
-        audioCtxRef.current?.close();
-    };
+            return () => {
+                audioCtxRef.current?.close();
+            };
         };
 
         loadData();
@@ -347,7 +347,8 @@ function AnimalShop() {
                 throw new Error('Error al vender');
             }
 
-            fetchUserAnimals();
+            await fetchUserAnimals();
+            await fetchUserBalance(); // Update user balance
             const result = await response.text();
             console.log(result);
             setSelectedAnimalToSell(null);
@@ -388,8 +389,9 @@ function AnimalShop() {
             }
 
             const result = await response.text();
-            fetchShopAnimals();
-            fetchUserAnimals();
+            await fetchShopAnimals();
+            await fetchUserAnimals();
+            await fetchUserBalance(); // Update user balance
             console.log(result);
             setSelectedAnimal(null);
             setCustomName("");
@@ -404,7 +406,7 @@ function AnimalShop() {
     const handleRouletteFinished = () => {
         fetchUserAnimals();
         fetchShopAnimals();
-        fetchUserBalance(); 
+        fetchUserBalance();
     };
 
     if (isLoadingAnimals) {

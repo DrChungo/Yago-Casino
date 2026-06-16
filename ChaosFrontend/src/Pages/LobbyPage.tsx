@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import { LobbyHeader } from '../components/Lobby/LobbyHeader';
 import { InteractiveMap } from '../components/Lobby/InteractiveMap';
+import { getAnimalImageUrl } from '../services/animalImageService';
 
 // ─────────────────────────────────────────────
 // Helper: JWT Decoder
@@ -51,6 +52,7 @@ const LobbyPage: React.FC = () => {
     const [isGameSelectorOpen, setIsGameSelectorOpen] = useState(false);
     const [userWallet, setUserWallet] = useState(0);
     const [userAnimals, setUserAnimals] = useState<any[]>([]);
+    const [animalConfigs, setAnimalConfigs] = useState<Map<string, any>>(new Map());
     const [userName, setUserName] = useState('Player');
     const [cargandoDatos, setCargandoDatos] = useState(false);
 
@@ -96,6 +98,21 @@ const LobbyPage: React.FC = () => {
                 const matchedUser = data.users?.find((u: any) => u.id === userId);
                 if (matchedUser) setUserWallet(matchedUser.wallet);
             }
+
+            // Animal Configs Mapping
+            const resConfigs = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/AnimalValueConfig/images`, {
+                headers: { Authorization: `Bearer ${token}` },
+            });
+            const configMap = new Map<string, any>();
+            if (resConfigs.ok) {
+                const configData = await resConfigs.json();
+                const arrayHabi = configData || [];
+                arrayHabi.forEach((h: any) => {
+                    const tipo = h.animalType || h.typeAnimal;
+                    if (tipo) configMap.set(tipo.toLowerCase(), h);
+                });
+            }
+            setAnimalConfigs(configMap);
 
             // Animals
             const resAnimals = await fetch(`${import.meta.env.VITE_BASE_URL || 'https://localhost:7101'}/api/Animal/All`, {
@@ -156,6 +173,7 @@ const LobbyPage: React.FC = () => {
      onNavigateToShop={() => navigate('/shop')}
      onNavigateToBar={() => navigate('/bar')}
      onNavigateToMusicRoom={() => navigate('/music-room')}
+     onNavigateToRanking={() => navigate('/ranking')}
 />
             {/* Three-column dashboard */}
             <div className="lobby-dashboard-layout">
@@ -171,31 +189,54 @@ const LobbyPage: React.FC = () => {
                                 Your corral is empty. Buy pets in the Shop!
                             </p>
                         ) : (
-                            userAnimals.map((animal) => (
-                                <div key={animal.id} className="animal-card-mini">
-                                    <div className="animal-card-header">
-                                        <span className="animal-name">
-                                            {animal.name || 'Unnamed Pet'}
-                                        </span>
-                                        <span
-                                            className="animal-health-badge"
-                                            style={{
-                                                backgroundColor: mapHealth(animal.health).color,
-                                            }}
-                                        >
-                                            {mapHealth(animal.health).label}
-                                        </span>
+                            userAnimals.map((animal) => {
+                                const config = animalConfigs.get((animal.typeAnimal || '').toLowerCase());
+                                const esMecha = animal.rarity === true || animal.Rarity === true;
+                                const svgBd = esMecha ? config?.imageUrlMecha : config?.imageUrlNormal;
+                                const imgUrl = getAnimalImageUrl(svgBd);
+
+                                return (
+                                    <div key={animal.id} className="animal-card-mini">
+                                        <div className="animal-card-header">
+                                            <span className="animal-name">
+                                                {animal.name || 'Unnamed Pet'}
+                                            </span>
+                                            <span
+                                                className="animal-health-badge"
+                                                style={{
+                                                    backgroundColor: mapHealth(animal.health).color,
+                                                }}
+                                            >
+                                                {mapHealth(animal.health).label}
+                                            </span>
+                                        </div>
+                                        <div className="animal-card-body" style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                                            {imgUrl && (
+                                                <div style={{
+                                                    width: '50px',
+                                                    height: '50px',
+                                                    backgroundImage: `url(${imgUrl})`,
+                                                    backgroundSize: 'contain',
+                                                    backgroundRepeat: 'no-repeat',
+                                                    backgroundPosition: 'center',
+                                                    flexShrink: 0,
+                                                    backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                                                    borderRadius: '8px',
+                                                    padding: '4px'
+                                                }} />
+                                            )}
+                                            <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+                                                <span>Type: <strong>{animal.typeAnimal}</strong></span>
+                                                <span>Age: <strong>{animal.age} y/o</strong></span>
+                                                <span>
+                                                    Est. Value:{' '}
+                                                    <strong className="gold-text">${animal.value}</strong>
+                                                </span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="animal-card-body">
-                                        <span>Type: <strong>{animal.typeAnimal}</strong></span>
-                                        <span>Age: <strong>{animal.age} y/o</strong></span>
-                                        <span>
-                                            Est. Value:{' '}
-                                            <strong className="gold-text">${animal.value}</strong>
-                                        </span>
-                                    </div>
-                                </div>
-                            ))
+                                );
+                            })
                         )}
                     </div>
                 </aside>

@@ -1,4 +1,4 @@
-﻿
+
 using Chaos.Shared.RequestEntity.AnimalValue;
 using Chaos.Shared.ResponseEntity;
 
@@ -13,5 +13,6 @@ namespace Chaos.BlazorCasinoApp.IApiService
         Task<AnimalValueResponse> CreateAsync(CreateAnimalValueRequest request);
         Task<AnimalValueResponse?> UpdateAsync(Guid id, UpdateAnimalValueRequest request); // ← Task<AnimalValueResponse?>
         Task<bool> DeleteAsync(Guid id);
+        Task<List<string>> GetSvgFilesAsync();
     }
 }
