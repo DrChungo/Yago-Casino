@@ -1,7 +1,7 @@
 ﻿using Chaos.Api.Interface;
 using Chaos.Infraestructure.Models;
 using Microsoft.EntityFrameworkCore;
-
+//test
 namespace Chaos.Api.Service
 {
     public class ActiveDrinkEffectService : IActiveDrinkEffectService
