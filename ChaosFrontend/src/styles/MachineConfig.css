@@ -1,46 +1,65 @@
-#configuration{
+#configuration {
+    
     color: white;
     position: absolute;
     left: 2rem;
-    background-color:rgba(255, 255, 255, 0.15) ;
+    background-color: rgba(15, 10, 5, 0.92); 
     max-height: 60vh;
     overflow: scroll;
     scrollbar-width: none;
-    padding: 0.5rem;
-     border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
+    border: 1px solid rgba(218, 180, 0, 0.8); 
     border-radius: 15px;
 }
-#configuration > div{
+
+#configuration > div {
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(80, 70, 50, 0.5);
     margin: 0.5rem 0;
     padding: 0.5rem;
     border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(5, 5, 5, 0.95); 
     transition: all 0.3s ease-in-out;
-
+    color: white;
+    font-weight: bold;
 }
 
-#configuration > div:hover{
-    
+#configuration > div:hover {
     background-color: rgba(8, 8, 8, 0.082);
     border: 0.15rem solid gold;
     animation: parpadeo 2s infinite ease-in-out;
 }
-@keyframes parpadeo {
-    0% { border-color: gold; 
-     background-color: rgba(0, 0, 0, 0.55);
-    }
-    50% { border-color: rgba(255, 217, 0, 0.753); 
+#configuration h1 {
+    color: gold;
+    text-align: center;
+    margin: 0.2rem 0;
+    font-size: 1.2rem;
+}
+
+.selectedConfig {
+    border: 0.15rem solid rgb(218, 180, 0)!important;
+    background-color: rgba(101, 84, 0, 0.75)!important;
     
-    background-color: rgba(255, 217, 0, 0.096); 
+}
+
+@keyframes parpadeo {
+    0% {
+        border-color: gold;
+        background-color: rgba(0, 0, 0, 0.55);
     }
-    100% { border-color: gold;
-     background-color: rgba(0, 0, 0, 0.55);
+    50% {
+        border-color: rgba(255, 217, 0, 0.753);
+        background-color: rgba(255, 217, 0, 0.096);
+    }
+    100% {
+        border-color: gold;
+        background-color: rgba(0, 0, 0, 0.55);
     }
 }
 
-.selectedConfig{
-    border: 0.15rem solid gold;
-    background-color: rgba(255, 217, 0, 0.404);
+
+.selectedConfig {
+    border: 0.15rem solid rgb(218, 180, 0); 
+    background-color: rgba(101, 84, 0, 0.75); 
+    color: white;
 }

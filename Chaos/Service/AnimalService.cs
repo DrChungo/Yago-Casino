@@ -5,6 +5,7 @@ using Chaos.Api.ResponseEntity;
 using Chaos.Infraestructure.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Concurrent;
+using System.Threading.Tasks.Dataflow;
 
 namespace Chaos.Api.Service
 {
@@ -270,8 +271,9 @@ namespace Chaos.Api.Service
             //    Log1p = Log(x + 1), seguro para x=0 y
             //    suaviza rangos extremos (Ant vs Godzilla)
             // ─────────────────────────────────────────────
-            double weightScore = Math.Log((double)animal.Weight) * 40.0;
-            double heightScore = Math.Log((double)animal.Height) * 20.0;
+            double weightScore = (double)animal.Weight * 40.0;
+            double heightScore = (double)animal.Height * 20.0;
+         
 
             // ─────────────────────────────────────────────
             // 2. PENALIZACIÓN POR EDAD (logarítmica suave)

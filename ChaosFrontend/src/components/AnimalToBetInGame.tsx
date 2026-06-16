@@ -47,7 +47,6 @@ import pterodactylus from '../assets/AnimalsSprites/SVG/Pterodactylus.svg';
 import mechaPterodactylus from '../assets/AnimalsSprites/SVG/MechaPterodactylus.svg';
 
 
-
 import './AnimalToBetInGame.css';
 
 const AnimalType = {
@@ -87,10 +86,10 @@ interface AnimalToBetInGameProps {
   animals: Animal[];
   selectedAnimal: Animal | null;
   onSelectAnimal: (animal: Animal) => void;
-  isFlipping: boolean;
+  isFlipping?: boolean;
   error: string | null;
-    isForBet: boolean;
-    isForSale: boolean;
+    isForBet?: boolean;
+    isForSale?: boolean;
     correct: string | null;
 }
 
