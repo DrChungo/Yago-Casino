@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Chaos.Infraestructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea4ee6b70585194dfc3b5d5c7305be5a356f43dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8235eec6dfa87224fc9d00ca7f90930ad694e918")]
 [assembly: System.Reflection.AssemblyProductAttribute("Chaos.Infraestructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Chaos.Infraestructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
