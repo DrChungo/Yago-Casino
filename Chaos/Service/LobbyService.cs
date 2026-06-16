@@ -222,7 +222,7 @@ namespace Chaos.Api.Service
             };
         }
 
-        public Lobby KickPlayerLobby(PlayerLobby playerKickLobby)
+        public Lobby KickPlayerLobby(PlayerLobby playerKickLobby, Guid requesterUserId)
         {
             RussianRouletteLobby lobby = _casinoDBContext.RussianRouletteLobbies
                 .FirstOrDefault(L => L.Id == playerKickLobby.IdLobby);
@@ -237,6 +237,11 @@ namespace Chaos.Api.Service
                 .ToList();
 
             RussianRoulettePlayer master = playersInLobby.FirstOrDefault();
+
+            if (master == null || master.UserId != requesterUserId)
+            {
+                throw new UnauthorizedAccessException("Only the lobby master can kick players.");
+            }
 
             RussianRoulettePlayer playerToRemove = playersInLobby
                 .FirstOrDefault(p => p.Id == playerKickLobby.IdPlayer);

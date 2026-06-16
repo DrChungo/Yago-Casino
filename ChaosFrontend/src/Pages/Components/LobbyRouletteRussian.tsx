@@ -266,10 +266,12 @@ export default function LobbyRouletteRussian() {
                                         className={
                                             pair[0]?.name === lobby?.nameOfMaster
                                                 ? "player-cell master-cell"
-                                                : "player-cell kickable-cell"
+                                                : isMaster
+                                                    ? "player-cell kickable-cell"
+                                                    : "player-cell"
                                         }
                                         onClick={() =>
-                                            pair[0] && kickPlayer(pair[0].id, pair[0].name)
+                                            isMaster && pair[0] && kickPlayer(pair[0].id, pair[0].name)
                                         }
                                     >
                                         {pair[0]?.name ?? ""}
@@ -278,10 +280,12 @@ export default function LobbyRouletteRussian() {
                                         className={
                                             pair[1]?.name === lobby?.nameOfMaster
                                                 ? "player-cell master-cell"
-                                                : "player-cell kickable-cell"
+                                                : isMaster
+                                                    ? "player-cell kickable-cell"
+                                                    : "player-cell"
                                         }
                                         onClick={() =>
-                                            pair[1] && kickPlayer(pair[1].id, pair[1].name)
+                                            isMaster && pair[1] && kickPlayer(pair[1].id, pair[1].name)
                                         }
                                     >
                                         {pair[1]?.name ?? ""}

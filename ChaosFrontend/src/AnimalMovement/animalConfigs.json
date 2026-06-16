@@ -2,9 +2,9 @@
   {
     "tipo": "dog",
     "habitat": "Urban",
-    "anchoHitbox": 21.5,
-    "altoHitbox": 33,
-    "escala": 3
+    "anchoHitbox": 106.5,
+    "altoHitbox": 152,
+    "escala": 5.7
   },
   {
     "tipo": "hamster",
@@ -289,7 +289,7 @@
   {
     "tipo": "sandworm",
     "habitat": "Desert",
-    "anchoHitbox": 197.5,
+    "anchoHitbox": 101.5,
     "altoHitbox": 97,
     "escala": 1.8
   },

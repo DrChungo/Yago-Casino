@@ -1,4 +1,4 @@
-﻿using Chaos.Api.RequestEntity;
+using Chaos.Api.RequestEntity;
 using Chaos.Api.ResponseEntity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,7 +10,7 @@ namespace Chaos.Api.Interface
         Lobby AddPlayerToLobby(string lobbyCode, Guid userId); 
         bool CheckUsersLobby(PlayerLobby playerKickLobby);
         Lobby GetLobbyById(Guid idLobby);
-        Lobby KickPlayerLobby(PlayerLobby playerKickLobby);
+        Lobby KickPlayerLobby(PlayerLobby playerKickLobby, Guid requesterUserId);
 
         //nuevo añadido el 001/06/2026
         Lobby LeaveFromLobby(Guid lobbyId, Guid userId);

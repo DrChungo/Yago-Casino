@@ -1,4 +1,4 @@
-﻿using Chaos.Api.Interface;
+using Chaos.Api.Interface;
 using Chaos.Api.Models;
 using Chaos.Api.RequestEntity;
 using Chaos.Api.ResponseEntity;
@@ -70,14 +70,31 @@ namespace Chaos.Api.Controllers
         }
 
         [HttpDelete("Kick/Player")]
+        [Authorize]
         public ActionResult KickPlayerFromLobby([FromBody]PlayerLobby playerKickLobby)
         {
+            var userIdString = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(userIdString))
+                return Unauthorized("Token inválido o expirado.");
+
+            Guid requesterUserId = Guid.Parse(userIdString);
+
             if (!_lobbyService.CheckUsersLobby(playerKickLobby))
                 return Unauthorized("This player is not in the lobby");
-            Console.WriteLine($"IdLobby: '{playerKickLobby.IdLobby}'");
-            Console.WriteLine($"IdPlayer: '{playerKickLobby.IdPlayer}'");
-            Lobby lobby = _lobbyService.KickPlayerLobby(playerKickLobby);
-            return Ok(lobby);
+
+            try
+            {
+                Lobby lobby = _lobbyService.KickPlayerLobby(playerKickLobby, requesterUserId);
+                return Ok(lobby);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Unauthorized(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
         [HttpDelete("Remove")]
         public ActionResult RemoveLobby([FromBody]Guid lobbyId)
