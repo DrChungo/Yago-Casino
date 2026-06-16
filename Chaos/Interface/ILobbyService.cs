@@ -12,7 +12,7 @@ namespace Chaos.Api.Interface
         Lobby GetLobbyById(Guid idLobby);
         Lobby KickPlayerLobby(PlayerLobby playerKickLobby);
 
-        //nuevo añadido el 001/06/2026
+        //nuevo añadido el 01/06/2026
         Lobby LeaveFromLobby(Guid lobbyId, Guid userId);
         List<PlayerInLobbyResponse> GetPlayersByLobby(Guid lobbyId);
         bool RemoveLobby(Guid lobby);

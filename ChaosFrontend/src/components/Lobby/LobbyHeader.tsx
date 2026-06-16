@@ -10,6 +10,7 @@ interface LobbyHeaderProps {
     onNavigateToPen?: () => void;
     onNavigateToBar?: () => void;
     onNavigateToMusicRoom?: () => void;
+    onNavigateToRanking?: () => void;
 }
 
 export const LobbyHeader: React.FC<LobbyHeaderProps> = ({
@@ -20,7 +21,8 @@ export const LobbyHeader: React.FC<LobbyHeaderProps> = ({
     onNavigateToShop,
     onNavigateToPen,
     onNavigateToBar,
-    onNavigateToMusicRoom
+    onNavigateToMusicRoom,
+    onNavigateToRanking
 }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
@@ -66,6 +68,11 @@ export const LobbyHeader: React.FC<LobbyHeaderProps> = ({
                     {onNavigateToMusicRoom && (
                         <button className="nav-item-btn" onClick={onNavigateToMusicRoom}>
                             MUSIC ROOM
+                        </button>
+                    )}
+                    {onNavigateToRanking && (
+                        <button className="nav-item-btn" onClick={onNavigateToRanking}>
+                            RANKING
                         </button>
                     )}
                 </div>
@@ -118,6 +125,14 @@ export const LobbyHeader: React.FC<LobbyHeaderProps> = ({
                                     onClick={() => handleNavClick(onNavigateToMusicRoom)}
                                 >
                                     MUSIC ROOM
+                                </button>
+                            )}
+                            {onNavigateToRanking && (
+                                <button
+                                    className="nav-item-btn mobile-nav-btn"
+                                    onClick={() => handleNavClick(onNavigateToRanking)}
+                                >
+                                    RANKING
                                 </button>
                             )}
                         </div>

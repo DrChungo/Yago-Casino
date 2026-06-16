@@ -310,7 +310,29 @@ namespace Chaos.Api.Service
                 .FirstOrDefault(p => p.UserId == userId)
                 ?? throw new Exception("El usuario no está en este lobby.");
 
-            // Eliminar al jugador
+            // Obtener el master actual (el primero que se unió)
+            var currentMaster = lobby.RussianRoulettePlayers
+                .OrderBy(p => p.JoinedAt)
+                .FirstOrDefault();
+
+            bool isMasterLeaving = currentMaster != null && currentMaster.UserId == userId;
+
+            if (isMasterLeaving)
+            {
+                // Si el master se sale, deshace la partida (elimina lobby y a todos los jugadores)
+                _casinoDBContext.RussianRoulettePlayers.RemoveRange(lobby.RussianRoulettePlayers);
+                _casinoDBContext.RussianRouletteLobbies.Remove(lobby);
+                _casinoDBContext.SaveChanges();
+
+                return new Lobby
+                {
+                    LobbyCode = lobby.LobbyCode,
+                    MasterOfLobby = Guid.Empty,
+                    Players = new List<Guid>()
+                };
+            }
+
+            // Eliminar al jugador normal
             _casinoDBContext.RussianRoulettePlayers.Remove(player);
             _casinoDBContext.SaveChanges();
 

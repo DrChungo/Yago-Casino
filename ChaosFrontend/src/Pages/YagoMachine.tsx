@@ -1,10 +1,10 @@
 import "../styles/YagoMachine.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import AnimalsUser from "../components/AnimalsUser";
 import { useSlotMachine } from "./Components/useSlotMachine";
 import MachineConfig from "./Components/MachineConfig";
 import BackButton from "./Components/BackButton";
-import ActiveDrinkEffects from "./Components/ActiveDrinkEffect";
+
 
 import ErrorPopup from "./Components/ErrorPopup";
 import { useAudio } from '../hooks/useAudio';
@@ -201,7 +201,6 @@ export default function YagoMachine() {
     const totalRounds = gameResult?.tragaperras.length ?? 0;
 
     return (<>
-        <ActiveDrinkEffects disabled={true} />
 
         <div className="yago-machine-wrapper">
 
@@ -310,7 +309,7 @@ export default function YagoMachine() {
                         : "Spin"}
             </button>
 
-            {/* ✅ Mensaje de error */}
+
             {spinError && (
                 <ErrorPopup
                     message={spinError}
@@ -326,8 +325,10 @@ export default function YagoMachine() {
                 onClick={() => {
                     fetchResultGame();
                     setGameFinished(false);
+
                 }}
-                disabled={!slotGameConf || !animalSelected || isSpinning}
+                disabled={!slotGameConf || !animalSelected || isSpinning ||
+                    currentRound < totalRounds && currentRound != 0 && totalRounds != 0}
             >
                 Bet
             </button>

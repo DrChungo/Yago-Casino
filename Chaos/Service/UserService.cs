@@ -1,4 +1,4 @@
-﻿using Chaos.Api.Interface;
+using Chaos.Api.Interface;
 using Chaos.Api.RequestEntity;
 using Chaos.Api.ResponseEntity;
 using Chaos.Api.Utils;
@@ -44,7 +44,8 @@ namespace Chaos.Api.Service
                 Name = newUser.Name,
                 Email = newUser.Email,
                 Wallet = newUser.Wallet,
-                IsAlive = newUser.IsActive
+                IsAlive = newUser.IsActive,
+                IsAdmin = newUser.IsAdmin
             };
         }
 
@@ -67,7 +68,8 @@ namespace Chaos.Api.Service
                     Name = name,
                     Email = $"{name}@gmail.com",
                     Wallet = _random.NextInt64(minWalletValue, maxWalletValue),
-                    IsAlive = true
+                    IsAlive = true,
+                    IsAdmin = false
                 });
             }
 
@@ -88,7 +90,8 @@ namespace Chaos.Api.Service
                     Name = user.Name,
                     Email = user.Email,
                     Wallet = user.Wallet,
-                    IsAlive = user.IsActive
+                    IsAlive = user.IsActive,
+                    IsAdmin = user.IsAdmin
                 })
                 .ToList();
         }
@@ -112,7 +115,8 @@ namespace Chaos.Api.Service
                 Name = user.Name,
                 Email = user.Email,
                 Wallet = user.Wallet,
-                IsAlive = user.IsActive
+                IsAlive = user.IsActive,
+                IsAdmin = user.IsAdmin
             };
         }
 

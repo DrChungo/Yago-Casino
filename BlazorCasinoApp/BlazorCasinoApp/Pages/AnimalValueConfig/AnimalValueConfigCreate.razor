@@ -1,4 +1,4 @@
-﻿@page "/AnimalValueConfigPage/create"
+@page "/AnimalValueConfigPage/create"
 
 @using Chaos.BlazorCasinoApp.IApiService
 @using Chaos.Shared.RequestEntity.AnimalValue
@@ -83,68 +83,64 @@
                         <ValidationMessage For="() => request.MaxHealth" />
                     </div>
                 </div>
+
                 <div class="form-group">
                     <label class="form-label">Hábitat</label>
                     <InputSelect class="form-control" @bind-Value="request.Habitat">
-
                         <option value="">-- Selecciona un hábitat --</option>
-
                         <option value="Desset"> Desierto</option>
-
                         <option value="Ocean"> Ocean</option>
-
                         <option value="Farm"> Farm</option>
                         <option value="Farm / Sky"> Farm / Sky</option>
-
                         <option value="Savanna">Savanna</option>
-
                         <option value="Jungle"> Jungle</option>
                         <option value="Jungle / Sky"> Jungle / Sky</option>
-                        
                         <option value="Legend"> Legend</option>
                         <option value="Legend / Sky"> Legend / Sky</option>
-
                         <option value="Swamp"> Swamp</option>
                         <option value="Jurassic"> Jurassic</option>
                         <option value="Jurassic / Sky"> Jurassic / Sky</option>
-
                         <option value="Urban"> Urban</option>
                         <option value="Urban / Sky"> Urban / Sky</option>
-
-
                     </InputSelect>
                     <ValidationMessage For="() => request.Habitat" />
                 </div>
 
-
-                <div class="form-grid-2">
-                    <div class="form-group">
-                        <label class="form-label">Imagen Normal</label>
-                        <InputFile id="fileNormal" OnChange="e => LoadSvg(e, true)" accept=".svg" style="display:none" />
-                        <label for="fileNormal" class="btn-casino-secondary" style="cursor:pointer">
-                            📁 Seleccionar SVG Normal
-                        </label>
+                @* ── Imagen Normal ── *@
+                <div class="form-group">
+                    <label class="form-label">🖼️ Imagen Normal</label>
+                    <div class="svg-picker-area">
                         @if (!string.IsNullOrEmpty(request.ImageUrlNormal))
                         {
-                            <span class="text-gold ms-2">✅ SVG cargado</span>
+                            <div class="svg-confirmed">
+                                <span class="svg-confirmed-icon">✅</span>
+                                <span class="svg-confirmed-name">@GetAnimalName(request.ImageUrlNormal)</span>
+                                <button type="button" class="svg-remove-btn" @onclick="() => request.ImageUrlNormal = string.Empty" title="Quitar">✕</button>
+                            </div>
                         }
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Imagen Mecha</label>
-                        <InputFile id="fileMecha" OnChange="e => LoadSvg(e, false)" accept=".svg" style="display:none" />
-                        <label for="fileMecha" class="btn-casino-secondary" style="cursor:pointer">
-                            📁 Seleccionar SVG Mecha
-                        </label>
-                        @if (!string.IsNullOrEmpty(request.ImageUrlMecha))
-                        {
-                            <span class="text-gold ms-2">✅ SVG cargado</span>
-                        }
+                        <button type="button" class="svg-pick-btn" @onclick='() => OpenPicker("normal")'>
+                            @(string.IsNullOrEmpty(request.ImageUrlNormal) ? "📂 Seleccionar animal" : "🔄 Cambiar")
+                        </button>
                     </div>
                 </div>
 
-        @*FIN *@
-
+                @* ── Imagen Mecha ── *@
+                <div class="form-group">
+                    <label class="form-label">🤖 Imagen Mecha</label>
+                    <div class="svg-picker-area">
+                        @if (!string.IsNullOrEmpty(request.ImageUrlMecha))
+                        {
+                            <div class="svg-confirmed">
+                                <span class="svg-confirmed-icon">✅</span>
+                                <span class="svg-confirmed-name">@GetAnimalName(request.ImageUrlMecha)</span>
+                                <button type="button" class="svg-remove-btn" @onclick="() => request.ImageUrlMecha = string.Empty" title="Quitar">✕</button>
+                            </div>
+                        }
+                        <button type="button" class="svg-pick-btn" @onclick='() => OpenPicker("mecha")'>
+                            @(string.IsNullOrEmpty(request.ImageUrlMecha) ? "📂 Seleccionar animal" : "🔄 Cambiar")
+                        </button>
+                    </div>
+                </div>
 
                 <div class="form-check mb-4">
                     <InputCheckbox class="form-check-input" @bind-Value="request.IsActive" />
@@ -169,29 +165,211 @@
     </div>
 </div>
 
+@* ══════════ MODAL LISTA DE ANIMALES ══════════ *@
+@if (showPicker)
+{
+    <div class="svg-modal-overlay" @onclick="ClosePicker">
+        <div class="svg-modal" @onclick:stopPropagation="true">
+            <div class="svg-modal-header">
+                <h5>📋 Seleccionar Animal</h5>
+                <input type="text" class="svg-search-input" placeholder="🔍 Buscar..."
+                       @bind="searchFilter" @bind:event="oninput" />
+                <button type="button" class="svg-modal-close" @onclick="ClosePicker">✕</button>
+            </div>
+            <div class="svg-list">
+                @foreach (var svg in FilteredSvgFiles)
+                {
+                    var name = GetAnimalName(svg);
+                    var isSelected = (pickerTarget == "normal" && request.ImageUrlNormal == svg)
+                                  || (pickerTarget == "mecha" && request.ImageUrlMecha == svg);
+                    <div class="svg-list-item @(isSelected ? "selected" : "")" @onclick="() => SelectImage(svg)">
+                        <span class="svg-list-name">@name</span>
+                        @if (isSelected)
+                        {
+                            <span class="svg-list-check">✅</span>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}
+
+<style>
+    .svg-picker-area {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .svg-confirmed {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(0,200,83,0.08);
+        border: 1px solid rgba(0,200,83,0.3);
+        border-radius: 8px;
+        padding: 0.4rem 0.8rem;
+    }
+    .svg-confirmed-icon { font-size: 1.1rem; }
+    .svg-confirmed-name {
+        color: #00c853;
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+    .svg-remove-btn {
+        background: rgba(255,60,60,0.15);
+        border: 1px solid rgba(255,60,60,0.4);
+        color: #ff4444;
+        border-radius: 50%;
+        width: 24px; height: 24px;
+        cursor: pointer;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 0.7rem;
+        transition: all 0.2s;
+    }
+    .svg-remove-btn:hover { background: rgba(255,60,60,0.3); transform: scale(1.1); }
+    .svg-pick-btn {
+        background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,215,0,0.05));
+        border: 1px dashed rgba(255,215,0,0.4);
+        color: #ffd700;
+        padding: 0.5rem 1.2rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.25s;
+    }
+    .svg-pick-btn:hover {
+        background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(255,215,0,0.1));
+        border-color: #ffd700;
+        transform: translateY(-1px);
+    }
+    .svg-modal-overlay {
+        position: fixed; inset: 0;
+        background: rgba(0,0,0,0.75);
+        backdrop-filter: blur(4px);
+        z-index: 9999;
+        display: flex; align-items: center; justify-content: center;
+    }
+    .svg-modal {
+        background: #1a1a2e;
+        border: 1px solid rgba(255,215,0,0.25);
+        border-radius: 16px;
+        width: min(90vw, 480px);
+        max-height: 75vh;
+        display: flex; flex-direction: column;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(255,215,0,0.08);
+    }
+    .svg-modal-header {
+        display: flex; align-items: center; gap: 1rem;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid rgba(255,215,0,0.15);
+    }
+    .svg-modal-header h5 { margin: 0; color: #ffd700; white-space: nowrap; }
+    .svg-search-input {
+        flex: 1;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,215,0,0.2);
+        color: #fff;
+        border-radius: 8px;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+        outline: none;
+    }
+    .svg-search-input:focus { border-color: #ffd700; }
+    .svg-modal-close {
+        background: rgba(255,255,255,0.08);
+        border: none; color: #aaa;
+        width: 32px; height: 32px;
+        border-radius: 8px; cursor: pointer;
+        font-size: 1rem; transition: all 0.2s;
+    }
+    .svg-modal-close:hover { background: rgba(255,60,60,0.2); color: #ff4444; }
+    .svg-list {
+        overflow-y: auto;
+        padding: 0.5rem;
+    }
+    .svg-list-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.6rem 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.15s;
+        border: 1px solid transparent;
+    }
+    .svg-list-item:hover {
+        background: rgba(255,215,0,0.08);
+        border-color: rgba(255,215,0,0.2);
+    }
+    .svg-list-item.selected {
+        background: rgba(0,200,83,0.1);
+        border-color: rgba(0,200,83,0.3);
+    }
+    .svg-list-name { color: #ddd; font-size: 0.9rem; }
+    .svg-list-item.selected .svg-list-name { color: #00c853; font-weight: 600; }
+    .svg-list-check { font-size: 0.9rem; }
+</style>
+
 @code {
     private CreateAnimalValueRequest request = new();
     private bool isSaving = false;
     private string? errorMessage;
+    private List<string> svgFiles = new();
 
-    private async Task LoadSvg(InputFileChangeEventArgs e, bool isNormal)
+    private bool showPicker = false;
+    private string pickerTarget = "";
+    private string searchFilter = "";
+
+    private IEnumerable<string> FilteredSvgFiles =>
+        string.IsNullOrWhiteSpace(searchFilter)
+            ? svgFiles
+            : svgFiles.Where(s => GetAnimalName(s)
+                .Contains(searchFilter, StringComparison.OrdinalIgnoreCase));
+
+    [Inject] private IConfiguration Configuration { get; set; } = default!;
+
+    private string GetAnimalName(string path) =>
+        System.IO.Path.GetFileNameWithoutExtension(path ?? "");
+
+    protected override async Task OnInitializedAsync()
     {
         try
         {
-            var file = e.File;
-            using var stream = file.OpenReadStream(maxAllowedSize: 5 * 1024 * 1024); // 5MB max
-            using var reader = new StreamReader(stream);
-            var content = await reader.ReadToEndAsync();
-
-            if (isNormal)
-                request.ImageUrlNormal = content;
-            else
-                request.ImageUrlMecha = content;
+            svgFiles = await AnimalValueConfigService.GetSvgFilesAsync();
         }
         catch (Exception ex)
         {
-            errorMessage = $"Error al leer el SVG: {ex.Message}";
+            errorMessage = $"Error al cargar imágenes SVG: {ex.Message}";
         }
+    }
+
+    private string GetAbsoluteUrl(string relativePath)
+    {
+        if (string.IsNullOrEmpty(relativePath)) return "";
+        if (relativePath.StartsWith("http://") || relativePath.StartsWith("https://")) return relativePath;
+        var apiBase = Configuration["Api:UrlBase"] ?? "http://localhost:5254/api/";
+        var origin = new Uri(apiBase).GetLeftPart(UriPartial.Authority);
+        return $"{origin}/{relativePath.TrimStart('/')}";
+    }
+
+    private void OpenPicker(string target)
+    {
+        pickerTarget = target;
+        searchFilter = "";
+        showPicker = true;
+    }
+
+    private void ClosePicker() => showPicker = false;
+
+    private void SelectImage(string svgPath)
+    {
+        if (pickerTarget == "normal")
+            request.ImageUrlNormal = svgPath;
+        else
+            request.ImageUrlMecha = svgPath;
+        showPicker = false;
     }
 
     private async Task HandleSubmit()

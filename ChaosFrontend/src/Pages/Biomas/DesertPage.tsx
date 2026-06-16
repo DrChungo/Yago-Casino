@@ -5,14 +5,15 @@ import '../../styles/Farm.Modules.css';
 import '../../styles/LoadingPages.css'
 import imagenFondo from '../../assets/BiomasBG/casino_desert.png';
 import { chequearColisionRectangulos, limitesCielo, limite, obstaculos } from '../../AnimalMovement/DesertCollisions';
-import DesertMusic from '../../assets/Audios/dessert_soundtrack.m4a';
-import { useNavigate } from "react-router-dom";
-import LoadingHamster from '../Components/LoadingHamster';
 import BackButton from '../Components/BackButton';
+import EditorButton from '../Components/EditorButton';
 import { getAnimalConfig } from '../../AnimalMovement/AnimalCollisions';
 import BiomeSelector from '../Components/BiomeSelector';
 import MusicButton from '../Components/MusicButton';
 import { getAnimalImageUrl } from '../../services/animalImageService';
+import DesertMusic from '../../assets/Audios/dessert_soundtrack.m4a';
+import { useNavigate } from "react-router-dom";
+import LoadingHamster from '../Components/LoadingHamster';
 
 
 interface AnimalData {
@@ -301,6 +302,7 @@ export default function DesertPage() {
             />
 
             <BackButton biome="Desert" />
+            <EditorButton />
             <MusicButton 
                 playing={musicaSonando}
                 onToggle={toggleMusica}

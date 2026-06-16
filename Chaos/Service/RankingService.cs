@@ -1,4 +1,4 @@
-﻿using Bogus;
+using Bogus;
 using Chaos.Api.Enums;
 using Chaos.Api.Interface;
 using Chaos.Api.Models;
@@ -97,7 +97,9 @@ namespace Chaos.Api.Service
                     Id = user.Id,
                     Name = user.Name,
                     Email = user.Email,
-                    IsAlive = user.IsActive
+                    Wallet = user.Wallet,
+                    IsAlive = user.IsActive,
+                    IsAdmin = user.IsAdmin
                 }).ToList();
 
 

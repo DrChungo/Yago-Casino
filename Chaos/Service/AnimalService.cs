@@ -1,10 +1,11 @@
-﻿using Bogus;
+using Bogus;
 using Chaos.Api.Enums;
 using Chaos.Api.Interface;
 using Chaos.Api.ResponseEntity;
 using Chaos.Infraestructure.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Concurrent;
+using System.Threading.Tasks.Dataflow;
 
 namespace Chaos.Api.Service
 {
@@ -173,7 +174,7 @@ namespace Chaos.Api.Service
                     Health = (HealthEnum)animal.Health,
                     Value = (int)animal.EstimatedValue,
                     OwnerId = animal.OwnerId,
-                    
+
                 };
                 animalResponse.Add(newAnimal);
             }
@@ -266,44 +267,18 @@ namespace Chaos.Api.Service
         public Task<double> CalculateValue(Animal animal)
         {
             // ─────────────────────────────────────────────
-            // 1. COMPONENTES BASE (escala logarítmica)
-            //    Log1p = Log(x + 1), seguro para x=0 y
-            //    suaviza rangos extremos (Ant vs Godzilla)
+            // Use the same linear formula as the shop average price:
+            // Value = (Weight * 10 + Height * 5 - Age * 2) * Health / 3
             // ─────────────────────────────────────────────
-            double weightScore = Math.Log((double)animal.Weight) * 40.0;
-            double heightScore = Math.Log((double)animal.Height) * 20.0;
 
-            // ─────────────────────────────────────────────
-            // 2. PENALIZACIÓN POR EDAD (logarítmica suave)
-            //    Un animal viejo pierde valor, pero nunca
-            //    llega a 0. Capped al 60% del base máximo.
-            // ─────────────────────────────────────────────
-            double agePenaltyRatio = Math.Min(0.60, Math.Log((double)animal.Age) / Math.Log((double)(animal.Age + 50)));
-            double baseValue = Math.Max(1.0, weightScore + heightScore);
-            double afterAgePenalty = baseValue * (1.0 - agePenaltyRatio * 0.4);
+            double baseValue = ((double)animal.Weight * 10 + (double)animal.Height * 5 - (double)animal.Age * 2) * (double)animal.Health / 3.0;
 
-            // ─────────────────────────────────────────────
-            // 3. MULTIPLICADOR DE SALUD
-            //    Rango: 0.05 (moribundo) → 1.0 (perfecto)
-            //    Nunca destruye el valor completamente.
-            // ─────────────────────────────────────────────
-            double healthMultiplier = Math.Max(0.05, animal.Health / 100.0);
 
-            // ─────────────────────────────────────────────
-            // 4. VALOR FINAL
-            // ─────────────────────────────────────────────
-            double value = afterAgePenalty * healthMultiplier;
-
-            // ─────────────────────────────────────────────
-            // 5. RARITY: bonus del 100% (x2)
-            // ─────────────────────────────────────────────
+            // Rarity: bonus of 100% (x2)
             if (animal.Rarity)
-                value *= 2.0;
+                baseValue *= 2.0;
 
-            // ─────────────────────────────────────────────
-            // 6. GARANTÍA ABSOLUTA: mínimo 1.0, nunca menos
-            // ─────────────────────────────────────────────
-            return Task.FromResult(Math.Max(1.0, Math.Round(value, 2)));
+            return Task.FromResult(Math.Max(1.0, Math.Round(baseValue, 2)));
         }
 
         #endregion
@@ -618,13 +593,13 @@ namespace Chaos.Api.Service
         public async Task<(bool success, string message, List<AnimalResponse>? data)> GetAnimalsByOwnerId(Guid OwnerId)
         {
             var animals = await _dbContext.Animals.Where(a => a.OwnerId == OwnerId && a.IsAvailable).ToListAsync();
-            var list =  new List<AnimalResponse>();
-            if (animals.Count == 0) 
+            var list = new List<AnimalResponse>();
+            if (animals.Count == 0)
             {
                 return (false, "No tienes ningun animal...", null);
             }
 
-            foreach (var animal in animals) 
+            foreach (var animal in animals)
             {
                 var an = new AnimalResponse()
                 {

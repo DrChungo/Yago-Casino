@@ -7,7 +7,7 @@ interface BackButtonProps {
 }
 
 function BackButton({ biome }: BackButtonProps) {
-    const navigate = useNavigate(); // ✅ move inside component
+    const navigate = useNavigate(); 
 
     return (
         <button

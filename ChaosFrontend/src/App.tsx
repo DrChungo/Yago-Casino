@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useAudio } from './hooks/useAudio';
 import { useAuth } from './hooks/useAuth';
@@ -11,6 +11,7 @@ import sonidoHover from './assets/Audios/casino_coin_sound.m4a';
 import logoCasino from './assets/CasinoImages/casino_logo.png';
  
 import './App.css';
+import { setRuntimeAnimalConfigs } from './AnimalMovement/AnimalCollisions';
  
 const App: React.FC = () => {
     const location = useLocation();
@@ -110,6 +111,21 @@ const App: React.FC = () => {
         }
     };
  
+    useEffect(() => {
+        const loadConfigs = async () => {
+            try {
+                const res = await fetch(`${Api_Url || 'https://localhost:7101'}/api/dev/animalconfigs`);
+                if (res.ok) {
+                    const data = await res.json();
+                    setRuntimeAnimalConfigs(data);
+                }
+            } catch (err) {
+                console.error('Error loading animal configs on App mount:', err);
+            }
+        };
+        loadConfigs();
+    }, [Api_Url]);
+
     // Auto-fetch + play music on login
     useEffect(() => {
         if (estaLogueado && location.pathname === '/lobby') {

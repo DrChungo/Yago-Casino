@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import '../../styles/RussianRoulette.css'
 import BackButton from "./BackButton";
 import { useNavigate, useLocation } from "react-router-dom"; // ← añadir useLocation
@@ -22,6 +22,7 @@ export default function LobbyRouletteRussian() {
     const location = useLocation(); 
     const token = localStorage.getItem('token_casino');
     const [loading, setLoading] = useState(true);
+    const isStarting = useRef(false);
 
     const decodeToken = (token: string) => {
         const base64Payload = token.split('.')[1];
@@ -33,9 +34,23 @@ export default function LobbyRouletteRussian() {
     const currentUserName = decoded['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'];
     const isMaster = currentUserName === lobby?.nameOfMaster;
 
+    const handleLeaveLobby = () => {
+        if (isStarting.current || !lobby?.idLobby) return;
+        
+        fetch(`${Api_URL}/api/Lobby/leave?lobbyId=${lobby.idLobby}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'authorization': `Bearer ${token}`
+            },
+            keepalive: true
+        }).catch(err => console.error("Error leaving lobby:", err));
+    };
+
     // ── Fetch Start Game ──────────────────────────────────────
     const fetchStartGame = async () => {
         try {
+            isStarting.current = true;
             const response = await fetch(`${Api_URL}/api/RussianRouletteControllerr/Start/${lobby.idLobby}`, {
                 method: 'POST',
                 headers: {
@@ -47,9 +62,12 @@ export default function LobbyRouletteRussian() {
                 const data = await response.json();
                 console.log(data);
                 navigate(`/russian-roulette/game/${lobby.idLobby}`);
+            } else {
+                isStarting.current = false;
             }
         } catch (error) {
             console.error("Error starting game:", error);
+            isStarting.current = false;
         }
     }
 
@@ -74,6 +92,7 @@ export default function LobbyRouletteRussian() {
                 const data = await response.json();
                 console.log(data);
                 if (playerId == currentUserName) {
+                    isStarting.current = true;
                     navigate("/lobby");
                 }
             }
@@ -85,6 +104,7 @@ export default function LobbyRouletteRussian() {
     // ── Delete Lobby ──────────────────────────────────────────
     const fetchDeleteLobby = async () => {
         try {
+            isStarting.current = true;
             const response = await fetch(`${Api_URL}/api/Lobby/Remove`, {
                 method: 'DELETE',
                 headers: {
@@ -94,8 +114,10 @@ export default function LobbyRouletteRussian() {
                 body: JSON.stringify(lobby.idLobby)
             });
             if (response.ok) { navigate("/lobby"); }
+            else { isStarting.current = false; }
         } catch (error) {
             console.error("Error deleting lobby:", error);
+            isStarting.current = false;
             navigate("/create-or-join-russian-roulette");
         }
     }
@@ -156,18 +178,38 @@ export default function LobbyRouletteRussian() {
                 console.log("Lobby"+lobby.idLobby)
 
                 if (data.status === "InProgress") {
+                    isStarting.current = true;
                     navigate(`/russian-roulette/game/${lobby.idLobby}`);
                     return;
                 }
 
                 const isPlayerInLobby = data.nameOfPlayers?.includes(currentUserName);
                 if (!isPlayerInLobby) {
+                    isStarting.current = true;
                     navigate('/lobby');
                 }
             }
         }, 3000);
 
         return () => clearInterval(interval);
+    }, [lobby?.idLobby]);
+
+    // ── Cleanup: leave lobby when navigating away or closing page ──────────────────
+    useEffect(() => {
+        if (!lobby?.idLobby) return;
+
+        const handleUnload = () => {
+            handleLeaveLobby();
+        };
+
+        window.addEventListener("beforeunload", handleUnload);
+        window.addEventListener("pagehide", handleUnload);
+
+        return () => {
+            handleLeaveLobby();
+            window.removeEventListener("beforeunload", handleUnload);
+            window.removeEventListener("pagehide", handleUnload);
+        };
     }, [lobby?.idLobby]);
 
     // ── Copy code ─────────────────────────────────────────────

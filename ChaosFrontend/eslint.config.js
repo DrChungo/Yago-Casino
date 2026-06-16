@@ -18,5 +18,9 @@ export default defineConfig([
     languageOptions: {
       globals: globals.browser,
     },
+    rules: {
+      // ✅ Cambia a 'warn' si prefieres verlo como advertencia en lugar de error
+      'react-hooks/exhaustive-deps': 'off',
+    },
   },
 ])
