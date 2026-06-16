@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Chaos.BlazorCasinoApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8235eec6dfa87224fc9d00ca7f90930ad694e918")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8982535243bd567b682003ff4e084ff6c4e31e0d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Chaos.BlazorCasinoApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Chaos.BlazorCasinoApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

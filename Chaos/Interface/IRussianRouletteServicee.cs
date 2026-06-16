@@ -1,4 +1,4 @@
-﻿using Chaos.Api.ResponseEntity.RussianRoulette;
+using Chaos.Api.ResponseEntity.RussianRoulette;
 using Chaos.Infraestructure.Models;
 
 namespace Chaos.Api.Interface
@@ -11,6 +11,7 @@ namespace Chaos.Api.Interface
 
         //nuevo añadido el 01/06/2026
         Task<List<RussianRouletteRound>> GetRoundHistory(Guid lobbyId);
+        Task AbandonGame(Guid lobbyId, Guid userId);
 
     }
 }

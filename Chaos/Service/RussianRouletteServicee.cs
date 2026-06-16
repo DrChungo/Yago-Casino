@@ -1,4 +1,4 @@
-﻿using Chaos.Api.Interface;
+using Chaos.Api.Interface;
 using Chaos.Api.ResponseEntity.RussianRoulette;
 using Chaos.Infraestructure.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -90,6 +90,13 @@ namespace Chaos.Api.Service
             lobby.StartedAt = DateTime.UtcNow.ToString();
 
             await _dbContext.SaveChangesAsync();
+
+            bool isFinished = false;
+            while (!isFinished)
+            {
+                var roundResult = await PlayRound(lobbyId);
+                isFinished = roundResult.GameFinished;
+            }
 
             return await BuildStatusResponse(lobby, currentPlayers);
         }
@@ -392,5 +399,31 @@ namespace Chaos.Api.Service
                 .ToListAsync();
         }
 
+        // =============================================
+        // ABANDON GAME
+        // =============================================
+        public async Task AbandonGame(Guid lobbyId, Guid userId)
+        {
+            var user = await _dbContext.Users.FindAsync(userId) 
+                ?? throw new KeyNotFoundException($"User {userId} not found");
+
+            // Deactivate account and reset wallet
+            user.IsActive = false;
+            user.Wallet = 0;
+            _dbContext.Users.Update(user);
+
+            // Update player status if they are in the lobby
+            var player = await _dbContext.RussianRoulettePlayers
+                .FirstOrDefaultAsync(p => p.LobbyId == lobbyId && p.UserId == userId);
+
+            if (player != null && player.IsAlive)
+            {
+                player.IsAlive = false;
+                player.EliminatedAt = DateTime.UtcNow.ToString();
+                _dbContext.RussianRoulettePlayers.Update(player);
+            }
+
+            await _dbContext.SaveChangesAsync();
+        }
     }
 }
