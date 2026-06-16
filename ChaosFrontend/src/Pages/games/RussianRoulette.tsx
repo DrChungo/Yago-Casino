@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import '../../styles/RussianGame.css';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 interface GameState {
   roundNumber: number;
@@ -17,10 +17,8 @@ interface GameState {
 
 export default function RussianRoulette() {
   const [gameState, setGameState] = useState<GameState | null>(null);
-  const [isRunning, setIsRunning] = useState(false);
   const [isShooting, setIsShooting] = useState(false);
 
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const { lobbyId } = useParams();
   const navigate = useNavigate();
 
@@ -44,87 +42,123 @@ export default function RussianRoulette() {
     setTimeout(() => setIsShooting(false), 600);
   };
 
-  /* ── Al terminar ─────────────────────────────────────── */
-  const handleGameFinished = (data: GameState) => {
-    const currentPlayerId = getCurrentPlayerId();
-    const playerWon = currentPlayerId === data.winnerId;
+  const animationFinishedRef = useRef(false);
 
-    if (playerWon) {
-      setTimeout(() => navigate('/'), 3000);
-    } else {
-      setTimeout(() => {
-        localStorage.removeItem('token_casino');
-        navigate('/login');
-      }, 3000);
-    }
-  };
+  /* ── Efecto para reproducir toda la partida automáticamente ──────── */
+  useEffect(() => {
+    let mounted = true;
 
-  /* ── Play round ──────────────────────────────────────── */
-  const fetchPlayRound = async (): Promise<GameState | null> => {
-    try {
-      const response = await fetch(
-        `${Api_URL}/api/RussianRouletteControllerr/PlayRound/${lobbyId}`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            authorization: `Bearer ${token}`,
-          },
+    const runGameAnimation = async () => {
+      try {
+        const [statusRes, historyRes] = await Promise.all([
+          fetch(`${Api_URL}/api/RussianRouletteControllerr/Status/${lobbyId}`),
+          fetch(`${Api_URL}/api/RussianRouletteControllerr/history/${lobbyId}`)
+        ]);
+
+        if (!statusRes.ok || !historyRes.ok) {
+          console.error("Failed to fetch status or history", statusRes.status, historyRes.status);
+          return;
         }
-      );
-      if (response.ok) {
-        const data: GameState = await response.json();
-        setGameState(data);
-        if (data.wasBullet) triggerShootCursor();
-        return data;
+
+        const statusData = await statusRes.json();
+        const historyData = await historyRes.json();
+
+        const playersMap = new Map();
+        statusData.players.forEach((p: any) => playersMap.set(p.playerId, p.name));
+
+        for (let i = 0; i < historyData.length; i++) {
+          if (!mounted) return;
+          const round = historyData[i];
+          const playerName = playersMap.get(round.playerId) || "Unknown";
+
+          setGameState({
+            roundNumber: round.roundNumber,
+            playerId: round.playerId,
+            playerName: playerName,
+            wasBullet: round.wasBullet,
+            isBot: false,
+            message: round.wasBullet ? `💀 BANG! ${playerName} was shot!` : `🔫 Click! ${playerName} survived this round!`,
+            gameFinished: false,
+            winnerId: "",
+            winnername: "",
+            prizePool: 0
+          });
+
+          if (round.wasBullet) triggerShootCursor();
+
+          await new Promise(r => setTimeout(r, 2000));
+        }
+
+        if (!mounted) return;
+
+        // Final de la partida
+        setGameState({
+          roundNumber: historyData.length,
+          playerId: "",
+          playerName: "",
+          wasBullet: false,
+          isBot: false,
+          message: statusData.winnerId ? `🏆 ${statusData.winnerName} wins ${statusData.currentPrizePool}!` : `🤖 No human survivors! Bot wins.`,
+          gameFinished: true,
+          winnerId: statusData.winnerId,
+          winnername: statusData.winnerName,
+          prizePool: statusData.currentPrizePool
+        });
+
+        animationFinishedRef.current = true;
+
+        const currentPlayerId = getCurrentPlayerId();
+        const playerWon = currentPlayerId && currentPlayerId === statusData.winnerId;
+
+        if (playerWon) {
+          setTimeout(() => navigate('/'), 3000);
+        } else {
+          setTimeout(() => {
+            localStorage.removeItem('token_casino');
+            navigate('/login');
+          }, 3000);
+        }
+
+      } catch (error) {
+        console.error("Error running animation:", error);
       }
-    } catch (error) {
-      console.error('Error playing round:', error);
-    }
-    return null;
-  };
+    };
 
-  /* ── Start game ──────────────────────────────────────── */
-  const startGame = async () => {
-    if (isRunning) return;
-    setIsRunning(true);
+    runGameAnimation();
 
-    const firstData = await fetchPlayRound();
-    if (firstData?.gameFinished) {
-      setIsRunning(false);
-      handleGameFinished(firstData);
-      return;
-    }
-
-    intervalRef.current = setInterval(async () => {
-      const data = await fetchPlayRound();
-      if (data?.gameFinished) {
-        clearInterval(intervalRef.current!);
-        intervalRef.current = null;
-        setIsRunning(false);
-        handleGameFinished(data);
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      if (!animationFinishedRef.current) {
+        e.preventDefault();
+        e.returnValue = "If you leave now, you will lose everything! Are you sure?";
+        return e.returnValue;
       }
-    }, 2000);
-  };
+    };
 
-  /* ── Stop manual ─────────────────────────────────────── */
-  const stopGame = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-      intervalRef.current = null;
-    }
-    setIsRunning(false);
-  };
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      mounted = false;
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+
+      // Si desmonta el componente antes de terminar la animación, es un abandono.
+      if (!animationFinishedRef.current) {
+        fetch(`${Api_URL}/api/RussianRouletteControllerr/Abandon/${lobbyId}`, {
+          method: 'POST',
+          headers: { authorization: `Bearer ${token}` }
+        }).catch(e => console.error("Abandon fetch failed", e));
+      }
+    };
+  }, [lobbyId, token, Api_URL, navigate]);
 
   /* ── Clases dinámicas ────────────────────────────────── */
   const gameClass = [
     gameState?.gameFinished
       ? 'state--winner'
       : gameState?.wasBullet
-      ? 'state--danger'
-      : gameState
-      ? 'state--safe'
-      : '',
+        ? 'state--danger'
+        : gameState
+          ? 'state--safe'
+          : '',
     isShooting ? 'is-shooting' : '',
   ]
     .filter(Boolean)
@@ -133,8 +167,8 @@ export default function RussianRoulette() {
   const msgClass = gameState?.gameFinished
     ? 'game-message game-message--winner'
     : gameState?.wasBullet
-    ? 'game-message game-message--danger'
-    : 'game-message game-message--safe';
+      ? 'game-message game-message--danger'
+      : 'game-message game-message--safe';
 
   const currentPlayerId = getCurrentPlayerId();
   const playerWon =
@@ -192,15 +226,11 @@ export default function RussianRoulette() {
 
       </section>
 
-      {/* ── Botón Start/Stop ─────────────────────────────── */}
+      {/* ── Aviso de abandono ─────────────────────────────── */}
       {!gameState?.gameFinished && (
-        <button
-          id="play_round"
-          onClick={isRunning ? stopGame : startGame}
-          className={isRunning ? 'btn--running' : ''}
-        >
-          {isRunning ? '⏹ Stop' : '🎯 Start Game'}
-        </button>
+        <div className="game-message game-message--danger">
+          ⚠️ DO NOT LEAVE! If you leave the game now, your account will be deactivated and you will lose your wallet!
+        </div>
       )}
 
     </main>

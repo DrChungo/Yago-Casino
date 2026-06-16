@@ -5,6 +5,7 @@ using Chaos.Api.ResponseEntity;
 using Chaos.Infraestructure.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Concurrent;
+using System.Threading.Tasks.Dataflow;
 
 namespace Chaos.Api.Service
 {
@@ -173,7 +174,7 @@ namespace Chaos.Api.Service
                     Health = (HealthEnum)animal.Health,
                     Value = (int)animal.EstimatedValue,
                     OwnerId = animal.OwnerId,
-                    
+
                 };
                 animalResponse.Add(newAnimal);
             }
@@ -269,7 +270,9 @@ namespace Chaos.Api.Service
             // Use the same linear formula as the shop average price:
             // Value = (Weight * 10 + Height * 5 - Age * 2) * Health / 3
             // ─────────────────────────────────────────────
+
             double baseValue = ((double)animal.Weight * 10 + (double)animal.Height * 5 - (double)animal.Age * 2) * (double)animal.Health / 3.0;
+
 
             // Rarity: bonus of 100% (x2)
             if (animal.Rarity)
@@ -590,13 +593,13 @@ namespace Chaos.Api.Service
         public async Task<(bool success, string message, List<AnimalResponse>? data)> GetAnimalsByOwnerId(Guid OwnerId)
         {
             var animals = await _dbContext.Animals.Where(a => a.OwnerId == OwnerId && a.IsAvailable).ToListAsync();
-            var list =  new List<AnimalResponse>();
-            if (animals.Count == 0) 
+            var list = new List<AnimalResponse>();
+            if (animals.Count == 0)
             {
                 return (false, "No tienes ningun animal...", null);
             }
 
-            foreach (var animal in animals) 
+            foreach (var animal in animals)
             {
                 var an = new AnimalResponse()
                 {

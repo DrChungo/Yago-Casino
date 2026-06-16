@@ -7,6 +7,7 @@ using Chaos.Api.ResponseEntity;
 using Chaos.Infraestructure.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Concurrent;
+using System.Reflection.Metadata;
 using static Bogus.Person.CardAddress;
 
 namespace Chaos.Api.Service
@@ -195,34 +196,48 @@ namespace Chaos.Api.Service
         private static List<string> WinCombination(List<string[,]> Machines)
         {
             List<string> rewards = [];
-
+            string[] winConditon = new string [3];
+            int rewindCounter = 0;
             foreach (string[,] machine in Machines)
             {
-                int rows = machine.GetLength(0);
-                int cols = machine.GetLength(1);
+                int cols = machine.GetLength(0);
+                int rows = machine.GetLength(1);
 
-                for (int i = 0; i < rows; i++)
+                for (int i = 0; i < cols; i++)
                 {
-                    bool isWinningRow = true;
-                    string firstValue = machine[i, 0];
-
-                    for (int j = 1; j < cols; j++)
+                   
+                    winConditon[rewindCounter] = machine[i, 0];
+                    
+                    for (int j = 1; j < rows; j++)
                     {
-                        if (machine[i, j] != firstValue)
+                        if (rewindCounter >= 2  &&  RewindRow(winConditon))
+                         {
+                        rewards.Add(winConditon[0]);
+                          }
+                        if (machine[i, j] != winConditon[rewindCounter])
                         {
-                            isWinningRow = false;
-                            break;
+                            winConditon[0] = machine[i, j];
+                            rewindCounter = 0;
+                            break; 
                         }
-                    }
-
-                    if (isWinningRow)
-                    {
-                        rewards.Add(firstValue);
-                    }
+                        else
+                        {
+                            winConditon[++rewindCounter] = machine[i, j];
+                        }
+                    } 
                 }
             }
 
             return rewards;
+        }
+
+        private static bool RewindRow(string[] winConditon)
+        {
+            for (int i = 1; i < winConditon.Length; i++)
+            {
+                if(winConditon[i] != winConditon[i -1]) return false; 
+            }
+            return true;
         }
 
         public List<string[][]> ConvertToJagged(List<string[,]> matrices)
@@ -1117,17 +1132,17 @@ namespace Chaos.Api.Service
             string message = BuildResultMessage(ValuesBet, totalBet, PositionRoullete);
 
 
-            //marca animal perdedor como muerto -> isAvailable = false
+           // marca animal perdedor como muerto -> isAvailable = false
 
-            //foreach (Guid animalId in losingAnimals)
+            foreach (Guid animalId in losingAnimals)
 
-            //{
+            {
 
-            //    Animal AnimalFromDB =   _dbContext.Animals.Find(animalId);
+               Animal AnimalFromDB =   _dbContext.Animals.Find(animalId);
 
-            //    if (AnimalFromDB != null) AnimalFromDB.IsAvailable = false;
+               if (AnimalFromDB != null) AnimalFromDB.IsAvailable = false;
 
-            //}
+            }
 
             var user = await _dbContext.Users.FindAsync(UserId)
          ?? throw new Exception("User not found");

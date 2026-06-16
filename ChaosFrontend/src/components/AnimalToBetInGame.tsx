@@ -10,8 +10,11 @@
 //   error={error} // Mensaje de error a mostrar si no hay animales disponibles
 // />
 
+
+
 import { useState, useEffect } from 'react';
 import { getAnimalImageUrl } from '../services/animalImageService';
+
 
 import './AnimalToBetInGame.css';
 
@@ -52,11 +55,12 @@ interface AnimalToBetInGameProps {
   animals: Animal[];
   selectedAnimal: Animal | null;
   onSelectAnimal: (animal: Animal) => void;
-  isFlipping: boolean;
+  isFlipping?: boolean;
   error: string | null;
-  isForBet: boolean;
-  isForSale: boolean;
+  isForBet?: boolean;
+  isForSale?: boolean;
   correct: string | null;
+
 }
 
 const AnimalToBetInGame = ({
