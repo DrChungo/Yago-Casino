@@ -165,7 +165,7 @@
     "habitat": "Ocean",
     "anchoHitbox": 200,
     "altoHitbox": 200,
-    "escala": 2.3
+    "escala": 2
   },
   {
     "tipo": "octopus",
